@@ -14,6 +14,9 @@
   "trends_terms": [
     "crypto", "cryptomonnaie", "bitcoin", "btc", "alt", "altcoin", "ethereum", "eth"
   ],
-  "trends_timeframe": "now 7-d",
-  "trends_geo": "FR"
+ "trends_timeframe": "now 7-d",
+  "trends_geo": "FR",
+  "backfill_days": 180,
+  "backfill_coins_per_narrative": 15,
+  "backfill_trends_timeframe": "today 12-m"
 }
