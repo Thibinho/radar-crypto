@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "date": "2026-08-07",
+    "values": {
+      "crypto": 11.0,
+      "cryptomonnaie": 0.0,
+      "bitcoin": 21.0,
+      "btc": 9.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 3.0,
+      "eth": 3.0
+    }
+  }
+]
