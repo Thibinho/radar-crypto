@@ -103,22 +103,45 @@
   .news-item:hover{color:var(--amber);}
   .news-item .tag.news{background:#241a3a;color:#B8A6F0;}
 
-  /* --- Widget Fear & Greed fixe --- */
-  #fng-widget{position:fixed;left:18px;bottom:18px;z-index:50;display:none;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px 16px;box-shadow:0 6px 20px rgba(0,0,0,.45);}
-  #fng-widget.show{display:flex;}
-  #fng-widget .fng-emoji{font-size:24px;line-height:1;}
-  #fng-widget .fng-text{display:flex;flex-direction:column;line-height:1.2;}
-  #fng-widget .fng-value{font-family:var(--mono);font-size:18px;font-weight:700;color:var(--amber);}
-  #fng-widget .fng-label{font-family:var(--mono);font-size:9.5px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em;}
+  /* --- Widget marché fixe (BTC / Fear & Greed / ETH) --- */
+  #market-widget{position:fixed;left:18px;bottom:18px;z-index:50;display:none;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.45);overflow:hidden;min-width:210px;}
+  #market-widget.show{display:flex;}
+  .mw-row{display:flex;align-items:center;gap:10px;padding:9px 14px;text-decoration:none;color:var(--text);border-bottom:1px solid var(--line);}
+  .mw-row:last-child{border-bottom:none;}
+  a.mw-row:hover{background:var(--panel-2);}
+  .mw-icon{font-size:17px;width:20px;text-align:center;flex-shrink:0;}
+  .mw-text{display:flex;flex-direction:column;line-height:1.25;flex:1;min-width:0;}
+  .mw-price{font-family:var(--mono);font-size:13.5px;font-weight:700;color:var(--text);white-space:nowrap;}
+  .mw-sub{font-family:var(--mono);font-size:9px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;}
+  .mw-tv{font-family:var(--mono);font-size:8.5px;color:var(--cyan);border:1px solid var(--cyan);border-radius:4px;padding:2px 5px;flex-shrink:0;}
+  .mw-emoji{font-size:20px;line-height:1;flex-shrink:0;width:20px;text-align:center;}
 </style>
 </head>
 <body>
-<div id="fng-widget">
-  <span class="fng-emoji" id="fng-emoji">📊</span>
-  <div class="fng-text">
-    <span class="fng-value" id="fng-value">--</span>
-    <span class="fng-label" id="fng-label">Fear &amp; Greed</span>
+<div id="market-widget">
+  <a class="mw-row" id="mw-btc" href="https://www.tradingview.com/symbols/BTCUSD/" target="_blank" rel="noopener">
+    <span class="mw-icon">₿</span>
+    <div class="mw-text">
+      <span class="mw-price" id="mw-btc-price">--</span>
+      <span class="mw-sub" id="mw-btc-dom">BTC · dominance --%</span>
+    </div>
+    <span class="mw-tv">TV↗</span>
+  </a>
+  <div class="mw-row">
+    <span class="mw-emoji" id="fng-emoji">📊</span>
+    <div class="mw-text">
+      <span class="mw-price" id="fng-value">--</span>
+      <span class="mw-sub" id="fng-label">Fear &amp; Greed</span>
+    </div>
   </div>
+  <a class="mw-row" id="mw-eth" href="https://www.tradingview.com/symbols/ETHUSD/" target="_blank" rel="noopener">
+    <span class="mw-icon">Ξ</span>
+    <div class="mw-text">
+      <span class="mw-price" id="mw-eth-price">--</span>
+      <span class="mw-sub" id="mw-eth-dom">ETH · dominance --%</span>
+    </div>
+    <span class="mw-tv">TV↗</span>
+  </a>
 </div>
 <div class="app">
   <div id="alert-banner" class="ticker"><div class="track" id="alert-track"></div></div>
@@ -592,16 +615,44 @@ async function initAlertBanner(){
 
 async function initFngWidget(){
   const feargreed = await loadJsonSafe('data/feargreed.json');
-  const widget = document.getElementById('fng-widget');
-  if(!feargreed || !feargreed.length){
-    widget.classList.remove('show');
-    return;
-  }
+  if(!feargreed || !feargreed.length) return;
   const latest = feargreed[feargreed.length-1];
   document.getElementById('fng-emoji').textContent = fngEmoji(latest.classification);
   document.getElementById('fng-value').textContent = latest.value;
   document.getElementById('fng-label').textContent = `Fear & Greed · ${fngLabelFr(latest.classification)}`;
-  widget.classList.add('show');
+  document.getElementById('market-widget').classList.add('show');
+}
+
+function fmtPrice(n){
+  if(n==null) return '--';
+  return '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits: n<10?4:2});
+}
+
+async function refreshMarketPrices(){
+  try{
+    const [priceRes, globalRes] = await Promise.all([
+      fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd'),
+      fetch('https://api.coingecko.com/api/v3/global')
+    ]);
+    if(!priceRes.ok || !globalRes.ok) return;
+    const priceData = await priceRes.json();
+    const globalData = await globalRes.json();
+
+    const btcPrice = priceData?.bitcoin?.usd;
+    const ethPrice = priceData?.ethereum?.usd;
+    const btcDom = globalData?.data?.market_cap_percentage?.btc;
+    const ethDom = globalData?.data?.market_cap_percentage?.eth;
+
+    if(btcPrice!=null){
+      document.getElementById('mw-btc-price').textContent = fmtPrice(btcPrice);
+      document.getElementById('market-widget').classList.add('show');
+    }
+    if(btcDom!=null) document.getElementById('mw-btc-dom').textContent = `BTC · dominance ${btcDom.toFixed(1)}%`;
+    if(ethPrice!=null) document.getElementById('mw-eth-price').textContent = fmtPrice(ethPrice);
+    if(ethDom!=null) document.getElementById('mw-eth-dom').textContent = `ETH · dominance ${ethDom.toFixed(1)}%`;
+  }catch(e){
+    console.warn('Impossible de charger les prix en direct', e);
+  }
 }
 
 function escapeHtml(str){
@@ -633,6 +684,8 @@ async function initNewsBanner(){
   initAlertBanner();
   initNewsBanner();
   initFngWidget();
+  refreshMarketPrices();
+  setInterval(refreshMarketPrices, 60000); // rafraîchit prix + dominance chaque minute
 })();
 </script>
 </body>
