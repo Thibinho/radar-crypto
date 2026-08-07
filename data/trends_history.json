@@ -3410,12 +3410,12 @@
     "values": {
       "crypto": 13.0,
       "cryptomonnaie": 0.0,
-      "bitcoin": 20.0,
+      "bitcoin": 19.0,
       "btc": 6.0,
-      "alt": 10.0,
+      "alt": 9.0,
       "altcoin": 0.0,
-      "ethereum": 0.0,
-      "eth": 2.0
+      "ethereum": 1.9,
+      "eth": 1.9
     }
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T20:30:58.484623+00:00",
+  "generated_at": "2026-08-07T20:43:56.039615+00:00",
   "items": [
     {
       "title": "US Treasury’s OFAC sanctions 2 Iran-linked crypto exchanges",
@@ -18,6 +18,12 @@
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "source": "Cointelegraph",
       "published": "2026-08-07T18:36:10+00:00"
+    },
+    {
+      "title": "OKX remet le couvert avec un bonus de 8 % sur les dépôts, jusqu’à 5 000 €",
+      "link": "https://journalducoin.com/exchanges/okx-bonus-8-depots-5-000/",
+      "source": "Journal du Coin",
+      "published": "2026-08-07T18:00:00+00:00"
     },
     {
       "title": "Circle expands USDC to OKX ecosystem with X Layer launch",
@@ -44,6 +50,18 @@
       "published": "2026-08-07T16:32:41+00:00"
     },
     {
+      "title": "Un quart des mineurs de Bitcoin sont dans le rouge",
+      "link": "https://cryptoast.fr/quart-mineurs-bitcoin-dans-rouge/",
+      "source": "Cryptoast",
+      "published": "2026-08-07T16:00:46+00:00"
+    },
+    {
+      "title": "71,9 % des tokens du Top 100 sont morts : combien de temps survit une cryptomonnaie ?",
+      "link": "https://journalducoin.com/actualites/719-tokens-top-100-crypto-mort/",
+      "source": "Journal du Coin",
+      "published": "2026-08-07T16:00:00+00:00"
+    },
+    {
       "title": "Bitcoin price tags $65.3K August high as low US jobs numbers cool Fed rate bets",
       "link": "https://cointelegraph.com/markets/bitcoin-price-tags-653k-august-high-as-low-us-jobs-numbers-cool-fed-rate-bets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "source": "Cointelegraph",
@@ -68,10 +86,16 @@
       "published": "2026-08-07T15:07:49+00:00"
     },
     {
-      "title": "A part of FTX survived, and it’s the case for the CLARITY Act",
-      "link": "https://www.coindesk.com/opinion/2026/08/07/a-part-of-ftx-survived-and-it-s-the-case-for-the-clarity-act",
-      "source": "CoinDesk",
-      "published": "2026-08-07T14:30:25+00:00"
+      "title": "Plus que 30 heures : Le BIP-110 activera-t-il un hard fork de Bitcoin ce week-end ?",
+      "link": "https://cryptoast.fr/30-heures-bip-110-activera-hard-fork-bitcoin-weekend/",
+      "source": "Cryptoast",
+      "published": "2026-08-07T15:00:56+00:00"
+    },
+    {
+      "title": "MARA réduit ses réserves de Bitcoin de 29 % et voit son chiffre d’affaires plonger",
+      "link": "https://journalducoin.com/bitcoin/mara-reserves-bitcoin-29-chiffre-affaires-plonger/",
+      "source": "Journal du Coin",
+      "published": "2026-08-07T15:00:00+00:00"
     }
   ]
 }
