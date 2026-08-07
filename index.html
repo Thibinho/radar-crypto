@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radar — Narratifs & Tendances Crypto</title>
 <script src="chart.umd.js"></script>
+<script src="hammer.min.js"></script>
+<script src="chartjs-plugin-zoom.min.js"></script>
 <style>
   :root{
     --ink:#0B0E14; --panel:#11151D; --panel-2:#161B25; --line:#232A38;
@@ -149,6 +151,7 @@
               <input type="checkbox" id="narr-smoothing">
               Lissage (moy. 7 pts)
             </label>
+            <button class="btn small" id="narr-reset-zoom" style="margin-left:auto;">↺ Réinitialiser le zoom</button>
           </div>
           <div class="meta-row">
             <div id="narr-legend" class="legend-pills"></div>
@@ -203,6 +206,7 @@
               <input type="checkbox" id="trends-smoothing">
               Lissage (moy. 7 pts)
             </label>
+            <button class="btn small" id="trends-reset-zoom" style="margin-left:auto;">↺ Réinitialiser le zoom</button>
           </div>
           <div class="meta-row">
             <div id="trends-legend" class="legend-pills"></div>
@@ -386,7 +390,20 @@ function renderChart(store, ui, canvasEl, legendEl, statusEl, ref, opts){
   if(ref.chart) ref.chart.destroy();
   ref.chart = new Chart(canvasEl,{type:'line',data:{labels,datasets},options:{
     responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
-    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y!=null?yFmt(c.parsed.y):'—'}`}}},
+    plugins:{
+      legend:{display:false},
+      tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y!=null?yFmt(c.parsed.y):'—'}`}},
+      zoom:{
+        pan:{enabled:true, mode:'x', modifierKey:null},
+        zoom:{
+          wheel:{enabled:true, speed:0.08},
+          pinch:{enabled:true},
+          drag:{enabled:false},
+          mode:'x'
+        },
+        limits:{x:{min:'original', max:'original'}}
+      }
+    },
     scales:{x:{grid:{color:'#1A2029'},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:10}}, y:yScale}
   }});
 }
@@ -464,6 +481,9 @@ document.getElementById('ml-save').addEventListener('click', ()=>{
 
 wireControls('narr', narrUi, ()=>refreshNarr());
 wireControls('trends', trendsUi, ()=>refreshTrends());
+
+document.getElementById('narr-reset-zoom').addEventListener('click', ()=>{ if(narrRef.chart) narrRef.chart.resetZoom(); });
+document.getElementById('trends-reset-zoom').addEventListener('click', ()=>{ if(trendsRef.chart) trendsRef.chart.resetZoom(); });
 
 /* ---------- bandeau d'alertes ---------- */
 async function loadJsonSafe(path){
