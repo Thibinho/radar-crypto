@@ -17,6 +17,6 @@
  "trends_timeframe": "now 7-d",
   "trends_geo": "FR",
   "backfill_days": 180,
-  "backfill_coins_per_narrative": 15,
+  "backfill_coins_per_narrative": 8,
   "backfill_trends_timeframe": "today 12-m"
 }
