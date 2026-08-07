@@ -412,14 +412,14 @@ function renderChart(store, ui, canvasEl, legendEl, statusEl, ref, opts){
       legend:{display:false},
       tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y!=null?yFmt(c.parsed.y):'—'}`}},
       zoom:{
-        pan:{enabled:true, mode:'x', modifierKey:null},
+        pan:{enabled:true, mode:'xy', modifierKey:null},
         zoom:{
           wheel:{enabled:true, speed:0.08},
           pinch:{enabled:true},
           drag:{enabled:false},
-          mode:'x'
+          mode:'xy'
         },
-        limits:{x:{min:'original', max:'original'}}
+        limits:{x:{min:'original', max:'original'}, y:{min:'original', max:'original'}}
       }
     },
     scales:{x:{grid:{color:'#1A2029'},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:10}}, y:yScale}
