@@ -10,10 +10,12 @@ les scores et les rendre comparables entre eux (approximation raisonnable,
 pas une garantie mathématique).
 
 ⚠️ pytrends n'est pas une API officielle Google : elle peut casser si Google
-change son site. Si ce script échoue, le tableau de bord reste utilisable
-avec les autres sources / l'import CSV manuel.
+change son site, et les IP partagées de GitHub Actions se font souvent
+limiter (erreur 429). Ce script réessaie automatiquement avec des pauses
+croissantes pour limiter ce risque, sans garantie à 100%.
 """
 import json
+import random
 import sys
 import time
 from datetime import datetime, timezone
@@ -26,11 +28,11 @@ CONFIG_PATH = ROOT / "config.json"
 HISTORY_PATH = ROOT / "data" / "trends_history.json"
 
 CHUNK_SIZE = 5
+MAX_RETRIES = 4
+BASE_DELAY = 45  # secondes, augmente à chaque tentative (backoff exponentiel)
 
 
 def chunk_with_pivot(terms, pivot, size):
-    """Découpe `terms` en lots de taille `size`, chaque lot (sauf le premier)
-    inclut `pivot` en plus pour permettre le rééchelonnage."""
     chunks = []
     others = [t for t in terms if t != pivot]
     first = [pivot] + others[: size - 1]
@@ -39,6 +41,24 @@ def chunk_with_pivot(terms, pivot, size):
     for i in range(0, len(rest), size - 1):
         chunks.append([pivot] + rest[i : i + size - 1])
     return chunks
+
+
+def fetch_chunk_with_retry(pytrends, chunk, timeframe, geo):
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            pytrends.build_payload(chunk, timeframe=timeframe, geo=geo)
+            df = pytrends.interest_over_time()
+            return df
+        except Exception as e:
+            is_rate_limit = "429" in str(e) or "TooManyRequestsError" in type(e).__name__
+            if attempt == MAX_RETRIES:
+                print(f"[fetch_trends] Échec définitif sur {chunk} après {attempt} tentatives: {e}", file=sys.stderr)
+                return None
+            delay = BASE_DELAY * (2 ** (attempt - 1)) + random.uniform(0, 10)
+            reason = "rate-limit (429)" if is_rate_limit else str(e)
+            print(f"[fetch_trends] Tentative {attempt}/{MAX_RETRIES} échouée sur {chunk} ({reason}), nouvelle tentative dans {delay:.0f}s…", file=sys.stderr)
+            time.sleep(delay)
+    return None
 
 
 def main():
@@ -57,17 +77,12 @@ def main():
     pytrends = TrendReq(hl="fr-FR", tz=60)
     today = datetime.now(timezone.utc).date().isoformat()
 
-    all_values = {}   # term -> raw last-day value
-    pivot_values = []  # pivot value observed in each chunk, for rescaling
+    all_values = {}
+    pivot_values = []
 
-    for chunk in chunks:
-        try:
-            pytrends.build_payload(chunk, timeframe=timeframe, geo=geo)
-            df = pytrends.interest_over_time()
-        except Exception as e:
-            print(f"[fetch_trends] Erreur sur le lot {chunk}: {e}", file=sys.stderr)
-            continue
-        if df.empty:
+    for i, chunk in enumerate(chunks):
+        df = fetch_chunk_with_retry(pytrends, chunk, timeframe, geo)
+        if df is None or df.empty:
             continue
         last_row = df.iloc[-1]
         chunk_pivot_val = float(last_row.get(pivot, 0) or 0)
@@ -75,20 +90,17 @@ def main():
         for term in chunk:
             if term in last_row:
                 all_values[term] = {"raw": float(last_row[term]), "chunk_pivot": chunk_pivot_val}
-        time.sleep(1)  # anti rate-limit
+        if i < len(chunks) - 1:
+            time.sleep(random.uniform(8, 15))  # pause entre lots, même en cas de succès
 
-    # rescale using the first chunk's pivot value as the reference
     reference = pivot_values[0] if pivot_values else None
     final_values = {}
     for term, info in all_values.items():
-        if reference and info["chunk_pivot"] > 0:
-            scale = reference / info["chunk_pivot"]
-        else:
-            scale = 1.0
+        scale = (reference / info["chunk_pivot"]) if (reference and info["chunk_pivot"] > 0) else 1.0
         final_values[term] = round(info["raw"] * scale, 1)
 
     if not final_values:
-        print("[fetch_trends] Aucune donnée récupérée, abandon.", file=sys.stderr)
+        print("[fetch_trends] Aucune donnée récupérée après retries, abandon pour aujourd'hui (réessai demain).", file=sys.stderr)
         sys.exit(1)
 
     HISTORY_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -103,7 +115,7 @@ def main():
     history = history[-730:]
 
     HISTORY_PATH.write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[fetch_trends] OK — {len(final_values)} termes mis à jour pour {today}")
+    print(f"[fetch_trends] OK — {len(final_values)} termes mis à jour pour {today} ({len(final_values)}/{len(terms)} récupérés)")
 
 
 if __name__ == "__main__":
