@@ -1,532 +1,3408 @@
 [
   {
-    "date": "2025-08-03",
+    "date": "2021-08-01",
     "values": {
-      "crypto": 17.0,
+      "crypto": 20.7,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 32.0,
+      "btc": 7.0,
+      "alt": 3.0,
+      "altcoin": 0.0,
+      "ethereum": 13.8,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2021-08-08",
+    "values": {
+      "crypto": 30.2,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 39.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 14.6,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2021-08-15",
+    "values": {
+      "crypto": 32.7,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 35.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 11.2,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2021-08-22",
+    "values": {
+      "crypto": 34.5,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 36.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2021-08-29",
+    "values": {
+      "crypto": 37.9,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 27.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2021-09-05",
+    "values": {
+      "crypto": 43.1,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 39.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2021-09-12",
+    "values": {
+      "crypto": 33.6,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 26.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 9.5,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2021-09-19",
+    "values": {
+      "crypto": 31.9,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 33.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2021-09-26",
+    "values": {
+      "crypto": 25.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 27.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 9.5,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2021-10-03",
+    "values": {
+      "crypto": 40.5,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 31.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2021-10-10",
+    "values": {
+      "crypto": 39.6,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 36.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 11.2,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2021-10-17",
+    "values": {
+      "crypto": 38.8,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 43.0,
+      "btc": 10.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2021-10-24",
+    "values": {
+      "crypto": 69.8,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 35.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2021-10-31",
+    "values": {
+      "crypto": 73.2,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 28.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2021-11-07",
+    "values": {
+      "crypto": 69.8,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 36.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 14.6,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2021-11-14",
+    "values": {
+      "crypto": 66.4,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 37.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 14.6,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2021-11-21",
+    "values": {
+      "crypto": 69.8,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 35.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.1,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2021-11-28",
+    "values": {
+      "crypto": 66.4,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 38.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2021-12-05",
+    "values": {
+      "crypto": 50.8,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 42.0,
+      "btc": 9.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2021-12-12",
+    "values": {
+      "crypto": 46.5,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 35.0,
+      "btc": 7.0,
+      "alt": 3.0,
+      "altcoin": 0.0,
+      "ethereum": 11.2,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2021-12-19",
+    "values": {
+      "crypto": 49.1,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 30.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2021-12-26",
+    "values": {
+      "crypto": 54.3,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 32.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 11.2,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2022-01-02",
+    "values": {
+      "crypto": 68.9,
+      "cryptomonnaie": 4.0,
+      "bitcoin": 49.0,
+      "btc": 11.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 14.6,
+      "eth": 9.5
+    }
+  },
+  {
+    "date": "2022-01-09",
+    "values": {
+      "crypto": 53.4,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 41.0,
+      "btc": 10.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 8.6
+    }
+  },
+  {
+    "date": "2022-01-16",
+    "values": {
+      "crypto": 49.1,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 43.0,
+      "btc": 10.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 7.8
+    }
+  },
+  {
+    "date": "2022-01-23",
+    "values": {
+      "crypto": 48.3,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 55.0,
+      "btc": 13.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 16.4,
+      "eth": 8.6
+    }
+  },
+  {
+    "date": "2022-01-30",
+    "values": {
+      "crypto": 43.9,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 42.0,
+      "btc": 9.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 14.6,
+      "eth": 7.8
+    }
+  },
+  {
+    "date": "2022-02-06",
+    "values": {
+      "crypto": 47.4,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 39.0,
+      "btc": 10.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 6.9
+    }
+  },
+  {
+    "date": "2022-02-13",
+    "values": {
+      "crypto": 44.8,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 34.0,
+      "btc": 8.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 12.1,
+      "eth": 6.9
+    }
+  },
+  {
+    "date": "2022-02-20",
+    "values": {
+      "crypto": 42.2,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 50.0,
+      "btc": 11.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 6.9
+    }
+  },
+  {
+    "date": "2022-02-27",
+    "values": {
+      "crypto": 40.5,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 49.0,
+      "btc": 11.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 12.1,
+      "eth": 6.0
+    }
+  },
+  {
+    "date": "2022-03-06",
+    "values": {
+      "crypto": 38.8,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 38.0,
+      "btc": 9.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2022-03-13",
+    "values": {
+      "crypto": 41.4,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 35.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 9.5,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2022-03-20",
+    "values": {
+      "crypto": 42.2,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 34.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 11.2,
+      "eth": 6.0
+    }
+  },
+  {
+    "date": "2022-03-27",
+    "values": {
+      "crypto": 51.7,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 37.0,
+      "btc": 9.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 6.9
+    }
+  },
+  {
+    "date": "2022-04-03",
+    "values": {
+      "crypto": 43.1,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 30.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 6.0
+    }
+  },
+  {
+    "date": "2022-04-10",
+    "values": {
+      "crypto": 35.3,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 29.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 9.5,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2022-04-17",
+    "values": {
+      "crypto": 37.9,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 27.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 8.6,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2022-04-24",
+    "values": {
+      "crypto": 39.6,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 29.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 8.6,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2022-05-01",
+    "values": {
+      "crypto": 37.9,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 28.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 8.6,
+      "eth": 6.0
+    }
+  },
+  {
+    "date": "2022-05-08",
+    "values": {
+      "crypto": 68.1,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 70.0,
+      "btc": 16.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 14.6,
+      "eth": 7.8
+    }
+  },
+  {
+    "date": "2022-05-15",
+    "values": {
+      "crypto": 42.2,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 49.0,
+      "btc": 11.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 11.2,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2022-05-22",
+    "values": {
+      "crypto": 32.7,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 41.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2022-05-29",
+    "values": {
+      "crypto": 31.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 34.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 9.5,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2022-06-05",
+    "values": {
+      "crypto": 29.3,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 34.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2022-06-12",
+    "values": {
+      "crypto": 37.1,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 86.0,
+      "btc": 17.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 18.1,
+      "eth": 8.6
+    }
+  },
+  {
+    "date": "2022-06-19",
+    "values": {
+      "crypto": 25.9,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 64.0,
+      "btc": 13.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 15.5,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2022-06-26",
+    "values": {
+      "crypto": 22.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 50.0,
+      "btc": 10.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.1,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2022-07-03",
+    "values": {
+      "crypto": 21.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 46.0,
+      "btc": 10.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 11.2,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2022-07-10",
+    "values": {
+      "crypto": 19.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 38.0,
+      "btc": 9.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2022-07-17",
+    "values": {
+      "crypto": 21.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 39.0,
+      "btc": 9.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 13.8,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2022-07-24",
+    "values": {
+      "crypto": 22.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 35.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2022-07-31",
+    "values": {
+      "crypto": 22.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 31.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2022-08-07",
+    "values": {
+      "crypto": 21.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 31.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.1,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2022-08-14",
+    "values": {
+      "crypto": 24.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 32.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.1,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2022-08-21",
+    "values": {
+      "crypto": 20.7,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 32.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2022-08-28",
+    "values": {
+      "crypto": 20.7,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 31.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2022-09-04",
+    "values": {
+      "crypto": 23.3,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 32.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 11.2,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2022-09-11",
+    "values": {
+      "crypto": 20.7,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 30.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 18.1,
+      "eth": 9.5
+    }
+  },
+  {
+    "date": "2022-09-18",
+    "values": {
+      "crypto": 19.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 32.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.9,
+      "eth": 6.0
+    }
+  },
+  {
+    "date": "2022-09-25",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 27.0,
+      "btc": 6.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 9.5,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2022-10-02",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 22.0,
+      "btc": 5.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 7.8,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2022-10-09",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 23.0,
+      "btc": 5.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 7.8,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2022-10-16",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 5.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2022-10-23",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 21.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 8.6,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2022-10-30",
+    "values": {
+      "crypto": 19.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 22.0,
+      "btc": 5.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 8.6,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2022-11-06",
+    "values": {
+      "crypto": 31.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 45.0,
+      "btc": 12.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 12.1,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2022-11-13",
+    "values": {
+      "crypto": 29.3,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 53.0,
+      "btc": 10.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 11.2,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2022-11-20",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 33.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 8.6,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2022-11-27",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 28.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2022-12-04",
+    "values": {
+      "crypto": 13.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 21.0,
+      "btc": 5.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2022-12-11",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 23.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2022-12-18",
+    "values": {
+      "crypto": 14.6,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 21.0,
+      "btc": 5.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2022-12-25",
+    "values": {
+      "crypto": 14.6,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 21.0,
+      "btc": 5.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 22.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-01-08",
+    "values": {
+      "crypto": 18.1,
       "cryptomonnaie": 1.0,
       "bitcoin": 25.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-01-15",
+    "values": {
+      "crypto": 19.8,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 30.0,
+      "btc": 9.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 7.8,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-01-22",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 27.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-01-29",
+    "values": {
+      "crypto": 19.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 24.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-02-05",
+    "values": {
+      "crypto": 19.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 24.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-02-12",
+    "values": {
+      "crypto": 17.2,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 24.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-02-19",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 22.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-02-26",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 6.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-03-05",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 21.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-03-12",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 38.0,
+      "btc": 11.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 7.8,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2023-03-19",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 33.0,
       "btc": 10.0,
-      "alt": 6.0
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-03-26",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 27.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-04-02",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 22.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-04-09",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 26.0,
+      "btc": 9.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 8.6,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2023-04-16",
+    "values": {
+      "crypto": 17.2,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 24.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2023-04-23",
+    "values": {
+      "crypto": 14.6,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 24.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-04-30",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-05-07",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-05-14",
+    "values": {
+      "crypto": 14.6,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 16.0,
+      "btc": 5.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-05-21",
+    "values": {
+      "crypto": 14.6,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 18.0,
+      "btc": 5.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-05-28",
+    "values": {
+      "crypto": 13.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 16.0,
+      "btc": 5.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-06-04",
+    "values": {
+      "crypto": 14.6,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 17.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-06-11",
+    "values": {
+      "crypto": 12.9,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 17.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-06-18",
+    "values": {
+      "crypto": 12.9,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 22.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-06-25",
+    "values": {
+      "crypto": 12.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 17.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-07-02",
+    "values": {
+      "crypto": 12.9,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 19.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-07-09",
+    "values": {
+      "crypto": 12.9,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 18.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-07-16",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 18.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-07-23",
+    "values": {
+      "crypto": 14.6,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 21.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-07-30",
+    "values": {
+      "crypto": 13.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 16.0,
+      "btc": 5.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-08-06",
+    "values": {
+      "crypto": 14.6,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 17.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-08-13",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 24.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-08-20",
+    "values": {
+      "crypto": 13.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 19.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-08-27",
+    "values": {
+      "crypto": 12.9,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 18.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-09-03",
+    "values": {
+      "crypto": 12.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 16.0,
+      "btc": 6.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 2.6,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-09-10",
+    "values": {
+      "crypto": 12.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 15.0,
+      "btc": 5.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 2.6,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-09-17",
+    "values": {
+      "crypto": 12.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 17.0,
+      "btc": 5.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-09-24",
+    "values": {
+      "crypto": 12.9,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 15.0,
+      "btc": 5.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-10-01",
+    "values": {
+      "crypto": 12.9,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 15.0,
+      "btc": 5.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 2.6,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-10-08",
+    "values": {
+      "crypto": 12.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 15.0,
+      "btc": 5.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 2.6,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-10-15",
+    "values": {
+      "crypto": 13.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 17.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-10-22",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 30.0,
+      "btc": 11.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-10-29",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 21.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-11-05",
+    "values": {
+      "crypto": 21.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 22.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2023-11-12",
+    "values": {
+      "crypto": 19.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-11-19",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 19.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-11-26",
+    "values": {
+      "crypto": 17.2,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 19.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2023-12-03",
+    "values": {
+      "crypto": 26.7,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 32.0,
+      "btc": 12.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 7.8,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2023-12-10",
+    "values": {
+      "crypto": 24.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 26.0,
+      "btc": 9.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-12-17",
+    "values": {
+      "crypto": 25.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 22.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-12-24",
+    "values": {
+      "crypto": 31.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 23.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2023-12-31",
+    "values": {
+      "crypto": 31.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 38.0,
+      "btc": 10.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2024-01-07",
+    "values": {
+      "crypto": 29.3,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 54.0,
+      "btc": 15.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 8.6,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2024-01-14",
+    "values": {
+      "crypto": 21.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 27.0,
+      "btc": 9.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-01-21",
+    "values": {
+      "crypto": 19.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 23.0,
+      "btc": 9.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-01-28",
+    "values": {
+      "crypto": 19.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 19.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-02-04",
+    "values": {
+      "crypto": 19.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 21.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-02-11",
+    "values": {
+      "crypto": 25.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 35.0,
+      "btc": 14.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2024-02-18",
+    "values": {
+      "crypto": 29.3,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 24.0,
+      "btc": 10.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2024-02-25",
+    "values": {
+      "crypto": 43.1,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 54.0,
+      "btc": 18.0,
+      "alt": 5.0,
+      "altcoin": 0.9,
+      "ethereum": 10.3,
+      "eth": 7.8
+    }
+  },
+  {
+    "date": "2024-03-03",
+    "values": {
+      "crypto": 54.3,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 63.0,
+      "btc": 21.0,
+      "alt": 5.0,
+      "altcoin": 0.9,
+      "ethereum": 12.9,
+      "eth": 8.6
+    }
+  },
+  {
+    "date": "2024-03-10",
+    "values": {
+      "crypto": 50.8,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 59.0,
+      "btc": 19.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 12.1,
+      "eth": 7.8
+    }
+  },
+  {
+    "date": "2024-03-17",
+    "values": {
+      "crypto": 43.1,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 44.0,
+      "btc": 16.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 9.5,
+      "eth": 6.9
+    }
+  },
+  {
+    "date": "2024-03-24",
+    "values": {
+      "crypto": 39.6,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 39.0,
+      "btc": 13.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2024-03-31",
+    "values": {
+      "crypto": 35.3,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 37.0,
+      "btc": 12.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2024-04-07",
+    "values": {
+      "crypto": 32.7,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 34.0,
+      "btc": 13.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2024-04-14",
+    "values": {
+      "crypto": 23.3,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 49.0,
+      "btc": 16.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2024-04-21",
+    "values": {
+      "crypto": 21.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 33.0,
+      "btc": 10.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-04-28",
+    "values": {
+      "crypto": 19.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 27.0,
+      "btc": 11.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-05-05",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 22.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-05-12",
+    "values": {
+      "crypto": 19.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 22.0,
+      "btc": 9.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-05-19",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 22.0,
+      "btc": 9.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 13.8,
+      "eth": 9.5
+    }
+  },
+  {
+    "date": "2024-05-26",
+    "values": {
+      "crypto": 19.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2024-06-02",
+    "values": {
+      "crypto": 20.7,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2024-06-09",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 19.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-06-16",
+    "values": {
+      "crypto": 17.2,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 18.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-06-23",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 22.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-06-30",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-07-07",
+    "values": {
+      "crypto": 13.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 18.0,
+      "btc": 7.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-07-14",
+    "values": {
+      "crypto": 17.2,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 23.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-07-21",
+    "values": {
+      "crypto": 17.2,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 19.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2024-07-28",
+    "values": {
+      "crypto": 14.6,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 21.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-08-04",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 40.0,
+      "btc": 14.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2024-08-11",
+    "values": {
+      "crypto": 14.6,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 8.0,
+      "alt": 4.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-08-18",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-08-25",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-09-01",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 19.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-09-08",
+    "values": {
+      "crypto": 14.6,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 19.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-09-15",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 19.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2024-09-22",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 19.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-09-29",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 2.6,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-10-06",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 18.0,
+      "btc": 7.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 1.7,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-10-13",
+    "values": {
+      "crypto": 17.2,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 19.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 2.6,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-10-20",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 7.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 2.6,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-10-27",
+    "values": {
+      "crypto": 19.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 24.0,
+      "btc": 10.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2024-11-03",
+    "values": {
+      "crypto": 25.9,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 55.0,
+      "btc": 16.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2024-11-10",
+    "values": {
+      "crypto": 50.8,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 88.0,
+      "btc": 31.0,
+      "alt": 6.0,
+      "altcoin": 0.9,
+      "ethereum": 10.3,
+      "eth": 6.9
+    }
+  },
+  {
+    "date": "2024-11-17",
+    "values": {
+      "crypto": 45.7,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 65.0,
+      "btc": 24.0,
+      "alt": 6.0,
+      "altcoin": 0.9,
+      "ethereum": 8.6,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2024-11-24",
+    "values": {
+      "crypto": 43.1,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 53.0,
+      "btc": 18.0,
+      "alt": 6.0,
+      "altcoin": 0.9,
+      "ethereum": 7.8,
+      "eth": 6.0
+    }
+  },
+  {
+    "date": "2024-12-01",
+    "values": {
+      "crypto": 54.3,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 57.0,
+      "btc": 18.0,
+      "alt": 6.0,
+      "altcoin": 0.9,
+      "ethereum": 9.5,
+      "eth": 6.9
+    }
+  },
+  {
+    "date": "2024-12-08",
+    "values": {
+      "crypto": 45.7,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 44.0,
+      "btc": 15.0,
+      "alt": 6.0,
+      "altcoin": 0.9,
+      "ethereum": 7.8,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2024-12-15",
+    "values": {
+      "crypto": 42.2,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 52.0,
+      "btc": 17.0,
+      "alt": 5.0,
+      "altcoin": 0.9,
+      "ethereum": 8.6,
+      "eth": 6.0
+    }
+  },
+  {
+    "date": "2024-12-22",
+    "values": {
+      "crypto": 31.0,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 42.0,
+      "btc": 14.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2024-12-29",
+    "values": {
+      "crypto": 32.7,
+      "cryptomonnaie": 4.0,
+      "bitcoin": 40.0,
+      "btc": 12.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2025-01-05",
+    "values": {
+      "crypto": 32.7,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 39.0,
+      "btc": 13.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2025-01-12",
+    "values": {
+      "crypto": 42.2,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 45.0,
+      "btc": 15.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2025-01-19",
+    "values": {
+      "crypto": 86.2,
+      "cryptomonnaie": 14.0,
+      "bitcoin": 62.0,
+      "btc": 18.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2025-01-26",
+    "values": {
+      "crypto": 41.4,
+      "cryptomonnaie": 6.0,
+      "bitcoin": 45.0,
+      "btc": 13.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2025-02-02",
+    "values": {
+      "crypto": 32.7,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 45.0,
+      "btc": 14.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 7.8,
+      "eth": 6.0
+    }
+  },
+  {
+    "date": "2025-02-09",
+    "values": {
+      "crypto": 23.3,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 29.0,
+      "btc": 10.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2025-02-16",
+    "values": {
+      "crypto": 25.0,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 29.0,
+      "btc": 9.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2025-02-23",
+    "values": {
+      "crypto": 26.7,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 54.0,
+      "btc": 16.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2025-03-02",
+    "values": {
+      "crypto": 26.7,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 55.0,
+      "btc": 17.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2025-03-09",
+    "values": {
+      "crypto": 19.8,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 46.0,
+      "btc": 14.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2025-03-16",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 31.0,
+      "btc": 11.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2025-03-23",
+    "values": {
+      "crypto": 17.2,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 28.0,
+      "btc": 9.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2025-03-30",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 33.0,
+      "btc": 11.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2025-04-06",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 52.0,
+      "btc": 16.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2025-04-13",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 27.0,
+      "btc": 10.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2025-04-20",
+    "values": {
+      "crypto": 17.2,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 28.0,
+      "btc": 11.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2025-04-27",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 23.0,
+      "btc": 9.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2025-05-04",
+    "values": {
+      "crypto": 22.4,
+      "cryptomonnaie": 5.0,
+      "bitcoin": 29.0,
+      "btc": 12.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2025-05-11",
+    "values": {
+      "crypto": 26.7,
+      "cryptomonnaie": 10.0,
+      "bitcoin": 29.0,
+      "btc": 11.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
+    }
+  },
+  {
+    "date": "2025-05-18",
+    "values": {
+      "crypto": 19.8,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 36.0,
+      "btc": 14.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2025-05-25",
+    "values": {
+      "crypto": 17.2,
+      "cryptomonnaie": 3.0,
+      "bitcoin": 26.0,
+      "btc": 10.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2025-06-01",
+    "values": {
+      "crypto": 16.4,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 22.0,
+      "btc": 9.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2025-06-08",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 23.0,
+      "btc": 10.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2025-06-15",
+    "values": {
+      "crypto": 13.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 9.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2025-06-22",
+    "values": {
+      "crypto": 13.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 22.0,
+      "btc": 9.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2025-06-29",
+    "values": {
+      "crypto": 13.8,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 20.0,
+      "btc": 8.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
+    }
+  },
+  {
+    "date": "2025-07-06",
+    "values": {
+      "crypto": 15.5,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 28.0,
+      "btc": 12.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
+    }
+  },
+  {
+    "date": "2025-07-13",
+    "values": {
+      "crypto": 20.7,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 39.0,
+      "btc": 15.0,
+      "alt": 6.0,
+      "altcoin": 0.9,
+      "ethereum": 8.6,
+      "eth": 6.0
+    }
+  },
+  {
+    "date": "2025-07-20",
+    "values": {
+      "crypto": 19.8,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 26.0,
+      "btc": 11.0,
+      "alt": 6.0,
+      "altcoin": 0.9,
+      "ethereum": 8.6,
+      "eth": 6.0
+    }
+  },
+  {
+    "date": "2025-07-27",
+    "values": {
+      "crypto": 19.0,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 27.0,
+      "btc": 10.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 7.8,
+      "eth": 5.2
+    }
+  },
+  {
+    "date": "2025-08-03",
+    "values": {
+      "crypto": 18.1,
+      "cryptomonnaie": 1.0,
+      "bitcoin": 26.0,
+      "btc": 10.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 7.8,
+      "eth": 5.2
     }
   },
   {
     "date": "2025-08-10",
     "values": {
-      "crypto": 20.0,
-      "cryptomonnaie": 1.0,
-      "bitcoin": 30.0,
-      "btc": 11.0,
-      "alt": 5.0
+      "crypto": 20.7,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 29.0,
+      "btc": 12.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 12.1,
+      "eth": 9.5
     }
   },
   {
     "date": "2025-08-17",
     "values": {
-      "crypto": 17.0,
+      "crypto": 18.1,
       "cryptomonnaie": 1.0,
       "bitcoin": 25.0,
-      "btc": 9.0,
-      "alt": 5.0
+      "btc": 10.0,
+      "alt": 5.0,
+      "altcoin": 0.0,
+      "ethereum": 9.5,
+      "eth": 6.9
     }
   },
   {
     "date": "2025-08-24",
     "values": {
-      "crypto": 19.0,
+      "crypto": 20.7,
       "cryptomonnaie": 1.0,
-      "bitcoin": 25.0,
-      "btc": 10.0,
-      "alt": 6.0
+      "bitcoin": 27.0,
+      "btc": 11.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 8.6,
+      "eth": 6.9
     }
   },
   {
     "date": "2025-08-31",
     "values": {
-      "crypto": 17.0,
-      "cryptomonnaie": 1.0,
-      "bitcoin": 21.0,
-      "btc": 8.0,
-      "alt": 6.0
+      "crypto": 15.5,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 23.0,
+      "btc": 9.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
     }
   },
   {
     "date": "2025-09-07",
     "values": {
-      "crypto": 16.0,
+      "crypto": 16.4,
       "cryptomonnaie": 1.0,
       "bitcoin": 21.0,
       "btc": 8.0,
-      "alt": 6.0
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
     }
   },
   {
     "date": "2025-09-14",
     "values": {
-      "crypto": 17.0,
+      "crypto": 18.1,
       "cryptomonnaie": 1.0,
       "bitcoin": 21.0,
       "btc": 8.0,
-      "alt": 6.0
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 4.3
     }
   },
   {
     "date": "2025-09-21",
     "values": {
-      "crypto": 17.0,
+      "crypto": 19.0,
       "cryptomonnaie": 1.0,
-      "bitcoin": 21.0,
+      "bitcoin": 20.0,
       "btc": 8.0,
-      "alt": 5.0
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 4.3
     }
   },
   {
     "date": "2025-09-28",
     "values": {
-      "crypto": 18.0,
+      "crypto": 17.2,
       "cryptomonnaie": 1.0,
       "bitcoin": 23.0,
       "btc": 10.0,
-      "alt": 6.0
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 4.3
     }
   },
   {
     "date": "2025-10-05",
     "values": {
-      "crypto": 21.0,
+      "crypto": 22.4,
       "cryptomonnaie": 2.0,
-      "bitcoin": 38.0,
-      "btc": 14.0,
-      "alt": 6.0
+      "bitcoin": 41.0,
+      "btc": 15.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 5.2
     }
   },
   {
     "date": "2025-10-12",
     "values": {
-      "crypto": 19.0,
+      "crypto": 19.8,
       "cryptomonnaie": 2.0,
-      "bitcoin": 42.0,
-      "btc": 15.0,
-      "alt": 6.0
+      "bitcoin": 45.0,
+      "btc": 16.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 4.3
     }
   },
   {
     "date": "2025-10-19",
     "values": {
-      "crypto": 15.0,
+      "crypto": 15.5,
       "cryptomonnaie": 1.0,
-      "bitcoin": 25.0,
-      "btc": 11.0,
-      "alt": 6.0
+      "bitcoin": 27.0,
+      "btc": 12.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
     }
   },
   {
     "date": "2025-10-26",
     "values": {
-      "crypto": 18.0,
+      "crypto": 19.0,
       "cryptomonnaie": 1.0,
       "bitcoin": 30.0,
       "btc": 11.0,
-      "alt": 6.0
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
     }
   },
   {
     "date": "2025-11-02",
     "values": {
-      "crypto": 27.0,
+      "crypto": 29.3,
       "cryptomonnaie": 1.0,
-      "bitcoin": 43.0,
+      "bitcoin": 45.0,
       "btc": 16.0,
-      "alt": 7.0
+      "alt": 7.0,
+      "altcoin": 0.9,
+      "ethereum": 7.8,
+      "eth": 5.2
     }
   },
   {
     "date": "2025-11-09",
     "values": {
-      "crypto": 22.0,
+      "crypto": 23.3,
       "cryptomonnaie": 1.0,
-      "bitcoin": 42.0,
+      "bitcoin": 44.0,
       "btc": 15.0,
-      "alt": 7.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 7.8,
+      "eth": 4.3
     }
   },
   {
     "date": "2025-11-16",
     "values": {
-      "crypto": 25.0,
+      "crypto": 25.9,
       "cryptomonnaie": 1.0,
-      "bitcoin": 70.0,
-      "btc": 21.0,
-      "alt": 7.0
+      "bitcoin": 74.0,
+      "btc": 22.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 9.5,
+      "eth": 5.2
     }
   },
   {
     "date": "2025-11-23",
     "values": {
-      "crypto": 23.0,
+      "crypto": 23.3,
       "cryptomonnaie": 1.0,
-      "bitcoin": 58.0,
-      "btc": 16.0,
-      "alt": 7.0
+      "bitcoin": 61.0,
+      "btc": 19.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 7.8,
+      "eth": 4.3
     }
   },
   {
     "date": "2025-11-30",
     "values": {
-      "crypto": 30.0,
+      "crypto": 31.0,
       "cryptomonnaie": 1.0,
-      "bitcoin": 51.0,
-      "btc": 19.0,
-      "alt": 7.0
+      "bitcoin": 53.0,
+      "btc": 18.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 8.6,
+      "eth": 4.3
     }
   },
   {
     "date": "2025-12-07",
     "values": {
-      "crypto": 25.0,
+      "crypto": 25.9,
       "cryptomonnaie": 1.0,
-      "bitcoin": 39.0,
-      "btc": 13.0,
-      "alt": 6.0
+      "bitcoin": 42.0,
+      "btc": 14.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 4.3
     }
   },
   {
     "date": "2025-12-14",
     "values": {
-      "crypto": 24.0,
+      "crypto": 23.3,
       "cryptomonnaie": 1.0,
-      "bitcoin": 40.0,
-      "btc": 14.0,
-      "alt": 7.0
+      "bitcoin": 41.0,
+      "btc": 15.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 6.9,
+      "eth": 4.3
     }
   },
   {
     "date": "2025-12-21",
     "values": {
-      "crypto": 22.0,
+      "crypto": 23.3,
       "cryptomonnaie": 1.0,
-      "bitcoin": 32.0,
-      "btc": 12.0,
-      "alt": 6.0
+      "bitcoin": 38.0,
+      "btc": 13.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
     }
   },
   {
     "date": "2025-12-28",
     "values": {
-      "crypto": 20.0,
+      "crypto": 21.5,
       "cryptomonnaie": 1.0,
       "bitcoin": 33.0,
       "btc": 11.0,
-      "alt": 6.0
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
     }
   },
   {
     "date": "2026-01-04",
     "values": {
-      "crypto": 19.0,
+      "crypto": 18.1,
       "cryptomonnaie": 1.0,
-      "bitcoin": 29.0,
+      "bitcoin": 31.0,
       "btc": 12.0,
-      "alt": 6.0
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
     }
   },
   {
     "date": "2026-01-11",
     "values": {
-      "crypto": 20.0,
+      "crypto": 19.8,
       "cryptomonnaie": 1.0,
-      "bitcoin": 29.0,
+      "bitcoin": 28.0,
       "btc": 12.0,
-      "alt": 6.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
     }
   },
   {
     "date": "2026-01-18",
     "values": {
-      "crypto": 18.0,
+      "crypto": 19.8,
       "cryptomonnaie": 1.0,
       "bitcoin": 32.0,
-      "btc": 11.0,
-      "alt": 7.0
+      "btc": 12.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 4.3
     }
   },
   {
     "date": "2026-01-25",
     "values": {
-      "crypto": 19.0,
+      "crypto": 20.7,
       "cryptomonnaie": 2.0,
-      "bitcoin": 42.0,
-      "btc": 14.0,
-      "alt": 7.0
+      "bitcoin": 43.0,
+      "btc": 15.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
     }
   },
   {
     "date": "2026-02-01",
     "values": {
-      "crypto": 24.0,
+      "crypto": 24.1,
       "cryptomonnaie": 3.0,
       "bitcoin": 100.0,
-      "btc": 30.0,
-      "alt": 8.0
+      "btc": 31.0,
+      "alt": 8.0,
+      "altcoin": 0.0,
+      "ethereum": 10.3,
+      "eth": 6.0
     }
   },
   {
     "date": "2026-02-08",
     "values": {
-      "crypto": 19.0,
-      "cryptomonnaie": 1.0,
-      "bitcoin": 69.0,
-      "btc": 20.0,
-      "alt": 8.0
+      "crypto": 20.7,
+      "cryptomonnaie": 2.0,
+      "bitcoin": 71.0,
+      "btc": 21.0,
+      "alt": 8.0,
+      "altcoin": 0.0,
+      "ethereum": 7.8,
+      "eth": 4.3
     }
   },
   {
     "date": "2026-02-15",
     "values": {
-      "crypto": 18.0,
+      "crypto": 16.4,
       "cryptomonnaie": 1.0,
-      "bitcoin": 51.0,
-      "btc": 15.0,
-      "alt": 7.0
+      "bitcoin": 50.0,
+      "btc": 17.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
     }
   },
   {
     "date": "2026-02-22",
     "values": {
-      "crypto": 18.0,
+      "crypto": 18.1,
       "cryptomonnaie": 1.0,
       "bitcoin": 52.0,
-      "btc": 16.0,
-      "alt": 7.0
+      "btc": 18.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
     }
   },
   {
     "date": "2026-03-01",
     "values": {
-      "crypto": 17.0,
+      "crypto": 18.1,
       "cryptomonnaie": 1.0,
-      "bitcoin": 54.0,
+      "bitcoin": 56.0,
       "btc": 18.0,
-      "alt": 6.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 4.3
     }
   },
   {
     "date": "2026-03-08",
     "values": {
-      "crypto": 19.0,
+      "crypto": 18.1,
       "cryptomonnaie": 1.0,
-      "bitcoin": 44.0,
+      "bitcoin": 42.0,
       "btc": 15.0,
-      "alt": 7.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
     }
   },
   {
     "date": "2026-03-15",
     "values": {
-      "crypto": 17.0,
+      "crypto": 19.8,
       "cryptomonnaie": 1.0,
-      "bitcoin": 37.0,
+      "bitcoin": 40.0,
       "btc": 13.0,
-      "alt": 7.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
     }
   },
   {
     "date": "2026-03-22",
     "values": {
-      "crypto": 17.0,
+      "crypto": 18.1,
       "cryptomonnaie": 1.0,
       "bitcoin": 35.0,
       "btc": 12.0,
-      "alt": 7.0
+      "alt": 8.0,
+      "altcoin": 0.0,
+      "ethereum": 5.2,
+      "eth": 3.4
     }
   },
   {
     "date": "2026-03-29",
     "values": {
-      "crypto": 19.0,
+      "crypto": 19.8,
       "cryptomonnaie": 1.0,
-      "bitcoin": 36.0,
-      "btc": 11.0,
-      "alt": 8.0
+      "bitcoin": 35.0,
+      "btc": 12.0,
+      "alt": 8.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
     }
   },
   {
     "date": "2026-04-05",
     "values": {
-      "crypto": 18.0,
+      "crypto": 16.4,
       "cryptomonnaie": 1.0,
-      "bitcoin": 31.0,
-      "btc": 11.0,
-      "alt": 7.0
+      "bitcoin": 32.0,
+      "btc": 12.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-04-12",
     "values": {
-      "crypto": 18.0,
+      "crypto": 19.8,
       "cryptomonnaie": 4.0,
-      "bitcoin": 31.0,
+      "bitcoin": 33.0,
       "btc": 12.0,
-      "alt": 7.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 6.0,
+      "eth": 3.4
     }
   },
   {
     "date": "2026-04-19",
     "values": {
-      "crypto": 18.0,
+      "crypto": 19.0,
       "cryptomonnaie": 2.0,
-      "bitcoin": 28.0,
+      "bitcoin": 30.0,
       "btc": 11.0,
-      "alt": 6.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-04-26",
     "values": {
-      "crypto": 17.0,
+      "crypto": 17.2,
       "cryptomonnaie": 1.0,
-      "bitcoin": 24.0,
+      "bitcoin": 23.0,
       "btc": 9.0,
-      "alt": 6.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-05-03",
     "values": {
-      "crypto": 25.0,
+      "crypto": 27.6,
       "cryptomonnaie": 1.0,
-      "bitcoin": 33.0,
-      "btc": 10.0,
-      "alt": 6.0
+      "bitcoin": 34.0,
+      "btc": 11.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-05-10",
     "values": {
-      "crypto": 26.0,
+      "crypto": 25.0,
       "cryptomonnaie": 2.0,
       "bitcoin": 36.0,
       "btc": 10.0,
-      "alt": 6.0
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-05-17",
     "values": {
-      "crypto": 19.0,
+      "crypto": 19.8,
       "cryptomonnaie": 2.0,
-      "bitcoin": 23.0,
+      "bitcoin": 24.0,
       "btc": 9.0,
-      "alt": 7.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-05-24",
     "values": {
-      "crypto": 16.0,
+      "crypto": 16.4,
       "cryptomonnaie": 2.0,
       "bitcoin": 22.0,
       "btc": 9.0,
-      "alt": 7.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-05-31",
     "values": {
-      "crypto": 17.0,
+      "crypto": 19.0,
       "cryptomonnaie": 2.0,
-      "bitcoin": 35.0,
+      "bitcoin": 37.0,
       "btc": 14.0,
-      "alt": 7.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 3.4
     }
   },
   {
     "date": "2026-06-07",
     "values": {
-      "crypto": 22.0,
+      "crypto": 21.5,
       "cryptomonnaie": 1.0,
       "bitcoin": 29.0,
       "btc": 12.0,
-      "alt": 6.0
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 4.3,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-06-14",
     "values": {
-      "crypto": 18.0,
+      "crypto": 19.8,
       "cryptomonnaie": 1.0,
-      "bitcoin": 23.0,
-      "btc": 9.0,
-      "alt": 6.0
+      "bitcoin": 27.0,
+      "btc": 10.0,
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-06-21",
     "values": {
-      "crypto": 22.0,
+      "crypto": 25.0,
       "cryptomonnaie": 1.0,
-      "bitcoin": 24.0,
+      "bitcoin": 22.0,
       "btc": 11.0,
-      "alt": 6.0
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-06-28",
     "values": {
-      "crypto": 16.0,
+      "crypto": 18.1,
       "cryptomonnaie": 1.0,
-      "bitcoin": 23.0,
+      "bitcoin": 22.0,
       "btc": 10.0,
-      "alt": 6.0
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-07-05",
     "values": {
-      "crypto": 16.0,
+      "crypto": 16.4,
       "cryptomonnaie": 1.0,
-      "bitcoin": 20.0,
+      "bitcoin": 22.0,
       "btc": 8.0,
-      "alt": 6.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-07-12",
     "values": {
-      "crypto": 14.0,
+      "crypto": 14.6,
       "cryptomonnaie": 0.0,
-      "bitcoin": 19.0,
+      "bitcoin": 20.0,
       "btc": 7.0,
-      "alt": 6.0
+      "alt": 6.0,
+      "altcoin": 0.0,
+      "ethereum": 3.4,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-07-19",
     "values": {
-      "crypto": 14.0,
+      "crypto": 14.6,
       "cryptomonnaie": 0.0,
-      "bitcoin": 18.0,
+      "bitcoin": 19.0,
       "btc": 7.0,
-      "alt": 6.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 2.6,
+      "eth": 2.6
     }
   },
   {
     "date": "2026-07-26",
     "values": {
-      "crypto": 13.0,
+      "crypto": 13.8,
       "cryptomonnaie": 1.0,
-      "bitcoin": 17.0,
-      "btc": 6.0,
-      "alt": 6.0
+      "bitcoin": 19.0,
+      "btc": 7.0,
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 2.6,
+      "eth": 1.7
     }
   },
   {
     "date": "2026-08-02",
     "values": {
-      "crypto": 13.0,
+      "crypto": 13.8,
       "cryptomonnaie": 2.0,
-      "bitcoin": 20.0,
+      "bitcoin": 21.0,
       "btc": 8.0,
-      "alt": 6.0
+      "alt": 7.0,
+      "altcoin": 0.0,
+      "ethereum": 2.6,
+      "eth": 2.6
     }
   },
   {
