@@ -33,6 +33,10 @@ jobs:
         run: python scripts/fetch_feargreed.py
         continue-on-error: true
 
+      - name: Récupérer les actualités crypto (RSS)
+        run: python scripts/fetch_news.py
+        continue-on-error: true
+
       - name: Récupérer les tendances de recherche (Google Trends)
         run: python scripts/fetch_trends.py
         continue-on-error: true
