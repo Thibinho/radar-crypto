@@ -102,9 +102,24 @@
   .news-item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;white-space:nowrap;padding:0 28px;border-right:1px solid var(--line);color:var(--text);text-decoration:none;}
   .news-item:hover{color:var(--amber);}
   .news-item .tag.news{background:#241a3a;color:#B8A6F0;}
+
+  /* --- Widget Fear & Greed fixe --- */
+  #fng-widget{position:fixed;left:18px;bottom:18px;z-index:50;display:none;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px 16px;box-shadow:0 6px 20px rgba(0,0,0,.45);}
+  #fng-widget.show{display:flex;}
+  #fng-widget .fng-emoji{font-size:24px;line-height:1;}
+  #fng-widget .fng-text{display:flex;flex-direction:column;line-height:1.2;}
+  #fng-widget .fng-value{font-family:var(--mono);font-size:18px;font-weight:700;color:var(--amber);}
+  #fng-widget .fng-label{font-family:var(--mono);font-size:9.5px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em;}
 </style>
 </head>
 <body>
+<div id="fng-widget">
+  <span class="fng-emoji" id="fng-emoji">📊</span>
+  <div class="fng-text">
+    <span class="fng-value" id="fng-value">--</span>
+    <span class="fng-label" id="fng-label">Fear &amp; Greed</span>
+  </div>
+</div>
 <div class="app">
   <div id="alert-banner" class="ticker"><div class="track" id="alert-track"></div></div>
   <div id="news-banner" class="ticker"><div class="track" id="news-track"></div></div>
@@ -546,17 +561,9 @@ function fngLabelFr(classification){
 }
 
 async function initAlertBanner(){
-  const [alerts, feargreed] = await Promise.all([
-    loadJsonSafe('data/alerts.json'),
-    loadJsonSafe('data/feargreed.json')
-  ]);
+  const alerts = await loadJsonSafe('data/alerts.json');
 
   const items = [];
-
-  if(feargreed && feargreed.length){
-    const latest = feargreed[feargreed.length-1];
-    items.push(`<div class="alert-item"><span class="tag fng">Fear &amp; Greed</span>${fngEmoji(latest.classification)} ${latest.value} — ${fngLabelFr(latest.classification)}</div>`);
-  }
 
   if(alerts && alerts.movers){
     alerts.movers.forEach(m=>{
@@ -581,6 +588,20 @@ async function initAlertBanner(){
   // dupliqué pour un défilement continu sans coupure
   track.innerHTML = items.join('') + items.join('');
   banner.classList.add('show');
+}
+
+async function initFngWidget(){
+  const feargreed = await loadJsonSafe('data/feargreed.json');
+  const widget = document.getElementById('fng-widget');
+  if(!feargreed || !feargreed.length){
+    widget.classList.remove('show');
+    return;
+  }
+  const latest = feargreed[feargreed.length-1];
+  document.getElementById('fng-emoji').textContent = fngEmoji(latest.classification);
+  document.getElementById('fng-value').textContent = latest.value;
+  document.getElementById('fng-label').textContent = `Fear & Greed · ${fngLabelFr(latest.classification)}`;
+  widget.classList.add('show');
 }
 
 function escapeHtml(str){
@@ -611,6 +632,7 @@ async function initNewsBanner(){
   refreshTrends();
   initAlertBanner();
   initNewsBanner();
+  initFngWidget();
 })();
 </script>
 </body>
