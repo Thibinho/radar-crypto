@@ -1,0 +1,36 @@
+name: Rattrapage historique (backfill)
+
+on:
+  workflow_dispatch: {}   # se lance uniquement à la main depuis l'onglet Actions
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Rattraper l'historique des narratifs (CoinGecko)
+        run: python scripts/backfill_narratives.py
+
+      - name: Rattraper l'historique Google Trends
+        run: python scripts/backfill_trends.py
+        continue-on-error: true
+
+      - name: Commit et push
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add data/*.json
+          git diff --quiet --cached || git commit -m "Rattrapage historique"
+          git push
