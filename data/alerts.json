@@ -1,0 +1,96 @@
+{
+  "generated_at": "2026-08-07T19:50:07.239675+00:00",
+  "movers": [
+    {
+      "name": "SocialFi",
+      "change_pct": 118.4,
+      "direction": "up",
+      "market_cap": 2009913595.58
+    },
+    {
+      "name": "Layer 2",
+      "change_pct": 104.1,
+      "direction": "up",
+      "market_cap": 7354529494.63
+    },
+    {
+      "name": "Meme",
+      "change_pct": 102.9,
+      "direction": "up",
+      "market_cap": 31039850516.88
+    },
+    {
+      "name": "DePIN",
+      "change_pct": 100.7,
+      "direction": "up",
+      "market_cap": 7247518578.59
+    },
+    {
+      "name": "Restaking",
+      "change_pct": 100.6,
+      "direction": "up",
+      "market_cap": 1537355214.74
+    },
+    {
+      "name": "Bitcoin",
+      "change_pct": 100.1,
+      "direction": "up",
+      "market_cap": 5340630356.02
+    },
+    {
+      "name": "Stablecoins",
+      "change_pct": 100.0,
+      "direction": "up",
+      "market_cap": 1010015648866.12
+    },
+    {
+      "name": "Liquid Staking",
+      "change_pct": 99.9,
+      "direction": "up",
+      "market_cap": 2070764855.01
+    },
+    {
+      "name": "Layer 1",
+      "change_pct": 99.7,
+      "direction": "up",
+      "market_cap": 3709411415157.44
+    },
+    {
+      "name": "Privacy",
+      "change_pct": 97.6,
+      "direction": "up",
+      "market_cap": 62356910466.23
+    },
+    {
+      "name": "Metaverse",
+      "change_pct": 97.4,
+      "direction": "up",
+      "market_cap": 1809109892.9
+    },
+    {
+      "name": "DeFi",
+      "change_pct": 96.7,
+      "direction": "up",
+      "market_cap": 61302053555.62
+    },
+    {
+      "name": "IA",
+      "change_pct": 92.5,
+      "direction": "up",
+      "market_cap": 23171504110.92
+    },
+    {
+      "name": "RWA",
+      "change_pct": 85.9,
+      "direction": "up",
+      "market_cap": 71707562061.84
+    },
+    {
+      "name": "GameFi",
+      "change_pct": 71.5,
+      "direction": "up",
+      "market_cap": 6836145912.82
+    }
+  ],
+  "emerging": []
+}
