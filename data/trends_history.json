@@ -3408,14 +3408,14 @@
   {
     "date": "2026-08-07",
     "values": {
-      "crypto": 13.0,
+      "crypto": 14.0,
       "cryptomonnaie": 0.0,
-      "bitcoin": 19.0,
+      "bitcoin": 18.0,
       "btc": 6.0,
-      "alt": 9.0,
+      "alt": 8.0,
       "altcoin": 0.0,
-      "ethereum": 1.9,
-      "eth": 1.9
+      "ethereum": 2.0,
+      "eth": 2.0
     }
   }
 ]
