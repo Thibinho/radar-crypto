@@ -1,25 +1,27 @@
 #!/usr/bin/env python3
 """
 Reconstitue un historique de capitalisation par narratif en additionnant
-l'historique de marché des cryptos qui composent chaque catégorie CoinGecko.
+l'historique de marché des cryptos qui composent chaque catégorie CoinGecko,
+puis recalibre le résultat sur la vraie capitalisation totale du jour
+(gratuite, déjà présente dans /coins/categories) pour limiter l'écart dû au
+fait qu'on ne regarde que les N plus grosses cryptos de chaque catégorie.
 
-L'API gratuite de CoinGecko ne fournit pas d'historique de capitalisation
-PAR CATÉGORIE directement — seulement par crypto individuelle
-(/coins/{id}/market_chart). On reconstruit donc l'historique d'un narratif
-en sommant, jour par jour, la capitalisation des N plus grosses cryptos de
-la catégorie correspondante.
-
-⚠️ C'est une approximation : seules les N plus grosses cryptos de chaque
-catégorie sont prises en compte (voir backfill_coins_per_narrative dans
-config.json), pas la totalité. Pour la plupart des narratifs, les plus
-grosses cryptos représentent l'essentiel de la capitalisation, donc l'écart
-reste généralement faible.
+Améliorations vs version précédente :
+- Agrège TOUTES les catégories CoinGecko qui matchent un narratif (pas
+  seulement la première), en dédupliquant les cryptos communes.
+- Recalibre chaque narratif sur sa vraie capitalisation totale actuelle
+  (somme des market_cap réels des catégories matchées) — gratuit, aucun
+  appel API supplémentaire, juste plus précis.
+- Support optionnel d'une clé API CoinGecko "Demo" (gratuite) via la
+  variable d'environnement COINGECKO_API_KEY, pour des limites de requêtes
+  plus généreuses.
 
 À lancer une seule fois (ou occasionnellement) pour peupler l'historique
 passé. La mise à jour quotidienne normale (fetch_narratives.py) prend le
 relais ensuite pour le jour présent uniquement.
 """
 import json
+import os
 import sys
 import time
 from datetime import datetime, timezone
@@ -31,7 +33,8 @@ ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "config.json"
 HISTORY_PATH = ROOT / "data" / "narratives_history.json"
 BASE = "https://api.coingecko.com/api/v3"
-SLEEP_BETWEEN_CALLS = 1.6  # respecte le rate-limit gratuit de CoinGecko
+API_KEY = os.environ.get("COINGECKO_API_KEY", "").strip()
+SLEEP_BETWEEN_CALLS = 0.8 if API_KEY else 1.6  # la clé Demo autorise un rythme plus rapide
 
 
 def api_get(path, params=None, retries=3):
@@ -39,7 +42,10 @@ def api_get(path, params=None, retries=3):
     if params:
         qs = "?" + "&".join(f"{k}={v}" for k, v in params.items())
     url = BASE + path + qs
-    req = urllib.request.Request(url, headers={"User-Agent": "radar-crypto/1.0"})
+    headers = {"User-Agent": "radar-crypto/1.0"}
+    if API_KEY:
+        headers["x-cg-demo-api-key"] = API_KEY
+    req = urllib.request.Request(url, headers=headers)
     for attempt in range(1, retries + 1):
         try:
             with urllib.request.urlopen(req, timeout=30) as resp:
@@ -58,14 +64,15 @@ def api_get(path, params=None, retries=3):
     return None
 
 
-def match_category_ids(all_categories, keywords):
+def match_categories(all_categories, keywords):
+    """Retourne TOUTES les catégories qui matchent (pas juste la première)."""
     matches = []
     for cat in all_categories:
         name = (cat.get("name") or "").lower()
         cid = (cat.get("id") or "").lower()
         for kw in keywords:
             if kw.lower() in name or kw.lower() in cid:
-                matches.append(cat["id"])
+                matches.append(cat)
                 break
     return matches
 
@@ -74,7 +81,12 @@ def main():
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     narratives = config["narratives"]
     days = config.get("backfill_days", 180)
-    coins_per_narrative = config.get("backfill_coins_per_narrative", 15)
+    coins_per_category = config.get("backfill_coins_per_narrative", 15)
+
+    if API_KEY:
+        print("Clé API CoinGecko détectée — rythme accéléré.")
+    else:
+        print("Pas de clé API — rythme prudent (ajoutez COINGECKO_API_KEY pour accélérer).")
 
     print("Récupération de la liste des catégories CoinGecko…")
     all_categories = api_get("/coins/categories")
@@ -91,20 +103,33 @@ def main():
 
     for n in narratives:
         name = n["name"]
-        cat_ids = match_category_ids(all_categories, n["keywords"])
-        if not cat_ids:
+        matched_cats = match_categories(all_categories, n["keywords"])
+        if not matched_cats:
             print(f"[{name}] aucune catégorie trouvée, ignoré.")
             continue
-        cat_id = cat_ids[0]  # la catégorie la plus pertinente (premier match)
-        print(f"[{name}] catégorie CoinGecko: {cat_id}")
 
-        coins = api_get("/coins/markets", {
-            "vs_currency": "usd", "category": cat_id,
-            "order": "market_cap_desc", "per_page": coins_per_narrative, "page": 1
-        })
-        time.sleep(SLEEP_BETWEEN_CALLS)
+        cat_ids = [c["id"] for c in matched_cats]
+        actual_total_today = sum(c.get("market_cap") or 0 for c in matched_cats)
+        print(f"[{name}] {len(cat_ids)} catégorie(s) CoinGecko: {', '.join(cat_ids)} (cap. réelle: ${actual_total_today:,.0f})")
+
+        # Récupère les top coins de chaque catégorie matchée, dédupliqués
+        seen_coin_ids = set()
+        coins = []
+        for cat_id in cat_ids:
+            batch = api_get("/coins/markets", {
+                "vs_currency": "usd", "category": cat_id,
+                "order": "market_cap_desc", "per_page": coins_per_category, "page": 1
+            })
+            time.sleep(SLEEP_BETWEEN_CALLS)
+            if not batch:
+                continue
+            for coin in batch:
+                if coin["id"] not in seen_coin_ids:
+                    seen_coin_ids.add(coin["id"])
+                    coins.append(coin)
+
         if not coins:
-            print(f"[{name}] aucune crypto trouvée dans la catégorie, ignoré.")
+            print(f"[{name}] aucune crypto trouvée, ignoré.")
             continue
 
         per_date_sum = {}
@@ -120,9 +145,18 @@ def main():
                 date = datetime.fromtimestamp(ts_ms / 1000, tz=timezone.utc).date().isoformat()
                 per_date_sum[date] = per_date_sum.get(date, 0) + cap
 
-        print(f"[{name}] {len(per_date_sum)} jours récupérés sur {len(coins)} cryptos.")
+        if not per_date_sum:
+            print(f"[{name}] aucune donnée historique récupérée, ignoré.")
+            continue
+
+        # Recalibrage sur la vraie capitalisation totale du jour (gratuit, précis)
+        most_recent_date = max(per_date_sum.keys())
+        approx_today = per_date_sum[most_recent_date]
+        scale = (actual_total_today / approx_today) if approx_today > 0 else 1.0
+
+        print(f"[{name}] {len(per_date_sum)} jours · {len(coins)} cryptos · calibrage x{scale:.2f}")
         for date, total in per_date_sum.items():
-            history_by_date.setdefault(date, {})[name] = round(total, 2)
+            history_by_date.setdefault(date, {})[name] = round(total * scale, 2)
 
     new_history = [{"date": d, "values": v} for d, v in history_by_date.items()]
     new_history.sort(key=lambda h: h["date"])
