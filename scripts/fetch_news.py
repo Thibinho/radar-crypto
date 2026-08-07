@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
 Récupère les dernières actualités crypto via des flux RSS publics et
-gratuits (CoinDesk, Cointelegraph — aucune clé API nécessaire) et écrit
-data/news.json avec les articles les plus récents.
+gratuits (CoinDesk, Cointelegraph, Journal du Coin, Cryptoast — aucune
+clé API nécessaire) et écrit data/news.json avec les articles les plus
+récents.
 """
 import json
 import sys
@@ -19,9 +20,11 @@ OUT_PATH = ROOT / "data" / "news.json"
 FEEDS = [
     ("CoinDesk", "https://www.coindesk.com/arc/outboundfeeds/rss/"),
     ("Cointelegraph", "https://cointelegraph.com/rss"),
+    ("Journal du Coin", "https://journalducoin.com/feed/"),
+    ("Cryptoast", "https://cryptoast.fr/feed/"),
 ]
 
-MAX_ITEMS = 12
+MAX_ITEMS = 16
 
 
 def fetch_feed(name, url):
