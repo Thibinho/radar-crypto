@@ -22,6 +22,8 @@ jobs:
 
       - name: Rattraper l'historique des narratifs (CoinGecko)
         run: python scripts/backfill_narratives.py
+        env:
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
 
       - name: Rattraper l'historique Google Trends
         run: python scripts/backfill_trends.py
