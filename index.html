@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar — Narratifs & Tendances Crypto</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<style>
+  :root{
+    --ink:#0B0E14; --panel:#11151D; --panel-2:#161B25; --line:#232A38;
+    --text:#E9EDF3; --text-dim:#8B95A7; --amber:#E8A33D; --cyan:#4FD1C5; --red:#E8615C;
+    --mono:'IBM Plex Mono','JetBrains Mono',ui-monospace,monospace;
+    --grot:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--ink);color:var(--text);font-family:var(--grot);}
+  .app{max-width:1280px;margin:0 auto;padding:28px 24px 80px;}
+  header.top{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px;flex-wrap:wrap;gap:12px;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand .mark{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--ink);background:var(--amber);padding:3px 7px;border-radius:3px;font-weight:600;}
+  .brand h1{font-size:19px;margin:0;font-weight:700;}
+  .brand .sub{font-family:var(--mono);font-size:11.5px;color:var(--text-dim);}
+  nav.tabs{display:flex;gap:2px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:3px;}
+  nav.tabs button{font-family:var(--mono);font-size:12px;color:var(--text-dim);background:transparent;border:none;padding:9px 16px;border-radius:6px;cursor:pointer;}
+  nav.tabs button.active{background:var(--panel-2);color:var(--text);box-shadow:inset 0 0 0 1px var(--line);}
+  .page{display:none;} .page.active{display:block;}
+  .grid{display:grid;grid-template-columns:280px 1fr;gap:20px;}
+  @media (max-width:860px){.grid{grid-template-columns:1fr;}}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;}
+  .panel h2{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin:0 0 14px;font-family:var(--mono);font-weight:500;}
+  .list{max-height:380px;overflow-y:auto;display:flex;flex-direction:column;gap:1px;}
+  .row-check{display:flex;align-items:center;gap:9px;padding:7px 8px;border-radius:6px;cursor:pointer;font-size:13px;}
+  .row-check:hover{background:var(--panel-2);}
+  .row-check input{accent-color:var(--amber);width:14px;height:14px;}
+  .row-check .swatch{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+  .row-check .name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .row-check .cap{font-family:var(--mono);font-size:11px;color:var(--text-dim);}
+  .btn{font-family:var(--mono);font-size:11.5px;color:var(--text);background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:8px 12px;cursor:pointer;}
+  .btn:hover{border-color:var(--amber);color:var(--amber);}
+  .btn.primary{background:var(--amber);color:#1a1305;border-color:var(--amber);font-weight:600;}
+  .btn.small{padding:5px 9px;font-size:11px;}
+  .toolbar{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+  .chart-wrap{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 18px 12px;height:460px;}
+  .chart-wrap canvas{max-height:100%;}
+  .meta-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px;}
+  .status{font-family:var(--mono);font-size:11px;color:var(--text-dim);}
+  .status.err{color:var(--red);} .status.ok{color:var(--cyan);}
+  .note{font-size:12.5px;color:var(--text-dim);line-height:1.55;background:var(--panel-2);border:1px solid var(--line);border-left:2px solid var(--amber);border-radius:6px;padding:12px 14px;margin-top:16px;}
+  .note b{color:var(--text);} .note.cyan{border-left-color:var(--cyan);}
+  dialog{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:20px;max-width:420px;width:92%;}
+  dialog::backdrop{background:rgba(0,0,0,.6);}
+  dialog h3{margin:0 0 14px;font-size:14px;font-family:var(--mono);text-transform:uppercase;}
+  dialog label{display:block;font-size:11.5px;color:var(--text-dim);margin:10px 0 4px;font-family:var(--mono);}
+  dialog input,dialog select{width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:12.5px;padding:8px 10px;}
+  .dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px;}
+  .legend-pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
+  .pill{display:flex;align-items:center;gap:6px;background:var(--panel-2);border:1px solid var(--line);border-radius:999px;padding:4px 10px 4px 8px;font-size:11.5px;font-family:var(--mono);}
+  .pill .dot{width:7px;height:7px;border-radius:50%;}
+  .pill button{background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:13px;padding:0;}
+  .pill button:hover{color:var(--red);}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <span class="mark">RADAR</span>
+      <h1>Narratifs & Tendances Crypto</h1>
+      <span class="sub">// mis à jour automatiquement chaque jour</span>
+    </div>
+    <nav class="tabs">
+      <button id="tab-btn-narr" class="active">Narratifs (Market Cap)</button>
+      <button id="tab-btn-trends">Google Trends</button>
+    </nav>
+  </header>
+
+  <section id="page-narr" class="page active">
+    <div class="grid">
+      <div class="panel">
+        <h2>Narratifs suivis</h2>
+        <div id="narr-list" class="list"></div>
+        <div class="toolbar">
+          <button class="btn small" id="narr-add-term">+ Ligne manuelle</button>
+        </div>
+        <div class="note">
+          Données mises à jour <b>automatiquement chaque jour</b> par une GitHub Action qui interroge l'API CoinGecko. Rien à faire ici, sauf pour ajouter une ligne manuelle personnalisée.
+        </div>
+      </div>
+      <div>
+        <div class="chart-wrap">
+          <div class="meta-row">
+            <div id="narr-legend" class="legend-pills"></div>
+            <span id="narr-status" class="status">Chargement…</span>
+          </div>
+          <canvas id="narr-chart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="page-trends" class="page">
+    <div class="grid">
+      <div class="panel">
+        <h2>Termes suivis</h2>
+        <div id="trends-list" class="list"></div>
+        <div class="toolbar">
+          <button class="btn small" id="trends-add-term">+ Ligne manuelle</button>
+        </div>
+        <div class="note cyan">
+          Données mises à jour <b>automatiquement chaque jour</b> via la librairie <i>pytrends</i>. Non-officiel : si Google change son site, la mise à jour peut s'interrompre — le graphique reste consultable avec l'historique déjà collecté.
+        </div>
+      </div>
+      <div>
+        <div class="chart-wrap">
+          <div class="meta-row">
+            <div id="trends-legend" class="legend-pills"></div>
+            <span id="trends-status" class="status">Chargement…</span>
+          </div>
+          <canvas id="trends-chart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<dialog id="dlg-manual">
+  <h3 id="dlg-manual-title">Ligne manuelle</h3>
+  <label>Nom</label>
+  <input id="ml-name" placeholder="ex: Solana Ecosystem">
+  <label>Date (AAAA-MM-JJ)</label>
+  <input id="ml-date" type="date">
+  <label id="ml-value-label">Valeur</label>
+  <input id="ml-value" type="number">
+  <div class="dialog-actions">
+    <button class="btn" id="ml-cancel">Annuler</button>
+    <button class="btn primary" id="ml-save">Ajouter</button>
+  </div>
+</dialog>
+
+<script>
+Chart.defaults.font.family = "'IBM Plex Mono', monospace";
+Chart.defaults.color = "#8B95A7";
+const PALETTE = ["#E8A33D","#4FD1C5","#E8615C","#8B7FD1","#5FB878","#D18FC2","#E0C341","#5DA9E9","#E08A5D","#7FDBD4","#C15FE8","#B8D15F"];
+const colorFor = i => PALETTE[i % PALETTE.length];
+const todayStr = () => new Date().toISOString().slice(0,10);
+const fmtUsd = n => n>=1e9 ? '$'+(n/1e9).toFixed(2)+'B' : n>=1e6 ? '$'+(n/1e6).toFixed(2)+'M' : '$'+Number(n).toLocaleString();
+
+const tabNarr=document.getElementById('tab-btn-narr'), tabTrends=document.getElementById('tab-btn-trends');
+const pageNarr=document.getElementById('page-narr'), pageTrends=document.getElementById('page-trends');
+tabNarr.onclick=()=>{tabNarr.classList.add('active');tabTrends.classList.remove('active');pageNarr.classList.add('active');pageTrends.classList.remove('active');};
+tabTrends.onclick=()=>{tabTrends.classList.add('active');tabNarr.classList.remove('active');pageTrends.classList.add('active');pageNarr.classList.remove('active');};
+
+// merge auto-fetched JSON history with manual points kept in localStorage
+function loadManual(ns){ try{ return JSON.parse(localStorage.getItem(ns+'-manual')||'{}'); }catch(e){ return {}; } }
+function saveManual(ns,data){ localStorage.setItem(ns+'-manual', JSON.stringify(data)); }
+function loadHidden(ns){ try{ return JSON.parse(localStorage.getItem(ns+'-hidden')||'[]'); }catch(e){ return []; } }
+function saveHidden(ns,arr){ localStorage.setItem(ns+'-hidden', JSON.stringify(arr)); }
+
+async function buildStore(ns, jsonPath){
+  let autoHistory = [];
+  try{
+    const res = await fetch(jsonPath + '?t=' + Date.now());
+    autoHistory = await res.json();
+  }catch(e){ console.warn('Impossible de charger', jsonPath, e); }
+
+  const manual = loadManual(ns); // {label:[{date,value}]}
+  const hidden = new Set(loadHidden(ns));
+
+  const labelsSet = new Set();
+  autoHistory.forEach(h => Object.keys(h.values||{}).forEach(k=>labelsSet.add(k)));
+  Object.keys(manual).forEach(k=>labelsSet.add(k));
+
+  const data = {}; // label -> {date:value}
+  labelsSet.forEach(l=> data[l]={});
+  autoHistory.forEach(h => Object.entries(h.values||{}).forEach(([k,v]) => data[k][h.date]=v));
+  Object.entries(manual).forEach(([label,pts]) => pts.forEach(p => { if(!data[label]) data[label]={}; data[label][p.date]=p.value; }));
+
+  return {
+    ns, data,
+    labels: [...labelsSet],
+    isHidden: l => hidden.has(l),
+    toggle(l){ if(hidden.has(l)) hidden.delete(l); else hidden.add(l); saveHidden(ns, [...hidden]); },
+    addManualPoint(label,date,value){
+      if(!manual[label]) manual[label]=[];
+      const idx = manual[label].findIndex(p=>p.date===date);
+      if(idx>=0) manual[label][idx].value=value; else manual[label].push({date,value});
+      saveManual(ns, manual);
+    }
+  };
+}
+
+function renderList(store, listEl, onChange){
+  listEl.innerHTML='';
+  store.labels.forEach((label,idx)=>{
+    const checked = !store.isHidden(label);
+    const dateCount = Object.keys(store.data[label]).length;
+    const row = document.createElement('label');
+    row.className='row-check';
+    row.innerHTML = `<input type="checkbox" ${checked?'checked':''}>
+      <span class="swatch" style="background:${checked?colorFor(idx):'var(--line)'}"></span>
+      <span class="name">${label}</span><span class="cap">${dateCount} pts</span>`;
+    row.querySelector('input').addEventListener('change', ()=>{ store.toggle(label); onChange(); });
+    listEl.appendChild(row);
+  });
+}
+
+function renderChart(store, canvasEl, legendEl, statusEl, ref, opts){
+  const visible = store.labels.filter(l=>!store.isHidden(l));
+  const dateSet = new Set();
+  visible.forEach(l => Object.keys(store.data[l]).forEach(d=>dateSet.add(d)));
+  const labels = [...dateSet].sort();
+  const datasets=[]; legendEl.innerHTML='';
+
+  visible.forEach((label,idx)=>{
+    const color = colorFor(store.labels.indexOf(label));
+    const data = labels.map(d => store.data[label][d] !== undefined ? store.data[label][d] : null);
+    datasets.push({label,data,borderColor:color,backgroundColor:color+'22',tension:.3,pointRadius:3,pointHoverRadius:5,spanGaps:true,borderWidth:2});
+    const pill=document.createElement('div'); pill.className='pill';
+    pill.innerHTML=`<span class="dot" style="background:${color}"></span>${label}<button>×</button>`;
+    pill.querySelector('button').onclick=()=>{ store.toggle(label); opts.onChange(); };
+    legendEl.appendChild(pill);
+  });
+
+  statusEl.textContent = labels.length ? (labels.length+' dates · '+visible.length+' séries') : 'Aucune donnée pour le moment — la première mise à jour automatique n\'a peut-être pas encore eu lieu';
+  statusEl.className = 'status'+(labels.length?' ok':'');
+
+  if(ref.chart) ref.chart.destroy();
+  ref.chart = new Chart(canvasEl,{type:'line',data:{labels,datasets},options:{
+    responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y!=null?opts.fmt(c.parsed.y):'—'}`}}},
+    scales:{x:{grid:{color:'#1A2029'},ticks:{maxRotation:0}}, y:opts.yScale}
+  }});
+}
+
+let narrStore, trendsStore;
+const narrRef={chart:null}, trendsRef={chart:null};
+
+function refreshNarr(){
+  renderList(narrStore, document.getElementById('narr-list'), refreshNarr);
+  renderChart(narrStore, document.getElementById('narr-chart'), document.getElementById('narr-legend'), document.getElementById('narr-status'), narrRef, {
+    fmt: fmtUsd, yScale:{grid:{color:'#1A2029'},ticks:{callback:v=>fmtUsd(v)}}, onChange: refreshNarr
+  });
+}
+function refreshTrends(){
+  renderList(trendsStore, document.getElementById('trends-list'), refreshTrends);
+  renderChart(trendsStore, document.getElementById('trends-chart'), document.getElementById('trends-legend'), document.getElementById('trends-status'), trendsRef, {
+    fmt: v=>v, yScale:{grid:{color:'#1A2029'},min:0,ticks:{}}, onChange: refreshTrends
+  });
+}
+
+// manual line dialog, shared
+const dlg = document.getElementById('dlg-manual');
+let dlgTargetStore = null, dlgRefresh = null;
+function openManual(store, refreshFn, unitLabel){
+  dlgTargetStore = store; dlgRefresh = refreshFn;
+  document.getElementById('dlg-manual-title').textContent = 'Ligne manuelle';
+  document.getElementById('ml-value-label').textContent = unitLabel;
+  document.getElementById('ml-date').value = todayStr();
+  document.getElementById('ml-name').value=''; document.getElementById('ml-value').value='';
+  dlg.showModal();
+}
+document.getElementById('narr-add-term').addEventListener('click', ()=> openManual(narrStore, refreshNarr, 'Capitalisation (USD)'));
+document.getElementById('trends-add-term').addEventListener('click', ()=> openManual(trendsStore, refreshTrends, "Valeur d'intérêt (0–100)"));
+document.getElementById('ml-cancel').addEventListener('click', ()=> dlg.close());
+document.getElementById('ml-save').addEventListener('click', ()=>{
+  const name=document.getElementById('ml-name').value.trim();
+  const date=document.getElementById('ml-date').value;
+  const value=parseFloat(document.getElementById('ml-value').value);
+  if(!name||!date||isNaN(value)){ alert('Merci de remplir tous les champs.'); return; }
+  dlgTargetStore.addManualPoint(name,date,value);
+  if(!dlgTargetStore.labels.includes(name)) dlgTargetStore.labels.push(name);
+  dlg.close(); dlgRefresh();
+});
+
+(async function init(){
+  narrStore = await buildStore('narr', 'data/narratives_history.json');
+  refreshNarr();
+  trendsStore = await buildStore('trends', 'data/trends_history.json');
+  refreshTrends();
+})();
+</script>
+</body>
+</html>

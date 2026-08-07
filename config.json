@@ -1,0 +1,19 @@
+{
+  "narratives": [
+    {"name": "Bitcoin",  "keywords": ["bitcoin"]},
+    {"name": "Ethereum", "keywords": ["ethereum"]},
+    {"name": "Altcoins", "keywords": ["altcoin"]},
+    {"name": "DeFi",     "keywords": ["defi", "decentralized finance"]},
+    {"name": "IA",       "keywords": ["artificial intelligence", "ai agents"]},
+    {"name": "Meme",     "keywords": ["meme"]},
+    {"name": "RWA",      "keywords": ["real world assets", "rwa"]},
+    {"name": "GameFi",   "keywords": ["gaming", "gamefi"]},
+    {"name": "DePIN",    "keywords": ["depin"]},
+    {"name": "Layer 2",  "keywords": ["layer 2", "layer-2"]}
+  ],
+  "trends_terms": [
+    "crypto", "cryptomonnaie", "bitcoin", "btc", "alt", "altcoin", "ethereum", "eth"
+  ],
+  "trends_timeframe": "now 7-d",
+  "trends_geo": "FR"
+}
