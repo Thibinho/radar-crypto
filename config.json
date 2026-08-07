@@ -26,5 +26,9 @@
   "trends_geo": "FR",
   "backfill_days": 365,
   "backfill_coins_per_narrative": 10,
-  "backfill_trends_timeframe": "today 5-y"
+  "backfill_trends_timeframe": "today 5-y",
+  "movement_alert_threshold_pct": 15,
+  "emerging_growth_threshold_pct": 25,
+  "emerging_min_market_cap": 50000000,
+  "emerging_lookback_days": 7
 }
