@@ -2,9 +2,8 @@ name: Mise à jour quotidienne des données
 
 on:
   schedule:
-    # 06:00 UTC chaque jour — ajustez si besoin
     - cron: "0 6 * * *"
-  workflow_dispatch: {}   # permet de lancer manuellement depuis l'onglet Actions
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -24,10 +23,19 @@ jobs:
 
       - name: Récupérer les capitalisations par narratif (CoinGecko)
         run: python scripts/fetch_narratives.py
+        env:
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+
+      - name: Générer les alertes (mouvements + narratifs émergents)
+        run: python scripts/generate_alerts.py
+
+      - name: Récupérer le Fear & Greed Index
+        run: python scripts/fetch_feargreed.py
+        continue-on-error: true
 
       - name: Récupérer les tendances de recherche (Google Trends)
         run: python scripts/fetch_trends.py
-        continue-on-error: true   # pytrends est non-officiel, ne bloque pas le reste si ça casse
+        continue-on-error: true
 
       - name: Commit et push si changement
         run: |
