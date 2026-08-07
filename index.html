@@ -83,10 +83,24 @@
   table.lb .chg{font-family:var(--mono);text-align:right;font-weight:600;}
   table.lb .chg.up{color:var(--green);}
   table.lb .chg.down{color:var(--red);}
+
+  /* --- Bandeau d'alertes défilant --- */
+  #alert-banner{display:none;overflow:hidden;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;margin-bottom:18px;padding:10px 0;position:relative;}
+  #alert-banner.show{display:block;}
+  #alert-banner .track{display:flex;width:max-content;animation:marquee 45s linear infinite;}
+  #alert-banner:hover .track{animation-play-state:paused;}
+  @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .alert-item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;white-space:nowrap;padding:0 28px;border-right:1px solid var(--line);}
+  .alert-item .tag{font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding:2px 6px;border-radius:4px;font-weight:600;}
+  .alert-item .tag.fng{background:#3a2f1a;color:var(--amber);}
+  .alert-item .tag.up{background:#173325;color:var(--green);}
+  .alert-item .tag.down{background:#3a1a1a;color:var(--red);}
+  .alert-item .tag.new{background:#1a2f3a;color:var(--cyan);}
 </style>
 </head>
 <body>
 <div class="app">
+  <div id="alert-banner"><div class="track" id="alert-track"></div></div>
   <header class="top">
     <div class="brand">
       <span class="mark">RADAR</span>
@@ -451,11 +465,76 @@ document.getElementById('ml-save').addEventListener('click', ()=>{
 wireControls('narr', narrUi, ()=>refreshNarr());
 wireControls('trends', trendsUi, ()=>refreshTrends());
 
+/* ---------- bandeau d'alertes ---------- */
+async function loadJsonSafe(path){
+  try{
+    const res = await fetch(path + '?t=' + Date.now());
+    if(!res.ok) return null;
+    return await res.json();
+  }catch(e){ return null; }
+}
+
+function fngEmoji(classification){
+  const c = (classification||'').toLowerCase();
+  if(c.includes('extreme fear')) return '😱';
+  if(c.includes('fear')) return '😨';
+  if(c.includes('neutral')) return '😐';
+  if(c.includes('extreme greed')) return '🤑';
+  if(c.includes('greed')) return '🙂';
+  return '📊';
+}
+function fngLabelFr(classification){
+  const map = {
+    'Extreme Fear':'Peur extrême','Fear':'Peur','Neutral':'Neutre',
+    'Greed':'Avidité','Extreme Greed':'Avidité extrême'
+  };
+  return map[classification] || classification || '';
+}
+
+async function initAlertBanner(){
+  const [alerts, feargreed] = await Promise.all([
+    loadJsonSafe('data/alerts.json'),
+    loadJsonSafe('data/feargreed.json')
+  ]);
+
+  const items = [];
+
+  if(feargreed && feargreed.length){
+    const latest = feargreed[feargreed.length-1];
+    items.push(`<div class="alert-item"><span class="tag fng">Fear &amp; Greed</span>${fngEmoji(latest.classification)} ${latest.value} — ${fngLabelFr(latest.classification)}</div>`);
+  }
+
+  if(alerts && alerts.movers){
+    alerts.movers.forEach(m=>{
+      const tag = m.direction==='up' ? 'up' : 'down';
+      const arrow = m.direction==='up' ? '▲' : '▼';
+      items.push(`<div class="alert-item"><span class="tag ${tag}">Mouvement</span>${arrow} ${m.name} ${m.change_pct>=0?'+':''}${m.change_pct}% sur 7j</div>`);
+    });
+  }
+
+  if(alerts && alerts.emerging){
+    alerts.emerging.forEach(e=>{
+      items.push(`<div class="alert-item"><span class="tag new">Émergent</span>🆕 ${e.name} +${e.change_pct}% (cap ${fmtUsd(e.market_cap)}) — non suivi</div>`);
+    });
+  }
+
+  const banner = document.getElementById('alert-banner');
+  const track = document.getElementById('alert-track');
+  if(items.length === 0){
+    banner.classList.remove('show');
+    return;
+  }
+  // dupliqué pour un défilement continu sans coupure
+  track.innerHTML = items.join('') + items.join('');
+  banner.classList.add('show');
+}
+
 (async function init(){
   narrStore = await buildStore('narr', 'data/narratives_history.json');
   refreshNarr();
   trendsStore = await buildStore('trends', 'data/trends_history.json');
   refreshTrends();
+  initAlertBanner();
 })();
 </script>
 </body>
