@@ -8,7 +8,7 @@
 <style>
   :root{
     --ink:#0B0E14; --panel:#11151D; --panel-2:#161B25; --line:#232A38;
-    --text:#E9EDF3; --text-dim:#8B95A7; --amber:#E8A33D; --cyan:#4FD1C5; --red:#E8615C;
+    --text:#E9EDF3; --text-dim:#8B95A7; --amber:#E8A33D; --cyan:#4FD1C5; --red:#E8615C; --green:#5FB878;
     --mono:'IBM Plex Mono','JetBrains Mono',ui-monospace,monospace;
     --grot:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   }
@@ -29,7 +29,7 @@
   @media (max-width:860px){.grid{grid-template-columns:1fr;}}
   .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;}
   .panel h2{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin:0 0 14px;font-family:var(--mono);font-weight:500;}
-  .list{max-height:380px;overflow-y:auto;display:flex;flex-direction:column;gap:1px;}
+  .list{max-height:320px;overflow-y:auto;display:flex;flex-direction:column;gap:1px;}
   .row-check{display:flex;align-items:center;gap:9px;padding:7px 8px;border-radius:6px;cursor:pointer;font-size:13px;}
   .row-check:hover{background:var(--panel-2);}
   .row-check input{accent-color:var(--amber);width:14px;height:14px;}
@@ -41,11 +41,11 @@
   .btn.primary{background:var(--amber);color:#1a1305;border-color:var(--amber);font-weight:600;}
   .btn.small{padding:5px 9px;font-size:11px;}
   .toolbar{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
-  .chart-wrap{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 18px 12px;height:460px;}
+  .chart-wrap{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 18px 12px;height:420px;}
   .chart-wrap canvas{max-height:100%;}
   .meta-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px;}
   .status{font-family:var(--mono);font-size:11px;color:var(--text-dim);}
-  .status.err{color:var(--red);} .status.ok{color:var(--cyan);}
+  .status.ok{color:var(--cyan);}
   .note{font-size:12.5px;color:var(--text-dim);line-height:1.55;background:var(--panel-2);border:1px solid var(--line);border-left:2px solid var(--amber);border-radius:6px;padding:12px 14px;margin-top:16px;}
   .note b{color:var(--text);} .note.cyan{border-left-color:var(--cyan);}
   dialog{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:20px;max-width:420px;width:92%;}
@@ -59,6 +59,30 @@
   .pill .dot{width:7px;height:7px;border-radius:50%;}
   .pill button{background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:13px;padding:0;}
   .pill button:hover{color:var(--red);}
+
+  /* --- Contrôles graphique (view mode / période / lissage) --- */
+  .chart-controls{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--line);}
+  .control-group{display:flex;align-items:center;gap:6px;}
+  .control-group .cg-label{font-family:var(--mono);font-size:10.5px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em;margin-right:2px;}
+  .seg{display:flex;background:var(--panel-2);border:1px solid var(--line);border-radius:7px;padding:2px;}
+  .seg button{font-family:var(--mono);font-size:11px;color:var(--text-dim);background:transparent;border:none;padding:6px 10px;border-radius:5px;cursor:pointer;white-space:nowrap;}
+  .seg button.active{background:var(--ink);color:var(--amber);box-shadow:inset 0 0 0 1px var(--line);}
+  .toggle-switch{display:flex;align-items:center;gap:7px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--text-dim);}
+  .toggle-switch input{accent-color:var(--cyan);width:13px;height:13px;}
+
+  /* --- Leaderboard --- */
+  .leaderboard{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;}
+  .leaderboard h3{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin:0 0 12px;font-family:var(--mono);font-weight:500;}
+  table.lb{width:100%;border-collapse:collapse;font-size:13px;}
+  table.lb th{text-align:left;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--text-dim);font-weight:500;padding:6px 10px;border-bottom:1px solid var(--line);}
+  table.lb td{padding:9px 10px;border-bottom:1px solid var(--line);}
+  table.lb tr:last-child td{border-bottom:none;}
+  table.lb .rank{font-family:var(--mono);color:var(--text-dim);width:24px;}
+  table.lb .name{font-weight:600;}
+  table.lb .val{font-family:var(--mono);text-align:right;}
+  table.lb .chg{font-family:var(--mono);text-align:right;font-weight:600;}
+  table.lb .chg.up{color:var(--green);}
+  table.lb .chg.down{color:var(--red);}
 </style>
 </head>
 <body>
@@ -84,16 +108,46 @@
           <button class="btn small" id="narr-add-term">+ Ligne manuelle</button>
         </div>
         <div class="note">
-          Données mises à jour <b>automatiquement chaque jour</b> par une GitHub Action qui interroge l'API CoinGecko. Rien à faire ici, sauf pour ajouter une ligne manuelle personnalisée.
+          Données mises à jour <b>automatiquement chaque jour</b> par une GitHub Action qui interroge l'API CoinGecko.
         </div>
       </div>
       <div>
-        <div class="chart-wrap">
+        <div class="chart-wrap" style="height:auto;padding-bottom:18px;">
+          <div class="chart-controls">
+            <div class="control-group">
+              <span class="cg-label">Affichage</span>
+              <div class="seg" id="narr-viewmode-seg">
+                <button data-val="raw" class="active">$ Brut</button>
+                <button data-val="pct">% Variation</button>
+              </div>
+            </div>
+            <div class="control-group">
+              <span class="cg-label">Période</span>
+              <div class="seg" id="narr-range-seg">
+                <button data-val="1">1M</button>
+                <button data-val="3">3M</button>
+                <button data-val="6">6M</button>
+                <button data-val="12">1A</button>
+                <button data-val="all" class="active">Tout</button>
+              </div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="narr-smoothing">
+              Lissage (moy. 7 pts)
+            </label>
+          </div>
           <div class="meta-row">
             <div id="narr-legend" class="legend-pills"></div>
             <span id="narr-status" class="status">Chargement…</span>
           </div>
-          <canvas id="narr-chart"></canvas>
+          <div style="height:380px;"><canvas id="narr-chart"></canvas></div>
+        </div>
+        <div class="leaderboard">
+          <h3>Top 5 — narratifs les plus performants sur la période sélectionnée</h3>
+          <table class="lb" id="narr-leaderboard">
+            <thead><tr><th class="rank">#</th><th>Narratif</th><th class="val">Cap. actuelle</th><th class="chg">Variation</th></tr></thead>
+            <tbody></tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -108,16 +162,39 @@
           <button class="btn small" id="trends-add-term">+ Ligne manuelle</button>
         </div>
         <div class="note cyan">
-          Données mises à jour <b>automatiquement chaque jour</b> via la librairie <i>pytrends</i>. Non-officiel : si Google change son site, la mise à jour peut s'interrompre — le graphique reste consultable avec l'historique déjà collecté.
+          Données mises à jour <b>automatiquement chaque jour</b> via la librairie <i>pytrends</i>.
         </div>
       </div>
       <div>
-        <div class="chart-wrap">
+        <div class="chart-wrap" style="height:auto;padding-bottom:18px;">
+          <div class="chart-controls">
+            <div class="control-group">
+              <span class="cg-label">Affichage</span>
+              <div class="seg" id="trends-viewmode-seg">
+                <button data-val="raw" class="active">Score brut</button>
+                <button data-val="pct">% Variation</button>
+              </div>
+            </div>
+            <div class="control-group">
+              <span class="cg-label">Période</span>
+              <div class="seg" id="trends-range-seg">
+                <button data-val="1">1M</button>
+                <button data-val="3">3M</button>
+                <button data-val="6">6M</button>
+                <button data-val="12">1A</button>
+                <button data-val="all" class="active">Tout</button>
+              </div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="trends-smoothing">
+              Lissage (moy. 7 pts)
+            </label>
+          </div>
           <div class="meta-row">
             <div id="trends-legend" class="legend-pills"></div>
             <span id="trends-status" class="status">Chargement…</span>
           </div>
-          <canvas id="trends-chart"></canvas>
+          <div style="height:380px;"><canvas id="trends-chart"></canvas></div>
         </div>
       </div>
     </div>
@@ -141,17 +218,17 @@
 <script>
 Chart.defaults.font.family = "'IBM Plex Mono', monospace";
 Chart.defaults.color = "#8B95A7";
-const PALETTE = ["#E8A33D","#4FD1C5","#E8615C","#8B7FD1","#5FB878","#D18FC2","#E0C341","#5DA9E9","#E08A5D","#7FDBD4","#C15FE8","#B8D15F"];
+const PALETTE = ["#E8A33D","#4FD1C5","#E8615C","#8B7FD1","#5FB878","#D18FC2","#E0C341","#5DA9E9","#E08A5D","#7FDBD4","#C15FE8","#B8D15F","#F2A65A","#6FCF97","#BB86FC","#4DD0E1","#FF8A65","#A0D468"];
 const colorFor = i => PALETTE[i % PALETTE.length];
 const todayStr = () => new Date().toISOString().slice(0,10);
 const fmtUsd = n => n>=1e9 ? '$'+(n/1e9).toFixed(2)+'B' : n>=1e6 ? '$'+(n/1e6).toFixed(2)+'M' : '$'+Number(n).toLocaleString();
+const fmtPct = n => (n>=0?'+':'') + n.toFixed(1) + '%';
 
 const tabNarr=document.getElementById('tab-btn-narr'), tabTrends=document.getElementById('tab-btn-trends');
 const pageNarr=document.getElementById('page-narr'), pageTrends=document.getElementById('page-trends');
 tabNarr.onclick=()=>{tabNarr.classList.add('active');tabTrends.classList.remove('active');pageNarr.classList.add('active');pageTrends.classList.remove('active');};
 tabTrends.onclick=()=>{tabTrends.classList.add('active');tabNarr.classList.remove('active');pageTrends.classList.add('active');pageNarr.classList.remove('active');};
 
-// merge auto-fetched JSON history with manual points kept in localStorage
 function loadManual(ns){ try{ return JSON.parse(localStorage.getItem(ns+'-manual')||'{}'); }catch(e){ return {}; } }
 function saveManual(ns,data){ localStorage.setItem(ns+'-manual', JSON.stringify(data)); }
 function loadHidden(ns){ try{ return JSON.parse(localStorage.getItem(ns+'-hidden')||'[]'); }catch(e){ return []; } }
@@ -164,7 +241,7 @@ async function buildStore(ns, jsonPath){
     autoHistory = await res.json();
   }catch(e){ console.warn('Impossible de charger', jsonPath, e); }
 
-  const manual = loadManual(ns); // {label:[{date,value}]}
+  const manual = loadManual(ns);
   const hidden = new Set(loadHidden(ns));
 
   const labelsSet = new Set();
@@ -205,32 +282,130 @@ function renderList(store, listEl, onChange){
   });
 }
 
-function renderChart(store, canvasEl, legendEl, statusEl, ref, opts){
+/* ---------- helpers de transformation ---------- */
+function monthsAgoDate(dateStr, months){
+  const d = new Date(dateStr + 'T00:00:00Z');
+  d.setUTCMonth(d.getUTCMonth() - months);
+  return d.toISOString().slice(0,10);
+}
+function filterDatesByRange(allDates, rangeMonths){
+  if(rangeMonths === 'all' || allDates.length===0) return allDates;
+  const last = allDates[allDates.length-1];
+  const cutoff = monthsAgoDate(last, Number(rangeMonths));
+  return allDates.filter(d => d >= cutoff);
+}
+function smoothSeries(values, window=7){
+  const out = [];
+  for(let i=0;i<values.length;i++){
+    const start = Math.max(0, i-window+1);
+    const slice = values.slice(start, i+1).filter(v=>v!=null);
+    out.push(slice.length ? slice.reduce((a,b)=>a+b,0)/slice.length : null);
+  }
+  return out;
+}
+function rebaseToPct(values){
+  const base = values.find(v => v!=null && v!==0);
+  if(base==null) return values.map(()=>null);
+  return values.map(v => v==null ? null : ((v/base)-1)*100);
+}
+
+/* ---------- state par page ---------- */
+function makeUiState(){ return { viewMode:'raw', rangeMonths:'all', smoothing:false }; }
+const narrUi = makeUiState();
+const trendsUi = makeUiState();
+
+function wireControls(prefix, ui, onChange){
+  const seg = document.getElementById(prefix+'-viewmode-seg');
+  seg.querySelectorAll('button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      seg.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      ui.viewMode = btn.dataset.val;
+      onChange();
+    });
+  });
+  const rangeSeg = document.getElementById(prefix+'-range-seg');
+  rangeSeg.querySelectorAll('button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      rangeSeg.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      ui.rangeMonths = btn.dataset.val;
+      onChange();
+    });
+  });
+  document.getElementById(prefix+'-smoothing').addEventListener('change', (e)=>{
+    ui.smoothing = e.target.checked;
+    onChange();
+  });
+}
+
+function renderChart(store, ui, canvasEl, legendEl, statusEl, ref, opts){
   const visible = store.labels.filter(l=>!store.isHidden(l));
-  const dateSet = new Set();
-  visible.forEach(l => Object.keys(store.data[l]).forEach(d=>dateSet.add(d)));
-  const labels = [...dateSet].sort();
+  const allDatesSet = new Set();
+  visible.forEach(l => Object.keys(store.data[l]).forEach(d=>allDatesSet.add(d)));
+  const allDates = [...allDatesSet].sort();
+  const labels = filterDatesByRange(allDates, ui.rangeMonths);
+
   const datasets=[]; legendEl.innerHTML='';
 
-  visible.forEach((label,idx)=>{
+  visible.forEach((label)=>{
     const color = colorFor(store.labels.indexOf(label));
-    const data = labels.map(d => store.data[label][d] !== undefined ? store.data[label][d] : null);
-    datasets.push({label,data,borderColor:color,backgroundColor:color+'22',tension:.3,pointRadius:3,pointHoverRadius:5,spanGaps:true,borderWidth:2});
+    let values = labels.map(d => store.data[label][d] !== undefined ? store.data[label][d] : null);
+    if(ui.smoothing) values = smoothSeries(values, 7);
+    if(ui.viewMode === 'pct') values = rebaseToPct(values);
+
+    datasets.push({label,data:values,borderColor:color,backgroundColor:color+'22',tension:.3,pointRadius:2,pointHoverRadius:5,spanGaps:true,borderWidth:2});
     const pill=document.createElement('div'); pill.className='pill';
     pill.innerHTML=`<span class="dot" style="background:${color}"></span>${label}<button>×</button>`;
     pill.querySelector('button').onclick=()=>{ store.toggle(label); opts.onChange(); };
     legendEl.appendChild(pill);
   });
 
-  statusEl.textContent = labels.length ? (labels.length+' dates · '+visible.length+' séries') : 'Aucune donnée pour le moment — la première mise à jour automatique n\'a peut-être pas encore eu lieu';
+  statusEl.textContent = labels.length ? (labels.length+' dates · '+visible.length+' séries') : 'Aucune donnée pour le moment';
   statusEl.className = 'status'+(labels.length?' ok':'');
+
+  const yFmt = ui.viewMode === 'pct' ? (v=>fmtPct(v)) : opts.fmt;
+  const yScale = ui.viewMode === 'pct'
+    ? {grid:{color:'#1A2029'}, ticks:{callback:v=>v+'%'}}
+    : opts.yScale;
 
   if(ref.chart) ref.chart.destroy();
   ref.chart = new Chart(canvasEl,{type:'line',data:{labels,datasets},options:{
     responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
-    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y!=null?opts.fmt(c.parsed.y):'—'}`}}},
-    scales:{x:{grid:{color:'#1A2029'},ticks:{maxRotation:0}}, y:opts.yScale}
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y!=null?yFmt(c.parsed.y):'—'}`}}},
+    scales:{x:{grid:{color:'#1A2029'},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:10}}, y:yScale}
   }});
+}
+
+function renderLeaderboard(store, ui, tbodyEl, fmt){
+  const allDatesSet = new Set();
+  store.labels.forEach(l => Object.keys(store.data[l]).forEach(d=>allDatesSet.add(d)));
+  const allDates = [...allDatesSet].sort();
+  const rangeDates = filterDatesByRange(allDates, ui.rangeMonths);
+
+  const rows = [];
+  store.labels.forEach(label=>{
+    const series = rangeDates.map(d => store.data[label][d]);
+    const firstIdx = series.findIndex(v=>v!=null);
+    let lastIdx = -1;
+    for(let i=series.length-1;i>=0;i--){ if(series[i]!=null){ lastIdx=i; break; } }
+    if(firstIdx===-1 || lastIdx===-1 || firstIdx===lastIdx) return;
+    const first = series[firstIdx], last = series[lastIdx];
+    if(!first) return;
+    const change = ((last/first)-1)*100;
+    rows.push({label, current: last, change});
+  });
+
+  rows.sort((a,b)=> b.change - a.change);
+  const top5 = rows.slice(0,5);
+
+  tbodyEl.innerHTML = top5.map((r,i)=>`
+    <tr>
+      <td class="rank">${i+1}</td>
+      <td class="name">${r.label}</td>
+      <td class="val">${fmt(r.current)}</td>
+      <td class="chg ${r.change>=0?'up':'down'}">${fmtPct(r.change)}</td>
+    </tr>`).join('') || '<tr><td colspan="4" style="color:var(--text-dim);padding:14px 10px;">Pas assez de données sur cette période.</td></tr>';
 }
 
 let narrStore, trendsStore;
@@ -238,18 +413,18 @@ const narrRef={chart:null}, trendsRef={chart:null};
 
 function refreshNarr(){
   renderList(narrStore, document.getElementById('narr-list'), refreshNarr);
-  renderChart(narrStore, document.getElementById('narr-chart'), document.getElementById('narr-legend'), document.getElementById('narr-status'), narrRef, {
+  renderChart(narrStore, narrUi, document.getElementById('narr-chart'), document.getElementById('narr-legend'), document.getElementById('narr-status'), narrRef, {
     fmt: fmtUsd, yScale:{grid:{color:'#1A2029'},ticks:{callback:v=>fmtUsd(v)}}, onChange: refreshNarr
   });
+  renderLeaderboard(narrStore, narrUi, document.querySelector('#narr-leaderboard tbody'), fmtUsd);
 }
 function refreshTrends(){
   renderList(trendsStore, document.getElementById('trends-list'), refreshTrends);
-  renderChart(trendsStore, document.getElementById('trends-chart'), document.getElementById('trends-legend'), document.getElementById('trends-status'), trendsRef, {
-    fmt: v=>v, yScale:{grid:{color:'#1A2029'},min:0,ticks:{}}, onChange: refreshTrends
+  renderChart(trendsStore, trendsUi, document.getElementById('trends-chart'), document.getElementById('trends-legend'), document.getElementById('trends-status'), trendsRef, {
+    fmt: v=>Math.round(v), yScale:{grid:{color:'#1A2029'},min:0,ticks:{}}, onChange: refreshTrends
   });
 }
 
-// manual line dialog, shared
 const dlg = document.getElementById('dlg-manual');
 let dlgTargetStore = null, dlgRefresh = null;
 function openManual(store, refreshFn, unitLabel){
@@ -272,6 +447,9 @@ document.getElementById('ml-save').addEventListener('click', ()=>{
   if(!dlgTargetStore.labels.includes(name)) dlgTargetStore.labels.push(name);
   dlg.close(); dlgRefresh();
 });
+
+wireControls('narr', narrUi, ()=>refreshNarr());
+wireControls('trends', trendsUi, ()=>refreshTrends());
 
 (async function init(){
   narrStore = await buildStore('narr', 'data/narratives_history.json');
