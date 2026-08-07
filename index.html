@@ -74,7 +74,8 @@
 
   /* --- Leaderboard --- */
   .leaderboard{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;}
-  .leaderboard h3{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin:0 0 12px;font-family:var(--mono);font-weight:500;}
+  .leaderboard-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:12px;}
+  .leaderboard h3{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin:0;font-family:var(--mono);font-weight:500;}
   table.lb{width:100%;border-collapse:collapse;font-size:13px;}
   table.lb th{text-align:left;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--text-dim);font-weight:500;padding:6px 10px;border-bottom:1px solid var(--line);}
   table.lb td{padding:9px 10px;border-bottom:1px solid var(--line);}
@@ -160,7 +161,16 @@
           <div style="height:380px;"><canvas id="narr-chart"></canvas></div>
         </div>
         <div class="leaderboard">
-          <h3>Top 5 — narratifs les plus performants sur la période sélectionnée</h3>
+          <div class="leaderboard-head">
+            <h3>Top 5 — narratifs les plus performants</h3>
+            <div class="seg" id="narr-lb-range-seg">
+              <button data-val="7">1 sem.</button>
+              <button data-val="30" class="active">1 mois</button>
+              <button data-val="60">2 mois</button>
+              <button data-val="182">6 mois</button>
+              <button data-val="365">1 an</button>
+            </div>
+          </div>
           <table class="lb" id="narr-leaderboard">
             <thead><tr><th class="rank">#</th><th>Narratif</th><th class="val">Cap. actuelle</th><th class="chg">Variation</th></tr></thead>
             <tbody></tbody>
@@ -306,6 +316,14 @@ function monthsAgoDate(dateStr, months){
   d.setUTCMonth(d.getUTCMonth() - months);
   return d.toISOString().slice(0,10);
 }
+function filterDatesByDays(allDates, days){
+  if(allDates.length===0) return allDates;
+  const last = allDates[allDates.length-1];
+  const d = new Date(last + 'T00:00:00Z');
+  d.setUTCDate(d.getUTCDate() - Number(days));
+  const cutoff = d.toISOString().slice(0,10);
+  return allDates.filter(dt => dt >= cutoff);
+}
 function filterDatesByRange(allDates, rangeMonths){
   if(rangeMonths === 'all' || allDates.length===0) return allDates;
   const last = allDates[allDates.length-1];
@@ -408,11 +426,11 @@ function renderChart(store, ui, canvasEl, legendEl, statusEl, ref, opts){
   }});
 }
 
-function renderLeaderboard(store, ui, tbodyEl, fmt){
+function renderLeaderboard(store, days, tbodyEl, fmt){
   const allDatesSet = new Set();
   store.labels.forEach(l => Object.keys(store.data[l]).forEach(d=>allDatesSet.add(d)));
   const allDates = [...allDatesSet].sort();
-  const rangeDates = filterDatesByRange(allDates, ui.rangeMonths);
+  const rangeDates = filterDatesByDays(allDates, days);
 
   const rows = [];
   store.labels.forEach(label=>{
@@ -442,12 +460,14 @@ function renderLeaderboard(store, ui, tbodyEl, fmt){
 let narrStore, trendsStore;
 const narrRef={chart:null}, trendsRef={chart:null};
 
+const narrLbUi = { days: 30 };
+
 function refreshNarr(){
   renderList(narrStore, document.getElementById('narr-list'), refreshNarr);
   renderChart(narrStore, narrUi, document.getElementById('narr-chart'), document.getElementById('narr-legend'), document.getElementById('narr-status'), narrRef, {
     fmt: fmtUsd, yScale:{grid:{color:'#1A2029'},ticks:{callback:v=>fmtUsd(v)}}, onChange: refreshNarr
   });
-  renderLeaderboard(narrStore, narrUi, document.querySelector('#narr-leaderboard tbody'), fmtUsd);
+  renderLeaderboard(narrStore, narrLbUi.days, document.querySelector('#narr-leaderboard tbody'), fmtUsd);
 }
 function refreshTrends(){
   renderList(trendsStore, document.getElementById('trends-list'), refreshTrends);
@@ -481,6 +501,16 @@ document.getElementById('ml-save').addEventListener('click', ()=>{
 
 wireControls('narr', narrUi, ()=>refreshNarr());
 wireControls('trends', trendsUi, ()=>refreshTrends());
+
+const lbRangeSeg = document.getElementById('narr-lb-range-seg');
+lbRangeSeg.querySelectorAll('button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    lbRangeSeg.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    narrLbUi.days = Number(btn.dataset.val);
+    renderLeaderboard(narrStore, narrLbUi.days, document.querySelector('#narr-leaderboard tbody'), fmtUsd);
+  });
+});
 
 document.getElementById('narr-reset-zoom').addEventListener('click', ()=>{ if(narrRef.chart) narrRef.chart.resetZoom(); });
 document.getElementById('trends-reset-zoom').addEventListener('click', ()=>{ if(trendsRef.chart) trendsRef.chart.resetZoom(); });
