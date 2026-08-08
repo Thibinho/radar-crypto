@@ -39,6 +39,17 @@
   .row-check .name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .row-check .cap{font-family:var(--mono);font-size:11px;color:var(--text-dim);flex-shrink:0;}
   .row-check .sparkline{flex-shrink:0;}
+  .gainer-row{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:6px;font-size:12.5px;}
+  .gainer-row:hover{background:var(--panel-2);}
+  .gainer-rank{font-family:var(--mono);font-size:10.5px;color:var(--text-dim);width:16px;flex-shrink:0;}
+  .gainer-symbol{font-weight:600;flex-shrink:0;width:52px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .gainer-price{font-family:var(--mono);font-size:11px;color:var(--text-dim);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .gainer-chg{font-family:var(--mono);font-size:11.5px;font-weight:700;color:var(--green);flex-shrink:0;}
+
+  /* --- Pied de page --- */
+  .site-footer{text-align:center;padding:24px 0 8px;margin-top:8px;}
+  .site-footer a{font-family:var(--mono);font-size:12.5px;color:var(--text-dim);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:9px 20px;transition:all .15s;}
+  .site-footer a:hover{color:var(--amber);border-color:var(--amber);}
   .btn{font-family:var(--mono);font-size:11.5px;color:var(--text);background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:8px 12px;cursor:pointer;}
   .btn:hover{border-color:var(--amber);color:var(--amber);}
   .btn.primary{background:var(--amber);color:#1a1305;border-color:var(--amber);font-weight:600;}
@@ -161,6 +172,13 @@
   .help-content ul{margin:0 0 8px;padding-left:18px;}
   .help-content li{font-size:12.5px;line-height:1.6;color:var(--text-dim);margin-bottom:4px;}
   .help-content li b{color:var(--text);}
+
+  /* --- Thème clair --- */
+  body.light-theme{
+    --ink:#F3F5F9; --panel:#FFFFFF; --panel-2:#EEF1F6; --line:#DBE1EA;
+    --text:#161B26; --text-dim:#5B6478; --amber:#B4740A; --cyan:#0C8B81; --red:#C23B36; --green:#1E8A4C;
+  }
+  #settings-btn{bottom:66px;}
 </style>
 </head>
 <body>
@@ -169,104 +187,116 @@
   <div id="market-widget"></div>
 </div>
 <div id="event-popup" class="event-popup"></div>
-<button class="help-fab" id="help-btn" title="Guide d'utilisation">❓ Guide</button>
+<button class="help-fab" id="settings-btn" title="Réglages" data-i18n="settingsBtn">⚙️ Réglages</button>
+<button class="help-fab" id="help-btn" title="Guide d'utilisation" data-i18n="guideBtn">❓ Guide</button>
 <div class="app">
   <div id="alert-banner" class="ticker"><div class="track" id="alert-track"></div></div>
   <div id="news-banner" class="ticker"><div class="track" id="news-track"></div></div>
   <header class="top">
     <div class="brand">
       <span class="mark">RADAR</span>
-      <h1>Narratifs & Tendances Crypto</h1>
-      <span class="sub">// mis à jour automatiquement chaque jour</span>
+      <h1 data-i18n="siteTitle">Narratifs & Tendances Crypto</h1>
+      <span class="sub" data-i18n="siteSub">// mis à jour automatiquement chaque jour</span>
     </div>
     <nav class="tabs">
-      <button id="tab-btn-narr" class="active">Narratifs (Market Cap)</button>
-      <button id="tab-btn-trends">Google Trends</button>
+      <button id="tab-btn-narr" class="active" data-i18n="tabNarr">Narratifs (Market Cap)</button>
+      <button id="tab-btn-trends" data-i18n="tabTrends">Google Trends</button>
     </nav>
-    <button class="btn small" id="refresh-all-btn">↻ Actualiser les données</button>
+    <button class="btn small" id="refresh-all-btn" data-i18n="refreshAllBtn">↻ Actualiser les données</button>
   </header>
 
   <section id="page-narr" class="page active">
     <div class="grid">
-      <div class="panel">
-        <h2>Narratifs suivis</h2>
-        <div id="narr-list" class="list"></div>
-        <div class="toolbar">
-          <button class="btn small" id="narr-add-term">+ Ligne manuelle</button>
+      <div>
+        <div class="panel">
+          <h2 data-i18n="narrListTitle">Narratifs suivis</h2>
+          <div id="narr-list" class="list"></div>
+          <div class="toolbar">
+            <button class="btn small" id="narr-add-term" data-i18n="addManualLine">+ Ligne manuelle</button>
+          </div>
+          <div class="note" data-i18n="narrNote">
+            Données mises à jour <b>automatiquement chaque jour</b> par une GitHub Action qui interroge l'API CoinGecko.
+          </div>
         </div>
-        <div class="note">
-          Données mises à jour <b>automatiquement chaque jour</b> par une GitHub Action qui interroge l'API CoinGecko.
+        <div class="panel" style="margin-top:16px;">
+          <h2 data-i18n="topGainersTitle">Top 20 altcoins — hausse 24h</h2>
+          <div id="top-gainers-list" class="list"></div>
+          <div class="note" data-i18n="topGainersNote">
+            En direct depuis CoinGecko, actualisé chaque minute. Bitcoin et les stablecoins sont exclus.
+          </div>
         </div>
       </div>
       <div>
         <div class="chart-wrap" style="height:auto;padding-bottom:18px;">
           <div class="chart-controls">
             <div class="control-group">
-              <span class="cg-label">Affichage</span>
+              <span class="cg-label" data-i18n="ctrlDisplay">Affichage</span>
               <div class="seg" id="narr-viewmode-seg">
-                <button data-val="raw" class="active">$ Brut</button>
-                <button data-val="pct">% Variation</button>
+                <button data-val="raw" class="active" data-i18n="ctrlRaw">$ Brut</button>
+                <button data-val="pct" data-i18n="ctrlPct">% Variation</button>
               </div>
             </div>
             <div class="control-group">
-              <span class="cg-label">Période</span>
+              <span class="cg-label" data-i18n="ctrlPeriod">Période</span>
               <div class="seg" id="narr-range-seg">
                 <button data-val="1">1M</button>
                 <button data-val="3">3M</button>
                 <button data-val="6">6M</button>
                 <button data-val="12">1A</button>
-                <button data-val="all" class="active">Tout</button>
+                <button data-val="24" data-i18n="rng24">2A</button>
+                <button data-val="60" data-i18n="rng60">5A</button>
+                <button data-val="all" class="active" data-i18n="ctrlAll">Tout</button>
               </div>
             </div>
             <label class="toggle-switch">
               <input type="checkbox" id="narr-smoothing">
-              Lissage (moy. 7 pts)
+              <span data-i18n="ctrlSmoothing">Lissage (moy. 7 pts)</span>
             </label>
-            <button class="btn small" id="narr-share-btn" style="margin-left:auto;" title="Copier un lien vers cette vue exacte">🔗 Partager</button>
-            <button class="btn small" id="narr-reset-zoom">↺ Réinitialiser le zoom</button>
+            <button class="btn small" id="narr-share-btn" style="margin-left:auto;" title="Copier un lien vers cette vue exacte" data-i18n="ctrlShare">🔗 Partager</button>
+            <button class="btn small" id="narr-reset-zoom" data-i18n="ctrlResetZoom">↺ Réinitialiser le zoom</button>
           </div>
           <div class="meta-row">
             <div id="narr-legend" class="legend-pills"></div>
-            <span id="narr-status" class="status">Chargement…</span>
+            <span id="narr-status" class="status" data-i18n="loading">Chargement…</span>
           </div>
           <div style="height:380px;"><canvas id="narr-chart"></canvas></div>
           <div id="narr-events-strip" class="events-strip"></div>
         </div>
         <div class="leaderboard">
           <div class="leaderboard-head">
-            <h3>Top 5 — narratifs les plus performants</h3>
+            <h3 data-i18n="top5Title">Top 5 — narratifs les plus performants</h3>
             <div class="seg" id="narr-lb-range-seg">
-              <button data-val="7">1 sem.</button>
-              <button data-val="30" class="active">1 mois</button>
-              <button data-val="60">2 mois</button>
-              <button data-val="182">6 mois</button>
-              <button data-val="365">1 an</button>
+              <button data-val="7" data-i18n="rng7">1 sem.</button>
+              <button data-val="30" class="active" data-i18n="rng30">1 mois</button>
+              <button data-val="60" data-i18n="rng60_lb">2 mois</button>
+              <button data-val="182" data-i18n="rng182">6 mois</button>
+              <button data-val="365" data-i18n="rng365">1 an</button>
             </div>
           </div>
           <table class="lb" id="narr-leaderboard">
-            <thead><tr><th class="rank">#</th><th>Narratif</th><th class="val">Cap. actuelle</th><th class="chg">Variation</th><th class="val">Ratio / BTC</th><th class="val">Stade</th><th class="val">Largeur</th></tr></thead>
+            <thead><tr><th class="rank">#</th><th data-i18n="colNarrative">Narratif</th><th class="val" data-i18n="colCap">Cap. actuelle</th><th class="chg" data-i18n="colChange">Variation</th><th class="val" data-i18n="colRatio">Ratio / BTC</th><th class="val" data-i18n="colStage">Stade</th><th class="val" data-i18n="colBreadth">Largeur</th></tr></thead>
             <tbody></tbody>
           </table>
           <div class="toolbar">
-            <button class="btn small" id="notice-toggle-btn">📋 Notice</button>
+            <button class="btn small" id="notice-toggle-btn" data-i18n="noticeBtn">📋 Notice</button>
           </div>
           <div id="notice-panel" class="notice-panel">
             <div class="stage-legend">
-              <h4 class="stage-legend-title">Légende — stade du cycle de vie (basé sur la capitalisation, 30j/7j)</h4>
+              <h4 class="stage-legend-title" data-i18n="legendTitle">Légende — stade du cycle de vie (basé sur la capitalisation, 30j/7j)</h4>
               <table class="lb">
-                <thead><tr><th>Stade</th><th>Condition</th><th class="val">Remplissage</th><th class="val">Couleur</th></tr></thead>
+                <thead><tr><th data-i18n="colStage">Stade</th><th data-i18n="colCondition">Condition</th><th class="val" data-i18n="colFill">Remplissage</th><th class="val" data-i18n="colColor">Couleur</th></tr></thead>
                 <tbody>
-                  <tr><td>Neutre</td><td>Progression 30j négative ou nulle</td><td class="val">25%</td><td class="val"><span class="stage-dot" style="background:#8B95A7"></span>Gris</td></tr>
-                  <tr><td>Émergence</td><td>Progression 30j positive (mais modérée)</td><td class="val">50%</td><td class="val"><span class="stage-dot" style="background:#4FD1C5"></span>Cyan</td></tr>
-                  <tr><td>Momentum</td><td>Progression 30j ≥ 20% et progression 7j positive</td><td class="val">75%</td><td class="val"><span class="stage-dot" style="background:#E8A33D"></span>Orange</td></tr>
-                  <tr><td>Euphorie ⚠</td><td>Progression 7j &gt; 50% (mouvement parabolique, standard des analystes crypto)</td><td class="val">100%</td><td class="val"><span class="stage-dot" style="background:#E8615C"></span>Rouge</td></tr>
+                  <tr><td data-i18n="stageNeutral">Neutre</td><td data-i18n="condNeutral">Progression 30j négative ou nulle</td><td class="val">25%</td><td class="val"><span class="stage-dot" style="background:#8B95A7"></span><span data-i18n="colorGray">Gris</span></td></tr>
+                  <tr><td data-i18n="stageEmergence">Émergence</td><td data-i18n="condEmergence">Progression 30j positive (mais modérée)</td><td class="val">50%</td><td class="val"><span class="stage-dot" style="background:#4FD1C5"></span>Cyan</td></tr>
+                  <tr><td data-i18n="stageMomentum">Momentum</td><td data-i18n="condMomentum">Progression 30j ≥ 20% et progression 7j positive</td><td class="val">75%</td><td class="val"><span class="stage-dot" style="background:#E8A33D"></span><span data-i18n="colorOrange">Orange</span></td></tr>
+                  <tr><td data-i18n="stageEuphoria">Euphorie ⚠</td><td data-i18n="condEuphoria">Progression 7j &gt; 50% (mouvement parabolique, standard des analystes crypto)</td><td class="val">100%</td><td class="val"><span class="stage-dot" style="background:#E8615C"></span><span data-i18n="colorRed">Rouge</span></td></tr>
                 </tbody>
               </table>
             </div>
             <div class="stage-legend">
-              <h4 class="stage-legend-title">Auto-validation — sur votre historique, qu'est-il arrivé 7 jours après chaque stade ?</h4>
+              <h4 class="stage-legend-title" data-i18n="validationTitle">Auto-validation — sur votre historique, qu'est-il arrivé 7 jours après chaque stade ?</h4>
               <table class="lb" id="stage-validation-table">
-                <thead><tr><th>Stade</th><th class="val">Jours observés</th><th class="val">Hausse ensuite</th><th class="val">Baisse ensuite</th></tr></thead>
+                <thead><tr><th data-i18n="colStage">Stade</th><th class="val" data-i18n="colDaysObserved">Jours observés</th><th class="val" data-i18n="colUpAfter">Hausse ensuite</th><th class="val" data-i18n="colDownAfter">Baisse ensuite</th></tr></thead>
                 <tbody id="stage-validation-tbody"><tr><td colspan="4" style="color:var(--text-dim);padding:10px;">Calcul en cours…</td></tr></tbody>
               </table>
             </div>
@@ -279,12 +309,12 @@
   <section id="page-trends" class="page">
     <div class="grid">
       <div class="panel">
-        <h2>Termes suivis</h2>
+        <h2 data-i18n="trendsListTitle">Termes suivis</h2>
         <div id="trends-list" class="list"></div>
         <div class="toolbar">
-          <button class="btn small" id="trends-add-term">+ Ligne manuelle</button>
+          <button class="btn small" id="trends-add-term" data-i18n="addManualLine">+ Ligne manuelle</button>
         </div>
-        <div class="note cyan">
+        <div class="note cyan" data-i18n="trendsNote">
           Données mises à jour <b>automatiquement chaque jour</b> via la librairie <i>pytrends</i>.
         </div>
       </div>
@@ -292,56 +322,87 @@
         <div class="chart-wrap" style="height:auto;padding-bottom:18px;">
           <div class="chart-controls">
             <div class="control-group">
-              <span class="cg-label">Affichage</span>
+              <span class="cg-label" data-i18n="ctrlDisplay">Affichage</span>
               <div class="seg" id="trends-viewmode-seg">
-                <button data-val="raw" class="active">Score brut</button>
-                <button data-val="pct">% Variation</button>
+                <button data-val="raw" class="active" data-i18n="ctrlRawScore">Score brut</button>
+                <button data-val="pct" data-i18n="ctrlPct">% Variation</button>
               </div>
             </div>
             <div class="control-group">
-              <span class="cg-label">Période</span>
+              <span class="cg-label" data-i18n="ctrlPeriod">Période</span>
               <div class="seg" id="trends-range-seg">
                 <button data-val="1">1M</button>
                 <button data-val="3">3M</button>
                 <button data-val="6">6M</button>
                 <button data-val="12">1A</button>
-                <button data-val="all" class="active">Tout</button>
+                <button data-val="24" data-i18n="rng24">2A</button>
+                <button data-val="60" data-i18n="rng60">5A</button>
+                <button data-val="all" class="active" data-i18n="ctrlAll">Tout</button>
               </div>
             </div>
             <label class="toggle-switch">
               <input type="checkbox" id="trends-smoothing">
-              Lissage (moy. 7 pts)
+              <span data-i18n="ctrlSmoothing">Lissage (moy. 7 pts)</span>
             </label>
-            <button class="btn small" id="trends-reset-zoom" style="margin-left:auto;">↺ Réinitialiser le zoom</button>
+            <button class="btn small" id="trends-reset-zoom" style="margin-left:auto;" data-i18n="ctrlResetZoom">↺ Réinitialiser le zoom</button>
           </div>
           <div class="meta-row">
             <div id="trends-legend" class="legend-pills"></div>
-            <span id="trends-status" class="status">Chargement…</span>
+            <span id="trends-status" class="status" data-i18n="loading">Chargement…</span>
           </div>
           <div style="height:380px;"><canvas id="trends-chart"></canvas></div>
         </div>
       </div>
     </div>
   </section>
+
+  <footer class="site-footer">
+    <a href="https://www.tradingview.com/" target="_blank" rel="noopener" data-i18n="tradingViewFooter">📈 Ouvrir TradingView ↗</a>
+  </footer>
 </div>
 
 <dialog id="dlg-manual">
-  <h3 id="dlg-manual-title">Ligne manuelle</h3>
-  <label>Nom</label>
+  <h3 id="dlg-manual-title" data-i18n="manualDialogTitle">Ligne manuelle</h3>
+  <label data-i18n="manualName">Nom</label>
   <input id="ml-name" placeholder="ex: Solana Ecosystem">
-  <label>Date (AAAA-MM-JJ)</label>
+  <label data-i18n="manualDate">Date (AAAA-MM-JJ)</label>
   <input id="ml-date" type="date">
   <label id="ml-value-label">Valeur</label>
   <input id="ml-value" type="number">
   <div class="dialog-actions">
-    <button class="btn" id="ml-cancel">Annuler</button>
-    <button class="btn primary" id="ml-save">Ajouter</button>
+    <button class="btn" id="ml-cancel" data-i18n="cancel">Annuler</button>
+    <button class="btn primary" id="ml-save" data-i18n="add">Ajouter</button>
+  </div>
+</dialog>
+
+
+<dialog id="dlg-settings">
+  <h3 data-i18n="settingsTitle">Réglages</h3>
+  <label data-i18n="settingsLangLabel">Langue</label>
+  <select id="settings-lang">
+    <option value="fr">Français</option>
+    <option value="en">English</option>
+    <option value="es">Español</option>
+    <option value="de">Deutsch</option>
+  </select>
+  <label data-i18n="settingsThemeLabel">Thème</label>
+  <div class="seg" id="settings-theme-seg">
+    <button data-val="dark" class="active" data-i18n="settingsDark">Sombre</button>
+    <button data-val="light" data-i18n="settingsLight">Clair</button>
+  </div>
+  <label data-i18n="settingsCurrencyLabel">Devise</label>
+  <div class="seg" id="settings-currency-seg">
+    <button data-val="USD" class="active">USD ($)</button>
+    <button data-val="EUR">EUR (€)</button>
+  </div>
+  <div class="dialog-actions">
+    <button class="btn primary" id="settings-close-btn" data-i18n="close">Fermer</button>
   </div>
 </dialog>
 
 <dialog id="dlg-help">
   <h3>Guide d'utilisation du Radar</h3>
-  <div class="help-content">
+  <div class="help-content" id="help-content-body">
     <h4>Vue d'ensemble</h4>
     <p>Ce site suit l'évolution de plusieurs <b>narratifs crypto</b> (DeFi, IA, Meme, RWA, etc.) et de l'<b>intérêt de recherche Google</b> pour des mots-clés crypto. Tout se met à jour <b>automatiquement chaque jour</b> — vous n'avez rien à faire, sauf si vous voulez actualiser manuellement ou personnaliser l'affichage.</p>
 
@@ -397,7 +458,11 @@ Chart.defaults.color = "#8B95A7";
 const PALETTE = ["#E8A33D","#4FD1C5","#E8615C","#8B7FD1","#5FB878","#D18FC2","#E0C341","#5DA9E9","#E08A5D","#7FDBD4","#C15FE8","#B8D15F","#F2A65A","#6FCF97","#BB86FC","#4DD0E1","#FF8A65","#A0D468"];
 const colorFor = i => PALETTE[i % PALETTE.length];
 const todayStr = () => new Date().toISOString().slice(0,10);
-const fmtUsd = n => n>=1e9 ? '$'+(n/1e9).toFixed(2)+'B' : n>=1e6 ? '$'+(n/1e6).toFixed(2)+'M' : '$'+Number(n).toLocaleString();
+const fmtUsd = n => {
+  const v = (typeof convertCurrency === 'function') ? convertCurrency(n) : n;
+  const sym = (typeof currencySymbol === 'function') ? currencySymbol() : '$';
+  return v>=1e9 ? sym+(v/1e9).toFixed(2)+'B' : v>=1e6 ? sym+(v/1e6).toFixed(2)+'M' : sym+Number(v).toLocaleString();
+};
 const fmtPct = n => (n>=0?'+':'') + n.toFixed(1) + '%';
 
 const tabNarr=document.getElementById('tab-btn-narr'), tabTrends=document.getElementById('tab-btn-trends');
@@ -583,7 +648,7 @@ function renderChart(store, ui, canvasEl, legendEl, statusEl, ref, opts){
     legendEl.appendChild(pill);
   });
 
-  statusEl.textContent = labels.length ? (labels.length+' dates · '+visible.length+' séries') : 'Aucune donnée pour le moment';
+  statusEl.textContent = labels.length ? (labels.length+' '+t('dates')+' · '+visible.length+' '+t('series')) : t('noData');
   statusEl.className = 'status'+(labels.length?' ok':'');
 
   const yFmt = ui.viewMode === 'pct' ? (v=>fmtPct(v)) : opts.fmt;
@@ -668,10 +733,10 @@ window.addEventListener('resize', ()=>{ if(narrRef.updateEventDots) narrRef.upda
 
 function classifyStage(c30, c7){
   if(c30 == null) return {stage:0, color:'var(--line)', text:'—'};
-  if(c7 != null && c7 > 50) return {stage:4, color:'#E8615C', text:'Euphorie ⚠'};
-  if(c30 >= 20 && c7 != null && c7 > 0) return {stage:3, color:'#E8A33D', text:'Momentum'};
-  if(c30 > 0) return {stage:2, color:'#4FD1C5', text:'Émergence'};
-  return {stage:1, color:'#8B95A7', text:'Neutre'};
+  if(c7 != null && c7 > 50) return {stage:4, color:'#E8615C', text:t('stageEuphoria')};
+  if(c30 >= 20 && c7 != null && c7 > 0) return {stage:3, color:'#E8A33D', text:t('stageMomentum')};
+  if(c30 > 0) return {stage:2, color:'#4FD1C5', text:t('stageEmergence')};
+  return {stage:1, color:'#8B95A7', text:t('stageNeutral')};
 }
 
 function renderLeaderboard(store, days, tbodyEl, fmt){
@@ -721,7 +786,7 @@ function renderLeaderboard(store, days, tbodyEl, fmt){
       <td class="val">${r.ratio!=null ? r.ratio.toFixed(2)+'%' : '—'}</td>
       <td class="val"><span class="stage-dot" style="background:${r.stageInfo.color}"></span>${r.stageInfo.text}</td>
       <td class="val">${r.breadthVal!=null ? r.breadthVal+' cryptos' : '—'}</td>
-    </tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim);padding:14px 10px;">Pas assez de données sur cette période.</td></tr>';
+    </tr>`).join('') || `<tr><td colspan="7" style="color:var(--text-dim);padding:14px 10px;">${t('notEnoughData')}</td></tr>`;
 }
 
 /* ---------- largeur (breadth) par narratif ---------- */
@@ -887,13 +952,248 @@ document.getElementById('notice-toggle-btn').addEventListener('click', ()=>{
 document.getElementById('help-btn').addEventListener('click', ()=> document.getElementById('dlg-help').showModal());
 document.getElementById('help-close-btn').addEventListener('click', ()=> document.getElementById('dlg-help').close());
 
+/* ============================================================
+   RÉGLAGES : langue / thème / devise
+   ============================================================ */
+const TRANSLATIONS = {
+  fr: {
+    siteTitle:"Narratifs & Tendances Crypto", siteSub:"// mis à jour automatiquement chaque jour",
+    tabNarr:"Narratifs (Market Cap)", tabTrends:"Google Trends", refreshAllBtn:"↻ Actualiser les données",
+    narrListTitle:"Narratifs suivis", trendsListTitle:"Termes suivis", addManualLine:"+ Ligne manuelle",
+    topGainersTitle:"Top 20 altcoins — hausse 24h", topGainersNote:"En direct depuis CoinGecko, actualisé chaque minute. Bitcoin et les stablecoins sont exclus.",
+    narrNote:"Données mises à jour <b>automatiquement chaque jour</b> par une GitHub Action qui interroge l'API CoinGecko.",
+    trendsNote:"Données mises à jour <b>automatiquement chaque jour</b> via la librairie <i>pytrends</i>.",
+    ctrlDisplay:"Affichage", ctrlRaw:"$ Brut", ctrlRawScore:"Score brut", ctrlPct:"% Variation",
+    ctrlPeriod:"Période", ctrlAll:"Tout", ctrlSmoothing:"Lissage (moy. 7 pts)",
+    ctrlShare:"🔗 Partager", ctrlResetZoom:"↺ Réinitialiser le zoom",
+    top5Title:"Top 5 — narratifs les plus performants",
+    rng7:"1 sem.", rng30:"1 mois", rng60_lb:"2 mois", rng182:"6 mois", rng365:"1 an", rng24:"2A", rng60:"5A",
+    colNarrative:"Narratif", colCap:"Cap. actuelle", colChange:"Variation", colRatio:"Ratio / BTC",
+    colStage:"Stade", colBreadth:"Largeur", colCondition:"Condition", colFill:"Remplissage", colColor:"Couleur",
+    colDaysObserved:"Jours observés", colUpAfter:"Hausse ensuite", colDownAfter:"Baisse ensuite",
+    noticeBtn:"📋 Notice", legendTitle:"Légende — stade du cycle de vie (basé sur la capitalisation, 30j/7j)",
+    stageNeutral:"Neutre", stageEmergence:"Émergence", stageMomentum:"Momentum", stageEuphoria:"Euphorie ⚠",
+    condNeutral:"Progression 30j négative ou nulle", condEmergence:"Progression 30j positive (mais modérée)",
+    condMomentum:"Progression 30j ≥ 20% et progression 7j positive",
+    condEuphoria:"Progression 7j > 50% (mouvement parabolique, standard des analystes crypto)",
+    colorGray:"Gris", colorOrange:"Orange", colorRed:"Rouge",
+    validationTitle:"Auto-validation — sur votre historique, qu'est-il arrivé 7 jours après chaque stade ?",
+    manualDialogTitle:"Ligne manuelle", manualName:"Nom", manualDate:"Date (AAAA-MM-JJ)",
+    cancel:"Annuler", add:"Ajouter", close:"Fermer",
+    guideBtn:"❓ Guide", settingsBtn:"⚙️ Réglages",
+    settingsTitle:"Réglages", settingsLangLabel:"Langue", settingsThemeLabel:"Thème",
+    settingsDark:"Sombre", settingsLight:"Clair", settingsCurrencyLabel:"Devise",
+    tagMovement:"Mouvement", tagEmergent:"Émergent", notTracked:"non suivi", cap:"cap",
+    dominance:"dominance", fngLabel:"Fear & Greed", loading:"Chargement…", noData:"Aucune donnée pour le moment",
+    dates:"dates", series:"séries", notEnoughData:"Pas assez de données sur cette période.",
+    copied:"✓ Copié !", updating:"⏳ Actualisation…", tradingViewFooter:"📈 Ouvrir TradingView ↗"
+  },
+  en: {
+    siteTitle:"Narratives & Crypto Trends", siteSub:"// automatically updated every day",
+    tabNarr:"Narratives (Market Cap)", tabTrends:"Google Trends", refreshAllBtn:"↻ Refresh data",
+    narrListTitle:"Tracked narratives", trendsListTitle:"Tracked terms", addManualLine:"+ Manual line",
+    topGainersTitle:"Top 20 altcoins — 24h gainers", topGainersNote:"Live from CoinGecko, refreshed every minute. Bitcoin and stablecoins excluded.",
+    narrNote:"Data updated <b>automatically every day</b> by a GitHub Action querying the CoinGecko API.",
+    trendsNote:"Data updated <b>automatically every day</b> via the <i>pytrends</i> library.",
+    ctrlDisplay:"Display", ctrlRaw:"$ Raw", ctrlRawScore:"Raw score", ctrlPct:"% Change",
+    ctrlPeriod:"Period", ctrlAll:"All", ctrlSmoothing:"Smoothing (7-pt avg)",
+    ctrlShare:"🔗 Share", ctrlResetZoom:"↺ Reset zoom",
+    top5Title:"Top 5 — best performing narratives",
+    rng7:"1 wk", rng30:"1 mo", rng60_lb:"2 mo", rng182:"6 mo", rng365:"1 yr", rng24:"2Y", rng60:"5Y",
+    colNarrative:"Narrative", colCap:"Current cap", colChange:"Change", colRatio:"Ratio / BTC",
+    colStage:"Stage", colBreadth:"Breadth", colCondition:"Condition", colFill:"Fill", colColor:"Color",
+    colDaysObserved:"Days observed", colUpAfter:"Up afterward", colDownAfter:"Down afterward",
+    noticeBtn:"📋 Notice", legendTitle:"Legend — lifecycle stage (based on market cap, 30d/7d)",
+    stageNeutral:"Neutral", stageEmergence:"Emerging", stageMomentum:"Momentum", stageEuphoria:"Euphoria ⚠",
+    condNeutral:"30d change negative or flat", condEmergence:"30d change positive (but moderate)",
+    condMomentum:"30d change ≥ 20% and 7d change positive",
+    condEuphoria:"7d change > 50% (parabolic move, standard crypto-analyst definition)",
+    colorGray:"Gray", colorOrange:"Orange", colorRed:"Red",
+    validationTitle:"Auto-validation — based on your history, what happened 7 days after each stage?",
+    manualDialogTitle:"Manual line", manualName:"Name", manualDate:"Date (YYYY-MM-DD)",
+    cancel:"Cancel", add:"Add", close:"Close",
+    guideBtn:"❓ Guide", settingsBtn:"⚙️ Settings",
+    settingsTitle:"Settings", settingsLangLabel:"Language", settingsThemeLabel:"Theme",
+    settingsDark:"Dark", settingsLight:"Light", settingsCurrencyLabel:"Currency",
+    tagMovement:"Movement", tagEmergent:"Emerging", notTracked:"not tracked", cap:"cap",
+    dominance:"dominance", fngLabel:"Fear & Greed", loading:"Loading…", noData:"No data yet",
+    dates:"dates", series:"series", notEnoughData:"Not enough data for this period.",
+    copied:"✓ Copied!", updating:"⏳ Refreshing…", tradingViewFooter:"📈 Open TradingView ↗"
+  },
+  es: {
+    siteTitle:"Narrativas y Tendencias Cripto", siteSub:"// actualizado automáticamente cada día",
+    tabNarr:"Narrativas (Cap. de mercado)", tabTrends:"Google Trends", refreshAllBtn:"↻ Actualizar datos",
+    narrListTitle:"Narrativas seguidas", trendsListTitle:"Términos seguidos", addManualLine:"+ Línea manual",
+    topGainersTitle:"Top 20 altcoins — subida 24h", topGainersNote:"En vivo desde CoinGecko, actualizado cada minuto. Bitcoin y stablecoins excluidos.",
+    narrNote:"Datos actualizados <b>automáticamente cada día</b> por una GitHub Action que consulta la API de CoinGecko.",
+    trendsNote:"Datos actualizados <b>automáticamente cada día</b> mediante la librería <i>pytrends</i>.",
+    ctrlDisplay:"Vista", ctrlRaw:"$ Bruto", ctrlRawScore:"Puntuación bruta", ctrlPct:"% Variación",
+    ctrlPeriod:"Período", ctrlAll:"Todo", ctrlSmoothing:"Suavizado (media 7 pts)",
+    ctrlShare:"🔗 Compartir", ctrlResetZoom:"↺ Restablecer zoom",
+    top5Title:"Top 5 — narrativas con mejor rendimiento",
+    rng7:"1 sem.", rng30:"1 mes", rng60_lb:"2 meses", rng182:"6 meses", rng365:"1 año", rng24:"2A", rng60:"5A",
+    colNarrative:"Narrativa", colCap:"Cap. actual", colChange:"Variación", colRatio:"Ratio / BTC",
+    colStage:"Etapa", colBreadth:"Amplitud", colCondition:"Condición", colFill:"Relleno", colColor:"Color",
+    colDaysObserved:"Días observados", colUpAfter:"Sube después", colDownAfter:"Baja después",
+    noticeBtn:"📋 Aviso", legendTitle:"Leyenda — etapa del ciclo de vida (según cap. de mercado, 30d/7d)",
+    stageNeutral:"Neutral", stageEmergence:"Emergencia", stageMomentum:"Momentum", stageEuphoria:"Euforia ⚠",
+    condNeutral:"Variación 30d negativa o nula", condEmergence:"Variación 30d positiva (pero moderada)",
+    condMomentum:"Variación 30d ≥ 20% y variación 7d positiva",
+    condEuphoria:"Variación 7d > 50% (movimiento parabólico, estándar de analistas cripto)",
+    colorGray:"Gris", colorOrange:"Naranja", colorRed:"Rojo",
+    validationTitle:"Auto-validación — según su historial, ¿qué pasó 7 días después de cada etapa?",
+    manualDialogTitle:"Línea manual", manualName:"Nombre", manualDate:"Fecha (AAAA-MM-DD)",
+    cancel:"Cancelar", add:"Añadir", close:"Cerrar",
+    guideBtn:"❓ Guía", settingsBtn:"⚙️ Ajustes",
+    settingsTitle:"Ajustes", settingsLangLabel:"Idioma", settingsThemeLabel:"Tema",
+    settingsDark:"Oscuro", settingsLight:"Claro", settingsCurrencyLabel:"Moneda",
+    tagMovement:"Movimiento", tagEmergent:"Emergente", notTracked:"no seguido", cap:"cap",
+    dominance:"dominancia", fngLabel:"Fear & Greed", loading:"Cargando…", noData:"Sin datos por ahora",
+    dates:"fechas", series:"series", notEnoughData:"Datos insuficientes para este período.",
+    copied:"✓ ¡Copiado!", updating:"⏳ Actualizando…", tradingViewFooter:"📈 Abrir TradingView ↗"
+  },
+  de: {
+    siteTitle:"Narrative & Krypto-Trends", siteSub:"// wird jeden Tag automatisch aktualisiert",
+    tabNarr:"Narrative (Marktkapital.)", tabTrends:"Google Trends", refreshAllBtn:"↻ Daten aktualisieren",
+    narrListTitle:"Verfolgte Narrative", trendsListTitle:"Verfolgte Begriffe", addManualLine:"+ Manuelle Zeile",
+    topGainersTitle:"Top 20 Altcoins — 24h-Gewinner", topGainersNote:"Live von CoinGecko, jede Minute aktualisiert. Bitcoin und Stablecoins ausgeschlossen.",
+    narrNote:"Daten werden <b>jeden Tag automatisch</b> über eine GitHub Action von der CoinGecko-API abgerufen.",
+    trendsNote:"Daten werden <b>jeden Tag automatisch</b> über die Bibliothek <i>pytrends</i> aktualisiert.",
+    ctrlDisplay:"Ansicht", ctrlRaw:"$ Roh", ctrlRawScore:"Roh-Score", ctrlPct:"% Veränderung",
+    ctrlPeriod:"Zeitraum", ctrlAll:"Alle", ctrlSmoothing:"Glättung (7-Tage-Ø)",
+    ctrlShare:"🔗 Teilen", ctrlResetZoom:"↺ Zoom zurücksetzen",
+    top5Title:"Top 5 — beste Narrative",
+    rng7:"1 Wo.", rng30:"1 Mon.", rng60_lb:"2 Mon.", rng182:"6 Mon.", rng365:"1 J.", rng24:"2J", rng60:"5J",
+    colNarrative:"Narrativ", colCap:"Aktuelle Cap.", colChange:"Veränderung", colRatio:"Verhältnis / BTC",
+    colStage:"Phase", colBreadth:"Breite", colCondition:"Bedingung", colFill:"Füllung", colColor:"Farbe",
+    colDaysObserved:"Beobachtete Tage", colUpAfter:"Danach Anstieg", colDownAfter:"Danach Rückgang",
+    noticeBtn:"📋 Hinweis", legendTitle:"Legende — Lebenszyklus-Phase (basierend auf Marktkap., 30T/7T)",
+    stageNeutral:"Neutral", stageEmergence:"Entstehung", stageMomentum:"Momentum", stageEuphoria:"Euphorie ⚠",
+    condNeutral:"30-Tage-Veränderung negativ oder null", condEmergence:"30-Tage-Veränderung positiv (aber moderat)",
+    condMomentum:"30-Tage-Veränderung ≥ 20% und 7-Tage-Veränderung positiv",
+    condEuphoria:"7-Tage-Veränderung > 50% (parabolische Bewegung, Standard bei Krypto-Analysten)",
+    colorGray:"Grau", colorOrange:"Orange", colorRed:"Rot",
+    validationTitle:"Selbstvalidierung — was geschah laut Ihrer Historie 7 Tage nach jeder Phase?",
+    manualDialogTitle:"Manuelle Zeile", manualName:"Name", manualDate:"Datum (JJJJ-MM-TT)",
+    cancel:"Abbrechen", add:"Hinzufügen", close:"Schließen",
+    guideBtn:"❓ Anleitung", settingsBtn:"⚙️ Einstellungen",
+    settingsTitle:"Einstellungen", settingsLangLabel:"Sprache", settingsThemeLabel:"Design",
+    settingsDark:"Dunkel", settingsLight:"Hell", settingsCurrencyLabel:"Währung",
+    tagMovement:"Bewegung", tagEmergent:"Aufstrebend", notTracked:"nicht verfolgt", cap:"Cap.",
+    dominance:"Dominanz", fngLabel:"Fear & Greed", loading:"Lädt…", noData:"Noch keine Daten",
+    dates:"Daten", series:"Serien", notEnoughData:"Nicht genug Daten für diesen Zeitraum.",
+    copied:"✓ Kopiert!", updating:"⏳ Wird aktualisiert…", tradingViewFooter:"📈 TradingView öffnen ↗"
+  }
+};
+
+const GUIDE_HTML = {
+  fr: document.getElementById('help-content-body') ? document.getElementById('help-content-body').innerHTML : '',
+  en: `<h4>Overview</h4><p>This site tracks the market-cap evolution of several <b>crypto narratives</b> (DeFi, AI, Meme, RWA…) and Google search interest for crypto keywords. Everything updates <b>automatically every day</b>.</p>
+  <h4>"Narratives" tab</h4><p>The main chart shows market-cap history per narrative. Controls: <b>$ Raw / % Change</b> (compare narratives of different sizes), <b>Period</b>, <b>Smoothing</b>, <b>Zoom</b> (scroll/pinch, drag to pan), <b>Share</b> (copies a link reproducing this exact view). Small dots under the chart marked "News" flag a notable news day — click to see the article(s).</p>
+  <p>In the left list: check/uncheck a narrative to show/hide it. The sparkline and colored dot show its recent trend and lifecycle stage.</p>
+  <h4>"Top 5" table</h4><p>Ranks your narratives by performance over the chosen period. Columns include Ratio/BTC (relative size vs Bitcoin), Stage (lifecycle) and Breadth (number of coins composing the narrative). The <b>📋 Notice</b> button reveals the full stage legend and a self-validation table.</p>
+  <h4>"Google Trends" tab</h4><p>Same principle, for Google search interest instead of market cap.</p>
+  <h4>Scrolling banners</h4><p>Top 10 crypto prices (24h change) + emerging narratives, then latest crypto news (clickable).</p>
+  <h4>Market widget (bottom-left)</h4><p>Live BTC/ETH price, BTC/ETH/USDT/USDC dominance, and the Fear &amp; Greed Index. Click a row to open TradingView. Arrows reorder rows; the ↻ icon refreshes everything.</p>
+  <h4>Lifecycle stages</h4><p>A custom indicator based purely on market cap: <b>Neutral</b> (flat/negative 30d), <b>Emerging</b> (positive 30d), <b>Momentum</b> (30d≥20% & 7d positive), <b>Euphoria ⚠</b> (7d>50%, a "parabolic move" per crypto-analyst standards, often followed by a correction).</p>`,
+  es: `<h4>Resumen</h4><p>Este sitio sigue la evolución de la capitalización de varias <b>narrativas cripto</b> (DeFi, IA, Meme, RWA…) y el interés de búsqueda en Google para palabras clave cripto. Todo se actualiza <b>automáticamente cada día</b>.</p>
+  <h4>Pestaña "Narrativas"</h4><p>El gráfico principal muestra el historial de capitalización por narrativa. Controles: <b>$ Bruto / % Variación</b>, <b>Período</b>, <b>Suavizado</b>, <b>Zoom</b> (rueda/pellizco, arrastrar para desplazar), <b>Compartir</b> (copia un enlace que reproduce esta vista exacta). Los puntos "News" bajo el gráfico señalan una noticia destacada ese día.</p>
+  <p>En la lista de la izquierda: marque/desmarque una narrativa para mostrarla u ocultarla. El minigráfico y el punto de color muestran su tendencia reciente y etapa del ciclo de vida.</p>
+  <h4>Tabla "Top 5"</h4><p>Clasifica sus narrativas por rendimiento. Incluye Ratio/BTC, Etapa (ciclo de vida) y Amplitud (número de criptos que componen la narrativa). El botón <b>📋 Aviso</b> despliega la leyenda completa y una tabla de auto-validación.</p>
+  <h4>Pestaña "Google Trends"</h4><p>Mismo principio, para el interés de búsqueda en Google.</p>
+  <h4>Barras desplazables</h4><p>Precios de las 10 mayores criptos (variación 24h) + narrativas emergentes, luego últimas noticias cripto (clicables).</p>
+  <h4>Widget de mercado (abajo a la izquierda)</h4><p>Precio en vivo BTC/ETH, dominancia BTC/ETH/USDT/USDC, e índice Fear &amp; Greed. Haga clic en una fila para abrir TradingView. Las flechas reordenan las filas; el icono ↻ actualiza todo.</p>
+  <h4>Etapas del ciclo de vida</h4><p>Un indicador propio basado solo en la capitalización: <b>Neutral</b> (30d plano/negativo), <b>Emergencia</b> (30d positivo), <b>Momentum</b> (30d≥20% y 7d positivo), <b>Euforia ⚠</b> (7d>50%, "movimiento parabólico" según estándares de analistas cripto, a menudo seguido de una corrección).</p>`,
+  de: `<h4>Überblick</h4><p>Diese Seite verfolgt die Marktkapitalisierung mehrerer <b>Krypto-Narrative</b> (DeFi, KI, Meme, RWA…) und das Google-Suchinteresse für Krypto-Keywords. Alles wird <b>jeden Tag automatisch</b> aktualisiert.</p>
+  <h4>Tab "Narrative"</h4><p>Das Hauptdiagramm zeigt den Kapitalisierungsverlauf pro Narrativ. Steuerung: <b>$ Roh / % Veränderung</b>, <b>Zeitraum</b>, <b>Glättung</b>, <b>Zoom</b> (Scrollen/Pinch, Ziehen zum Verschieben), <b>Teilen</b> (kopiert einen Link zu genau dieser Ansicht). Kleine "News"-Punkte unter dem Diagramm markieren einen wichtigen Nachrichtentag.</p>
+  <p>In der linken Liste: Narrativ an-/abhaken, um es ein-/auszublenden. Sparkline und Farbpunkt zeigen den jüngsten Trend und die Lebenszyklus-Phase.</p>
+  <h4>"Top 5"-Tabelle</h4><p>Rangiert Ihre Narrative nach Performance. Spalten: Verhältnis/BTC, Phase (Lebenszyklus) und Breite (Anzahl der Coins im Narrativ). Der Button <b>📋 Hinweis</b> zeigt die vollständige Legende und eine Selbstvalidierungs-Tabelle.</p>
+  <h4>Tab "Google Trends"</h4><p>Gleiches Prinzip, für das Google-Suchinteresse.</p>
+  <h4>Laufende Banner</h4><p>Top-10-Krypto-Preise (24h-Veränderung) + aufstrebende Narrative, danach aktuelle Krypto-News (anklickbar).</p>
+  <h4>Markt-Widget (unten links)</h4><p>Live-Preis BTC/ETH, Dominanz BTC/ETH/USDT/USDC, und der Fear &amp; Greed Index. Zeile anklicken öffnet TradingView. Pfeile ordnen die Zeilen neu; das ↻-Symbol aktualisiert alles.</p>
+  <h4>Lebenszyklus-Phasen</h4><p>Ein eigener Indikator, rein auf Marktkapitalisierung basiert: <b>Neutral</b> (30T flach/negativ), <b>Entstehung</b> (30T positiv), <b>Momentum</b> (30T≥20% & 7T positiv), <b>Euphorie ⚠</b> (7T>50%, eine "parabolische Bewegung" nach Krypto-Analysten-Standard, oft gefolgt von einer Korrektur).</p>`
+};
+
+let currentLang = localStorage.getItem('radar-lang') || 'fr';
+let currentCurrency = localStorage.getItem('radar-currency') || 'USD';
+let usdToEurRate = null;
+
+function t(key){
+  return (TRANSLATIONS[currentLang] && TRANSLATIONS[currentLang][key]) || (TRANSLATIONS.fr[key]) || key;
+}
+
+function applyLanguage(lang){
+  currentLang = lang;
+  localStorage.setItem('radar-lang', lang);
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    const val = TRANSLATIONS[lang] && TRANSLATIONS[lang][key];
+    if(val != null) el.innerHTML = val;
+  });
+  const helpBody = document.getElementById('help-content-body');
+  if(helpBody) helpBody.innerHTML = GUIDE_HTML[lang] || GUIDE_HTML.fr;
+  if(narrStore){ refreshNarr(); }
+  if(trendsStore){ refreshTrends(); }
+  initAlertBanner();
+  renderMarketWidget();
+  applyMarketData();
+}
+
+function applyTheme(theme){
+  localStorage.setItem('radar-theme', theme);
+  document.body.classList.toggle('light-theme', theme === 'light');
+}
+
+async function loadFxRate(){
+  try{
+    const res = await fetch('https://api.frankfurter.app/latest?from=USD&to=EUR');
+    if(!res.ok) return;
+    const data = await res.json();
+    if(data && data.rates && data.rates.EUR) usdToEurRate = data.rates.EUR;
+  }catch(e){ console.warn('Impossible de charger le taux de change', e); }
+}
+
+function convertCurrency(usdValue){
+  if(currentCurrency === 'EUR' && usdToEurRate) return usdValue * usdToEurRate;
+  return usdValue;
+}
+function currencySymbol(){ return (currentCurrency === 'EUR' && usdToEurRate) ? '€' : '$'; }
+
+function applyCurrencyChange(){
+  if(narrStore) refreshNarr();
+  initAlertBanner();
+  applyMarketData();
+  refreshTopGainers();
+}
+
+document.getElementById('settings-btn').addEventListener('click', ()=> document.getElementById('dlg-settings').showModal());
+document.getElementById('settings-close-btn').addEventListener('click', ()=> document.getElementById('dlg-settings').close());
+document.getElementById('settings-lang').addEventListener('change', (e)=> applyLanguage(e.target.value));
+document.querySelectorAll('#settings-theme-seg button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#settings-theme-seg button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    applyTheme(btn.dataset.val);
+  });
+});
+document.querySelectorAll('#settings-currency-seg button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#settings-currency-seg button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCurrency = btn.dataset.val;
+    localStorage.setItem('radar-currency', currentCurrency);
+    applyCurrencyChange();
+  });
+});
+
+
 document.getElementById('narr-share-btn').addEventListener('click', async ()=>{
   const btn = document.getElementById('narr-share-btn');
   const url = buildShareLink();
   const original = btn.textContent;
   try{
     await navigator.clipboard.writeText(url);
-    btn.textContent = '✓ Copié !';
+    btn.textContent = t('copied');
   }catch(e){
     window.prompt('Copiez ce lien :', url);
     btn.textContent = original;
@@ -938,6 +1238,43 @@ async function fetchTop10Crypto(){
   }
 }
 
+const STABLECOIN_IDS = new Set(['tether','usd-coin','dai','binance-usd','true-usd','frax','usdd','first-digital-usd','paypal-usd','usde']);
+
+async function fetchTopAltcoinGainers(){
+  try{
+    const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=150&page=1&price_change_percentage=24h');
+    if(!res.ok) return [];
+    const data = await res.json();
+    return data
+      .filter(c => c.id !== 'bitcoin' && !STABLECOIN_IDS.has(c.id) && c.price_change_percentage_24h != null)
+      .sort((a,b) => b.price_change_percentage_24h - a.price_change_percentage_24h)
+      .slice(0, 20);
+  }catch(e){
+    console.warn('Impossible de charger le top altcoins', e);
+    return [];
+  }
+}
+
+async function refreshTopGainers(){
+  const listEl = document.getElementById('top-gainers-list');
+  const coins = await fetchTopAltcoinGainers();
+  if(!coins.length){
+    listEl.innerHTML = `<div style="color:var(--text-dim);font-family:var(--mono);font-size:11.5px;padding:8px;">${t('noData')}</div>`;
+    return;
+  }
+  listEl.innerHTML = coins.map((c,i)=>{
+    const chg = c.price_change_percentage_24h;
+    const chgClass = chg >= 0 ? '' : 'style="color:var(--red)"';
+    const arrow = chg >= 0 ? '+' : '';
+    return `<div class="gainer-row">
+      <span class="gainer-rank">${i+1}</span>
+      <span class="gainer-symbol">${(c.symbol||'').toUpperCase()}</span>
+      <span class="gainer-price">${fmtPrice(c.current_price)}</span>
+      <span class="gainer-chg" ${chgClass}>${arrow}${chg.toFixed(1)}%</span>
+    </div>`;
+  }).join('');
+}
+
 async function initAlertBanner(){
   const [alerts, top10] = await Promise.all([
     loadJsonSafe('data/alerts.json'),
@@ -955,7 +1292,7 @@ async function initAlertBanner(){
 
   if(alerts && alerts.emerging){
     alerts.emerging.forEach(e=>{
-      items.push(`<div class="alert-item"><span class="tag new">Émergent</span>🆕 ${e.name} +${e.change_pct}% (cap ${fmtUsd(e.market_cap)}) — non suivi</div>`);
+      items.push(`<div class="alert-item"><span class="tag new">${t('tagEmergent')}</span>🆕 ${e.name} +${e.change_pct}% (${t('cap')} ${fmtUsd(e.market_cap)}) — ${t('notTracked')}</div>`);
     });
   }
 
@@ -977,7 +1314,7 @@ const ROW_CONFIGS = {
       <span class="mw-icon">₿</span>
       <div class="mw-text">
         <span class="mw-price" id="mw-btc-price">--</span>
-        <span class="mw-sub" id="mw-btc-dom">BTC · dominance --%</span>
+        <span class="mw-sub" id="mw-btc-dom">BTC · ${t('dominance')} --%</span>
       </div>
       <span class="mw-tv">TV↗</span>
     </a>`,
@@ -986,7 +1323,7 @@ const ROW_CONFIGS = {
       <span class="mw-icon">Ξ</span>
       <div class="mw-text">
         <span class="mw-price" id="mw-eth-price">--</span>
-        <span class="mw-sub" id="mw-eth-dom">ETH · dominance --%</span>
+        <span class="mw-sub" id="mw-eth-dom">ETH · ${t('dominance')} --%</span>
       </div>
       <span class="mw-tv">TV↗</span>
     </a>`,
@@ -995,7 +1332,7 @@ const ROW_CONFIGS = {
       <span class="mw-icon">₮</span>
       <div class="mw-text">
         <span class="mw-price" id="mw-usdtd-value">--</span>
-        <span class="mw-sub">USDT.D · dominance</span>
+        <span class="mw-sub">USDT.D · ${t('dominance')}</span>
       </div>
       <span class="mw-tv">TV↗</span>
     </a>`,
@@ -1004,7 +1341,7 @@ const ROW_CONFIGS = {
       <span class="mw-icon">Ⓢ</span>
       <div class="mw-text">
         <span class="mw-price" id="mw-usdcd-value">--</span>
-        <span class="mw-sub">USDC.D · dominance</span>
+        <span class="mw-sub">USDC.D · ${t('dominance')}</span>
       </div>
       <span class="mw-tv">TV↗</span>
     </a>`,
@@ -1013,7 +1350,7 @@ const ROW_CONFIGS = {
       <span class="mw-emoji" id="fng-emoji">📊</span>
       <div class="mw-text">
         <span class="mw-price" id="fng-value">--</span>
-        <span class="mw-sub" id="fng-label">Fear &amp; Greed</span>
+        <span class="mw-sub" id="fng-label">${t('fngLabel')}</span>
       </div>
     </div>`
 };
@@ -1063,11 +1400,11 @@ function applyMarketData(){
   const priceEl = document.getElementById('mw-btc-price');
   if(priceEl && lastMarketData.btcPrice != null) priceEl.textContent = fmtPrice(lastMarketData.btcPrice);
   const domEl = document.getElementById('mw-btc-dom');
-  if(domEl && lastMarketData.btcDom != null) domEl.textContent = `BTC · dominance ${lastMarketData.btcDom.toFixed(1)}%`;
+  if(domEl && lastMarketData.btcDom != null) domEl.textContent = `BTC · ${t('dominance')} ${lastMarketData.btcDom.toFixed(1)}%`;
   const ethPriceEl = document.getElementById('mw-eth-price');
   if(ethPriceEl && lastMarketData.ethPrice != null) ethPriceEl.textContent = fmtPrice(lastMarketData.ethPrice);
   const ethDomEl = document.getElementById('mw-eth-dom');
-  if(ethDomEl && lastMarketData.ethDom != null) ethDomEl.textContent = `ETH · dominance ${lastMarketData.ethDom.toFixed(1)}%`;
+  if(ethDomEl && lastMarketData.ethDom != null) ethDomEl.textContent = `ETH · ${t('dominance')} ${lastMarketData.ethDom.toFixed(1)}%`;
   const usdtdEl = document.getElementById('mw-usdtd-value');
   if(usdtdEl && lastMarketData.usdtDom != null) usdtdEl.textContent = lastMarketData.usdtDom.toFixed(2) + '%';
   const usdcdEl = document.getElementById('mw-usdcd-value');
@@ -1079,7 +1416,7 @@ function applyMarketData(){
     const labEl = document.getElementById('fng-label');
     if(emojiEl) emojiEl.textContent = fngEmoji(lastMarketData.fng.classification);
     if(valEl) valEl.textContent = lastMarketData.fng.value;
-    if(labEl) labEl.textContent = `Fear & Greed · ${fngLabelFr(lastMarketData.fng.classification)}`;
+    if(labEl) labEl.textContent = `${t('fngLabel')} · ${fngLabelFr(lastMarketData.fng.classification)}`;
   }
 
   if(lastMarketData.btcPrice != null || lastMarketData.fng){
@@ -1096,7 +1433,8 @@ async function initFngWidget(){
 
 function fmtPrice(n){
   if(n==null) return '--';
-  return '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits: n<10?4:2});
+  const v = convertCurrency(n);
+  return currencySymbol() + v.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits: v<10?4:2});
 }
 
 async function refreshMarketPrices(){
@@ -1154,7 +1492,7 @@ async function refreshAllData(){
   const btn = document.getElementById('refresh-all-btn');
   const originalText = btn.textContent;
   btn.disabled = true;
-  btn.textContent = '⏳ Actualisation…';
+  btn.textContent = t('updating');
   try{
     narrStore = await buildStore('narr', 'data/narratives_history.json');
     await loadEventsHistory();
@@ -1167,6 +1505,7 @@ async function refreshAllData(){
     await initNewsBanner();
     await initFngWidget();
     await refreshMarketPrices();
+    await refreshTopGainers();
   } finally {
     btn.disabled = false;
     btn.textContent = originalText;
@@ -1185,6 +1524,15 @@ document.getElementById('mw-refresh-btn').addEventListener('click', async ()=>{
 });
 
 (async function init(){
+  // applique les préférences sauvegardées (langue, thème, devise) avant le premier rendu
+  const savedTheme = localStorage.getItem('radar-theme') || 'dark';
+  applyTheme(savedTheme);
+  document.querySelectorAll('#settings-theme-seg button').forEach(b => b.classList.toggle('active', b.dataset.val === savedTheme));
+  document.getElementById('settings-lang').value = currentLang;
+  document.querySelectorAll('#settings-currency-seg button').forEach(b => b.classList.toggle('active', b.dataset.val === currentCurrency));
+  applyLanguage(currentLang);
+  loadFxRate();
+
   renderMarketWidget();
   narrStore = await buildStore('narr', 'data/narratives_history.json');
   applyShareParamsIfPresent();
@@ -1198,7 +1546,8 @@ document.getElementById('mw-refresh-btn').addEventListener('click', async ()=>{
   initNewsBanner();
   initFngWidget();
   refreshMarketPrices();
-  setInterval(()=>{ refreshMarketPrices(); initAlertBanner(); }, 60000); // rafraîchit prix + dominance + top 10 chaque minute
+  refreshTopGainers();
+  setInterval(()=>{ refreshMarketPrices(); initAlertBanner(); refreshTopGainers(); }, 60000); // rafraîchit prix + dominance + top 10 + top gainers chaque minute
 })();
 </script>
 </body>
