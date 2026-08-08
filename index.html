@@ -104,9 +104,14 @@
   .news-item:hover{color:var(--amber);}
   .news-item .tag.news{background:#241a3a;color:#B8A6F0;}
 
-  /* --- Widget marché fixe (BTC / Fear & Greed / ETH), réorganisable --- */
-  #market-widget{position:fixed;left:18px;bottom:18px;z-index:50;display:none;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.45);overflow:hidden;min-width:222px;}
+  /* --- Widget marché fixe (BTC / Fear & Greed / ETH / USDT.D / USDC.D), réorganisable --- */
+  #market-widget-wrap{position:fixed;left:18px;bottom:18px;z-index:50;}
+  #market-widget{display:none;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.45);overflow:hidden;min-width:222px;}
   #market-widget.show{display:flex;}
+  .mw-refresh-btn{position:absolute;top:-12px;right:-12px;width:28px;height:28px;border-radius:50%;background:var(--amber);color:#1a1305;border:2px solid var(--ink);font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;z-index:51;line-height:1;}
+  .mw-refresh-btn:hover{filter:brightness(1.1);}
+  .mw-refresh-btn.spinning{animation:mw-spin 0.7s linear infinite;}
+  @keyframes mw-spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
   .mw-row-wrap{display:flex;align-items:stretch;border-bottom:1px solid var(--line);}
   .mw-row-wrap:last-child{border-bottom:none;}
   .mw-row-link{flex:1;display:flex;align-items:center;gap:10px;padding:9px 8px 9px 14px;text-decoration:none;color:var(--text);min-width:0;}
@@ -143,7 +148,10 @@
 </style>
 </head>
 <body>
-<div id="market-widget"></div>
+<div id="market-widget-wrap">
+  <button class="mw-refresh-btn" id="mw-refresh-btn" title="Actualiser BTC/ETH/USDT.D/USDC.D + graphique">↻</button>
+  <div id="market-widget"></div>
+</div>
 <div id="event-popup" class="event-popup"></div>
 <div class="app">
   <div id="alert-banner" class="ticker"><div class="track" id="alert-track"></div></div>
@@ -926,6 +934,16 @@ async function refreshAllData(){
   }
 }
 document.getElementById('refresh-all-btn').addEventListener('click', refreshAllData);
+
+document.getElementById('mw-refresh-btn').addEventListener('click', async ()=>{
+  const btn = document.getElementById('mw-refresh-btn');
+  btn.classList.add('spinning');
+  try{
+    await refreshAllData();
+  } finally {
+    btn.classList.remove('spinning');
+  }
+});
 
 (async function init(){
   renderMarketWidget();
