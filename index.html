@@ -148,6 +148,19 @@
   .notice-panel{display:none;}
   .notice-panel.show{display:block;}
   .row-stage{font-family:var(--mono);font-size:10.5px;color:var(--text-dim);white-space:nowrap;flex-shrink:0;}
+
+  /* --- Bouton et fenêtre d'aide --- */
+  .help-fab{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:11px 18px;font-family:var(--mono);font-size:12px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.45);}
+  .help-fab:hover{border-color:var(--amber);color:var(--amber);}
+  #dlg-help{max-width:600px;}
+  .help-content{max-height:62vh;overflow-y:auto;padding-right:10px;margin-top:8px;}
+  .help-content h4{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--amber);margin:20px 0 8px;}
+  .help-content h4:first-child{margin-top:0;}
+  .help-content p{font-size:12.5px;line-height:1.6;color:var(--text-dim);margin:0 0 8px;}
+  .help-content p b{color:var(--text);}
+  .help-content ul{margin:0 0 8px;padding-left:18px;}
+  .help-content li{font-size:12.5px;line-height:1.6;color:var(--text-dim);margin-bottom:4px;}
+  .help-content li b{color:var(--text);}
 </style>
 </head>
 <body>
@@ -156,6 +169,7 @@
   <div id="market-widget"></div>
 </div>
 <div id="event-popup" class="event-popup"></div>
+<button class="help-fab" id="help-btn" title="Guide d'utilisation">❓ Guide</button>
 <div class="app">
   <div id="alert-banner" class="ticker"><div class="track" id="alert-track"></div></div>
   <div id="news-banner" class="ticker"><div class="track" id="news-track"></div></div>
@@ -245,7 +259,7 @@
                   <tr><td>Neutre</td><td>Progression 30j négative ou nulle</td><td class="val">25%</td><td class="val"><span class="stage-dot" style="background:#8B95A7"></span>Gris</td></tr>
                   <tr><td>Émergence</td><td>Progression 30j positive (mais modérée)</td><td class="val">50%</td><td class="val"><span class="stage-dot" style="background:#4FD1C5"></span>Cyan</td></tr>
                   <tr><td>Momentum</td><td>Progression 30j ≥ 20% et progression 7j positive</td><td class="val">75%</td><td class="val"><span class="stage-dot" style="background:#E8A33D"></span>Orange</td></tr>
-                  <tr><td>Euphorie ⚠</td><td>Progression 7j &gt; 25% (accélération brutale récente)</td><td class="val">100%</td><td class="val"><span class="stage-dot" style="background:#E8615C"></span>Rouge</td></tr>
+                  <tr><td>Euphorie ⚠</td><td>Progression 7j &gt; 50% (mouvement parabolique, standard des analystes crypto)</td><td class="val">100%</td><td class="val"><span class="stage-dot" style="background:#E8615C"></span>Rouge</td></tr>
                 </tbody>
               </table>
             </div>
@@ -322,6 +336,58 @@
   <div class="dialog-actions">
     <button class="btn" id="ml-cancel">Annuler</button>
     <button class="btn primary" id="ml-save">Ajouter</button>
+  </div>
+</dialog>
+
+<dialog id="dlg-help">
+  <h3>Guide d'utilisation du Radar</h3>
+  <div class="help-content">
+    <h4>Vue d'ensemble</h4>
+    <p>Ce site suit l'évolution de plusieurs <b>narratifs crypto</b> (DeFi, IA, Meme, RWA, etc.) et de l'<b>intérêt de recherche Google</b> pour des mots-clés crypto. Tout se met à jour <b>automatiquement chaque jour</b> — vous n'avez rien à faire, sauf si vous voulez actualiser manuellement ou personnaliser l'affichage.</p>
+
+    <h4>Onglet « Narratifs (Market Cap) »</h4>
+    <p>Le graphique principal montre l'évolution de la capitalisation de marché de chaque narratif dans le temps.</p>
+    <ul>
+      <li><b>$ Brut / % Variation</b> : bascule entre la valeur en dollars et le % de variation depuis le début de la période affichée (utile pour comparer des narratifs de tailles très différentes).</li>
+      <li><b>Période</b> (1M/3M/6M/1A/Tout) : change la plage de dates affichée sur le graphique.</li>
+      <li><b>Lissage</b> : moyenne glissante sur 7 points, pour atténuer le bruit quotidien.</li>
+      <li><b>Zoom</b> : molette de souris ou pincement (trackpad) pour zoomer, glisser pour se déplacer. Le bouton « Réinitialiser le zoom » revient à la vue normale.</li>
+      <li><b>🔗 Partager</b> : copie un lien qui rouvre exactement la même vue (mêmes narratifs cochés, même période, même mode).</li>
+      <li>Les petits points sous le graphique, marqués <b>« News »</b>, signalent une actualité importante ce jour-là — cliquez dessus pour voir le ou les articles.</li>
+    </ul>
+    <p>Dans la liste à gauche : cochez/décochez un narratif pour l'afficher ou le masquer sur le graphique. Le petit graphique (sparkline) et la pastille de couleur montrent la tendance récente et le <b>stade du cycle de vie</b> de chaque narratif (voir plus bas).</p>
+
+    <h4>Tableau « Top 5 »</h4>
+    <p>Classe automatiquement vos narratifs par performance sur la période choisie (1 semaine à 1 an, indépendant de la période du graphique). Colonnes : capitalisation actuelle, variation, <b>Ratio / BTC</b> (taille du narratif comparée à Bitcoin), <b>Stade</b> (cycle de vie) et <b>Largeur</b> (nombre de cryptos qui composent le narratif — un narratif porté par 20 cryptos est un signal plus solide qu'un narratif porté par 2).</p>
+    <p>Le bouton <b>📋 Notice</b> déplie la légende détaillée des 4 stades (Neutre, Émergence, Momentum, Euphorie) ainsi qu'un tableau d'<b>auto-validation</b> : sur votre propre historique, ce qui s'est passé 7 jours après chaque stade, pour juger si l'indicateur est fiable.</p>
+
+    <h4>Onglet « Google Trends »</h4>
+    <p>Même principe que les narratifs, mais pour l'intérêt de recherche Google sur des mots-clés crypto (bitcoin, altcoin, crypto...). Les mêmes contrôles (période, %, lissage, zoom) sont disponibles.</p>
+
+    <h4>Bandeaux défilants (en haut)</h4>
+    <p>Le premier bandeau affiche en direct le <b>prix et la variation sur 24h des 10 plus grosses cryptos</b>, suivi des <b>narratifs émergents</b> détectés (catégories en forte croissance que vous ne suivez pas encore). Le second bandeau affiche les <b>dernières actualités crypto</b> (cliquables, ouvrent l'article).</p>
+
+    <h4>Widget marché (en bas à gauche)</h4>
+    <p>Affiche en direct : prix BTC et ETH (rafraîchis chaque minute), dominance BTC/ETH, dominance des stablecoins USDT.D et USDC.D, et le <b>Fear &amp; Greed Index</b> du jour. Cliquez sur une ligne BTC/ETH/USDT.D/USDC.D pour ouvrir son graphique sur TradingView. Les petites flèches ▲▼ permettent de réordonner les lignes à votre goût. Le rond ↻ en haut à droite du widget actualise tout (graphique + prix) sans recharger la page.</p>
+
+    <h4>Bouton « ↺ Actualiser les données » (en haut à droite)</h4>
+    <p>Recharge toutes les données affichées (narratifs, trends, alertes, actualités, Fear &amp; Greed, prix en direct) sans recharger toute la page. Fait exactement la même chose que le rond ↻ du widget marché.</p>
+
+    <h4>Stades du cycle de vie — comment ça marche</h4>
+    <p>Un indicateur maison, calculé uniquement à partir de la capitalisation de chaque narratif (pas de Google Trends dedans) :</p>
+    <ul>
+      <li><b>Neutre</b> : le narratif ne progresse pas sur 30 jours.</li>
+      <li><b>Émergence</b> : progression positive sur 30 jours, mais modérée.</li>
+      <li><b>Momentum</b> : progression solide sur 30 jours (≥20%) et toujours en hausse sur 7 jours.</li>
+      <li><b>Euphorie ⚠</b> : progression de plus de 50% en seulement 7 jours — un « mouvement parabolique » au sens où l'entendent les analystes crypto, souvent suivi d'une correction.</li>
+    </ul>
+    <p>Ce n'est pas une prédiction garantie, juste un repère basé sur des seuils. Le tableau d'auto-validation (bouton 📋 Notice) vous permet de juger vous-même de sa fiabilité, sur vos propres données.</p>
+
+    <h4>Mise à jour automatique</h4>
+    <p>Une GitHub Action tourne chaque nuit pour aller chercher les nouvelles données (CoinGecko, Google Trends, actualités, Fear &amp; Greed). Vous n'avez rien à faire — le site se construit tout seul, jour après jour.</p>
+  </div>
+  <div class="dialog-actions">
+    <button class="btn primary" id="help-close-btn">Fermer</button>
   </div>
 </dialog>
 
@@ -602,7 +668,7 @@ window.addEventListener('resize', ()=>{ if(narrRef.updateEventDots) narrRef.upda
 
 function classifyStage(c30, c7){
   if(c30 == null) return {stage:0, color:'var(--line)', text:'—'};
-  if(c7 != null && c7 > 25) return {stage:4, color:'#E8615C', text:'Euphorie ⚠'};
+  if(c7 != null && c7 > 50) return {stage:4, color:'#E8615C', text:'Euphorie ⚠'};
   if(c30 >= 20 && c7 != null && c7 > 0) return {stage:3, color:'#E8A33D', text:'Momentum'};
   if(c30 > 0) return {stage:2, color:'#4FD1C5', text:'Émergence'};
   return {stage:1, color:'#8B95A7', text:'Neutre'};
@@ -817,6 +883,9 @@ document.getElementById('trends-reset-zoom').addEventListener('click', ()=>{ if(
 document.getElementById('notice-toggle-btn').addEventListener('click', ()=>{
   document.getElementById('notice-panel').classList.toggle('show');
 });
+
+document.getElementById('help-btn').addEventListener('click', ()=> document.getElementById('dlg-help').showModal());
+document.getElementById('help-close-btn').addEventListener('click', ()=> document.getElementById('dlg-help').close());
 
 document.getElementById('narr-share-btn').addEventListener('click', async ()=>{
   const btn = document.getElementById('narr-share-btn');
