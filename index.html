@@ -57,6 +57,12 @@
     50%{transform:translate(calc(var(--fx,3px) * -1), calc(var(--fy,3px) * -1));}
     75%{transform:translate(var(--fx,3px), var(--fy,3px));}
   }
+
+  /* --- Agrandissement de l'encadré Top 20 --- */
+  .gainers-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:199;display:none;}
+  .gainers-backdrop.show{display:block;}
+  #gainers-panel.expanded{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:33vw;min-width:440px;max-width:920px;height:33vh;min-height:360px;max-height:75vh;z-index:200;box-shadow:0 24px 70px rgba(0,0,0,.65);overflow-y:auto;}
+  #gainers-panel.expanded .heatmap{height:calc(100% - 130px);min-height:220px;}
   .rotation-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-family:var(--mono);font-size:11.5px;}
   .rotation-label{width:110px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .rotation-track{flex:1;height:16px;position:relative;background:var(--panel-2);border-radius:3px;}
@@ -241,6 +247,7 @@
   <div id="market-widget"></div>
 </div>
 <div id="event-popup" class="event-popup"></div>
+<div id="gainers-backdrop" class="gainers-backdrop"></div>
 <button class="help-fab" id="settings-btn" title="Réglages" data-i18n="settingsBtn">⚙️ Réglages</button>
 <button class="help-fab" id="help-btn" title="Guide d'utilisation" data-i18n="guideBtn">❓ Guide</button>
 <div class="app">
@@ -272,10 +279,13 @@
             Données mises à jour <b>automatiquement chaque jour</b> par une GitHub Action qui interroge l'API CoinGecko.
           </div>
         </div>
-        <div class="panel" style="margin-top:16px;">
+        <div class="panel" id="gainers-panel" style="margin-top:16px;">
           <div class="leaderboard-head" style="margin-bottom:12px;">
             <h2 style="margin:0;" data-i18n="topGainersTitle">Top 20 altcoins — hausse 24h</h2>
-            <button class="btn small" id="gainers-refresh-btn" data-i18n="gainersRefreshBtn">↻ Actualiser</button>
+            <div style="display:flex;gap:6px;">
+              <button class="btn small" id="gainers-refresh-btn" data-i18n="gainersRefreshBtn">↻ Actualiser</button>
+              <button class="btn small" id="gainers-expand-btn" title="Agrandir">⤢</button>
+            </div>
           </div>
           <div id="top-gainers-list" class="heatmap"></div>
           <div class="note" data-i18n="topGainersNote">
@@ -635,7 +645,9 @@ function renderList(store, listEl, onChange, showSparkline){
     if(showSparkline){
       const c30 = pctChangeOverDates(store, label, d30);
       const c7 = pctChangeOverDates(store, label, d7);
-      const info = classifyStage(c30, c7);
+      const stat = narrStatsCache[label];
+      const z = (stat && stat.std > 0 && c7 != null) ? (c7 - stat.mean) / stat.std : 0;
+      const info = classifyStage(c30, c7, z);
       rightHtml = `<span class="row-stage"><span class="stage-dot" style="background:${info.color}"></span>${info.text}</span>`;
     }
 
@@ -819,10 +831,39 @@ function showEventPopup(e, date){
 document.addEventListener('click', ()=> document.getElementById('event-popup').classList.remove('show'));
 window.addEventListener('resize', ()=>{ if(narrRef.updateEventDots) narrRef.updateEventDots(); });
 
-function classifyStage(c30, c7){
+/* ---------- statistiques propres à chaque narratif (pour calibrer le seuil d'euphorie) ---------- */
+function compute7dReturnSeries(values){
+  const out = [];
+  for(let i=6;i<values.length;i++){
+    const r = pctChangeArray(values.slice(i-6, i+1));
+    if(r != null) out.push(r);
+  }
+  return out;
+}
+function meanStd(arr){
+  if(!arr.length) return {mean:0, std:0};
+  const mean = arr.reduce((a,b)=>a+b,0)/arr.length;
+  const variance = arr.reduce((a,b)=>a+(b-mean)*(b-mean),0)/arr.length;
+  return {mean, std: Math.sqrt(variance)};
+}
+let narrStatsCache = {};
+function computeNarrativeStats(store){
+  const stats = {};
+  store.labels.forEach(label=>{
+    const dates = Object.keys(store.data[label]).sort();
+    const values = dates.map(d=>store.data[label][d]);
+    stats[label] = meanStd(compute7dReturnSeries(values));
+  });
+  return stats;
+}
+
+/* ---------- classification par z-score (comparé à la propre volatilité du narratif, pas un seuil fixe) ---------- */
+function classifyStage(c30, c7, z){
   if(c30 == null) return {stage:0, color:'var(--line)', text:'—'};
-  if(c7 != null && c7 > 50) return {stage:4, color:'#E8615C', text:t('stageEuphoria')};
-  if(c30 >= 20 && c7 != null && c7 > 0) return {stage:3, color:'#E8A33D', text:t('stageMomentum')};
+  const zVal = (z == null) ? 0 : z;
+  // "Euphorie" = mouvement hebdomadaire statistiquement anormal pour CE narratif (> 2 écarts-types au-dessus de sa moyenne)
+  if(zVal > 2 && c7 != null && c7 > 0) return {stage:4, color:'#E8615C', text:t('stageEuphoria')};
+  if(c30 >= 15 && c7 != null && c7 > 0 && zVal > 0.5) return {stage:3, color:'#E8A33D', text:t('stageMomentum')};
   if(c30 > 0) return {stage:2, color:'#4FD1C5', text:t('stageEmergence')};
   return {stage:1, color:'#8B95A7', text:t('stageNeutral')};
 }
@@ -857,7 +898,9 @@ function renderLeaderboard(store, days, tbodyEl, fmt){
     const ratio = (btcCurrent && label !== 'Bitcoin') ? (last/btcCurrent*100) : null;
     const c30 = pctChangeOverDates(store, label, stageDates30);
     const c7 = pctChangeOverDates(store, label, stageDates7);
-    const stageInfo = classifyStage(c30, c7);
+    const stat = narrStatsCache[label];
+    const z = (stat && stat.std > 0 && c7 != null) ? (c7 - stat.mean) / stat.std : 0;
+    const stageInfo = classifyStage(c30, c7, z);
     const breadthVal = narrBreadthMap[label];
     rows.push({label, current: last, change, ratio, stageInfo, breadthVal});
   });
@@ -900,12 +943,14 @@ function backtestStageAccuracy(store){
     const dateMap = store.data[label];
     const dates = Object.keys(dateMap).sort();
     const values = dates.map(d=>dateMap[d]);
+    const narrStat = meanStd(compute7dReturnSeries(values));
     for(let i=0; i<values.length-7; i++){
       const w30 = values.slice(Math.max(0,i-29), i+1);
       const w7 = values.slice(Math.max(0,i-6), i+1);
       const c30 = pctChangeArray(w30);
       const c7 = pctChangeArray(w7);
-      const info = classifyStage(c30, c7);
+      const z = (narrStat.std > 0 && c7 != null) ? (c7 - narrStat.mean) / narrStat.std : 0;
+      const info = classifyStage(c30, c7, z);
       if(info.stage === 0) continue;
       const curVal = values[i];
       const futVal = values[i+7];
@@ -978,6 +1023,7 @@ const narrRef={chart:null}, trendsRef={chart:null};
 const narrLbUi = { days: 30 };
 
 function refreshNarr(){
+  narrStatsCache = computeNarrativeStats(narrStore);
   renderList(narrStore, document.getElementById('narr-list'), refreshNarr, true);
   renderChart(narrStore, narrUi, document.getElementById('narr-chart'), document.getElementById('narr-legend'), document.getElementById('narr-status'), narrRef, {
     fmt: fmtUsd, yScale:{grid:{color:'#1A2029'},ticks:{callback:v=>fmtUsd(v)}}, onChange: refreshNarr,
@@ -1129,7 +1175,7 @@ const TRANSLATIONS = {
     stageNeutral:"Neutre", stageEmergence:"Émergence", stageMomentum:"Momentum", stageEuphoria:"Euphorie ⚠",
     condNeutral:"Progression 30j négative ou nulle", condEmergence:"Progression 30j positive (mais modérée)",
     condMomentum:"Progression 30j ≥ 20% et progression 7j positive",
-    condEuphoria:"Progression 7j > 50% (mouvement parabolique, standard des analystes crypto)",
+    condEuphoria:"Hausse 7j > 2 écarts-types au-dessus de la moyenne propre du narratif (anormal pour LUI, pas un seuil universel)",
     colorGray:"Gris", colorOrange:"Orange", colorRed:"Rouge",
     validationTitle:"Auto-validation — sur votre historique, qu'est-il arrivé 7 jours après chaque stade ?",
     manualDialogTitle:"Ligne manuelle", manualName:"Nom", manualDate:"Date (AAAA-MM-JJ)",
@@ -1164,7 +1210,7 @@ const TRANSLATIONS = {
     stageNeutral:"Neutral", stageEmergence:"Emerging", stageMomentum:"Momentum", stageEuphoria:"Euphoria ⚠",
     condNeutral:"30d change negative or flat", condEmergence:"30d change positive (but moderate)",
     condMomentum:"30d change ≥ 20% and 7d change positive",
-    condEuphoria:"7d change > 50% (parabolic move, standard crypto-analyst definition)",
+    condEuphoria:"7d change > 2 standard deviations above this narrative's own average (abnormal for THIS narrative, not a universal threshold)",
     colorGray:"Gray", colorOrange:"Orange", colorRed:"Red",
     validationTitle:"Auto-validation — based on your history, what happened 7 days after each stage?",
     manualDialogTitle:"Manual line", manualName:"Name", manualDate:"Date (YYYY-MM-DD)",
@@ -1199,7 +1245,7 @@ const TRANSLATIONS = {
     stageNeutral:"Neutral", stageEmergence:"Emergencia", stageMomentum:"Momentum", stageEuphoria:"Euforia ⚠",
     condNeutral:"Variación 30d negativa o nula", condEmergence:"Variación 30d positiva (pero moderada)",
     condMomentum:"Variación 30d ≥ 20% y variación 7d positiva",
-    condEuphoria:"Variación 7d > 50% (movimiento parabólico, estándar de analistas cripto)",
+    condEuphoria:"Variación 7d > 2 desviaciones estándar sobre su propio promedio (anómalo para ESTA narrativa, no un umbral universal)",
     colorGray:"Gris", colorOrange:"Naranja", colorRed:"Rojo",
     validationTitle:"Auto-validación — según su historial, ¿qué pasó 7 días después de cada etapa?",
     manualDialogTitle:"Línea manual", manualName:"Nombre", manualDate:"Fecha (AAAA-MM-DD)",
@@ -1234,7 +1280,7 @@ const TRANSLATIONS = {
     stageNeutral:"Neutral", stageEmergence:"Entstehung", stageMomentum:"Momentum", stageEuphoria:"Euphorie ⚠",
     condNeutral:"30-Tage-Veränderung negativ oder null", condEmergence:"30-Tage-Veränderung positiv (aber moderat)",
     condMomentum:"30-Tage-Veränderung ≥ 20% und 7-Tage-Veränderung positiv",
-    condEuphoria:"7-Tage-Veränderung > 50% (parabolische Bewegung, Standard bei Krypto-Analysten)",
+    condEuphoria:"7-Tage-Veränderung > 2 Standardabweichungen über dem eigenen Durchschnitt (ungewöhnlich für DIESES Narrativ, keine feste Schwelle)",
     colorGray:"Grau", colorOrange:"Orange", colorRed:"Rot",
     validationTitle:"Selbstvalidierung — was geschah laut Ihrer Historie 7 Tage nach jeder Phase?",
     manualDialogTitle:"Manuelle Zeile", manualName:"Name", manualDate:"Datum (JJJJ-MM-TT)",
@@ -1418,6 +1464,7 @@ async function fetchTopAltcoinGainers(){
   }
 }
 
+let lastGainersCoins = [];
 async function refreshTopGainers(){
   const container = document.getElementById('top-gainers-list');
   const coins = await fetchTopAltcoinGainers();
@@ -1425,8 +1472,26 @@ async function refreshTopGainers(){
     container.innerHTML = `<div style="color:var(--text-dim);font-family:var(--mono);font-size:11.5px;padding:8px;">${t('noData')}</div>`;
     return;
   }
+  lastGainersCoins = coins;
   renderBubbles(coins, container);
 }
+
+function toggleGainersExpand(){
+  const panel = document.getElementById('gainers-panel');
+  const backdrop = document.getElementById('gainers-backdrop');
+  const btn = document.getElementById('gainers-expand-btn');
+  const isExpanded = panel.classList.toggle('expanded');
+  backdrop.classList.toggle('show', isExpanded);
+  btn.textContent = isExpanded ? '✕' : '⤢';
+  requestAnimationFrame(()=>{
+    if(lastGainersCoins.length) renderBubbles(lastGainersCoins, document.getElementById('top-gainers-list'));
+  });
+}
+document.getElementById('gainers-expand-btn').addEventListener('click', toggleGainersExpand);
+document.getElementById('gainers-backdrop').addEventListener('click', ()=>{
+  const panel = document.getElementById('gainers-panel');
+  if(panel.classList.contains('expanded')) toggleGainersExpand();
+});
 
 function gainerColor(chg, minChg, maxChg){
   const range = Math.max(0.001, maxChg - minChg);
