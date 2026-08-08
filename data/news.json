@@ -1,6 +1,12 @@
 {
-  "generated_at": "2026-08-08T11:55:43.683818+00:00",
+  "generated_at": "2026-08-08T12:07:52.797469+00:00",
   "items": [
+    {
+      "title": "Le Kenya met 30 millions de diplômes sur la blockchain Avalanche",
+      "link": "https://journalducoin.com/technologies/kenya-30-millions-diplomes-blockchain-avalanche/",
+      "source": "Journal du Coin",
+      "published": "2026-08-08T12:00:00+00:00"
+    },
     {
       "title": "La banque centrale du Brésil force un délai de 24h sur les transferts crypto de plus de 10 000 $",
       "link": "https://journalducoin.com/actualites/banque-centrale-bresil-force-delai-24h-crypto/",
@@ -90,12 +96,6 @@
       "link": "https://www.coindesk.com/business/2026/08/07/trump-media-pulls-back-from-crypto-scraps-crypto-com-cro-treasury-deal",
       "source": "CoinDesk",
       "published": "2026-08-07T21:13:21+00:00"
-    },
-    {
-      "title": "Trump-Backed American Bitcoin director Justin Mateen buys nearly $2 million of ABTC stock",
-      "link": "https://www.coindesk.com/business/2026/08/07/trump-backed-american-bitcoin-director-justin-mateen-buys-nearly-usd2-million-of-abtc-stock",
-      "source": "CoinDesk",
-      "published": "2026-08-07T20:20:00+00:00"
     }
   ]
 }

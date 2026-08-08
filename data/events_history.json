@@ -3,6 +3,11 @@
     "date": "2026-08-08",
     "events": [
       {
+        "title": "Le Kenya met 30 millions de diplômes sur la blockchain Avalanche",
+        "link": "https://journalducoin.com/technologies/kenya-30-millions-diplomes-blockchain-avalanche/",
+        "source": "Journal du Coin"
+      },
+      {
         "title": "La banque centrale du Brésil force un délai de 24h sur les transferts crypto de plus de 10 000 $",
         "link": "https://journalducoin.com/actualites/banque-centrale-bresil-force-delai-24h-crypto/",
         "source": "Journal du Coin"
@@ -11,11 +16,6 @@
         "title": "Bybit attaque en justice la Corée du Nord et Lazarus Group pour le hack à 1,5 milliard $",
         "link": "https://journalducoin.com/exchanges/bybit-justice-coree-nord-lazarus-group/",
         "source": "Journal du Coin"
-      },
-      {
-        "title": "U.S. Senate opens first stage of crypto Clarity Act voting to give bill a chance next month",
-        "link": "https://www.coindesk.com/policy/2026/08/08/u-s-senate-opens-first-stage-of-crypto-clarity-act-voting-to-give-bill-a-chance-next-month",
-        "source": "CoinDesk"
       }
     ]
   }
