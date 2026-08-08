@@ -133,24 +133,14 @@
   .event-popup a:first-of-type{border-top:none;padding-top:0;}
   .event-popup a:hover{color:var(--amber);}
 
-  /* --- Widget cycle de vie du narratif (bas droite) --- */
-  #lifecycle-widget{position:fixed;right:18px;bottom:18px;z-index:50;display:none;flex-direction:column;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 6px 20px rgba(0,0,0,.45);width:120px;}
-  #lifecycle-widget.show{display:flex;}
-  .lc-title{font-family:var(--mono);font-size:9px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;}
-  .lc-name{font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--text);margin-bottom:10px;text-align:center;}
-  .lc-square{width:84px;height:84px;border:1px solid var(--line);border-radius:8px;background:var(--panel-2);position:relative;overflow:hidden;}
-  .lc-fill{position:absolute;bottom:0;left:0;width:100%;height:0%;transition:height .6s ease, background .6s ease;}
-  .lc-stage{font-family:var(--mono);font-size:10.5px;margin-top:9px;font-weight:600;text-align:center;}
+  /* --- Colonne / légende Stade de cycle de vie --- */
+  .stage-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle;}
+  .stage-legend{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);}
+  .stage-legend-title{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dim);margin:0 0 10px;font-family:var(--mono);font-weight:500;}
 </style>
 </head>
 <body>
 <div id="market-widget"></div>
-<div id="lifecycle-widget">
-  <div class="lc-title">Cycle de vie</div>
-  <div class="lc-name" id="lc-name">--</div>
-  <div class="lc-square"><div class="lc-fill" id="lc-fill"></div></div>
-  <div class="lc-stage" id="lc-stage-label">--</div>
-</div>
 <div id="event-popup" class="event-popup"></div>
 <div class="app">
   <div id="alert-banner" class="ticker"><div class="track" id="alert-track"></div></div>
@@ -165,6 +155,7 @@
       <button id="tab-btn-narr" class="active">Narratifs (Market Cap)</button>
       <button id="tab-btn-trends">Google Trends</button>
     </nav>
+    <button class="btn small" id="refresh-all-btn">↻ Actualiser les données</button>
   </header>
 
   <section id="page-narr" class="page active">
@@ -224,9 +215,21 @@
             </div>
           </div>
           <table class="lb" id="narr-leaderboard">
-            <thead><tr><th class="rank">#</th><th>Narratif</th><th class="val">Cap. actuelle</th><th class="chg">Variation</th><th class="val">Ratio / BTC</th></tr></thead>
+            <thead><tr><th class="rank">#</th><th>Narratif</th><th class="val">Cap. actuelle</th><th class="chg">Variation</th><th class="val">Ratio / BTC</th><th class="val">Stade</th></tr></thead>
             <tbody></tbody>
           </table>
+          <div class="stage-legend">
+            <h4 class="stage-legend-title">Légende — stade du cycle de vie (basé sur la capitalisation, 30j/7j)</h4>
+            <table class="lb">
+              <thead><tr><th>Stade</th><th>Condition</th><th class="val">Remplissage</th><th class="val">Couleur</th></tr></thead>
+              <tbody>
+                <tr><td>Neutre</td><td>Progression 30j négative ou nulle</td><td class="val">25%</td><td class="val"><span class="stage-dot" style="background:#8B95A7"></span>Gris</td></tr>
+                <tr><td>Émergence</td><td>Progression 30j positive (mais modérée)</td><td class="val">50%</td><td class="val"><span class="stage-dot" style="background:#4FD1C5"></span>Cyan</td></tr>
+                <tr><td>Momentum</td><td>Progression 30j ≥ 20% et progression 7j positive</td><td class="val">75%</td><td class="val"><span class="stage-dot" style="background:#E8A33D"></span>Orange</td></tr>
+                <tr><td>Euphorie ⚠</td><td>Progression 7j &gt; 25% (accélération brutale récente)</td><td class="val">100%</td><td class="val"><span class="stage-dot" style="background:#E8615C"></span>Rouge</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -547,11 +550,21 @@ function showEventPopup(e, date){
 document.addEventListener('click', ()=> document.getElementById('event-popup').classList.remove('show'));
 window.addEventListener('resize', ()=>{ if(narrRef.updateEventDots) narrRef.updateEventDots(); });
 
+function classifyStage(c30, c7){
+  if(c30 == null) return {stage:0, color:'var(--line)', text:'—'};
+  if(c7 != null && c7 > 25) return {stage:4, color:'#E8615C', text:'Euphorie ⚠'};
+  if(c30 >= 20 && c7 != null && c7 > 0) return {stage:3, color:'#E8A33D', text:'Momentum'};
+  if(c30 > 0) return {stage:2, color:'#4FD1C5', text:'Émergence'};
+  return {stage:1, color:'#8B95A7', text:'Neutre'};
+}
+
 function renderLeaderboard(store, days, tbodyEl, fmt){
   const allDatesSet = new Set();
   store.labels.forEach(l => Object.keys(store.data[l]).forEach(d=>allDatesSet.add(d)));
   const allDates = [...allDatesSet].sort();
   const rangeDates = filterDatesByDays(allDates, days);
+  const stageDates30 = filterDatesByDays(allDates, 30);
+  const stageDates7 = filterDatesByDays(allDates, 7);
 
   // valeur BTC la plus récente dans la période, pour le calcul du ratio
   let btcCurrent = null;
@@ -573,7 +586,10 @@ function renderLeaderboard(store, days, tbodyEl, fmt){
     if(!first) return;
     const change = ((last/first)-1)*100;
     const ratio = (btcCurrent && label !== 'Bitcoin') ? (last/btcCurrent*100) : null;
-    rows.push({label, current: last, change, ratio});
+    const c30 = pctChangeOverDates(store, label, stageDates30);
+    const c7 = pctChangeOverDates(store, label, stageDates7);
+    const stageInfo = classifyStage(c30, c7);
+    rows.push({label, current: last, change, ratio, stageInfo});
   });
 
   rows.sort((a,b)=> b.change - a.change);
@@ -586,7 +602,8 @@ function renderLeaderboard(store, days, tbodyEl, fmt){
       <td class="val">${fmt(r.current)}</td>
       <td class="chg ${r.change>=0?'up':'down'}">${fmtPct(r.change)}</td>
       <td class="val">${r.ratio!=null ? r.ratio.toFixed(2)+'%' : '—'}</td>
-    </tr>`).join('') || '<tr><td colspan="5" style="color:var(--text-dim);padding:14px 10px;">Pas assez de données sur cette période.</td></tr>';
+      <td class="val"><span class="stage-dot" style="background:${r.stageInfo.color}"></span>${r.stageInfo.text}</td>
+    </tr>`).join('') || '<tr><td colspan="6" style="color:var(--text-dim);padding:14px 10px;">Pas assez de données sur cette période.</td></tr>';
 }
 
 let narrStore, trendsStore;
@@ -884,54 +901,33 @@ function pctChangeOverDates(store, label, dates){
   return ((series[series.length-1] / series[0]) - 1) * 100;
 }
 
-function computeLifecycle(store){
-  const allDatesSet = new Set();
-  store.labels.forEach(l => Object.keys(store.data[l]).forEach(d=>allDatesSet.add(d)));
-  const allDates = [...allDatesSet].sort();
-  const d30 = filterDatesByDays(allDates, 30);
-  const d7 = filterDatesByDays(allDates, 7);
-
-  let best = null;
-  store.labels.forEach(label=>{
-    const c30 = pctChangeOverDates(store, label, d30);
-    if(c30 == null) return;
-    if(!best || c30 > best.c30) best = {label, c30};
-  });
-  if(!best) return null;
-
-  const c7 = pctChangeOverDates(store, best.label, d7);
-  const c30 = best.c30;
-
-  let stage, color, text;
-  if(c7 != null && c7 > 25){
-    stage = 4; color = '#E8615C'; text = 'Euphorie ⚠';
-  } else if(c30 >= 20 && c7 != null && c7 > 0){
-    stage = 3; color = '#E8A33D'; text = 'Momentum';
-  } else if(c30 > 0){
-    stage = 2; color = '#4FD1C5'; text = 'Émergence';
-  } else {
-    stage = 1; color = '#8B95A7'; text = 'Neutre';
+async function refreshAllData(){
+  const btn = document.getElementById('refresh-all-btn');
+  const originalText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = '⏳ Actualisation…';
+  try{
+    narrStore = await buildStore('narr', 'data/narratives_history.json');
+    await loadEventsHistory();
+    refreshNarr();
+    trendsStore = await buildStore('trends', 'data/trends_history.json');
+    refreshTrends();
+    await initAlertBanner();
+    await initNewsBanner();
+    await initFngWidget();
+    await refreshMarketPrices();
+  } finally {
+    btn.disabled = false;
+    btn.textContent = originalText;
   }
-  return { label: best.label, stage, color, text, c7, c30 };
 }
-
-function renderLifecycleWidget(){
-  const result = narrStore ? computeLifecycle(narrStore) : null;
-  const widget = document.getElementById('lifecycle-widget');
-  if(!result){ widget.classList.remove('show'); return; }
-  document.getElementById('lc-name').textContent = result.label;
-  document.getElementById('lc-stage-label').textContent = result.text;
-  document.getElementById('lc-fill').style.height = (result.stage/4*100) + '%';
-  document.getElementById('lc-fill').style.background = result.color;
-  widget.classList.add('show');
-}
+document.getElementById('refresh-all-btn').addEventListener('click', refreshAllData);
 
 (async function init(){
   renderMarketWidget();
   narrStore = await buildStore('narr', 'data/narratives_history.json');
   await loadEventsHistory();
   refreshNarr();
-  renderLifecycleWidget();
   trendsStore = await buildStore('trends', 'data/trends_history.json');
   refreshTrends();
   initAlertBanner();
