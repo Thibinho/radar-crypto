@@ -205,7 +205,8 @@
               <input type="checkbox" id="narr-smoothing">
               Lissage (moy. 7 pts)
             </label>
-            <button class="btn small" id="narr-reset-zoom" style="margin-left:auto;">↺ Réinitialiser le zoom</button>
+            <button class="btn small" id="narr-share-btn" style="margin-left:auto;" title="Copier un lien vers cette vue exacte">🔗 Partager</button>
+            <button class="btn small" id="narr-reset-zoom">↺ Réinitialiser le zoom</button>
           </div>
           <div class="meta-row">
             <div id="narr-legend" class="legend-pills"></div>
@@ -226,7 +227,7 @@
             </div>
           </div>
           <table class="lb" id="narr-leaderboard">
-            <thead><tr><th class="rank">#</th><th>Narratif</th><th class="val">Cap. actuelle</th><th class="chg">Variation</th><th class="val">Ratio / BTC</th><th class="val">Stade</th></tr></thead>
+            <thead><tr><th class="rank">#</th><th>Narratif</th><th class="val">Cap. actuelle</th><th class="chg">Variation</th><th class="val">Ratio / BTC</th><th class="val">Stade</th><th class="val">Largeur</th></tr></thead>
             <tbody></tbody>
           </table>
           <div class="stage-legend">
@@ -239,6 +240,13 @@
                 <tr><td>Momentum</td><td>Progression 30j ≥ 20% et progression 7j positive</td><td class="val">75%</td><td class="val"><span class="stage-dot" style="background:#E8A33D"></span>Orange</td></tr>
                 <tr><td>Euphorie ⚠</td><td>Progression 7j &gt; 25% (accélération brutale récente)</td><td class="val">100%</td><td class="val"><span class="stage-dot" style="background:#E8615C"></span>Rouge</td></tr>
               </tbody>
+            </table>
+          </div>
+          <div class="stage-legend">
+            <h4 class="stage-legend-title">Auto-validation — sur votre historique, qu'est-il arrivé 7 jours après chaque stade ?</h4>
+            <table class="lb" id="stage-validation-table">
+              <thead><tr><th>Stade</th><th class="val">Occurrences</th><th class="val">Hausse ensuite</th><th class="val">Baisse ensuite</th></tr></thead>
+              <tbody id="stage-validation-tbody"><tr><td colspan="4" style="color:var(--text-dim);padding:10px;">Calcul en cours…</td></tr></tbody>
             </table>
           </div>
         </div>
@@ -499,7 +507,10 @@ function renderChart(store, ui, canvasEl, legendEl, statusEl, ref, opts){
     responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
     plugins:{
       legend:{display:false},
-      tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y!=null?yFmt(c.parsed.y):'—'}`}},
+      tooltip:{
+        enabled: opts.tooltipEnabled !== false,
+        callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y!=null?yFmt(c.parsed.y):'—'}`}
+      },
       zoom:{
         pan:{enabled:true, mode:'xy', modifierKey:null, onPanComplete: updateEventDots},
         zoom:{
@@ -601,7 +612,8 @@ function renderLeaderboard(store, days, tbodyEl, fmt){
     const c30 = pctChangeOverDates(store, label, stageDates30);
     const c7 = pctChangeOverDates(store, label, stageDates7);
     const stageInfo = classifyStage(c30, c7);
-    rows.push({label, current: last, change, ratio, stageInfo});
+    const breadthVal = narrBreadthMap[label];
+    rows.push({label, current: last, change, ratio, stageInfo, breadthVal});
   });
 
   rows.sort((a,b)=> b.change - a.change);
@@ -615,7 +627,104 @@ function renderLeaderboard(store, days, tbodyEl, fmt){
       <td class="chg ${r.change>=0?'up':'down'}">${fmtPct(r.change)}</td>
       <td class="val">${r.ratio!=null ? r.ratio.toFixed(2)+'%' : '—'}</td>
       <td class="val"><span class="stage-dot" style="background:${r.stageInfo.color}"></span>${r.stageInfo.text}</td>
-    </tr>`).join('') || '<tr><td colspan="6" style="color:var(--text-dim);padding:14px 10px;">Pas assez de données sur cette période.</td></tr>';
+      <td class="val">${r.breadthVal!=null ? r.breadthVal+' cryptos' : '—'}</td>
+    </tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim);padding:14px 10px;">Pas assez de données sur cette période.</td></tr>';
+}
+
+/* ---------- largeur (breadth) par narratif ---------- */
+let narrBreadthMap = {};
+async function loadBreadth(){
+  const data = await loadJsonSafe('data/narratives_breadth.json');
+  narrBreadthMap = {};
+  if(data && data.length){
+    const latest = data[data.length-1];
+    narrBreadthMap = latest.breadth || {};
+  }
+}
+
+/* ---------- auto-validation du cycle de vie ---------- */
+function pctChangeArray(values){
+  const filtered = values.filter(v=>v!=null);
+  if(filtered.length < 2) return null;
+  return ((filtered[filtered.length-1]/filtered[0])-1)*100;
+}
+
+function backtestStageAccuracy(store){
+  const stats = {1:{count:0,up:0,down:0},2:{count:0,up:0,down:0},3:{count:0,up:0,down:0},4:{count:0,up:0,down:0}};
+  store.labels.forEach(label=>{
+    const dateMap = store.data[label];
+    const dates = Object.keys(dateMap).sort();
+    const values = dates.map(d=>dateMap[d]);
+    for(let i=0; i<values.length-7; i++){
+      const w30 = values.slice(Math.max(0,i-29), i+1);
+      const w7 = values.slice(Math.max(0,i-6), i+1);
+      const c30 = pctChangeArray(w30);
+      const c7 = pctChangeArray(w7);
+      const info = classifyStage(c30, c7);
+      if(info.stage === 0) continue;
+      const curVal = values[i];
+      const futVal = values[i+7];
+      if(curVal == null || futVal == null) continue;
+      const outcome = futVal >= curVal ? 'up' : 'down';
+      stats[info.stage].count++;
+      stats[info.stage][outcome]++;
+    }
+  });
+  return stats;
+}
+
+function renderStageValidation(store){
+  const stats = backtestStageAccuracy(store);
+  const labelsMap = {1:'Neutre',2:'Émergence',3:'Momentum',4:'Euphorie ⚠'};
+  const colors = {1:'#8B95A7',2:'#4FD1C5',3:'#E8A33D',4:'#E8615C'};
+  const tbody = document.getElementById('stage-validation-tbody');
+  const rowsHtml = [1,2,3,4].map(s=>{
+    const st = stats[s];
+    const upPct = st.count ? Math.round(st.up/st.count*100) : null;
+    const downPct = st.count ? Math.round(st.down/st.count*100) : null;
+    return `<tr>
+      <td><span class="stage-dot" style="background:${colors[s]}"></span>${labelsMap[s]}</td>
+      <td class="val">${st.count}</td>
+      <td class="val" style="color:var(--green)">${upPct!=null ? upPct+'%' : '—'}</td>
+      <td class="val" style="color:var(--red)">${downPct!=null ? downPct+'%' : '—'}</td>
+    </tr>`;
+  }).join('');
+  tbody.innerHTML = rowsHtml;
+}
+
+/* ---------- lien de partage d'une vue ---------- */
+function buildShareLink(){
+  const visible = narrStore.labels.filter(l=>!narrStore.isHidden(l));
+  const params = new URLSearchParams({
+    view: narrUi.viewMode,
+    range: narrUi.rangeMonths,
+    smooth: narrUi.smoothing ? '1' : '0',
+    narrs: visible.join(',')
+  });
+  return `${location.origin}${location.pathname}?${params.toString()}`;
+}
+
+function applyShareParamsIfPresent(){
+  const params = new URLSearchParams(location.search);
+  if(![...params.keys()].length) return;
+
+  if(params.has('view')) narrUi.viewMode = params.get('view');
+  if(params.has('range')) narrUi.rangeMonths = params.get('range');
+  if(params.has('smooth')) narrUi.smoothing = params.get('smooth') === '1';
+
+  if(params.has('narrs')){
+    const wanted = new Set(params.get('narrs').split(',').filter(Boolean));
+    narrStore.labels.forEach(label=>{
+      const shouldShow = wanted.has(label);
+      const currentlyHidden = narrStore.isHidden(label);
+      if(shouldShow === currentlyHidden) narrStore.toggle(label);
+    });
+  }
+
+  document.querySelectorAll('#narr-viewmode-seg button').forEach(b => b.classList.toggle('active', b.dataset.val === narrUi.viewMode));
+  document.querySelectorAll('#narr-range-seg button').forEach(b => b.classList.toggle('active', b.dataset.val === narrUi.rangeMonths));
+  const smoothCb = document.getElementById('narr-smoothing');
+  if(smoothCb) smoothCb.checked = narrUi.smoothing;
 }
 
 let narrStore, trendsStore;
@@ -627,7 +736,8 @@ function refreshNarr(){
   renderList(narrStore, document.getElementById('narr-list'), refreshNarr, true);
   renderChart(narrStore, narrUi, document.getElementById('narr-chart'), document.getElementById('narr-legend'), document.getElementById('narr-status'), narrRef, {
     fmt: fmtUsd, yScale:{grid:{color:'#1A2029'},ticks:{callback:v=>fmtUsd(v)}}, onChange: refreshNarr,
-    eventsStripEl: document.getElementById('narr-events-strip')
+    eventsStripEl: document.getElementById('narr-events-strip'),
+    tooltipEnabled: false
   });
   renderLeaderboard(narrStore, narrLbUi.days, document.querySelector('#narr-leaderboard tbody'), fmtUsd);
 }
@@ -676,6 +786,20 @@ lbRangeSeg.querySelectorAll('button').forEach(btn=>{
 
 document.getElementById('narr-reset-zoom').addEventListener('click', ()=>{ if(narrRef.chart) narrRef.chart.resetZoom(); });
 document.getElementById('trends-reset-zoom').addEventListener('click', ()=>{ if(trendsRef.chart) trendsRef.chart.resetZoom(); });
+
+document.getElementById('narr-share-btn').addEventListener('click', async ()=>{
+  const btn = document.getElementById('narr-share-btn');
+  const url = buildShareLink();
+  const original = btn.textContent;
+  try{
+    await navigator.clipboard.writeText(url);
+    btn.textContent = '✓ Copié !';
+  }catch(e){
+    window.prompt('Copiez ce lien :', url);
+    btn.textContent = original;
+  }
+  setTimeout(()=>{ btn.textContent = original; }, 1600);
+});
 
 /* ---------- bandeau d'alertes ---------- */
 async function loadJsonSafe(path){
@@ -934,7 +1058,9 @@ async function refreshAllData(){
   try{
     narrStore = await buildStore('narr', 'data/narratives_history.json');
     await loadEventsHistory();
+    await loadBreadth();
     refreshNarr();
+    renderStageValidation(narrStore);
     trendsStore = await buildStore('trends', 'data/trends_history.json');
     refreshTrends();
     await initAlertBanner();
@@ -961,8 +1087,11 @@ document.getElementById('mw-refresh-btn').addEventListener('click', async ()=>{
 (async function init(){
   renderMarketWidget();
   narrStore = await buildStore('narr', 'data/narratives_history.json');
+  applyShareParamsIfPresent();
   await loadEventsHistory();
+  await loadBreadth();
   refreshNarr();
+  renderStageValidation(narrStore);
   trendsStore = await buildStore('trends', 'data/trends_history.json');
   refreshTrends();
   initAlertBanner();
