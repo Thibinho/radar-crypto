@@ -46,9 +46,17 @@
   .gainer-price{font-family:var(--mono);font-size:11px;color:var(--text-dim);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .gainer-chg{font-family:var(--mono);font-size:11.5px;font-weight:700;color:var(--green);flex-shrink:0;}
   .heatmap{position:relative;width:100%;height:260px;border-radius:8px;overflow:hidden;background:var(--panel-2);}
-  .heat-tile{position:absolute;box-sizing:border-box;border:1px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:2px;cursor:default;}
-  .heat-sym{font-family:var(--mono);font-weight:700;font-size:11px;color:#fff;line-height:1.15;text-shadow:0 1px 2px rgba(0,0,0,.4);}
-  .heat-chg{font-family:var(--mono);font-size:9px;color:#fff;opacity:.92;text-shadow:0 1px 2px rgba(0,0,0,.4);}
+  .bubble{position:absolute;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:left .35s ease, top .35s ease, width .35s ease, height .35s ease;animation-name:bubble-float;animation-timing-function:ease-in-out;animation-iteration-count:infinite;box-shadow:0 2px 6px rgba(0,0,0,.35);}
+  .bubble.enlarged{box-shadow:0 10px 26px rgba(0,0,0,.5);}
+  .bubble-sym{font-family:var(--mono);font-weight:700;font-size:10.5px;color:#fff;line-height:1.1;text-shadow:0 1px 2px rgba(0,0,0,.5);pointer-events:none;}
+  .bubble-chg{font-family:var(--mono);font-size:9px;color:#fff;opacity:.92;text-shadow:0 1px 2px rgba(0,0,0,.5);pointer-events:none;}
+  .bubble-price{font-family:var(--mono);font-size:9px;color:#fff;opacity:.85;margin-top:3px;text-shadow:0 1px 2px rgba(0,0,0,.5);pointer-events:none;}
+  @keyframes bubble-float{
+    0%,100%{transform:translate(0,0);}
+    25%{transform:translate(var(--fx,3px), calc(var(--fy,3px) * -1));}
+    50%{transform:translate(calc(var(--fx,3px) * -1), calc(var(--fy,3px) * -1));}
+    75%{transform:translate(var(--fx,3px), var(--fy,3px));}
+  }
   .rotation-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-family:var(--mono);font-size:11.5px;}
   .rotation-label{width:110px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .rotation-track{flex:1;height:16px;position:relative;background:var(--panel-2);border-radius:3px;}
@@ -77,6 +85,8 @@
   .site-footer{text-align:center;padding:24px 0 8px;margin-top:8px;}
   .site-footer a{font-family:var(--mono);font-size:12.5px;color:var(--text-dim);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:9px 20px;transition:all .15s;}
   .site-footer a:hover{color:var(--amber);border-color:var(--amber);}
+  .footer-inner{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;}
+  .fng-footer{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 16px 8px 12px;}
   .btn{font-family:var(--mono);font-size:11.5px;color:var(--text);background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:8px 12px;cursor:pointer;}
   .btn:hover{border-color:var(--amber);color:var(--amber);}
   .btn.primary{background:var(--amber);color:#1a1305;border-color:var(--amber);font-weight:600;}
@@ -163,6 +173,7 @@
   .mw-sub{font-family:var(--mono);font-size:9px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;}
   .mw-tv{font-family:var(--mono);font-size:8.5px;color:var(--cyan);border:1px solid var(--cyan);border-radius:4px;padding:2px 5px;flex-shrink:0;}
   .mw-emoji{font-size:20px;line-height:1;flex-shrink:0;width:20px;text-align:center;}
+  .fng-gauge{flex-shrink:0;}
   .fng-spark{flex-shrink:0;margin-left:2px;}
   .mw-reorder{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:6px 8px 6px 2px;border-left:1px solid var(--line);}
   .mw-reorder button{background:none;border:none;color:var(--text-dim);font-size:9px;cursor:pointer;padding:2px 3px;line-height:1;border-radius:3px;}
@@ -408,7 +419,30 @@
   </section>
 
   <footer class="site-footer">
-    <a href="https://www.tradingview.com/" target="_blank" rel="noopener" data-i18n="tradingViewFooter">📈 Ouvrir TradingView ↗</a>
+    <div class="footer-inner">
+      <div class="fng-footer">
+        <svg class="fng-gauge" viewBox="0 0 100 60" width="38" height="23">
+          <defs>
+            <linearGradient id="fngGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#E8615C"/>
+              <stop offset="25%" stop-color="#E8A33D"/>
+              <stop offset="50%" stop-color="#E0C341"/>
+              <stop offset="75%" stop-color="#8ED17A"/>
+              <stop offset="100%" stop-color="#5FB878"/>
+            </linearGradient>
+          </defs>
+          <path d="M10,55 A40,40 0 0 1 90,55" fill="none" stroke="url(#fngGrad)" stroke-width="11" stroke-linecap="round"/>
+          <line id="fng-needle" x1="50" y1="55" x2="50" y2="20" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="50" cy="55" r="4" fill="#fff"/>
+        </svg>
+        <div class="mw-text">
+          <span class="mw-price" id="fng-value">--</span>
+          <span class="mw-sub" id="fng-label" data-i18n="fngLabel">Fear &amp; Greed</span>
+        </div>
+        <span class="fng-spark" id="fng-spark"></span>
+      </div>
+      <a href="https://www.tradingview.com/" target="_blank" rel="noopener" data-i18n="tradingViewFooter">📈 Ouvrir TradingView ↗</a>
+    </div>
   </footer>
 </div>
 
@@ -1375,53 +1409,132 @@ async function refreshTopGainers(){
     container.innerHTML = `<div style="color:var(--text-dim);font-family:var(--mono);font-size:11.5px;padding:8px;">${t('noData')}</div>`;
     return;
   }
-  renderGainersHeatmap(coins, container);
-}
-
-/* ---------- treemap simple (découpe récursive équilibrée) ---------- */
-function computeTreemap(items, x, y, w, h){
-  if(items.length === 0) return [];
-  if(items.length === 1) return [{...items[0], rx:x, ry:y, rw:w, rh:h}];
-  const total = items.reduce((s,i)=>s+i.value,0);
-  let acc = 0, splitIdx = 1;
-  for(let i=0;i<items.length;i++){
-    acc += items[i].value;
-    if(acc >= total/2){ splitIdx = i+1; break; }
-  }
-  splitIdx = Math.min(Math.max(1, splitIdx), items.length-1);
-  const groupA = items.slice(0, splitIdx);
-  const groupB = items.slice(splitIdx);
-  const totalA = groupA.reduce((s,i)=>s+i.value,0);
-  const fracA = total > 0 ? totalA/total : 0.5;
-  if(w >= h){
-    const wA = w*fracA;
-    return [...computeTreemap(groupA, x, y, wA, h), ...computeTreemap(groupB, x+wA, y, w-wA, h)];
-  }
-  const hA = h*fracA;
-  return [...computeTreemap(groupA, x, y, w, hA), ...computeTreemap(groupB, x, y+hA, w, h-hA)];
+  renderBubbles(coins, container);
 }
 
 function heatColor(chg){
   const clamped = Math.max(-15, Math.min(15, chg || 0));
   if(clamped >= 0){
     const p = clamped/15;
-    return `rgba(95,184,120,${(0.35+p*0.55).toFixed(2)})`;
+    return `rgba(95,184,120,${(0.45+p*0.5).toFixed(2)})`;
   }
   const p = -clamped/15;
-  return `rgba(232,97,92,${(0.35+p*0.55).toFixed(2)})`;
+  return `rgba(232,97,92,${(0.45+p*0.5).toFixed(2)})`;
 }
 
-function renderGainersHeatmap(coins, container){
+/* ---------- bulles flottantes (placement en spirale, sans chevauchement) ---------- */
+function packBubbles(items, containerW, containerH){
+  const maxR = Math.min(containerW, containerH) * 0.19;
+  const minR = 13;
+  const values = items.map(i=>i.value);
+  const maxVal = Math.max(...values), minVal = Math.min(...values);
+  const scaleR = v => {
+    if(maxVal === minVal) return (minR+maxR)/2;
+    const tt = (v - minVal)/(maxVal - minVal);
+    return minR + Math.sqrt(tt) * (maxR - minR);
+  };
+
+  const placed = [];
+  const cx = containerW/2, cy = containerH/2;
+
+  items.forEach(item=>{
+    const r = scaleR(item.value);
+    let angle = Math.random()*Math.PI*2, radius = 0, x = cx, y = cy;
+    let attempts = 0;
+    while(attempts < 700){
+      x = cx + radius*Math.cos(angle);
+      y = cy + radius*Math.sin(angle);
+      const withinBounds = (x-r >= 2 && x+r <= containerW-2 && y-r >= 2 && y+r <= containerH-2);
+      let collides = false;
+      for(const p of placed){
+        const dx = x-p.x, dy = y-p.y;
+        if(Math.sqrt(dx*dx+dy*dy) < r+p.r+4){ collides = true; break; }
+      }
+      if(withinBounds && !collides) break;
+      angle += 0.45;
+      radius += 2.2;
+      attempts++;
+    }
+    placed.push({...item, x, y, r});
+  });
+  return placed;
+}
+
+function collapseBubble(bubble){
+  const cx = parseFloat(bubble.dataset.cx), cy = parseFloat(bubble.dataset.cy), r = parseFloat(bubble.dataset.r);
+  bubble.style.left = (cx-r)+'px';
+  bubble.style.top = (cy-r)+'px';
+  bubble.style.width = (r*2)+'px';
+  bubble.style.height = (r*2)+'px';
+  bubble.style.animationPlayState = 'running';
+  bubble.style.zIndex = 1;
+  bubble.classList.remove('enlarged');
+  const priceEl = bubble.querySelector('.bubble-price');
+  if(priceEl) priceEl.remove();
+  const symEl = bubble.querySelector('.bubble-sym');
+  const chgEl = bubble.querySelector('.bubble-chg');
+  if(r < 20){ if(symEl) symEl.style.display='none'; if(chgEl) chgEl.style.display='none'; }
+}
+
+function enlargeBubble(bubble, containerW, containerH){
+  const cx = parseFloat(bubble.dataset.cx), cy = parseFloat(bubble.dataset.cy);
+  const bigR = Math.min(containerW, containerH) * 0.36;
+  let newLeft = Math.max(2, Math.min(containerW-bigR*2-2, cx-bigR));
+  let newTop = Math.max(2, Math.min(containerH-bigR*2-2, cy-bigR));
+  bubble.style.left = newLeft+'px';
+  bubble.style.top = newTop+'px';
+  bubble.style.width = (bigR*2)+'px';
+  bubble.style.height = (bigR*2)+'px';
+  bubble.style.animationPlayState = 'paused';
+  bubble.style.zIndex = 20;
+  bubble.classList.add('enlarged');
+  const symEl = bubble.querySelector('.bubble-sym');
+  const chgEl = bubble.querySelector('.bubble-chg');
+  if(symEl) symEl.style.display = '';
+  if(chgEl) chgEl.style.display = '';
+  if(!bubble.querySelector('.bubble-price')){
+    const priceEl = document.createElement('span');
+    priceEl.className = 'bubble-price';
+    priceEl.textContent = bubble.dataset.price || '';
+    bubble.appendChild(priceEl);
+  }
+}
+
+function renderBubbles(coins, container){
+  const w = container.clientWidth || 250;
+  const h = container.clientHeight || 260;
   const items = coins.map(c => ({...c, value: c.market_cap || 1}));
-  const rects = computeTreemap(items, 0, 0, 100, 100);
-  container.innerHTML = rects.map(r=>{
-    const chg = r.price_change_percentage_24h || 0;
+  const placed = packBubbles(items, w, h);
+
+  container.innerHTML = '';
+  placed.forEach(p=>{
+    const chg = p.price_change_percentage_24h || 0;
     const sign = chg >= 0 ? '+' : '';
-    return `<div class="heat-tile" style="left:${r.rx}%;top:${r.ry}%;width:${r.rw}%;height:${r.rh}%;background:${heatColor(chg)};" title="${(r.symbol||'').toUpperCase()} ${sign}${chg.toFixed(1)}%">
-      <span class="heat-sym">${(r.symbol||'').toUpperCase()}</span>
-      <span class="heat-chg">${sign}${chg.toFixed(1)}%</span>
-    </div>`;
-  }).join('');
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    bubble.style.left = (p.x-p.r)+'px';
+    bubble.style.top = (p.y-p.r)+'px';
+    bubble.style.width = (p.r*2)+'px';
+    bubble.style.height = (p.r*2)+'px';
+    bubble.style.background = heatColor(chg);
+    bubble.style.setProperty('--fx', (2+Math.random()*4).toFixed(1)+'px');
+    bubble.style.setProperty('--fy', (2+Math.random()*4).toFixed(1)+'px');
+    bubble.style.animationDuration = (3+Math.random()*2.5).toFixed(1)+'s';
+    bubble.style.animationDelay = (Math.random()*2).toFixed(1)+'s';
+    bubble.dataset.cx = p.x; bubble.dataset.cy = p.y; bubble.dataset.r = p.r;
+    bubble.dataset.price = fmtPrice(p.current_price);
+    bubble.title = `${(p.symbol||'').toUpperCase()} — ${fmtPrice(p.current_price)} — ${sign}${chg.toFixed(1)}%`;
+    const showText = p.r >= 20;
+    bubble.innerHTML = `<span class="bubble-sym" style="display:${showText?'':'none'}">${(p.symbol||'').toUpperCase()}</span><span class="bubble-chg" style="display:${showText?'':'none'}">${sign}${chg.toFixed(1)}%</span>`;
+
+    bubble.addEventListener('click', ()=>{
+      const isEnlarged = bubble.classList.contains('enlarged');
+      container.querySelectorAll('.bubble.enlarged').forEach(b=>{ if(b!==bubble) collapseBubble(b); });
+      if(isEnlarged) collapseBubble(bubble); else enlargeBubble(bubble, w, h);
+    });
+
+    container.appendChild(bubble);
+  });
 }
 
 async function initAlertBanner(){
@@ -1493,18 +1606,9 @@ const ROW_CONFIGS = {
         <span class="mw-sub">USDC.D · ${t('dominance')}</span>
       </div>
       <span class="mw-tv">TV↗</span>
-    </a>`,
-  fng: () => `
-    <div class="mw-row-link" style="cursor:default;">
-      <span class="mw-emoji" id="fng-emoji">📊</span>
-      <div class="mw-text">
-        <span class="mw-price" id="fng-value">--</span>
-        <span class="mw-sub" id="fng-label">${t('fngLabel')}</span>
-      </div>
-      <span class="fng-spark" id="fng-spark"></span>
-    </div>`
+    </a>`
 };
-const DEFAULT_WIDGET_ORDER = ['btc', 'fng', 'eth', 'usdtd', 'usdcd'];
+const DEFAULT_WIDGET_ORDER = ['btc', 'eth', 'usdtd', 'usdcd'];
 
 function loadWidgetOrder(){
   try{
@@ -1561,11 +1665,14 @@ function applyMarketData(){
   if(usdcdEl && lastMarketData.usdcDom != null) usdcdEl.textContent = lastMarketData.usdcDom.toFixed(2) + '%';
 
   if(lastMarketData.fng){
-    const emojiEl = document.getElementById('fng-emoji');
+    const needleEl = document.getElementById('fng-needle');
     const valEl = document.getElementById('fng-value');
     const labEl = document.getElementById('fng-label');
     const sparkEl = document.getElementById('fng-spark');
-    if(emojiEl) emojiEl.textContent = fngEmoji(lastMarketData.fng.classification);
+    if(needleEl){
+      const angle = -90 + (Math.max(0, Math.min(100, lastMarketData.fng.value)) / 100) * 180;
+      needleEl.setAttribute('transform', `rotate(${angle} 50 55)`);
+    }
     if(valEl) valEl.textContent = lastMarketData.fng.value;
     if(labEl) labEl.textContent = `${t('fngLabel')} · ${fngLabelFr(lastMarketData.fng.classification)}`;
     if(sparkEl && lastMarketData.fngHistory) sparkEl.innerHTML = sparklineSVG(lastMarketData.fngHistory, 38, 18);
@@ -1730,8 +1837,34 @@ function makeDraggable(wrapId, handleId, storageKey){
   });
 }
 
+/* ---------- bip sonar au démarrage ---------- */
+function playSonarPing(){
+  try{
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if(!AudioCtx) return;
+    const ctx = new AudioCtx();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(1400, ctx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(500, ctx.currentTime + 0.45);
+    gain.gain.setValueAtTime(0.0001, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.22, ctx.currentTime + 0.015);
+    gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.9);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + 1);
+  }catch(e){ /* bloqué silencieusement si le navigateur refuse l'audio auto */ }
+}
+document.addEventListener('click', function firstClickSonarFallback(){
+  playSonarPing();
+  document.removeEventListener('click', firstClickSonarFallback);
+}, { once:true });
+
 (async function init(){
   const splashStart = Date.now();
+  playSonarPing();
 
   // applique les préférences sauvegardées (langue, thème, devise) avant le premier rendu
   const savedTheme = localStorage.getItem('radar-theme') || 'dark';
