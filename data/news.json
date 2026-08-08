@@ -1,6 +1,12 @@
 {
-  "generated_at": "2026-08-08T10:42:50.050380+00:00",
+  "generated_at": "2026-08-08T11:20:16.729245+00:00",
   "items": [
+    {
+      "title": "La banque centrale du Brésil force un délai de 24h sur les transferts crypto de plus de 10 000 $",
+      "link": "https://journalducoin.com/actualites/banque-centrale-bresil-force-delai-24h-crypto/",
+      "source": "Journal du Coin",
+      "published": "2026-08-08T11:00:00+00:00"
+    },
     {
       "title": "Bybit attaque en justice la Corée du Nord et Lazarus Group pour le hack à 1,5 milliard $",
       "link": "https://journalducoin.com/exchanges/bybit-justice-coree-nord-lazarus-group/",
@@ -90,12 +96,6 @@
       "link": "https://www.coindesk.com/business/2026/08/07/trump-backed-american-bitcoin-director-justin-mateen-buys-nearly-usd2-million-of-abtc-stock",
       "source": "CoinDesk",
       "published": "2026-08-07T20:20:00+00:00"
-    },
-    {
-      "title": "US Treasury’s OFAC sanctions 2 Iran-linked crypto exchanges",
-      "link": "https://cointelegraph.com/news/us-treasury-sanctions-iran-crypto-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-08-07T20:02:20+00:00"
     }
   ]
 }
