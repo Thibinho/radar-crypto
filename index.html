@@ -145,6 +145,9 @@
   .stage-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle;}
   .stage-legend{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);}
   .stage-legend-title{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dim);margin:0 0 10px;font-family:var(--mono);font-weight:500;}
+  .notice-panel{display:none;}
+  .notice-panel.show{display:block;}
+  .row-stage{font-family:var(--mono);font-size:10.5px;color:var(--text-dim);white-space:nowrap;flex-shrink:0;}
 </style>
 </head>
 <body>
@@ -230,24 +233,29 @@
             <thead><tr><th class="rank">#</th><th>Narratif</th><th class="val">Cap. actuelle</th><th class="chg">Variation</th><th class="val">Ratio / BTC</th><th class="val">Stade</th><th class="val">Largeur</th></tr></thead>
             <tbody></tbody>
           </table>
-          <div class="stage-legend">
-            <h4 class="stage-legend-title">Légende — stade du cycle de vie (basé sur la capitalisation, 30j/7j)</h4>
-            <table class="lb">
-              <thead><tr><th>Stade</th><th>Condition</th><th class="val">Remplissage</th><th class="val">Couleur</th></tr></thead>
-              <tbody>
-                <tr><td>Neutre</td><td>Progression 30j négative ou nulle</td><td class="val">25%</td><td class="val"><span class="stage-dot" style="background:#8B95A7"></span>Gris</td></tr>
-                <tr><td>Émergence</td><td>Progression 30j positive (mais modérée)</td><td class="val">50%</td><td class="val"><span class="stage-dot" style="background:#4FD1C5"></span>Cyan</td></tr>
-                <tr><td>Momentum</td><td>Progression 30j ≥ 20% et progression 7j positive</td><td class="val">75%</td><td class="val"><span class="stage-dot" style="background:#E8A33D"></span>Orange</td></tr>
-                <tr><td>Euphorie ⚠</td><td>Progression 7j &gt; 25% (accélération brutale récente)</td><td class="val">100%</td><td class="val"><span class="stage-dot" style="background:#E8615C"></span>Rouge</td></tr>
-              </tbody>
-            </table>
+          <div class="toolbar">
+            <button class="btn small" id="notice-toggle-btn">📋 Notice</button>
           </div>
-          <div class="stage-legend">
-            <h4 class="stage-legend-title">Auto-validation — sur votre historique, qu'est-il arrivé 7 jours après chaque stade ?</h4>
-            <table class="lb" id="stage-validation-table">
-              <thead><tr><th>Stade</th><th class="val">Occurrences</th><th class="val">Hausse ensuite</th><th class="val">Baisse ensuite</th></tr></thead>
-              <tbody id="stage-validation-tbody"><tr><td colspan="4" style="color:var(--text-dim);padding:10px;">Calcul en cours…</td></tr></tbody>
-            </table>
+          <div id="notice-panel" class="notice-panel">
+            <div class="stage-legend">
+              <h4 class="stage-legend-title">Légende — stade du cycle de vie (basé sur la capitalisation, 30j/7j)</h4>
+              <table class="lb">
+                <thead><tr><th>Stade</th><th>Condition</th><th class="val">Remplissage</th><th class="val">Couleur</th></tr></thead>
+                <tbody>
+                  <tr><td>Neutre</td><td>Progression 30j négative ou nulle</td><td class="val">25%</td><td class="val"><span class="stage-dot" style="background:#8B95A7"></span>Gris</td></tr>
+                  <tr><td>Émergence</td><td>Progression 30j positive (mais modérée)</td><td class="val">50%</td><td class="val"><span class="stage-dot" style="background:#4FD1C5"></span>Cyan</td></tr>
+                  <tr><td>Momentum</td><td>Progression 30j ≥ 20% et progression 7j positive</td><td class="val">75%</td><td class="val"><span class="stage-dot" style="background:#E8A33D"></span>Orange</td></tr>
+                  <tr><td>Euphorie ⚠</td><td>Progression 7j &gt; 25% (accélération brutale récente)</td><td class="val">100%</td><td class="val"><span class="stage-dot" style="background:#E8615C"></span>Rouge</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="stage-legend">
+              <h4 class="stage-legend-title">Auto-validation — sur votre historique, qu'est-il arrivé 7 jours après chaque stade ?</h4>
+              <table class="lb" id="stage-validation-table">
+                <thead><tr><th>Stade</th><th class="val">Jours observés</th><th class="val">Hausse ensuite</th><th class="val">Baisse ensuite</th></tr></thead>
+                <tbody id="stage-validation-tbody"><tr><td colspan="4" style="color:var(--text-dim);padding:10px;">Calcul en cours…</td></tr></tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -388,16 +396,35 @@ function sparklineSVG(dateValueMap, width=48, height=18){
 
 function renderList(store, listEl, onChange, showSparkline){
   listEl.innerHTML='';
+
+  let d30 = null, d7 = null;
+  if(showSparkline){
+    const allDatesSet = new Set();
+    store.labels.forEach(l => Object.keys(store.data[l]).forEach(d=>allDatesSet.add(d)));
+    const allDates = [...allDatesSet].sort();
+    d30 = filterDatesByDays(allDates, 30);
+    d7 = filterDatesByDays(allDates, 7);
+  }
+
   store.labels.forEach((label,idx)=>{
     const checked = !store.isHidden(label);
     const dateCount = Object.keys(store.data[label]).length;
     const row = document.createElement('label');
     row.className='row-check';
+
+    let rightHtml = `<span class="cap">${dateCount} pts</span>`;
+    if(showSparkline){
+      const c30 = pctChangeOverDates(store, label, d30);
+      const c7 = pctChangeOverDates(store, label, d7);
+      const info = classifyStage(c30, c7);
+      rightHtml = `<span class="row-stage"><span class="stage-dot" style="background:${info.color}"></span>${info.text}</span>`;
+    }
+
     row.innerHTML = `<input type="checkbox" ${checked?'checked':''}>
       <span class="swatch" style="background:${checked?colorFor(idx):'var(--line)'}"></span>
       <span class="name">${label}</span>
       ${showSparkline ? sparklineSVG(store.data[label]) : ''}
-      <span class="cap">${dateCount} pts</span>`;
+      ${rightHtml}`;
     row.querySelector('input').addEventListener('change', ()=>{ store.toggle(label); onChange(); });
     listEl.appendChild(row);
   });
@@ -786,6 +813,10 @@ lbRangeSeg.querySelectorAll('button').forEach(btn=>{
 
 document.getElementById('narr-reset-zoom').addEventListener('click', ()=>{ if(narrRef.chart) narrRef.chart.resetZoom(); });
 document.getElementById('trends-reset-zoom').addEventListener('click', ()=>{ if(trendsRef.chart) trendsRef.chart.resetZoom(); });
+
+document.getElementById('notice-toggle-btn').addEventListener('click', ()=>{
+  document.getElementById('notice-panel').classList.toggle('show');
+});
 
 document.getElementById('narr-share-btn').addEventListener('click', async ()=>{
   const btn = document.getElementById('narr-share-btn');
