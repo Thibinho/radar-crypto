@@ -45,6 +45,18 @@
   .gainer-symbol{font-weight:600;flex-shrink:0;width:52px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .gainer-price{font-family:var(--mono);font-size:11px;color:var(--text-dim);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .gainer-chg{font-family:var(--mono);font-size:11.5px;font-weight:700;color:var(--green);flex-shrink:0;}
+  .heatmap{position:relative;width:100%;height:260px;border-radius:8px;overflow:hidden;background:var(--panel-2);}
+  .heat-tile{position:absolute;box-sizing:border-box;border:1px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:2px;cursor:default;}
+  .heat-sym{font-family:var(--mono);font-weight:700;font-size:11px;color:#fff;line-height:1.15;text-shadow:0 1px 2px rgba(0,0,0,.4);}
+  .heat-chg{font-family:var(--mono);font-size:9px;color:#fff;opacity:.92;text-shadow:0 1px 2px rgba(0,0,0,.4);}
+  .rotation-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-family:var(--mono);font-size:11.5px;}
+  .rotation-label{width:110px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .rotation-track{flex:1;height:16px;position:relative;background:var(--panel-2);border-radius:3px;}
+  .rotation-bar{position:absolute;top:0;height:100%;border-radius:3px;}
+  .rotation-bar.pos{background:var(--green);left:50%;}
+  .rotation-bar.neg{background:var(--red);right:50%;}
+  .rotation-center{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--line);}
+  .rotation-value{width:60px;text-align:right;flex-shrink:0;}
 
   /* --- Pied de page --- */
   .site-footer{text-align:center;padding:24px 0 8px;margin-top:8px;}
@@ -123,6 +135,9 @@
   .mw-refresh-btn:hover{filter:brightness(1.1);}
   .mw-refresh-btn.spinning{animation:mw-spin 0.7s linear infinite;}
   @keyframes mw-spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+  .mw-handle{position:absolute;top:-13px;left:50%;transform:translateX(-50%);width:30px;height:14px;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;cursor:grab;font-size:9px;letter-spacing:-2px;color:var(--text-dim);z-index:52;user-select:none;}
+  .mw-handle:hover{color:var(--amber);border-color:var(--amber);}
+  .mw-handle:active{cursor:grabbing;}
   .mw-row-wrap{display:flex;align-items:stretch;border-bottom:1px solid var(--line);}
   .mw-row-wrap:last-child{border-bottom:none;}
   .mw-row-link{flex:1;display:flex;align-items:center;gap:10px;padding:9px 8px 9px 14px;text-decoration:none;color:var(--text);min-width:0;}
@@ -133,6 +148,7 @@
   .mw-sub{font-family:var(--mono);font-size:9px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;}
   .mw-tv{font-family:var(--mono);font-size:8.5px;color:var(--cyan);border:1px solid var(--cyan);border-radius:4px;padding:2px 5px;flex-shrink:0;}
   .mw-emoji{font-size:20px;line-height:1;flex-shrink:0;width:20px;text-align:center;}
+  .fng-spark{flex-shrink:0;margin-left:2px;}
   .mw-reorder{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:6px 8px 6px 2px;border-left:1px solid var(--line);}
   .mw-reorder button{background:none;border:none;color:var(--text-dim);font-size:9px;cursor:pointer;padding:2px 3px;line-height:1;border-radius:3px;}
   .mw-reorder button:hover:not(:disabled){color:var(--amber);background:var(--panel-2);}
@@ -184,6 +200,7 @@
 <body>
 <div id="market-widget-wrap">
   <button class="mw-refresh-btn" id="mw-refresh-btn" title="Actualiser BTC/ETH/USDT.D/USDC.D + graphique">↻</button>
+  <div id="market-widget-handle" class="mw-handle" title="Déplacer">⠿⠿</div>
   <div id="market-widget"></div>
 </div>
 <div id="event-popup" class="event-popup"></div>
@@ -220,7 +237,7 @@
         </div>
         <div class="panel" style="margin-top:16px;">
           <h2 data-i18n="topGainersTitle">Top 20 altcoins — hausse 24h</h2>
-          <div id="top-gainers-list" class="list"></div>
+          <div id="top-gainers-list" class="heatmap"></div>
           <div class="note" data-i18n="topGainersNote">
             En direct depuis CoinGecko, actualisé chaque minute. Bitcoin et les stablecoins sont exclus.
           </div>
@@ -279,6 +296,14 @@
           </table>
           <div class="toolbar">
             <button class="btn small" id="notice-toggle-btn" data-i18n="noticeBtn">📋 Notice</button>
+            <button class="btn small" id="rotation-toggle-btn" data-i18n="rotationBtn">🔀 Diagramme de rotation</button>
+          </div>
+          <div id="rotation-panel" class="notice-panel">
+            <div class="stage-legend">
+              <h4 class="stage-legend-title" data-i18n="rotationTitle">Rotation des parts de marché relatives (sur la période du Top 5 ci-dessus)</h4>
+              <p class="note" style="margin-top:0;" data-i18n="rotationExplain">Ce diagramme montre quels narratifs gagnent (vert) ou perdent (rouge) du poids relatif parmi vos narratifs suivis — pas la variation de capitalisation en elle-même, mais la part que chaque narratif représente dans l'ensemble.</p>
+              <div id="rotation-chart-container"></div>
+            </div>
           </div>
           <div id="notice-panel" class="notice-panel">
             <div class="stage-legend">
@@ -898,6 +923,7 @@ function refreshNarr(){
     tooltipEnabled: false
   });
   renderLeaderboard(narrStore, narrLbUi.days, document.querySelector('#narr-leaderboard tbody'), fmtUsd);
+  renderRotationDiagram(narrStore, narrLbUi.days);
 }
 function refreshTrends(){
   renderList(trendsStore, document.getElementById('trends-list'), refreshTrends);
@@ -939,6 +965,7 @@ lbRangeSeg.querySelectorAll('button').forEach(btn=>{
     btn.classList.add('active');
     narrLbUi.days = Number(btn.dataset.val);
     renderLeaderboard(narrStore, narrLbUi.days, document.querySelector('#narr-leaderboard tbody'), fmtUsd);
+    renderRotationDiagram(narrStore, narrLbUi.days);
   });
 });
 
@@ -948,6 +975,54 @@ document.getElementById('trends-reset-zoom').addEventListener('click', ()=>{ if(
 document.getElementById('notice-toggle-btn').addEventListener('click', ()=>{
   document.getElementById('notice-panel').classList.toggle('show');
 });
+document.getElementById('rotation-toggle-btn').addEventListener('click', ()=>{
+  document.getElementById('rotation-panel').classList.toggle('show');
+});
+
+/* ---------- diagramme de rotation (parts de marché relatives) ---------- */
+function renderRotationDiagram(store, days){
+  const container = document.getElementById('rotation-chart-container');
+  if(!container) return;
+  const allDatesSet = new Set();
+  store.labels.forEach(l => Object.keys(store.data[l]).forEach(d=>allDatesSet.add(d)));
+  const allDates = [...allDatesSet].sort();
+  const rangeDates = filterDatesByDays(allDates, days);
+  if(rangeDates.length < 2){ container.innerHTML = `<p style="color:var(--text-dim);font-size:12px;">${t('notEnoughData')}</p>`; return; }
+
+  const startVals = {}, endVals = {};
+  let totalStart = 0, totalEnd = 0;
+  store.labels.forEach(label=>{
+    let sv = null, ev = null;
+    for(let i=0;i<rangeDates.length;i++){ const v = store.data[label][rangeDates[i]]; if(v != null){ sv = v; break; } }
+    for(let i=rangeDates.length-1;i>=0;i--){ const v = store.data[label][rangeDates[i]]; if(v != null){ ev = v; break; } }
+    startVals[label] = sv; endVals[label] = ev;
+    if(sv != null) totalStart += sv;
+    if(ev != null) totalEnd += ev;
+  });
+
+  const rows = store.labels.map(label=>{
+    const sv = startVals[label], ev = endVals[label];
+    if(sv == null || ev == null || totalStart === 0 || totalEnd === 0) return null;
+    const shareStart = sv/totalStart*100;
+    const shareEnd = ev/totalEnd*100;
+    return { label, delta: shareEnd - shareStart };
+  }).filter(Boolean);
+
+  if(!rows.length){ container.innerHTML = `<p style="color:var(--text-dim);font-size:12px;">${t('notEnoughData')}</p>`; return; }
+
+  rows.sort((a,b)=> b.delta - a.delta);
+  const maxAbs = Math.max(0.3, ...rows.map(r=>Math.abs(r.delta)));
+
+  container.innerHTML = rows.map(r=>{
+    const widthPct = Math.min(100, Math.abs(r.delta)/maxAbs*50);
+    const cls = r.delta >= 0 ? 'pos' : 'neg';
+    return `<div class="rotation-row">
+      <span class="rotation-label">${r.label}</span>
+      <div class="rotation-track"><div class="rotation-center"></div><div class="rotation-bar ${cls}" style="width:${widthPct}%;"></div></div>
+      <span class="rotation-value" style="color:${r.delta>=0?'var(--green)':'var(--red)'}">${r.delta>=0?'+':''}${r.delta.toFixed(2)} pt</span>
+    </div>`;
+  }).join('');
+}
 
 document.getElementById('help-btn').addEventListener('click', ()=> document.getElementById('dlg-help').showModal());
 document.getElementById('help-close-btn').addEventListener('click', ()=> document.getElementById('dlg-help').close());
@@ -971,7 +1046,10 @@ const TRANSLATIONS = {
     colNarrative:"Narratif", colCap:"Cap. actuelle", colChange:"Variation", colRatio:"Ratio / BTC",
     colStage:"Stade", colBreadth:"Largeur", colCondition:"Condition", colFill:"Remplissage", colColor:"Couleur",
     colDaysObserved:"Jours observés", colUpAfter:"Hausse ensuite", colDownAfter:"Baisse ensuite",
-    noticeBtn:"📋 Notice", legendTitle:"Légende — stade du cycle de vie (basé sur la capitalisation, 30j/7j)",
+    noticeBtn:"📋 Notice", rotationBtn:"🔀 Diagramme de rotation",
+    rotationTitle:"Rotation des parts de marché relatives (sur la période du Top 5 ci-dessus)",
+    rotationExplain:"Ce diagramme montre quels narratifs gagnent (vert) ou perdent (rouge) du poids relatif parmi vos narratifs suivis — pas la variation de capitalisation en elle-même, mais la part que chaque narratif représente dans l'ensemble.",
+    legendTitle:"Légende — stade du cycle de vie (basé sur la capitalisation, 30j/7j)",
     stageNeutral:"Neutre", stageEmergence:"Émergence", stageMomentum:"Momentum", stageEuphoria:"Euphorie ⚠",
     condNeutral:"Progression 30j négative ou nulle", condEmergence:"Progression 30j positive (mais modérée)",
     condMomentum:"Progression 30j ≥ 20% et progression 7j positive",
@@ -1003,7 +1081,10 @@ const TRANSLATIONS = {
     colNarrative:"Narrative", colCap:"Current cap", colChange:"Change", colRatio:"Ratio / BTC",
     colStage:"Stage", colBreadth:"Breadth", colCondition:"Condition", colFill:"Fill", colColor:"Color",
     colDaysObserved:"Days observed", colUpAfter:"Up afterward", colDownAfter:"Down afterward",
-    noticeBtn:"📋 Notice", legendTitle:"Legend — lifecycle stage (based on market cap, 30d/7d)",
+    noticeBtn:"📋 Notice", rotationBtn:"🔀 Rotation diagram",
+    rotationTitle:"Relative market-share rotation (over the Top 5 period above)",
+    rotationExplain:"This chart shows which narratives are gaining (green) or losing (red) relative weight among your tracked narratives — not raw market-cap change, but the share each narrative represents within the whole.",
+    legendTitle:"Legend — lifecycle stage (based on market cap, 30d/7d)",
     stageNeutral:"Neutral", stageEmergence:"Emerging", stageMomentum:"Momentum", stageEuphoria:"Euphoria ⚠",
     condNeutral:"30d change negative or flat", condEmergence:"30d change positive (but moderate)",
     condMomentum:"30d change ≥ 20% and 7d change positive",
@@ -1035,7 +1116,10 @@ const TRANSLATIONS = {
     colNarrative:"Narrativa", colCap:"Cap. actual", colChange:"Variación", colRatio:"Ratio / BTC",
     colStage:"Etapa", colBreadth:"Amplitud", colCondition:"Condición", colFill:"Relleno", colColor:"Color",
     colDaysObserved:"Días observados", colUpAfter:"Sube después", colDownAfter:"Baja después",
-    noticeBtn:"📋 Aviso", legendTitle:"Leyenda — etapa del ciclo de vida (según cap. de mercado, 30d/7d)",
+    noticeBtn:"📋 Aviso", rotationBtn:"🔀 Diagrama de rotación",
+    rotationTitle:"Rotación de cuota de mercado relativa (según el período del Top 5 de arriba)",
+    rotationExplain:"Este gráfico muestra qué narrativas ganan (verde) o pierden (rojo) peso relativo entre sus narrativas seguidas — no el cambio de capitalización en sí, sino la parte que representa cada narrativa dentro del conjunto.",
+    legendTitle:"Leyenda — etapa del ciclo de vida (según cap. de mercado, 30d/7d)",
     stageNeutral:"Neutral", stageEmergence:"Emergencia", stageMomentum:"Momentum", stageEuphoria:"Euforia ⚠",
     condNeutral:"Variación 30d negativa o nula", condEmergence:"Variación 30d positiva (pero moderada)",
     condMomentum:"Variación 30d ≥ 20% y variación 7d positiva",
@@ -1067,7 +1151,10 @@ const TRANSLATIONS = {
     colNarrative:"Narrativ", colCap:"Aktuelle Cap.", colChange:"Veränderung", colRatio:"Verhältnis / BTC",
     colStage:"Phase", colBreadth:"Breite", colCondition:"Bedingung", colFill:"Füllung", colColor:"Farbe",
     colDaysObserved:"Beobachtete Tage", colUpAfter:"Danach Anstieg", colDownAfter:"Danach Rückgang",
-    noticeBtn:"📋 Hinweis", legendTitle:"Legende — Lebenszyklus-Phase (basierend auf Marktkap., 30T/7T)",
+    noticeBtn:"📋 Hinweis", rotationBtn:"🔀 Rotationsdiagramm",
+    rotationTitle:"Relative Marktanteils-Rotation (im oben gewählten Top-5-Zeitraum)",
+    rotationExplain:"Dieses Diagramm zeigt, welche Narrative relatives Gewicht gewinnen (grün) oder verlieren (rot) — nicht die reine Kapitalisierungsänderung, sondern den Anteil, den jedes Narrativ am Gesamten hat.",
+    legendTitle:"Legende — Lebenszyklus-Phase (basierend auf Marktkap., 30T/7T)",
     stageNeutral:"Neutral", stageEmergence:"Entstehung", stageMomentum:"Momentum", stageEuphoria:"Euphorie ⚠",
     condNeutral:"30-Tage-Veränderung negativ oder null", condEmergence:"30-Tage-Veränderung positiv (aber moderat)",
     condMomentum:"30-Tage-Veränderung ≥ 20% und 7-Tage-Veränderung positiv",
@@ -1256,21 +1343,57 @@ async function fetchTopAltcoinGainers(){
 }
 
 async function refreshTopGainers(){
-  const listEl = document.getElementById('top-gainers-list');
+  const container = document.getElementById('top-gainers-list');
   const coins = await fetchTopAltcoinGainers();
   if(!coins.length){
-    listEl.innerHTML = `<div style="color:var(--text-dim);font-family:var(--mono);font-size:11.5px;padding:8px;">${t('noData')}</div>`;
+    container.innerHTML = `<div style="color:var(--text-dim);font-family:var(--mono);font-size:11.5px;padding:8px;">${t('noData')}</div>`;
     return;
   }
-  listEl.innerHTML = coins.map((c,i)=>{
-    const chg = c.price_change_percentage_24h;
-    const chgClass = chg >= 0 ? '' : 'style="color:var(--red)"';
-    const arrow = chg >= 0 ? '+' : '';
-    return `<div class="gainer-row">
-      <span class="gainer-rank">${i+1}</span>
-      <span class="gainer-symbol">${(c.symbol||'').toUpperCase()}</span>
-      <span class="gainer-price">${fmtPrice(c.current_price)}</span>
-      <span class="gainer-chg" ${chgClass}>${arrow}${chg.toFixed(1)}%</span>
+  renderGainersHeatmap(coins, container);
+}
+
+/* ---------- treemap simple (découpe récursive équilibrée) ---------- */
+function computeTreemap(items, x, y, w, h){
+  if(items.length === 0) return [];
+  if(items.length === 1) return [{...items[0], rx:x, ry:y, rw:w, rh:h}];
+  const total = items.reduce((s,i)=>s+i.value,0);
+  let acc = 0, splitIdx = 1;
+  for(let i=0;i<items.length;i++){
+    acc += items[i].value;
+    if(acc >= total/2){ splitIdx = i+1; break; }
+  }
+  splitIdx = Math.min(Math.max(1, splitIdx), items.length-1);
+  const groupA = items.slice(0, splitIdx);
+  const groupB = items.slice(splitIdx);
+  const totalA = groupA.reduce((s,i)=>s+i.value,0);
+  const fracA = total > 0 ? totalA/total : 0.5;
+  if(w >= h){
+    const wA = w*fracA;
+    return [...computeTreemap(groupA, x, y, wA, h), ...computeTreemap(groupB, x+wA, y, w-wA, h)];
+  }
+  const hA = h*fracA;
+  return [...computeTreemap(groupA, x, y, w, hA), ...computeTreemap(groupB, x, y+hA, w, h-hA)];
+}
+
+function heatColor(chg){
+  const clamped = Math.max(-15, Math.min(15, chg || 0));
+  if(clamped >= 0){
+    const p = clamped/15;
+    return `rgba(95,184,120,${(0.35+p*0.55).toFixed(2)})`;
+  }
+  const p = -clamped/15;
+  return `rgba(232,97,92,${(0.35+p*0.55).toFixed(2)})`;
+}
+
+function renderGainersHeatmap(coins, container){
+  const items = coins.map(c => ({...c, value: c.market_cap || 1}));
+  const rects = computeTreemap(items, 0, 0, 100, 100);
+  container.innerHTML = rects.map(r=>{
+    const chg = r.price_change_percentage_24h || 0;
+    const sign = chg >= 0 ? '+' : '';
+    return `<div class="heat-tile" style="left:${r.rx}%;top:${r.ry}%;width:${r.rw}%;height:${r.rh}%;background:${heatColor(chg)};" title="${(r.symbol||'').toUpperCase()} ${sign}${chg.toFixed(1)}%">
+      <span class="heat-sym">${(r.symbol||'').toUpperCase()}</span>
+      <span class="heat-chg">${sign}${chg.toFixed(1)}%</span>
     </div>`;
   }).join('');
 }
@@ -1352,6 +1475,7 @@ const ROW_CONFIGS = {
         <span class="mw-price" id="fng-value">--</span>
         <span class="mw-sub" id="fng-label">${t('fngLabel')}</span>
       </div>
+      <span class="fng-spark" id="fng-spark"></span>
     </div>`
 };
 const DEFAULT_WIDGET_ORDER = ['btc', 'fng', 'eth', 'usdtd', 'usdcd'];
@@ -1414,9 +1538,11 @@ function applyMarketData(){
     const emojiEl = document.getElementById('fng-emoji');
     const valEl = document.getElementById('fng-value');
     const labEl = document.getElementById('fng-label');
+    const sparkEl = document.getElementById('fng-spark');
     if(emojiEl) emojiEl.textContent = fngEmoji(lastMarketData.fng.classification);
     if(valEl) valEl.textContent = lastMarketData.fng.value;
     if(labEl) labEl.textContent = `${t('fngLabel')} · ${fngLabelFr(lastMarketData.fng.classification)}`;
+    if(sparkEl && lastMarketData.fngHistory) sparkEl.innerHTML = sparklineSVG(lastMarketData.fngHistory, 38, 18);
   }
 
   if(lastMarketData.btcPrice != null || lastMarketData.fng){
@@ -1428,6 +1554,9 @@ async function initFngWidget(){
   const feargreed = await loadJsonSafe('data/feargreed.json');
   if(!feargreed || !feargreed.length) return;
   lastMarketData.fng = feargreed[feargreed.length-1];
+  const fngMap = {};
+  feargreed.forEach(f => { fngMap[f.date] = f.value; });
+  lastMarketData.fngHistory = fngMap;
   applyMarketData();
 }
 
@@ -1523,6 +1652,58 @@ document.getElementById('mw-refresh-btn').addEventListener('click', async ()=>{
   }
 });
 
+/* ---------- widget déplaçable (glisser-déposer) ---------- */
+function makeDraggable(wrapId, handleId, storageKey){
+  const wrap = document.getElementById(wrapId);
+  const handle = document.getElementById(handleId);
+  if(!wrap || !handle) return;
+
+  try{
+    const saved = JSON.parse(localStorage.getItem(storageKey));
+    if(saved && saved.left != null && saved.top != null){
+      wrap.style.left = saved.left + 'px';
+      wrap.style.top = saved.top + 'px';
+      wrap.style.right = 'auto';
+      wrap.style.bottom = 'auto';
+    }
+  }catch(e){}
+
+  let dragging = false, startX = 0, startY = 0, startLeft = 0, startTop = 0;
+
+  function onPointerMove(e){
+    if(!dragging) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    let newLeft = startLeft + dx;
+    let newTop = startTop + dy;
+    newLeft = Math.max(4, Math.min(window.innerWidth - wrap.offsetWidth - 4, newLeft));
+    newTop = Math.max(4, Math.min(window.innerHeight - wrap.offsetHeight - 4, newTop));
+    wrap.style.left = newLeft + 'px';
+    wrap.style.top = newTop + 'px';
+  }
+  function onPointerUp(){
+    if(!dragging) return;
+    dragging = false;
+    document.removeEventListener('pointermove', onPointerMove);
+    document.removeEventListener('pointerup', onPointerUp);
+    const rect = wrap.getBoundingClientRect();
+    localStorage.setItem(storageKey, JSON.stringify({left: rect.left, top: rect.top}));
+  }
+  handle.addEventListener('pointerdown', (e)=>{
+    dragging = true;
+    const rect = wrap.getBoundingClientRect();
+    startX = e.clientX; startY = e.clientY;
+    startLeft = rect.left; startTop = rect.top;
+    wrap.style.left = startLeft + 'px';
+    wrap.style.top = startTop + 'px';
+    wrap.style.right = 'auto';
+    wrap.style.bottom = 'auto';
+    document.addEventListener('pointermove', onPointerMove);
+    document.addEventListener('pointerup', onPointerUp);
+    e.preventDefault();
+  });
+}
+
 (async function init(){
   // applique les préférences sauvegardées (langue, thème, devise) avant le premier rendu
   const savedTheme = localStorage.getItem('radar-theme') || 'dark';
@@ -1534,6 +1715,7 @@ document.getElementById('mw-refresh-btn').addEventListener('click', async ()=>{
   loadFxRate();
 
   renderMarketWidget();
+  makeDraggable('market-widget-wrap', 'market-widget-handle', 'market-widget-pos');
   narrStore = await buildStore('narr', 'data/narratives_history.json');
   applyShareParamsIfPresent();
   await loadEventsHistory();
