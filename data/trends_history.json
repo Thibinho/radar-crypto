@@ -3421,13 +3421,13 @@
   {
     "date": "2026-08-08",
     "values": {
-      "crypto": 13.0,
+      "crypto": 12.0,
       "cryptomonnaie": 0.0,
-      "bitcoin": 14.0,
-      "btc": 0.0,
-      "alt": 0.0,
+      "bitcoin": 12.0,
+      "btc": 8.0,
+      "alt": 5.0,
       "altcoin": 0.0,
-      "ethereum": 0.0,
+      "ethereum": 4.0,
       "eth": 0.0
     }
   }
