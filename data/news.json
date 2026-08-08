@@ -1,6 +1,12 @@
 {
-  "generated_at": "2026-08-08T09:30:59.449911+00:00",
+  "generated_at": "2026-08-08T10:42:50.050380+00:00",
   "items": [
+    {
+      "title": "Bybit attaque en justice la Corée du Nord et Lazarus Group pour le hack à 1,5 milliard $",
+      "link": "https://journalducoin.com/exchanges/bybit-justice-coree-nord-lazarus-group/",
+      "source": "Journal du Coin",
+      "published": "2026-08-08T10:00:00+00:00"
+    },
     {
       "title": "U.S. Senate opens first stage of crypto Clarity Act voting to give bill a chance next month",
       "link": "https://www.coindesk.com/policy/2026/08/08/u-s-senate-opens-first-stage-of-crypto-clarity-act-voting-to-give-bill-a-chance-next-month",
@@ -90,12 +96,6 @@
       "link": "https://cointelegraph.com/news/us-treasury-sanctions-iran-crypto-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "source": "Cointelegraph",
       "published": "2026-08-07T20:02:20+00:00"
-    },
-    {
-      "title": "U.S. widens Iran crypto crackdown with sanctions on two exchanges",
-      "link": "https://www.coindesk.com/policy/2026/08/07/u-s-widens-iran-crypto-crackdown-with-sanctions-on-two-exchanges",
-      "source": "CoinDesk",
-      "published": "2026-08-07T18:42:44+00:00"
     }
   ]
 }
