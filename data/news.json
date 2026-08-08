@@ -1,6 +1,24 @@
 {
-  "generated_at": "2026-08-08T07:27:29.522269+00:00",
+  "generated_at": "2026-08-08T08:07:00.325479+00:00",
   "items": [
+    {
+      "title": "Bitcoin : BTCPay Server alerte sur une faille critique activement exploitée qui menace les fonds",
+      "link": "https://journalducoin.com/bitcoin/bitcoin-btcpay-server-alerte-sur-une-faille-critique-activement-exploitee-qui-menace-les-fonds/",
+      "source": "Journal du Coin",
+      "published": "2026-08-08T08:00:00+00:00"
+    },
+    {
+      "title": "Another Bitcoin infrastructure exploit hits, this time draining Lightning payment servers",
+      "link": "https://www.coindesk.com/tech/2026/08/08/another-bitcoin-infrastructure-exploit-hits-this-time-draining-merchant-lightning-nodes",
+      "source": "CoinDesk",
+      "published": "2026-08-08T07:46:04+00:00"
+    },
+    {
+      "title": "La Russie arrête plus de 20 personnes dans un réseau crypto qu’elle accuse de financer l’Ukraine",
+      "link": "https://journalducoin.com/actualites/russie-arrete-20-personnes-reseau-crypto-financer-ukraine/",
+      "source": "Journal du Coin",
+      "published": "2026-08-08T07:40:20+00:00"
+    },
     {
       "title": "Franklin Templeton entre dans le cercle très fermé des Super Validators de Canton Network",
       "link": "https://journalducoin.com/economie/franklin-templeton-super-validators-canton-network/",
@@ -78,24 +96,6 @@
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "source": "Cointelegraph",
       "published": "2026-08-07T18:36:10+00:00"
-    },
-    {
-      "title": "OKX remet le couvert avec un bonus de 8 % sur les dépôts, jusqu’à 5 000 €",
-      "link": "https://journalducoin.com/exchanges/okx-bonus-8-depots-5-000/",
-      "source": "Journal du Coin",
-      "published": "2026-08-07T18:00:00+00:00"
-    },
-    {
-      "title": "Circle expands USDC to OKX ecosystem with X Layer launch",
-      "link": "https://cointelegraph.com/news/circle-native-usdc-okx-x-layer-cctp?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-08-07T17:36:45+00:00"
-    },
-    {
-      "title": "Reform UK chair calls for probe into SBF-linked donation: Report",
-      "link": "https://cointelegraph.com/news/reform-uk-probe-ftx-sam-bankman-fried-donation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-08-07T17:03:50+00:00"
     }
   ]
 }
