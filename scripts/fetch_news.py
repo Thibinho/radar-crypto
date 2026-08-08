@@ -15,6 +15,8 @@ from email.utils import parsedate_to_datetime
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_PATH = ROOT / "data" / "news.json"
+EVENTS_PATH = ROOT / "data" / "events_history.json"
+MAX_EVENTS_PER_DAY = 3
 
 FEEDS_DEFAULT = [
     ("CoinDesk", "https://www.coindesk.com/arc/outboundfeeds/rss/"),
@@ -78,6 +80,27 @@ def load_feeds_and_max():
         return FEEDS_DEFAULT, 16
 
 
+def update_events_history(top_items):
+    """Ajoute les principaux titres du jour à un historique cumulatif
+    (contrairement à news.json qui ne garde que les tout derniers articles),
+    pour pouvoir placer des repères d'événements sur toute la timeline des graphiques."""
+    today = datetime.now(timezone.utc).date().isoformat()
+    if EVENTS_PATH.exists():
+        history = json.loads(EVENTS_PATH.read_text(encoding="utf-8"))
+    else:
+        history = []
+    history = [h for h in history if h["date"] != today]
+    day_events = [
+        {"title": i["title"], "link": i["link"], "source": i["source"]}
+        for i in top_items[:MAX_EVENTS_PER_DAY]
+    ]
+    if day_events:
+        history.append({"date": today, "events": day_events})
+    history.sort(key=lambda h: h["date"])
+    history = history[-730:]
+    EVENTS_PATH.write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def main():
     feeds, max_items = load_feeds_and_max()
     all_items = []
@@ -90,6 +113,8 @@ def main():
 
     all_items.sort(key=lambda i: i["published"], reverse=True)
     top = all_items[:max_items]
+
+    update_events_history(top)
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps({
