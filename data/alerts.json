@@ -1,95 +1,95 @@
 {
-  "generated_at": "2026-08-08T05:51:09.658876+00:00",
+  "generated_at": "2026-08-08T06:48:06.309921+00:00",
   "movers": [
     {
       "name": "SocialFi",
-      "change_pct": 123.1,
+      "change_pct": 122.6,
       "direction": "up",
-      "market_cap": 1997597832.36
+      "market_cap": 1992625307.04
     },
     {
       "name": "Liquid Staking",
-      "change_pct": 108.2,
+      "change_pct": 107.6,
       "direction": "up",
-      "market_cap": 2107351867.59
+      "market_cap": 2101084422.6
     },
     {
       "name": "Layer 2",
-      "change_pct": 107.8,
+      "change_pct": 107.5,
       "direction": "up",
-      "market_cap": 7447590988.38
+      "market_cap": 7435966832.63
     },
     {
       "name": "Bitcoin",
       "change_pct": 107.1,
       "direction": "up",
-      "market_cap": 5366600418.16
+      "market_cap": 5365560334.19
     },
     {
       "name": "Layer 1",
-      "change_pct": 105.4,
+      "change_pct": 105.3,
       "direction": "up",
-      "market_cap": 3713125166112.21
+      "market_cap": 3710948235514.01
     },
     {
       "name": "Meme",
       "change_pct": 103.7,
       "direction": "up",
-      "market_cap": 31101076398.52
+      "market_cap": 31107739390.66
     },
     {
       "name": "DeFi",
-      "change_pct": 103.4,
+      "change_pct": 103.1,
       "direction": "up",
-      "market_cap": 61195391902.29
+      "market_cap": 61118185577.45
     },
     {
       "name": "Privacy",
-      "change_pct": 101.9,
+      "change_pct": 101.7,
       "direction": "up",
-      "market_cap": 62449803381.33
-    },
-    {
-      "name": "Restaking",
-      "change_pct": 101.5,
-      "direction": "up",
-      "market_cap": 1527629831.5
+      "market_cap": 62382344885.51
     },
     {
       "name": "DePIN",
-      "change_pct": 101.2,
+      "change_pct": 101.5,
       "direction": "up",
-      "market_cap": 7267820322.28
+      "market_cap": 7278084683.78
+    },
+    {
+      "name": "Restaking",
+      "change_pct": 101.1,
+      "direction": "up",
+      "market_cap": 1524654926.34
     },
     {
       "name": "Stablecoins",
       "change_pct": 100.2,
       "direction": "up",
-      "market_cap": 1009660326095.71
+      "market_cap": 1009767462943.57
     },
     {
       "name": "Metaverse",
-      "change_pct": 98.3,
+      "change_pct": 98.7,
       "direction": "up",
-      "market_cap": 1804583167.36
+      "market_cap": 1808595237.8
     },
     {
       "name": "IA",
-      "change_pct": 95.4,
+      "change_pct": 94.9,
       "direction": "up",
-      "market_cap": 23292855057.54
+      "market_cap": 23239289595.43
     },
     {
       "name": "RWA",
-      "change_pct": 88.1,
+      "change_pct": 86.9,
       "direction": "up",
-      "market_cap": 71357271206.19
+      "market_cap": 70898363152.14
     },
     {
       "name": "GameFi",
-      "change_pct": 68.1,
+      "change_pct": 68.0,
       "direction": "up",
-      "market_cap": 6829915816.21
+      "market_cap": 6822789372.85
     }
   ],
   "emerging": []
