@@ -160,8 +160,8 @@
   .mw-refresh-btn:hover{filter:brightness(1.1);}
   .mw-refresh-btn.spinning{animation:mw-spin 0.7s linear infinite;}
   @keyframes mw-spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-  .mw-handle{position:absolute;top:-13px;left:50%;transform:translateX(-50%);width:30px;height:14px;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;cursor:grab;font-size:9px;letter-spacing:-2px;color:var(--text-dim);z-index:52;user-select:none;}
-  .mw-handle:hover{color:var(--amber);border-color:var(--amber);}
+  .mw-handle{position:absolute;top:-13px;left:50%;transform:translateX(-50%);width:34px;height:16px;background:var(--green);border:1px solid var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center;cursor:grab;font-size:10px;letter-spacing:-2px;color:#0a1f10;z-index:52;user-select:none;box-shadow:0 2px 6px rgba(0,0,0,.35);}
+  .mw-handle:hover{filter:brightness(1.15);}
   .mw-handle:active{cursor:grabbing;}
   .mw-row-wrap{display:flex;align-items:stretch;border-bottom:1px solid var(--line);}
   .mw-row-wrap:last-child{border-bottom:none;}
@@ -273,7 +273,10 @@
           </div>
         </div>
         <div class="panel" style="margin-top:16px;">
-          <h2 data-i18n="topGainersTitle">Top 20 altcoins — hausse 24h</h2>
+          <div class="leaderboard-head" style="margin-bottom:12px;">
+            <h2 style="margin:0;" data-i18n="topGainersTitle">Top 20 altcoins — hausse 24h</h2>
+            <button class="btn small" id="gainers-refresh-btn" data-i18n="gainersRefreshBtn">↻ Actualiser</button>
+          </div>
           <div id="top-gainers-list" class="heatmap"></div>
           <div class="note" data-i18n="topGainersNote">
             En direct depuis CoinGecko, actualisé chaque minute. Bitcoin et les stablecoins sont exclus.
@@ -328,7 +331,7 @@
             </div>
           </div>
           <table class="lb" id="narr-leaderboard">
-            <thead><tr><th class="rank">#</th><th data-i18n="colNarrative">Narratif</th><th class="val" data-i18n="colCap">Cap. actuelle</th><th class="chg" data-i18n="colChange">Variation</th><th class="val" data-i18n="colRatio">Ratio / BTC</th><th class="val" data-i18n="colStage">Stade</th><th class="val" data-i18n="colBreadth">Largeur</th></tr></thead>
+            <thead><tr><th class="rank">#</th><th data-i18n="colNarrative">Narratif</th><th class="val" data-i18n="colCap">Cap. actuelle</th><th class="chg" data-i18n="colChange">Variation</th><th class="val" data-i18n="colRatio">Ratio / BTC</th><th class="val" data-i18n="colStage">Stade</th></tr></thead>
             <tbody></tbody>
           </table>
           <div class="toolbar">
@@ -726,7 +729,7 @@ function renderChart(store, ui, canvasEl, legendEl, statusEl, ref, opts){
     if(ui.smoothing) values = smoothSeries(values, 7);
     if(ui.viewMode === 'pct') values = rebaseToPct(values);
 
-    datasets.push({label,data:values,borderColor:color,backgroundColor:color+'22',tension:.3,pointRadius:2,pointHoverRadius:5,spanGaps:true,borderWidth:2});
+    datasets.push({label,data:values,borderColor:color,backgroundColor:color+'22',tension:.3,pointRadius:2,pointHoverRadius:5,spanGaps:true,borderWidth: opts.lineWidth || 2});
     const pill=document.createElement('div'); pill.className='pill';
     pill.innerHTML=`<span class="dot" style="background:${color}"></span>${label}<button>×</button>`;
     pill.querySelector('button').onclick=()=>{ store.toggle(label); opts.onChange(); };
@@ -868,10 +871,9 @@ function renderLeaderboard(store, days, tbodyEl, fmt){
       <td class="name">${r.label}</td>
       <td class="val">${fmt(r.current)}</td>
       <td class="chg ${r.change>=0?'up':'down'}">${fmtPct(r.change)}</td>
-      <td class="val">${r.ratio!=null ? r.ratio.toFixed(2)+'%' : '—'}</td>
+      <td class="val" style="color:var(--amber);">${r.ratio!=null ? r.ratio.toFixed(2)+'%' : '—'}</td>
       <td class="val"><span class="stage-dot" style="background:${r.stageInfo.color}"></span>${r.stageInfo.text}</td>
-      <td class="val">${r.breadthVal!=null ? r.breadthVal+' cryptos' : '—'}</td>
-    </tr>`).join('') || `<tr><td colspan="7" style="color:var(--text-dim);padding:14px 10px;">${t('notEnoughData')}</td></tr>`;
+    </tr>`).join('') || `<tr><td colspan="6" style="color:var(--text-dim);padding:14px 10px;">${t('notEnoughData')}</td></tr>`;
 }
 
 /* ---------- largeur (breadth) par narratif ---------- */
@@ -980,7 +982,8 @@ function refreshNarr(){
   renderChart(narrStore, narrUi, document.getElementById('narr-chart'), document.getElementById('narr-legend'), document.getElementById('narr-status'), narrRef, {
     fmt: fmtUsd, yScale:{grid:{color:'#1A2029'},ticks:{callback:v=>fmtUsd(v)}}, onChange: refreshNarr,
     eventsStripEl: document.getElementById('narr-events-strip'),
-    tooltipEnabled: false
+    tooltipEnabled: false,
+    lineWidth: 1.3
   });
   renderLeaderboard(narrStore, narrLbUi.days, document.querySelector('#narr-leaderboard tbody'), fmtUsd);
   renderRotationDiagram(narrStore, narrLbUi.days);
@@ -1039,6 +1042,19 @@ document.getElementById('rotation-toggle-btn').addEventListener('click', ()=>{
   document.getElementById('rotation-panel').classList.toggle('show');
 });
 
+document.getElementById('gainers-refresh-btn').addEventListener('click', async ()=>{
+  const btn = document.getElementById('gainers-refresh-btn');
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = t('updating');
+  try{
+    await refreshTopGainers();
+  } finally {
+    btn.disabled = false;
+    btn.textContent = original;
+  }
+});
+
 /* ---------- diagramme de rotation (parts de marché relatives) ---------- */
 function renderRotationDiagram(store, days){
   const container = document.getElementById('rotation-chart-container');
@@ -1095,7 +1111,7 @@ const TRANSLATIONS = {
     siteTitle:"Narratifs & Tendances Crypto", siteSub:"// mis à jour automatiquement chaque jour",
     tabNarr:"Narratifs (Market Cap)", tabTrends:"Google Trends", refreshAllBtn:"↻ Actualiser les données",
     narrListTitle:"Narratifs suivis", trendsListTitle:"Termes suivis", addManualLine:"+ Ligne manuelle",
-    topGainersTitle:"Top 20 altcoins — hausse 24h", topGainersNote:"En direct depuis CoinGecko, actualisé chaque minute. Bitcoin et les stablecoins sont exclus.",
+    topGainersTitle:"Top 20 altcoins — hausse 24h", topGainersNote:"En direct depuis CoinGecko, actualisé chaque minute. Bitcoin et les stablecoins sont exclus.", gainersRefreshBtn:"↻ Actualiser",
     narrNote:"Données mises à jour <b>automatiquement chaque jour</b> par une GitHub Action qui interroge l'API CoinGecko.",
     trendsNote:"Données mises à jour <b>automatiquement chaque jour</b> via la librairie <i>pytrends</i>.",
     ctrlDisplay:"Affichage", ctrlRaw:"$ Brut", ctrlRawScore:"Score brut", ctrlPct:"% Variation",
@@ -1130,7 +1146,7 @@ const TRANSLATIONS = {
     siteTitle:"Narratives & Crypto Trends", siteSub:"// automatically updated every day",
     tabNarr:"Narratives (Market Cap)", tabTrends:"Google Trends", refreshAllBtn:"↻ Refresh data",
     narrListTitle:"Tracked narratives", trendsListTitle:"Tracked terms", addManualLine:"+ Manual line",
-    topGainersTitle:"Top 20 altcoins — 24h gainers", topGainersNote:"Live from CoinGecko, refreshed every minute. Bitcoin and stablecoins excluded.",
+    topGainersTitle:"Top 20 altcoins — 24h gainers", topGainersNote:"Live from CoinGecko, refreshed every minute. Bitcoin and stablecoins excluded.", gainersRefreshBtn:"↻ Refresh",
     narrNote:"Data updated <b>automatically every day</b> by a GitHub Action querying the CoinGecko API.",
     trendsNote:"Data updated <b>automatically every day</b> via the <i>pytrends</i> library.",
     ctrlDisplay:"Display", ctrlRaw:"$ Raw", ctrlRawScore:"Raw score", ctrlPct:"% Change",
@@ -1165,7 +1181,7 @@ const TRANSLATIONS = {
     siteTitle:"Narrativas y Tendencias Cripto", siteSub:"// actualizado automáticamente cada día",
     tabNarr:"Narrativas (Cap. de mercado)", tabTrends:"Google Trends", refreshAllBtn:"↻ Actualizar datos",
     narrListTitle:"Narrativas seguidas", trendsListTitle:"Términos seguidos", addManualLine:"+ Línea manual",
-    topGainersTitle:"Top 20 altcoins — subida 24h", topGainersNote:"En vivo desde CoinGecko, actualizado cada minuto. Bitcoin y stablecoins excluidos.",
+    topGainersTitle:"Top 20 altcoins — subida 24h", topGainersNote:"En vivo desde CoinGecko, actualizado cada minuto. Bitcoin y stablecoins excluidos.", gainersRefreshBtn:"↻ Actualizar",
     narrNote:"Datos actualizados <b>automáticamente cada día</b> por una GitHub Action que consulta la API de CoinGecko.",
     trendsNote:"Datos actualizados <b>automáticamente cada día</b> mediante la librería <i>pytrends</i>.",
     ctrlDisplay:"Vista", ctrlRaw:"$ Bruto", ctrlRawScore:"Puntuación bruta", ctrlPct:"% Variación",
@@ -1200,7 +1216,7 @@ const TRANSLATIONS = {
     siteTitle:"Narrative & Krypto-Trends", siteSub:"// wird jeden Tag automatisch aktualisiert",
     tabNarr:"Narrative (Marktkapital.)", tabTrends:"Google Trends", refreshAllBtn:"↻ Daten aktualisieren",
     narrListTitle:"Verfolgte Narrative", trendsListTitle:"Verfolgte Begriffe", addManualLine:"+ Manuelle Zeile",
-    topGainersTitle:"Top 20 Altcoins — 24h-Gewinner", topGainersNote:"Live von CoinGecko, jede Minute aktualisiert. Bitcoin und Stablecoins ausgeschlossen.",
+    topGainersTitle:"Top 20 Altcoins — 24h-Gewinner", topGainersNote:"Live von CoinGecko, jede Minute aktualisiert. Bitcoin und Stablecoins ausgeschlossen.", gainersRefreshBtn:"↻ Aktualisieren",
     narrNote:"Daten werden <b>jeden Tag automatisch</b> über eine GitHub Action von der CoinGecko-API abgerufen.",
     trendsNote:"Daten werden <b>jeden Tag automatisch</b> über die Bibliothek <i>pytrends</i> aktualisiert.",
     ctrlDisplay:"Ansicht", ctrlRaw:"$ Roh", ctrlRawScore:"Roh-Score", ctrlPct:"% Veränderung",
@@ -1412,14 +1428,11 @@ async function refreshTopGainers(){
   renderBubbles(coins, container);
 }
 
-function heatColor(chg){
-  const clamped = Math.max(-15, Math.min(15, chg || 0));
-  if(clamped >= 0){
-    const p = clamped/15;
-    return `rgba(95,184,120,${(0.45+p*0.5).toFixed(2)})`;
-  }
-  const p = -clamped/15;
-  return `rgba(232,97,92,${(0.45+p*0.5).toFixed(2)})`;
+function gainerColor(chg, minChg, maxChg){
+  const range = Math.max(0.001, maxChg - minChg);
+  const t = Math.max(0, Math.min(1, (chg - minChg) / range));
+  const hue = 210 - t*210; // bleu (petit gain de la liste) → vert → jaune → orange → rouge (plus gros gain)
+  return `hsl(${hue.toFixed(0)}, 72%, 50%)`;
 }
 
 /* ---------- bulles flottantes (placement en spirale, sans chevauchement) ---------- */
@@ -1473,7 +1486,8 @@ function collapseBubble(bubble){
   if(priceEl) priceEl.remove();
   const symEl = bubble.querySelector('.bubble-sym');
   const chgEl = bubble.querySelector('.bubble-chg');
-  if(r < 20){ if(symEl) symEl.style.display='none'; if(chgEl) chgEl.style.display='none'; }
+  if(symEl) symEl.style.fontSize = Math.max(7, Math.min(11, r*0.42)).toFixed(1)+'px';
+  if(chgEl) chgEl.style.fontSize = Math.max(6, Math.min(9, r*0.32)).toFixed(1)+'px';
 }
 
 function enlargeBubble(bubble, containerW, containerH){
@@ -1490,8 +1504,8 @@ function enlargeBubble(bubble, containerW, containerH){
   bubble.classList.add('enlarged');
   const symEl = bubble.querySelector('.bubble-sym');
   const chgEl = bubble.querySelector('.bubble-chg');
-  if(symEl) symEl.style.display = '';
-  if(chgEl) chgEl.style.display = '';
+  if(symEl) symEl.style.fontSize = '15px';
+  if(chgEl) chgEl.style.fontSize = '12px';
   if(!bubble.querySelector('.bubble-price')){
     const priceEl = document.createElement('span');
     priceEl.className = 'bubble-price';
@@ -1505,6 +1519,8 @@ function renderBubbles(coins, container){
   const h = container.clientHeight || 260;
   const items = coins.map(c => ({...c, value: c.market_cap || 1}));
   const placed = packBubbles(items, w, h);
+  const changes = coins.map(c => c.price_change_percentage_24h || 0);
+  const minChg = Math.min(...changes), maxChg = Math.max(...changes);
 
   container.innerHTML = '';
   placed.forEach(p=>{
@@ -1516,7 +1532,7 @@ function renderBubbles(coins, container){
     bubble.style.top = (p.y-p.r)+'px';
     bubble.style.width = (p.r*2)+'px';
     bubble.style.height = (p.r*2)+'px';
-    bubble.style.background = heatColor(chg);
+    bubble.style.background = gainerColor(chg, minChg, maxChg);
     bubble.style.setProperty('--fx', (2+Math.random()*4).toFixed(1)+'px');
     bubble.style.setProperty('--fy', (2+Math.random()*4).toFixed(1)+'px');
     bubble.style.animationDuration = (3+Math.random()*2.5).toFixed(1)+'s';
@@ -1524,8 +1540,9 @@ function renderBubbles(coins, container){
     bubble.dataset.cx = p.x; bubble.dataset.cy = p.y; bubble.dataset.r = p.r;
     bubble.dataset.price = fmtPrice(p.current_price);
     bubble.title = `${(p.symbol||'').toUpperCase()} — ${fmtPrice(p.current_price)} — ${sign}${chg.toFixed(1)}%`;
-    const showText = p.r >= 20;
-    bubble.innerHTML = `<span class="bubble-sym" style="display:${showText?'':'none'}">${(p.symbol||'').toUpperCase()}</span><span class="bubble-chg" style="display:${showText?'':'none'}">${sign}${chg.toFixed(1)}%</span>`;
+    const symSize = Math.max(7, Math.min(11, p.r*0.42)).toFixed(1);
+    const chgSize = Math.max(6, Math.min(9, p.r*0.32)).toFixed(1);
+    bubble.innerHTML = `<span class="bubble-sym" style="font-size:${symSize}px;">${(p.symbol||'').toUpperCase()}</span><span class="bubble-chg" style="font-size:${chgSize}px;">${sign}${chg.toFixed(1)}%</span>`;
 
     bubble.addEventListener('click', ()=>{
       const isEnlarged = bubble.classList.contains('enlarged');
@@ -1892,8 +1909,8 @@ document.addEventListener('click', function firstClickSonarFallback(){
   refreshTopGainers();
   setInterval(()=>{ refreshMarketPrices(); initAlertBanner(); refreshTopGainers(); }, 60000); // rafraîchit prix + dominance + top 10 + top gainers chaque minute
 
-  // écran de démarrage : affiché au moins 1,2s, puis fondu une fois les données prêtes
-  const minSplashDisplay = 1200;
+  // écran de démarrage : affiché au moins 3s (son sonar synchronisé au tout début), puis fondu une fois les données prêtes
+  const minSplashDisplay = 3000;
   const elapsed = Date.now() - splashStart;
   setTimeout(()=>{
     const splash = document.getElementById('splash-screen');
