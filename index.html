@@ -121,10 +121,37 @@
   .mw-reorder button{background:none;border:none;color:var(--text-dim);font-size:9px;cursor:pointer;padding:2px 3px;line-height:1;border-radius:3px;}
   .mw-reorder button:hover:not(:disabled){color:var(--amber);background:var(--panel-2);}
   .mw-reorder button:disabled{opacity:.2;cursor:default;}
+
+  /* --- Points d'événements sous le graphique --- */
+  .events-strip{position:relative;height:16px;margin-top:4px;}
+  .event-dot{position:absolute;top:2px;width:9px;height:9px;border-radius:50%;background:var(--cyan);cursor:pointer;transform:translateX(-50%);box-shadow:0 0 0 2px var(--panel);transition:transform .15s;}
+  .event-dot:hover{transform:translateX(-50%) scale(1.3);background:var(--amber);}
+  .event-popup{position:fixed;display:none;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px;box-shadow:0 8px 24px rgba(0,0,0,.5);z-index:100;max-width:260px;font-family:var(--mono);font-size:11.5px;}
+  .event-popup.show{display:block;}
+  .event-popup .ep-date{color:var(--text-dim);font-size:10px;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em;}
+  .event-popup a{display:block;color:var(--text);text-decoration:none;padding:5px 0;border-top:1px solid var(--line);line-height:1.4;}
+  .event-popup a:first-of-type{border-top:none;padding-top:0;}
+  .event-popup a:hover{color:var(--amber);}
+
+  /* --- Widget cycle de vie du narratif (bas droite) --- */
+  #lifecycle-widget{position:fixed;right:18px;bottom:18px;z-index:50;display:none;flex-direction:column;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 6px 20px rgba(0,0,0,.45);width:120px;}
+  #lifecycle-widget.show{display:flex;}
+  .lc-title{font-family:var(--mono);font-size:9px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;}
+  .lc-name{font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--text);margin-bottom:10px;text-align:center;}
+  .lc-square{width:84px;height:84px;border:1px solid var(--line);border-radius:8px;background:var(--panel-2);position:relative;overflow:hidden;}
+  .lc-fill{position:absolute;bottom:0;left:0;width:100%;height:0%;transition:height .6s ease, background .6s ease;}
+  .lc-stage{font-family:var(--mono);font-size:10.5px;margin-top:9px;font-weight:600;text-align:center;}
 </style>
 </head>
 <body>
 <div id="market-widget"></div>
+<div id="lifecycle-widget">
+  <div class="lc-title">Cycle de vie</div>
+  <div class="lc-name" id="lc-name">--</div>
+  <div class="lc-square"><div class="lc-fill" id="lc-fill"></div></div>
+  <div class="lc-stage" id="lc-stage-label">--</div>
+</div>
+<div id="event-popup" class="event-popup"></div>
 <div class="app">
   <div id="alert-banner" class="ticker"><div class="track" id="alert-track"></div></div>
   <div id="news-banner" class="ticker"><div class="track" id="news-track"></div></div>
@@ -183,6 +210,7 @@
             <span id="narr-status" class="status">Chargement…</span>
           </div>
           <div style="height:380px;"><canvas id="narr-chart"></canvas></div>
+          <div id="narr-events-strip" class="events-strip"></div>
         </div>
         <div class="leaderboard">
           <div class="leaderboard-head">
@@ -448,6 +476,10 @@ function renderChart(store, ui, canvasEl, legendEl, statusEl, ref, opts){
     ? {grid:{color:'#1A2029'}, ticks:{callback:v=>v+'%'}}
     : opts.yScale;
 
+  function updateEventDots(){
+    if(opts.eventsStripEl) renderEventDots(ref.chart, labels, opts.eventsStripEl);
+  }
+
   if(ref.chart) ref.chart.destroy();
   ref.chart = new Chart(canvasEl,{type:'line',data:{labels,datasets},options:{
     responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
@@ -455,19 +487,65 @@ function renderChart(store, ui, canvasEl, legendEl, statusEl, ref, opts){
       legend:{display:false},
       tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y!=null?yFmt(c.parsed.y):'—'}`}},
       zoom:{
-        pan:{enabled:true, mode:'xy', modifierKey:null},
+        pan:{enabled:true, mode:'xy', modifierKey:null, onPanComplete: updateEventDots},
         zoom:{
           wheel:{enabled:true, speed:0.08},
           pinch:{enabled:true},
           drag:{enabled:false},
-          mode:'xy'
+          mode:'xy',
+          onZoomComplete: updateEventDots
         },
         limits:{x:{min:'original', max:'original'}, y:{min:'original', max:'original'}}
       }
     },
     scales:{x:{grid:{color:'#1A2029'},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:10}}, y:yScale}
   }});
+
+  ref.updateEventDots = updateEventDots;
+  updateEventDots();
 }
+
+/* ---------- points d'événements macro ---------- */
+let eventsMap = {};
+async function loadEventsHistory(){
+  const events = await loadJsonSafe('data/events_history.json');
+  eventsMap = {};
+  if(events) events.forEach(e => { eventsMap[e.date] = e.events; });
+}
+
+function renderEventDots(chart, labels, stripEl){
+  if(!chart || !chart.scales || !chart.scales.x) return;
+  stripEl.innerHTML = '';
+  labels.forEach((date, idx) => {
+    if(!eventsMap[date]) return;
+    const x = chart.scales.x.getPixelForValue(idx);
+    if(x < 0 || x > stripEl.clientWidth + 40) return; // hors zone visible
+    const dot = document.createElement('div');
+    dot.className = 'event-dot';
+    dot.style.left = x + 'px';
+    dot.title = date;
+    dot.addEventListener('click', (e)=> showEventPopup(e, date));
+    stripEl.appendChild(dot);
+  });
+}
+
+function showEventPopup(e, date){
+  e.stopPropagation();
+  const popup = document.getElementById('event-popup');
+  const evs = eventsMap[date] || [];
+  popup.innerHTML = `<div class="ep-date">${date}</div>` + evs.map(ev =>
+    `<a href="${escapeHtml(ev.link)}" target="_blank" rel="noopener">${escapeHtml(ev.source)} — ${escapeHtml(ev.title)}</a>`
+  ).join('');
+  popup.classList.add('show');
+  const rect = e.target.getBoundingClientRect();
+  const popupWidth = popup.offsetWidth;
+  let left = rect.left - popupWidth/2;
+  left = Math.max(8, Math.min(left, window.innerWidth - popupWidth - 8));
+  popup.style.left = left + 'px';
+  popup.style.top = Math.max(8, rect.top - popup.offsetHeight - 10) + 'px';
+}
+document.addEventListener('click', ()=> document.getElementById('event-popup').classList.remove('show'));
+window.addEventListener('resize', ()=>{ if(narrRef.updateEventDots) narrRef.updateEventDots(); });
 
 function renderLeaderboard(store, days, tbodyEl, fmt){
   const allDatesSet = new Set();
@@ -519,7 +597,8 @@ const narrLbUi = { days: 30 };
 function refreshNarr(){
   renderList(narrStore, document.getElementById('narr-list'), refreshNarr, true);
   renderChart(narrStore, narrUi, document.getElementById('narr-chart'), document.getElementById('narr-legend'), document.getElementById('narr-status'), narrRef, {
-    fmt: fmtUsd, yScale:{grid:{color:'#1A2029'},ticks:{callback:v=>fmtUsd(v)}}, onChange: refreshNarr
+    fmt: fmtUsd, yScale:{grid:{color:'#1A2029'},ticks:{callback:v=>fmtUsd(v)}}, onChange: refreshNarr,
+    eventsStripEl: document.getElementById('narr-events-strip')
   });
   renderLeaderboard(narrStore, narrLbUi.days, document.querySelector('#narr-leaderboard tbody'), fmtUsd);
 }
@@ -645,6 +724,24 @@ const ROW_CONFIGS = {
       </div>
       <span class="mw-tv">TV↗</span>
     </a>`,
+  usdtd: () => `
+    <a class="mw-row-link" href="https://www.tradingview.com/symbols/CRYPTOCAP-USDT.D/" target="_blank" rel="noopener">
+      <span class="mw-icon">₮</span>
+      <div class="mw-text">
+        <span class="mw-price" id="mw-usdtd-value">--</span>
+        <span class="mw-sub">USDT.D · dominance</span>
+      </div>
+      <span class="mw-tv">TV↗</span>
+    </a>`,
+  usdcd: () => `
+    <a class="mw-row-link" href="https://www.tradingview.com/symbols/CRYPTOCAP-USDC.D/" target="_blank" rel="noopener">
+      <span class="mw-icon">Ⓢ</span>
+      <div class="mw-text">
+        <span class="mw-price" id="mw-usdcd-value">--</span>
+        <span class="mw-sub">USDC.D · dominance</span>
+      </div>
+      <span class="mw-tv">TV↗</span>
+    </a>`,
   fng: () => `
     <div class="mw-row-link" style="cursor:default;">
       <span class="mw-emoji" id="fng-emoji">📊</span>
@@ -654,19 +751,19 @@ const ROW_CONFIGS = {
       </div>
     </div>`
 };
-const DEFAULT_WIDGET_ORDER = ['btc', 'fng', 'eth'];
+const DEFAULT_WIDGET_ORDER = ['btc', 'fng', 'eth', 'usdtd', 'usdcd'];
 
 function loadWidgetOrder(){
   try{
     const saved = JSON.parse(localStorage.getItem('market-widget-order'));
-    if(Array.isArray(saved) && saved.length === 3 && saved.every(k => ROW_CONFIGS[k])) return saved;
+    if(Array.isArray(saved) && saved.length === DEFAULT_WIDGET_ORDER.length && saved.every(k => ROW_CONFIGS[k])) return saved;
   }catch(e){}
   return [...DEFAULT_WIDGET_ORDER];
 }
 function saveWidgetOrder(order){ try{ localStorage.setItem('market-widget-order', JSON.stringify(order)); }catch(e){} }
 
 let widgetOrder = loadWidgetOrder();
-const lastMarketData = { btcPrice:null, btcDom:null, ethPrice:null, ethDom:null, fng:null };
+const lastMarketData = { btcPrice:null, btcDom:null, ethPrice:null, ethDom:null, usdtDom:null, usdcDom:null, fng:null };
 
 function renderMarketWidget(){
   const container = document.getElementById('market-widget');
@@ -705,6 +802,10 @@ function applyMarketData(){
   if(ethPriceEl && lastMarketData.ethPrice != null) ethPriceEl.textContent = fmtPrice(lastMarketData.ethPrice);
   const ethDomEl = document.getElementById('mw-eth-dom');
   if(ethDomEl && lastMarketData.ethDom != null) ethDomEl.textContent = `ETH · dominance ${lastMarketData.ethDom.toFixed(1)}%`;
+  const usdtdEl = document.getElementById('mw-usdtd-value');
+  if(usdtdEl && lastMarketData.usdtDom != null) usdtdEl.textContent = lastMarketData.usdtDom.toFixed(2) + '%';
+  const usdcdEl = document.getElementById('mw-usdcd-value');
+  if(usdcdEl && lastMarketData.usdcDom != null) usdcdEl.textContent = lastMarketData.usdcDom.toFixed(2) + '%';
 
   if(lastMarketData.fng){
     const emojiEl = document.getElementById('fng-emoji');
@@ -746,6 +847,8 @@ async function refreshMarketPrices(){
     if(priceData?.ethereum?.usd != null) lastMarketData.ethPrice = priceData.ethereum.usd;
     if(globalData?.data?.market_cap_percentage?.btc != null) lastMarketData.btcDom = globalData.data.market_cap_percentage.btc;
     if(globalData?.data?.market_cap_percentage?.eth != null) lastMarketData.ethDom = globalData.data.market_cap_percentage.eth;
+    if(globalData?.data?.market_cap_percentage?.usdt != null) lastMarketData.usdtDom = globalData.data.market_cap_percentage.usdt;
+    if(globalData?.data?.market_cap_percentage?.usdc != null) lastMarketData.usdcDom = globalData.data.market_cap_percentage.usdc;
 
     applyMarketData();
   }catch(e){
@@ -774,10 +877,61 @@ async function initNewsBanner(){
   banner.classList.add('show');
 }
 
+/* ---------- indicateur cycle de vie (basé sur la capitalisation) ---------- */
+function pctChangeOverDates(store, label, dates){
+  const series = dates.map(d => store.data[label] ? store.data[label][d] : undefined).filter(v => v != null);
+  if(series.length < 2) return null;
+  return ((series[series.length-1] / series[0]) - 1) * 100;
+}
+
+function computeLifecycle(store){
+  const allDatesSet = new Set();
+  store.labels.forEach(l => Object.keys(store.data[l]).forEach(d=>allDatesSet.add(d)));
+  const allDates = [...allDatesSet].sort();
+  const d30 = filterDatesByDays(allDates, 30);
+  const d7 = filterDatesByDays(allDates, 7);
+
+  let best = null;
+  store.labels.forEach(label=>{
+    const c30 = pctChangeOverDates(store, label, d30);
+    if(c30 == null) return;
+    if(!best || c30 > best.c30) best = {label, c30};
+  });
+  if(!best) return null;
+
+  const c7 = pctChangeOverDates(store, best.label, d7);
+  const c30 = best.c30;
+
+  let stage, color, text;
+  if(c7 != null && c7 > 25){
+    stage = 4; color = '#E8615C'; text = 'Euphorie ⚠';
+  } else if(c30 >= 20 && c7 != null && c7 > 0){
+    stage = 3; color = '#E8A33D'; text = 'Momentum';
+  } else if(c30 > 0){
+    stage = 2; color = '#4FD1C5'; text = 'Émergence';
+  } else {
+    stage = 1; color = '#8B95A7'; text = 'Neutre';
+  }
+  return { label: best.label, stage, color, text, c7, c30 };
+}
+
+function renderLifecycleWidget(){
+  const result = narrStore ? computeLifecycle(narrStore) : null;
+  const widget = document.getElementById('lifecycle-widget');
+  if(!result){ widget.classList.remove('show'); return; }
+  document.getElementById('lc-name').textContent = result.label;
+  document.getElementById('lc-stage-label').textContent = result.text;
+  document.getElementById('lc-fill').style.height = (result.stage/4*100) + '%';
+  document.getElementById('lc-fill').style.background = result.color;
+  widget.classList.add('show');
+}
+
 (async function init(){
   renderMarketWidget();
   narrStore = await buildStore('narr', 'data/narratives_history.json');
+  await loadEventsHistory();
   refreshNarr();
+  renderLifecycleWidget();
   trendsStore = await buildStore('trends', 'data/trends_history.json');
   refreshTrends();
   initAlertBanner();
