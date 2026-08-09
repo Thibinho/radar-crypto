@@ -1,101 +1,101 @@
 {
-  "generated_at": "2026-08-08T12:25:16.395325+00:00",
+  "generated_at": "2026-08-09T08:10:02.185619+00:00",
   "items": [
     {
-      "title": "Le Kenya met 30 millions de diplômes sur la blockchain Avalanche",
-      "link": "https://journalducoin.com/technologies/kenya-30-millions-diplomes-blockchain-avalanche/",
+      "title": "France : Un home-jacking visant une détentrice de cryptomonnaies déjoué dans les Yvelines",
+      "link": "https://journalducoin.com/actualites/france-home-jacking-detentrice-cryptomonnaies-dejoue-yvelines/",
       "source": "Journal du Coin",
-      "published": "2026-08-08T12:00:00+00:00"
+      "published": "2026-08-09T07:48:26+00:00"
     },
     {
-      "title": "La banque centrale du Brésil force un délai de 24h sur les transferts crypto de plus de 10 000 $",
-      "link": "https://journalducoin.com/actualites/banque-centrale-bresil-force-delai-24h-crypto/",
+      "title": "Bitcoin : BIP-110 s’arrête net après 2 blocs à peine",
+      "link": "https://journalducoin.com/bitcoin/bitcoin-bip-110-2-blocs/",
       "source": "Journal du Coin",
-      "published": "2026-08-08T11:00:00+00:00"
+      "published": "2026-08-09T07:34:02+00:00"
     },
     {
-      "title": "Bybit attaque en justice la Corée du Nord et Lazarus Group pour le hack à 1,5 milliard $",
-      "link": "https://journalducoin.com/exchanges/bybit-justice-coree-nord-lazarus-group/",
+      "title": "67 millions de $ de cryptos oubliées : Comment les réclamer sans se faire arnaquer",
+      "link": "https://journalducoin.com/defi/defi-saver-retrouve-millions-cryptos-oubliees/",
       "source": "Journal du Coin",
-      "published": "2026-08-08T10:00:00+00:00"
+      "published": "2026-08-09T06:00:00+00:00"
     },
     {
-      "title": "U.S. Senate opens first stage of crypto Clarity Act voting to give bill a chance next month",
-      "link": "https://www.coindesk.com/policy/2026/08/08/u-s-senate-opens-first-stage-of-crypto-clarity-act-voting-to-give-bill-a-chance-next-month",
-      "source": "CoinDesk",
-      "published": "2026-08-08T09:07:24+00:00"
-    },
-    {
-      "title": "Bitcoin : BTCPay Server alerte sur une faille critique activement exploitée qui menace les fonds",
-      "link": "https://journalducoin.com/bitcoin/bitcoin-btcpay-server-alerte-sur-une-faille-critique-activement-exploitee-qui-menace-les-fonds/",
-      "source": "Journal du Coin",
-      "published": "2026-08-08T08:00:00+00:00"
-    },
-    {
-      "title": "Another Bitcoin infrastructure exploit hits, this time draining Lightning payment servers",
-      "link": "https://www.coindesk.com/tech/2026/08/08/another-bitcoin-infrastructure-exploit-hits-this-time-draining-merchant-lightning-nodes",
-      "source": "CoinDesk",
-      "published": "2026-08-08T07:46:04+00:00"
-    },
-    {
-      "title": "La Russie arrête plus de 20 personnes dans un réseau crypto qu’elle accuse de financer l’Ukraine",
-      "link": "https://journalducoin.com/actualites/russie-arrete-20-personnes-reseau-crypto-financer-ukraine/",
-      "source": "Journal du Coin",
-      "published": "2026-08-08T07:40:20+00:00"
-    },
-    {
-      "title": "Franklin Templeton entre dans le cercle très fermé des Super Validators de Canton Network",
-      "link": "https://journalducoin.com/economie/franklin-templeton-super-validators-canton-network/",
-      "source": "Journal du Coin",
-      "published": "2026-08-08T07:00:00+00:00"
-    },
-    {
-      "title": "Domestic stablecoins could boost demand for dollar-backed tokens: IMF",
-      "link": "https://cointelegraph.com/news/imf-domestic-stablecoins-dollar-token-demand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "title": "BTCPay restricts remote Lightning access after attackers steal funds",
+      "link": "https://cointelegraph.com/news/btcpay-restricts-remote-lightning-access-after-attackers-steal-funds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "source": "Cointelegraph",
-      "published": "2026-08-08T06:21:08+00:00"
+      "published": "2026-08-09T05:46:07+00:00"
     },
     {
-      "title": "BIP-110 : Comprendre la menace qui plane sur Bitcoin aujourd’hui",
-      "link": "https://journalducoin.com/bitcoin/bip-110-comprendre-menace-plane-bitcoin-week-end/",
-      "source": "Journal du Coin",
-      "published": "2026-08-08T06:06:46+00:00"
+      "title": "Controversial Bitcoin fork BIP-110 mines two blocks, then stops",
+      "link": "https://www.coindesk.com/tech/2026/08/09/controversial-bitcoin-fork-bip-110-mines-two-blocks-then-stops",
+      "source": "CoinDesk",
+      "published": "2026-08-09T05:08:20+00:00"
     },
     {
-      "title": "US court backs Bybit’s bid to trace funds from $1.5B North Korea hack",
-      "link": "https://cointelegraph.com/news/bybit-us-court-trace-funds-north-korea-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "title": "Bitcoin’s BIP-110 enters mandatory signaling with miner support below 3%",
+      "link": "https://cointelegraph.com/news/bitcoin-bip-110-mandatory-signaling?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "source": "Cointelegraph",
-      "published": "2026-08-08T04:11:53+00:00"
+      "published": "2026-08-08T21:17:08+00:00"
     },
     {
-      "title": "Tether détient désormais 146 tonnes d’or : plus qu’une banque centrale",
-      "link": "https://journalducoin.com/actualites/tether-146-tonnes-or-banque-centrale/",
+      "title": "Bitcoin hits block 961,632 as the controversial BIP-110 soft fork attempt begins",
+      "link": "https://www.coindesk.com/tech/2026/08/07/frame-bitcoin-s-bip-110-enters-mandatory-signaling-with-less-than-3-miner-support",
+      "source": "CoinDesk",
+      "published": "2026-08-08T20:06:47+00:00"
+    },
+    {
+      "title": "Bitcoin : « Les clés privées sont le péché originel de la crypto »",
+      "link": "https://journalducoin.com/bitcoin/bitcoin-cles-privees-peche-originel-crypto/",
       "source": "Journal du Coin",
-      "published": "2026-08-08T04:00:00+00:00"
+      "published": "2026-08-08T18:00:00+00:00"
     },
     {
-      "title": "New XRP Ledger amendments target $530 million in tokenized Wall Street assets",
-      "link": "https://www.coindesk.com/tech/2026/08/07/new-xrp-ledger-amendments-target-usd530-million-in-tokenized-wall-street-assets",
+      "title": "Hardware wallet sales in Russia more than double as new crypto rules near",
+      "link": "https://www.coindesk.com/business/2026/08/08/hardware-wallet-sales-in-russia-more-than-double-as-new-crypto-rules-near",
       "source": "CoinDesk",
-      "published": "2026-08-08T03:30:00+00:00"
+      "published": "2026-08-08T17:48:02+00:00"
     },
     {
-      "title": "Bitcoin holders risk losing real BTC if they sell coins from BIP-110 fork, says developer",
-      "link": "https://www.coindesk.com/tech/2026/08/08/bitcoin-holders-risk-losing-real-btc-if-they-sell-coins-from-bip-110-fork-says-developer",
-      "source": "CoinDesk",
-      "published": "2026-08-08T02:30:00+00:00"
-    },
-    {
-      "title": "Donald Trump’s media company to terminate Crypto.com deal",
-      "link": "https://cointelegraph.com/news/donald-trump-media-company-crypto-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "source": "Cointelegraph",
-      "published": "2026-08-07T21:39:36+00:00"
+      "published": "2026-08-08T17:19:56+00:00"
     },
     {
-      "title": "Trump Media pulls back from crypto, scraps Crypto.com's CRO token treasury deal",
-      "link": "https://www.coindesk.com/business/2026/08/07/trump-media-pulls-back-from-crypto-scraps-crypto-com-cro-treasury-deal",
+      "title": "Trump Media enterre son deal avec Crypto.com et son token CRO",
+      "link": "https://cryptoast.fr/trump-media-enterre-deal-crypto-com-token-cro/",
+      "source": "Cryptoast",
+      "published": "2026-08-08T17:00:23+00:00"
+    },
+    {
+      "title": "Bybit attaque la Corée du Nord en justice après le hack à 1,5 milliard de dollars",
+      "link": "https://cryptoast.fr/bybit-attaque-coree-nord-justice-hack-milliard-dollars/",
+      "source": "Cryptoast",
+      "published": "2026-08-08T16:20:32+00:00"
+    },
+    {
+      "title": "US spot Bitcoin ETFs post best week since April with $1B inflows",
+      "link": "https://cointelegraph.com/news/us-bitcoin-etfs-best-weekly-inflows-april-coldcard-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-08-08T16:20:17+00:00"
+    },
+    {
+      "title": "La règle des 500 jours avait annoncé le sommet du Bitcoin 34 jours à l’avance",
+      "link": "https://journalducoin.com/bitcoin/regle-500-jours-avait-annonce-sommet/",
+      "source": "Journal du Coin",
+      "published": "2026-08-08T16:00:00+00:00"
+    },
+    {
+      "title": "Brazil's central bank orders exchanges to delay large crypto transfers abroad",
+      "link": "https://www.coindesk.com/business/2026/08/08/brazil-s-central-bank-orders-exchanges-to-delay-large-crypto-transfers-abroad",
       "source": "CoinDesk",
-      "published": "2026-08-07T21:13:21+00:00"
+      "published": "2026-08-08T15:25:38+00:00"
+    },
+    {
+      "title": "US Senate to vote on advancing CLARITY Act in September after Thune files cloture",
+      "link": "https://cointelegraph.com/news/us-senate-clarity-act-september-vote-thune-cloture?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-08-08T15:08:06+00:00"
     }
   ]
 }

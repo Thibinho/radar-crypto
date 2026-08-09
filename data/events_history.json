@@ -18,5 +18,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-08-09",
+    "events": [
+      {
+        "title": "France : Un home-jacking visant une détentrice de cryptomonnaies déjoué dans les Yvelines",
+        "link": "https://journalducoin.com/actualites/france-home-jacking-detentrice-cryptomonnaies-dejoue-yvelines/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Bitcoin : BIP-110 s’arrête net après 2 blocs à peine",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-bip-110-2-blocs/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "67 millions de $ de cryptos oubliées : Comment les réclamer sans se faire arnaquer",
+        "link": "https://journalducoin.com/defi/defi-saver-retrouve-millions-cryptos-oubliees/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]

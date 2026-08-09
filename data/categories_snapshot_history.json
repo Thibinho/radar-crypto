@@ -2888,5 +2888,1442 @@
         "market_cap": 354.73286971841037
       }
     }
+  },
+  {
+    "date": "2026-08-09",
+    "categories": {
+      "smart-contract-platform": {
+        "name": "Smart Contract Platform",
+        "market_cap": 1870635416099.3347
+      },
+      "layer-1": {
+        "name": "Layer 1 (L1)",
+        "market_cap": 1844053684092.0662
+      },
+      "proof-of-work-pow": {
+        "name": "Proof of Work (PoW)",
+        "market_cap": 1340203807410.3289
+      },
+      "world-liberty-financial-portfolio": {
+        "name": "World Liberty Financial Portfolio",
+        "market_cap": 537266061554.4559
+      },
+      "proof-of-stake-pos": {
+        "name": "Proof of Stake (PoS)",
+        "market_cap": 427769558452.16156
+      },
+      "stablecoins": {
+        "name": "Stablecoins",
+        "market_cap": 287037649424.4618
+      },
+      "usd-stablecoin": {
+        "name": "USD Stablecoin",
+        "market_cap": 284414683793.2787
+      },
+      "fiat-backed-stablecoin": {
+        "name": "Fiat-backed Stablecoin",
+        "market_cap": 274092050170.4371
+      },
+      "made-in-usa": {
+        "name": "Made in USA",
+        "market_cap": 248040835768.88855
+      },
+      "exchange-based-tokens": {
+        "name": "Exchange-based Tokens",
+        "market_cap": 127795096865.42885
+      },
+      "made-in-china": {
+        "name": "Made in China",
+        "market_cap": 122390378251.47116
+      },
+      "alleged-sec-securities": {
+        "name": "Alleged SEC Securities",
+        "market_cap": 122107116148.23448
+      },
+      "centralized-exchange-token-cex": {
+        "name": "Centralized Exchange (CEX) Token",
+        "market_cap": 106056844617.52971
+      },
+      "base-native": {
+        "name": "Base Native",
+        "market_cap": 103735736840.88359
+      },
+      "mica-compliant-stablecoin": {
+        "name": "MiCA-Compliant Stablecoin",
+        "market_cap": 72860329419.57384
+      },
+      "genius-act-compliant-stablecoin": {
+        "name": "GENIUS Act Compliant Stablecoin",
+        "market_cap": 72364517802.48866
+      },
+      "decentralized-finance-defi": {
+        "name": "Decentralized Finance (DeFi)",
+        "market_cap": 56827383419.05133
+      },
+      "coinlist-launchpad": {
+        "name": "CoinList Launchpad",
+        "market_cap": 52279363270.654434
+      },
+      "real-world-assets-rwa": {
+        "name": "Real World Assets (RWA)",
+        "market_cap": 40566928433.56235
+      },
+      "privacy": {
+        "name": "Privacy",
+        "market_cap": 30775986471.184742
+      },
+      "governance": {
+        "name": "Governance",
+        "market_cap": 28996056847.90189
+      },
+      "meme-token": {
+        "name": "Meme",
+        "market_cap": 24998774078.604694
+      },
+      "decentralized-exchange": {
+        "name": "Decentralized Exchange (DEX)",
+        "market_cap": 22545295940.246826
+      },
+      "tokenized-private-credit": {
+        "name": "Tokenized Private Credit",
+        "market_cap": 21104209248.35836
+      },
+      "artificial-intelligence": {
+        "name": "Artificial Intelligence (AI)",
+        "market_cap": 20801780132.12988
+      },
+      "tokenized-products": {
+        "name": "Tokenized Assets",
+        "market_cap": 19482545435.68164
+      },
+      "infrastructure": {
+        "name": "Infrastructure",
+        "market_cap": 19347977537.275883
+      },
+      "binance-alpha-spotlight": {
+        "name": "Binance Alpha Spotlight",
+        "market_cap": 16680117032.692133
+      },
+      "decentralized-perpetuals": {
+        "name": "Perpetuals",
+        "market_cap": 16591524295.463972
+      },
+      "privacy-coins": {
+        "name": "Privacy Coins",
+        "market_cap": 16119961448.905874
+      },
+      "dog-themed-coins": {
+        "name": "Dog-Themed",
+        "market_cap": 14916741333.191479
+      },
+      "decentralized-derivatives": {
+        "name": "Derivatives",
+        "market_cap": 14091394216.811716
+      },
+      "4chan-themed": {
+        "name": "4chan-Themed",
+        "market_cap": 13000360953.514835
+      },
+      "zero-knowledge-zk": {
+        "name": "Zero Knowledge (ZK)",
+        "market_cap": 11774965873.695076
+      },
+      "elon-musk-inspired-coins": {
+        "name": "Elon Musk-Inspired",
+        "market_cap": 10957337068.806963
+      },
+      "privacy-infrastructure": {
+        "name": "Privacy Infrastructure",
+        "market_cap": 10176636565.442251
+      },
+      "quantum-resistant": {
+        "name": "Quantum-Resistant",
+        "market_cap": 9788920503.110342
+      },
+      "gambling": {
+        "name": "Gambling (GambleFi)",
+        "market_cap": 9717358228.778807
+      },
+      "yzi-labs-portfolio": {
+        "name": "YZi Labs (Prev. Binance Labs) Portfolio",
+        "market_cap": 9473473602.74598
+      },
+      "decentralized-options": {
+        "name": "Options",
+        "market_cap": 9158094155.50725
+      },
+      "prediction-markets": {
+        "name": "Prediction Markets",
+        "market_cap": 9129572033.391605
+      },
+      "rwa-protocol": {
+        "name": "RWA Protocol",
+        "market_cap": 8852478702.916763
+      },
+      "chain-abstraction": {
+        "name": "Chain Abstraction",
+        "market_cap": 8521452196.665461
+      },
+      "tokenized-treasuries": {
+        "name": "Tokenized Treasuries",
+        "market_cap": 8413959598.362469
+      },
+      "cross-chain-communication": {
+        "name": "Cross-chain Communication",
+        "market_cap": 7497016616.43129
+      },
+      "depin": {
+        "name": "DePIN",
+        "market_cap": 7458910615.178195
+      },
+      "yield-farming": {
+        "name": "Yield Farming",
+        "market_cap": 7031079391.94875
+      },
+      "oracle": {
+        "name": "Oracle",
+        "market_cap": 7013144290.978642
+      },
+      "x402-ecosystem": {
+        "name": "x402 Ecosystem",
+        "market_cap": 6999708889.798778
+      },
+      "layer-2": {
+        "name": "Layer 2 (L2)",
+        "market_cap": 6952438294.421896
+      },
+      "privacy-blockchain": {
+        "name": "Privacy Blockchain",
+        "market_cap": 6110053997.502188
+      },
+      "stablecoin-issuer": {
+        "name": "Stablecoin Issuer",
+        "market_cap": 6102857213.641129
+      },
+      "trump-affiliated-tokens": {
+        "name": "Trump-Affiliated",
+        "market_cap": 6096144337.587044
+      },
+      "automated-market-maker-amm": {
+        "name": "Automated Market Maker (AMM)",
+        "market_cap": 5642378657.2226515
+      },
+      "non-fungible-tokens-nft": {
+        "name": "NFT",
+        "market_cap": 5323854802.340851
+      },
+      "tokenized-commodities": {
+        "name": "Tokenized Commodities",
+        "market_cap": 5266031213.080828
+      },
+      "tokenized-gold": {
+        "name": "Tokenized Gold",
+        "market_cap": 5037401300.831741
+      },
+      "binance-launchpool": {
+        "name": "Binance Launchpool",
+        "market_cap": 4823252942.703752
+      },
+      "bitcoin-fork": {
+        "name": "Bitcoin Fork",
+        "market_cap": 4743725773.389386
+      },
+      "defi-pulse-index-dpi": {
+        "name": "Index Coop Defi Index",
+        "market_cap": 4547314705.659457
+      },
+      "gaming": {
+        "name": "Gaming (GameFi)",
+        "market_cap": 4533289283.650265
+      },
+      "crypto-backed-stablecoin": {
+        "name": "Crypto-backed Stablecoin",
+        "market_cap": 4388855859.828552
+      },
+      "lending-borrowing": {
+        "name": "Lending/Borrowing Protocols",
+        "market_cap": 4201839847.5681567
+      },
+      "directed-acyclic-graph-dag": {
+        "name": "Directed Acyclic Graph (DAG)",
+        "market_cap": 4030029514.6497846
+      },
+      "tokenized-money-market-fund-mmfs": {
+        "name": "Tokenized Money Market Fund (MMFs)",
+        "market_cap": 3937096761.605486
+      },
+      "layer-0-l0": {
+        "name": "Layer 0 (L0)",
+        "market_cap": 3729101227.1143837
+      },
+      "launchpad": {
+        "name": "Launchpad",
+        "market_cap": 3454001457.7327003
+      },
+      "crypto-card-issuer": {
+        "name": "Crypto Card Issuer",
+        "market_cap": 3063032597.872273
+      },
+      "data-availability": {
+        "name": "Data Availability",
+        "market_cap": 2946976854.170189
+      },
+      "wallets": {
+        "name": "Wallets",
+        "market_cap": 2897201318.371471
+      },
+      "ai-agents": {
+        "name": "AI Agents",
+        "market_cap": 2849221652.5768604
+      },
+      "payment-solutions": {
+        "name": "Payment Solutions",
+        "market_cap": 2729586499.032474
+      },
+      "yield-bearing-stablecoins": {
+        "name": "Yield-Bearing Stablecoin",
+        "market_cap": 2706441681.236354
+      },
+      "solana-meme-coins": {
+        "name": "Solana Meme",
+        "market_cap": 2631815826.2984877
+      },
+      "yield-bearing-tokens": {
+        "name": "Yield-Bearing Tokens",
+        "market_cap": 2414141432.236439
+      },
+      "binance-hodler-airdrops": {
+        "name": "Binance HODLer Airdrops",
+        "market_cap": 2213244682.7681155
+      },
+      "neobank": {
+        "name": "Neobank",
+        "market_cap": 2190035401.9033165
+      },
+      "us-treasury-backed-stablecoin": {
+        "name": "US Treasury-backed Stablecoin",
+        "market_cap": 2142483400.6824613
+      },
+      "socialfi": {
+        "name": "SocialFi",
+        "market_cap": 2011194433.0803819
+      },
+      "ai-applications": {
+        "name": "AI Applications",
+        "market_cap": 1990532864.5184722
+      },
+      "binance-launchpad": {
+        "name": "Binance Launchpad",
+        "market_cap": 1841673985.2245765
+      },
+      "metaverse": {
+        "name": "Metaverse",
+        "market_cap": 1812640314.7766032
+      },
+      "identity": {
+        "name": "Decentralized Identifier (DID)",
+        "market_cap": 1730499787.9976459
+      },
+      "binance-wallet-ido": {
+        "name": "Binance Wallet IDO",
+        "market_cap": 1729270552.695466
+      },
+      "tokenized-stock": {
+        "name": "Tokenized Stock",
+        "market_cap": 1671290629.9039123
+      },
+      "ai-framework": {
+        "name": "AI Framework",
+        "market_cap": 1662504045.2028255
+      },
+      "play-to-earn": {
+        "name": "Play To Earn",
+        "market_cap": 1661701198.953202
+      },
+      "algorithmic-stablecoin": {
+        "name": "Algorithmic Stablecoin",
+        "market_cap": 1637253802.5016656
+      },
+      "frog-themed-coins": {
+        "name": "Frog-Themed",
+        "market_cap": 1612337174.1056402
+      },
+      "synthetic-dollar": {
+        "name": "Synthetic Dollar",
+        "market_cap": 1531217474.4904296
+      },
+      "the-boy-s-club": {
+        "name": "The Boy’s Club",
+        "market_cap": 1505202944.3242993
+      },
+      "telegram_apps": {
+        "name": "Telegram Apps",
+        "market_cap": 1486242863.3520193
+      },
+      "superchain-ecosystem": {
+        "name": "Optimism Superchain Ecosystem",
+        "market_cap": 1399864003.4089053
+      },
+      "analytics": {
+        "name": "Analytics",
+        "market_cap": 1391797459.4153626
+      },
+      "storage": {
+        "name": "Storage",
+        "market_cap": 1387643384.3411655
+      },
+      "rollup": {
+        "name": "Rollup",
+        "market_cap": 1372896526.8905158
+      },
+      "liquid-staking": {
+        "name": "Liquid Staking",
+        "market_cap": 1355264232.5324256
+      },
+      "pump-fun": {
+        "name": "Pump.fun Ecosystem",
+        "market_cap": 1341713938.4856935
+      },
+      "morpho-ecosystem": {
+        "name": "Morpho Ecosystem",
+        "market_cap": 1262900053.8070896
+      },
+      "masternodes": {
+        "name": "Masternodes",
+        "market_cap": 1230887893.070882
+      },
+      "tradable-ecosystem": {
+        "name": "Tradable Ecosystem",
+        "market_cap": 1169391424.599854
+      },
+      "ai-agent-launchpad": {
+        "name": "AI Agent Launchpad",
+        "market_cap": 1120205726.6280615
+      },
+      "arcade-games": {
+        "name": "Arcade Games",
+        "market_cap": 1115692843.6631963
+      },
+      "mobile-mining": {
+        "name": "Mobile Mining",
+        "market_cap": 1041293250.3411005
+      },
+      "superstate-ecosystem": {
+        "name": "Superstate Ecosystem",
+        "market_cap": 967014375.0576509
+      },
+      "ondo-tokenized-assets": {
+        "name": "Ondo Tokenized Assets",
+        "market_cap": 955325126.8551376
+      },
+      "defai": {
+        "name": "DeFAI",
+        "market_cap": 937199474.2497139
+      },
+      "name-service": {
+        "name": "Name Service",
+        "market_cap": 923984436.6977679
+      },
+      "gaming-blockchains": {
+        "name": "Gaming Blockchains",
+        "market_cap": 914626405.179021
+      },
+      "restaking": {
+        "name": "Restaking",
+        "market_cap": 910730096.0399244
+      },
+      "bittensor-subnets": {
+        "name": "Bittensor Subnets",
+        "market_cap": 906478896.5849051
+      },
+      "dex-aggregator": {
+        "name": "Dex Aggregator",
+        "market_cap": 876797418.5791779
+      },
+      "internet-of-things-iot": {
+        "name": "Internet of Things (IOT)",
+        "market_cap": 875359109.6411729
+      },
+      "sidechain": {
+        "name": "SideChain",
+        "market_cap": 857899839.5403725
+      },
+      "four-meme-ecosystem": {
+        "name": "Four.meme Ecosystem (BNB Memes)",
+        "market_cap": 819193845.842478
+      },
+      "tokenized-credit": {
+        "name": "Tokenized Credit",
+        "market_cap": 800210681.221936
+      },
+      "liquid-staking-governance-tokens": {
+        "name": "Liquid Staking Governance Tokens",
+        "market_cap": 746540852.5150465
+      },
+      "vpn": {
+        "name": "VPN",
+        "market_cap": 739854637.842718
+      },
+      "eur-stablecoin": {
+        "name": "EUR Stablecoin",
+        "market_cap": 726826999.9664214
+      },
+      "airdropped-tokens-by-nft-projects": {
+        "name": "Airdropped Tokens by NFT Projects",
+        "market_cap": 718246840.7921188
+      },
+      "ip-meme": {
+        "name": "IP Meme",
+        "market_cap": 699274332.1107752
+      },
+      "ai-meme-coins": {
+        "name": "AI Meme",
+        "market_cap": 681730400.7318634
+      },
+      "chinese-meme": {
+        "name": "Chinese Meme",
+        "market_cap": 655414794.797956
+      },
+      "liquid-restaking-governance-token": {
+        "name": "Liquid Restaking Governance Tokens",
+        "market_cap": 649958831.2556164
+      },
+      "robotics": {
+        "name": "Robotics",
+        "market_cap": 633962667.9260056
+      },
+      "gaming-utility-token": {
+        "name": "Gaming Utility Token",
+        "market_cap": 630175918.761728
+      },
+      "venice-ecosystem": {
+        "name": "Venice Ecosystem",
+        "market_cap": 614818530.0561498
+      },
+      "xstocks-ecosystem": {
+        "name": "BackedFi xStocks Ecosystem",
+        "market_cap": 605673075.8978451
+      },
+      "parallel-evm": {
+        "name": "Parallelized EVM",
+        "market_cap": 604595943.1176244
+      },
+      "virtuals-protocol-ecosystem": {
+        "name": "Virtuals Protocol Ecosystem",
+        "market_cap": 559688298.9068033
+      },
+      "curve-ecosystem": {
+        "name": "Curve Ecosystem",
+        "market_cap": 559341912.0191664
+      },
+      "bstocks-ecosystem": {
+        "name": "bStocks Ecosystem",
+        "market_cap": 547441875.9742668
+      },
+      "bitcoin-layer-2": {
+        "name": "Bitcoin Sidechains",
+        "market_cap": 536303789.271665
+      },
+      "tokenized-exchange-traded-product-etps": {
+        "name": "Tokenized Exchange-Traded Product (ETPs)",
+        "market_cap": 536141002.6695586
+      },
+      "tokenized-exchange-traded-funds-etfs": {
+        "name": "Tokenized Exchange-Traded Funds (ETFs)",
+        "market_cap": 536020226.5033947
+      },
+      "entertainment": {
+        "name": "Entertainment",
+        "market_cap": 509317040.1456677
+      },
+      "politifi": {
+        "name": "PolitiFi",
+        "market_cap": 497380775.6868639
+      },
+      "rub-stablecoin": {
+        "name": "RUB Stablecoin",
+        "market_cap": 476983161.87265706
+      },
+      "cat-themed-coins": {
+        "name": "Cat-Themed",
+        "market_cap": 474682909.63469565
+      },
+      "mev-protection": {
+        "name": "MEV Protection",
+        "market_cap": 473074986.5385812
+      },
+      "modular-blockchain": {
+        "name": "Modular Blockchain",
+        "market_cap": 469813855.7634483
+      },
+      "btcfi": {
+        "name": "BTCfi Protocol",
+        "market_cap": 459090750.50013506
+      },
+      "gaming-governance-token": {
+        "name": "Gaming Governance Token",
+        "market_cap": 452035177.3483985
+      },
+      "murad-picks": {
+        "name": "Murad Picks",
+        "market_cap": 431725207.95079964
+      },
+      "sports": {
+        "name": "Sports",
+        "market_cap": 409835843.8398919
+      },
+      "bridge-governance-tokens": {
+        "name": "Bridge Governance Tokens",
+        "market_cap": 402790195.03717643
+      },
+      "ether-fi-ecosystem": {
+        "name": "Ether.fi Ecosystem",
+        "market_cap": 380922759.9178713
+      },
+      "account-abstraction": {
+        "name": "Account Abstraction",
+        "market_cap": 364573599.2337265
+      },
+      "trading-bots": {
+        "name": "Trading Bots",
+        "market_cap": 342215614.8131449
+      },
+      "asset-backed-tokens": {
+        "name": "Crypto-Backed Tokens",
+        "market_cap": 336628104.9685534
+      },
+      "cefi": {
+        "name": "CeFi",
+        "market_cap": 332092790.75126255
+      },
+      "lsdfi": {
+        "name": "LSDFi",
+        "market_cap": 323271120.01290965
+      },
+      "stock-market-themed": {
+        "name": "Stock market-themed",
+        "market_cap": 313915577.9741346
+      },
+      "trading-card-rwa-platform": {
+        "name": "Trading Card RWA Platform",
+        "market_cap": 309209382.46404326
+      },
+      "infofi": {
+        "name": "InfoFi",
+        "market_cap": 308267498.4719459
+      },
+      "bridged-tokens": {
+        "name": "Bridged-Tokens",
+        "market_cap": 303328630.14384985
+      },
+      "rpg": {
+        "name": "RPG",
+        "market_cap": 298711134.36235243
+      },
+      "yield-aggregator": {
+        "name": "Yield Aggregator",
+        "market_cap": 293035456.3117435
+      },
+      "decentralized-science-desci": {
+        "name": "Decentralized Science (DeSci)",
+        "market_cap": 289904743.0528781
+      },
+      "synthetic": {
+        "name": "Synthetic",
+        "market_cap": 275106487.09676635
+      },
+      "synthetic-issuer": {
+        "name": "Synthetic Issuer",
+        "market_cap": 275106487.09676635
+      },
+      "gaming-marketplace": {
+        "name": "Gaming Marketplace",
+        "market_cap": 275046582.9787595
+      },
+      "seigniorage": {
+        "name": "Seigniorage",
+        "market_cap": 274692770.8753643
+      },
+      "buidlpad-launchpad": {
+        "name": "Buidlpad Launchpad",
+        "market_cap": 274400447.173076
+      },
+      "simulation-games": {
+        "name": "Simulation Games",
+        "market_cap": 274084750.45985067
+      },
+      "midas-liquid-yield-tokens": {
+        "name": "Midas Liquid Yield Tokens",
+        "market_cap": 272175146.40227956
+      },
+      "intent": {
+        "name": "Intent",
+        "market_cap": 268460193.65769243
+      },
+      "fixed-interest": {
+        "name": "Fixed Interest",
+        "market_cap": 263571584.87011072
+      },
+      "communication": {
+        "name": "Communication",
+        "market_cap": 253933402.30140978
+      },
+      "robinhood-chain-meme": {
+        "name": "Robinhood Chain Meme",
+        "market_cap": 246360487.14603406
+      },
+      "echo-launchpad": {
+        "name": "Echo Launchpad",
+        "market_cap": 245948450.95493397
+      },
+      "lrtfi": {
+        "name": "LRTfi",
+        "market_cap": 244935929.53986436
+      },
+      "yield-tokenization": {
+        "name": "Yield Tokenization Protocol",
+        "market_cap": 242877685.7831958
+      },
+      "gaming-platform": {
+        "name": "Gaming Platform",
+        "market_cap": 237472213.1822723
+      },
+      "synths": {
+        "name": "Synthetic Asset",
+        "market_cap": 231376748.90681666
+      },
+      "tokenfi-launchpad": {
+        "name": "TokenFi Launchpad",
+        "market_cap": 227333424.43676898
+      },
+      "on-chain-gaming": {
+        "name": "On-chain Gaming",
+        "market_cap": 221449643.29960483
+      },
+      "timefi": {
+        "name": "TimeFi",
+        "market_cap": 218818316.33158618
+      },
+      "bank-issued-stablecoin": {
+        "name": "Bank-Issued Stablecoin",
+        "market_cap": 211998970.8204295
+      },
+      "base-meme-coins": {
+        "name": "Base Meme",
+        "market_cap": 207306094.05831766
+      },
+      "card-games": {
+        "name": "Card Games",
+        "market_cap": 207041270.46232474
+      },
+      "tokenized-silver": {
+        "name": "Tokenized Silver",
+        "market_cap": 199795502.93135983
+      },
+      "cybersecurity": {
+        "name": "Cybersecurity",
+        "market_cap": 196126223.4405658
+      },
+      "avalanche-subnet": {
+        "name": "Avalanche L1",
+        "market_cap": 184799690.75906783
+      },
+      "yield-optimizer": {
+        "name": "Yield Optimizer",
+        "market_cap": 181887222.92885423
+      },
+      "axie-infinity": {
+        "name": "Axie Infinity Ecosystem",
+        "market_cap": 179261214.43277815
+      },
+      "nft-marketplace": {
+        "name": "NFT Marketplace",
+        "market_cap": 166762960.12481594
+      },
+      "breeding": {
+        "name": "Breeding",
+        "market_cap": 165717774.74232078
+      },
+      "parody-meme-coins": {
+        "name": "Parody Meme",
+        "market_cap": 161155318.08613804
+      },
+      "metagovernance": {
+        "name": "Metagovernance",
+        "market_cap": 160371134.44505727
+      },
+      "insurance": {
+        "name": "Insurance",
+        "market_cap": 159919515.8797261
+      },
+      "jpy-stablecoin": {
+        "name": "JPY Stablecoin",
+        "market_cap": 152408301.9072782
+      },
+      "appchains": {
+        "name": "Appchains",
+        "market_cap": 150111864.09887585
+      },
+      "nftfi": {
+        "name": "NFTFi",
+        "market_cap": 148133653.20559004
+      },
+      "legal": {
+        "name": "Legal",
+        "market_cap": 145370812.11037073
+      },
+      "fan-token": {
+        "name": "Fan Token",
+        "market_cap": 145363480.94087857
+      },
+      "terminal-of-truths": {
+        "name": "Terminal of Truths",
+        "market_cap": 145222610.94584846
+      },
+      "rollups-as-a-service-raas": {
+        "name": "Rollups-as-a-Service (RaaS)",
+        "market_cap": 141326552.86814344
+      },
+      "securitize-ecosystem": {
+        "name": "Securitize Ecosystem",
+        "market_cap": 140310101.39582324
+      },
+      "inscriptions": {
+        "name": "Inscriptions",
+        "market_cap": 136022857.16074604
+      },
+      "ton-meme-coins": {
+        "name": "TON Meme",
+        "market_cap": 135188242.10146734
+      },
+      "music": {
+        "name": "Music",
+        "market_cap": 125711125.34747912
+      },
+      "layer-3-l3": {
+        "name": "Layer 3 (L3)",
+        "market_cap": 125103529.86568505
+      },
+      "impossible-launchpad": {
+        "name": "Impossible Finance Launchpad",
+        "market_cap": 123854358.14743851
+      },
+      "quest-to-earn": {
+        "name": "Quest-to-Earn",
+        "market_cap": 123416555.45818828
+      },
+      "yearn-yfi-partnerships-mergers": {
+        "name": "Yearn Ecosystem",
+        "market_cap": 123141993.75301056
+      },
+      "celebrity-themed-coins": {
+        "name": "Celebrity-Themed",
+        "market_cap": 115501868.4027192
+      },
+      "energy": {
+        "name": "Energy",
+        "market_cap": 110652140.4312832
+      },
+      "tap-to-earn": {
+        "name": "Tap to Earn",
+        "market_cap": 104125995.83677734
+      },
+      "real-estate": {
+        "name": "Tokenized Real Estate",
+        "market_cap": 101752863.02277459
+      },
+      "unitas-ecosystem": {
+        "name": "Unitas Ecosystem",
+        "market_cap": 97045602.69665402
+      },
+      "brc-20": {
+        "name": "BRC-20",
+        "market_cap": 94798716.48331514
+      },
+      "nest-ecosystem": {
+        "name": "Nest Ecosystem",
+        "market_cap": 92356829.10627288
+      },
+      "ip": {
+        "name": "IP",
+        "market_cap": 87209760.00184877
+      },
+      "zoo-themed": {
+        "name": "Zoo-Themed",
+        "market_cap": 87083221.23387323
+      },
+      "retail": {
+        "name": "Retail",
+        "market_cap": 85131654.67931534
+      },
+      "capital-launchpad": {
+        "name": "Capital Launchpad (Kaito)",
+        "market_cap": 84375036.32873544
+      },
+      "prediction-market-tools": {
+        "name": "Prediction Market Tools",
+        "market_cap": 82141053.63623098
+      },
+      "tourism": {
+        "name": "Tourism",
+        "market_cap": 79305467.39191678
+      },
+      "olympus-pro": {
+        "name": "Olympus Pro Ecosystem",
+        "market_cap": 78865507.59728049
+      },
+      "farcaster-ecosystem": {
+        "name": "Farcaster Ecosystem",
+        "market_cap": 76669524.88756329
+      },
+      "runes": {
+        "name": "Runes",
+        "market_cap": 75648350.8675902
+      },
+      "clanker-ecosystem": {
+        "name": "Clanker Ecosystem",
+        "market_cap": 73955125.1047334
+      },
+      "daomaker-ecosystem": {
+        "name": "DaoMaker Launchpad",
+        "market_cap": 73292776.22541349
+      },
+      "bitcoin-meme": {
+        "name": "Bitcoin Meme",
+        "market_cap": 73152121.2382566
+      },
+      "tiktok-meme": {
+        "name": "TikTok Meme",
+        "market_cap": 72770758.82663141
+      },
+      "wojak-themed": {
+        "name": "Wojak-Themed",
+        "market_cap": 71778863.86901662
+      },
+      "binance-buildkey-tge": {
+        "name": "Binance Buildkey TGE",
+        "market_cap": 71147928.728593
+      },
+      "eco-friendly": {
+        "name": "Regenerative Finance (ReFi)",
+        "market_cap": 68173795.6955426
+      },
+      "e-commerce": {
+        "name": "E-commerce",
+        "market_cap": 65830756.333301
+      },
+      "marketing": {
+        "name": "Marketing",
+        "market_cap": 61454011.47149824
+      },
+      "massively-multiplayer-online-mmo": {
+        "name": "MMO",
+        "market_cap": 57772881.10075319
+      },
+      "letsbonk-fun-ecosystem": {
+        "name": "BONK.fun Ecosystem",
+        "market_cap": 57526116.32766589
+      },
+      "charity": {
+        "name": "Charity",
+        "market_cap": 56873534.73415019
+      },
+      "move-to-earn": {
+        "name": "Move To Earn",
+        "market_cap": 53007521.84782137
+      },
+      "tokenized-pre-ipo-stocks": {
+        "name": "Tokenized Pre-IPO Stocks",
+        "market_cap": 50533112.61350526
+      },
+      "commodity-backed-stablecoin": {
+        "name": "Commodity-backed Stablecoin",
+        "market_cap": 50062327.678623825
+      },
+      "action-games": {
+        "name": "Action Games",
+        "market_cap": 48702089.49932055
+      },
+      "chf-stablecoin": {
+        "name": "CHF Stablecoin",
+        "market_cap": 47405274.559752725
+      },
+      "hybrid-token-standards": {
+        "name": "Hybrid Token Standards",
+        "market_cap": 46412881.61096461
+      },
+      "game-studio": {
+        "name": "Game Studio",
+        "market_cap": 46067498.65004155
+      },
+      "healthcare": {
+        "name": "Healthcare",
+        "market_cap": 45912339.89915404
+      },
+      "adventure-games": {
+        "name": "Adventure Games",
+        "market_cap": 43842727.63199106
+      },
+      "education": {
+        "name": "Education",
+        "market_cap": 42379803.37003105
+      },
+      "poolz-finance-launchpad": {
+        "name": "Poolz Finance Launchpad",
+        "market_cap": 41197336.97389421
+      },
+      "memorial-themed": {
+        "name": "Memorial Themed",
+        "market_cap": 40307372.41380986
+      },
+      "rebase-tokens": {
+        "name": "Rebase Tokens",
+        "market_cap": 39343550.729110315
+      },
+      "augmented-reality": {
+        "name": "Augmented Reality",
+        "market_cap": 37887019.36714873
+      },
+      "binance-megadrop": {
+        "name": "Binance Megadrop",
+        "market_cap": 36207560.31690283
+      },
+      "sticker-themed-coin": {
+        "name": "Sticker-Themed Coins",
+        "market_cap": 36022783.82808211
+      },
+      "ohm-fork": {
+        "name": "Ohm Fork",
+        "market_cap": 35285316.72603446
+      },
+      "discord-bots": {
+        "name": "Discord Bots",
+        "market_cap": 34966689.87725617
+      },
+      "republic-tokenized-pre-ipo-assets": {
+        "name": "Republic Tokenized Pre-IPO Assets",
+        "market_cap": 33635863.9014674
+      },
+      "strategy-games": {
+        "name": "Strategy Games",
+        "market_cap": 32671372.141800784
+      },
+      "pons-launchpad": {
+        "name": "Pons Launchpad",
+        "market_cap": 31410088.384742897
+      },
+      "baseline-ecosystem": {
+        "name": "Baseline Ecosystem",
+        "market_cap": 31147385.69475268
+      },
+      "metadao-launchpad": {
+        "name": "MetaDAO Launchpad",
+        "market_cap": 30496958.456083976
+      },
+      "liquid-staking-tokens": {
+        "name": "Liquid Staking Tokens",
+        "market_cap": 29076677.49140489
+      },
+      "chaingpt-pad": {
+        "name": "ChainGPT Launchpad",
+        "market_cap": 28865370.273182806
+      },
+      "robinhood-chain-stocks-ecosystem": {
+        "name": "Robinhood Chain Stocks Ecosystem",
+        "market_cap": 28336997.859180503
+      },
+      "gbp-stablecoin": {
+        "name": "GBP Stablecoin",
+        "market_cap": 27914436.18209219
+      },
+      "sports-games": {
+        "name": "Sports Games",
+        "market_cap": 26769032.13584148
+      },
+      "wrapped-tokens": {
+        "name": "Wrapped-Tokens",
+        "market_cap": 25440405.86514381
+      },
+      "backpack-securities-ecosystem": {
+        "name": "Backpack Securities Ecosystem",
+        "market_cap": 25365804.959552716
+      },
+      "defi-index": {
+        "name": "DeFi Index",
+        "market_cap": 23200518.227337454
+      },
+      "guild-scholarship": {
+        "name": "Guild and Scholarship",
+        "market_cap": 22925067.48075335
+      },
+      "anime-themed-coins": {
+        "name": "Anime-Themed",
+        "market_cap": 22004056.709694214
+      },
+      "token-2022": {
+        "name": "Solana Token-2022",
+        "market_cap": 21737370.110439196
+      },
+      "pump-fund-portfolio": {
+        "name": "Pump Fund Portfolio",
+        "market_cap": 19632376.712650962
+      },
+      "yield-tokenization-product": {
+        "name": "Yield Tokenization Product",
+        "market_cap": 19551684.51524264
+      },
+      "shooting-games": {
+        "name": "Shooting Games",
+        "market_cap": 18708248.464649536
+      },
+      "believe-app-ecosystem": {
+        "name": "Believe.app Ecosystem",
+        "market_cap": 16915537.432417512
+      },
+      "jupiter-dtf": {
+        "name": "Jupiter DTF Launchpad",
+        "market_cap": 16061099.963622842
+      },
+      "desci-meme": {
+        "name": "Desci Meme",
+        "market_cap": 15379806.051368892
+      },
+      "cookie-launchpad": {
+        "name": "Cookie Launchpad",
+        "market_cap": 15139519.51753309
+      },
+      "prestocks-ecosystem": {
+        "name": "PreStocks Ecosystem",
+        "market_cap": 14883017.887530176
+      },
+      "decentralized-social-media-desoc": {
+        "name": "Decentralized Social Media (DeSOC)",
+        "market_cap": 13893039.466231382
+      },
+      "mascot-themed": {
+        "name": "Mascot-Themed",
+        "market_cap": 13190097.849352788
+      },
+      "bankr-ecosystem": {
+        "name": "Bankr Ecosystem",
+        "market_cap": 12270690.776500165
+      },
+      "sgd-stablecoin": {
+        "name": "SGD Stablecoin",
+        "market_cap": 12230967.980365684
+      },
+      "nft-strategy-flywheel": {
+        "name": "NFT Strategy Flywheel",
+        "market_cap": 11582797.0229974
+      },
+      "nftstrategy-ecosystem": {
+        "name": "NFTStrategy Ecosystem",
+        "market_cap": 11392732.724196259
+      },
+      "reality-ecosystem": {
+        "name": "Reality Ecosystem",
+        "market_cap": 11259491.067411307
+      },
+      "idr-stablecoin": {
+        "name": "IDR Stablecoin",
+        "market_cap": 10644024.954260275
+      },
+      "sui-meme": {
+        "name": "Sui Meme",
+        "market_cap": 9890562.178507028
+      },
+      "wall-street-bets-themed-coins": {
+        "name": "Wall Street Bets Themed",
+        "market_cap": 9877746.58046215
+      },
+      "fractionalized-nft": {
+        "name": "Fractionalized NFT",
+        "market_cap": 9774032.185866097
+      },
+      "uniswap-v4-hooks": {
+        "name": "Uniswap v4 Hooks",
+        "market_cap": 9585454.697954312
+      },
+      "pools-launchpad": {
+        "name": "Pools Launchpad",
+        "market_cap": 9495669.820958963
+      },
+      "virtual-reality": {
+        "name": "Virtual Reality",
+        "market_cap": 9088365.673123786
+      },
+      "metals-io-ecosystem": {
+        "name": "Metals.io Ecosystem",
+        "market_cap": 8656926.480581358
+      },
+      "tokenized-uranium": {
+        "name": "Tokenized Uranium",
+        "market_cap": 8656926.480581358
+      },
+      "tron-meme": {
+        "name": "TRON Meme",
+        "market_cap": 8046716.528360842
+      },
+      "racing-games": {
+        "name": "Racing Games",
+        "market_cap": 7802622.2200868605
+      },
+      "aud-stablecoin": {
+        "name": "AUD Stablecoin",
+        "market_cap": 7684341.680379709
+      },
+      "decentralized-lottery": {
+        "name": "Decentralized Lottery",
+        "market_cap": 6977904.832231925
+      },
+      "cny-stablecoin": {
+        "name": "CNY Stablecoin",
+        "market_cap": 5775378.977254444
+      },
+      "paal-ai": {
+        "name": "PAAL AI Launchpad",
+        "market_cap": 5580755.636946456
+      },
+      "camelot-launchpad": {
+        "name": "Camelot Launchpad",
+        "market_cap": 5424211.079889686
+      },
+      "tokensets": {
+        "name": "TokenSets Ecosystem",
+        "market_cap": 4935837.436413929
+      },
+      "country-themed-meme-coins": {
+        "name": "Country-Themed Meme",
+        "market_cap": 4610345.04994616
+      },
+      "bagsapp-ecosystem": {
+        "name": "BagsApp Ecosystem",
+        "market_cap": 4468455.704056608
+      },
+      "nft-launchpad": {
+        "name": "NFT Launchpad",
+        "market_cap": 4302978.882105401
+      },
+      "sun-pump-ecosystem": {
+        "name": "Sun Pump Ecosystem",
+        "market_cap": 3944835.0299498537
+      },
+      "moonshot-ecosystem": {
+        "name": "Moonshot Ecosystem",
+        "market_cap": 3625415.0909710713
+      },
+      "dinari-ecosystem": {
+        "name": "Dinari Ecosystem",
+        "market_cap": 3419872.613602328
+      },
+      "realt-tokens": {
+        "name": "RealT Tokens",
+        "market_cap": 3061262.10584424
+      },
+      "moltbook-and-openclaw-themed": {
+        "name": "Moltbook and Openclaw-Themed",
+        "market_cap": 2680688.4088345836
+      },
+      "zora-creator-coins": {
+        "name": "Zora Creator",
+        "market_cap": 2371716.054011487
+      },
+      "gotchiverse": {
+        "name": "Gotchiverse",
+        "market_cap": 2319669.632392113
+      },
+      "tessera-tokenized-pre-ipo-assets": {
+        "name": "Tessera Tokenized Pre-IPO Assets",
+        "market_cap": 2014230.824507685
+      },
+      "spl22": {
+        "name": "SPL22",
+        "market_cap": 1870198.6835730996
+      },
+      "reserve-ecosystem": {
+        "name": "Reserve Ecosystem",
+        "market_cap": 1766017.642076766
+      },
+      "drc-20": {
+        "name": "DRC-20",
+        "market_cap": 1746001.6098197764
+      },
+      "commodities-meme": {
+        "name": "Commodities Meme",
+        "market_cap": 1729962.0298835428
+      },
+      "pump-fun-creator": {
+        "name": "Pump.fun Creator",
+        "market_cap": 1669975.0934136347
+      },
+      "yoink-fun-launchpad": {
+        "name": "Yoink.fun Launchpad",
+        "market_cap": 1590220.7685557099
+      },
+      "fighting-games": {
+        "name": "Fighting Games",
+        "market_cap": 1471464.0934180687
+      },
+      "leveraged-token": {
+        "name": "Leveraged Token",
+        "market_cap": 1389913.3655651303
+      },
+      "topblastdotlol-ecosystem": {
+        "name": "topblast.lol Ecosystem",
+        "market_cap": 1299798.5384861948
+      },
+      "orynth-ecosystem": {
+        "name": "Orynth Ecosystem",
+        "market_cap": 1282300.810749196
+      },
+      "creatorbid-ecosystem": {
+        "name": "CreatorBid Ecosystem",
+        "market_cap": 1261032.7790405357
+      },
+      "animal-racing": {
+        "name": "Animal Racing",
+        "market_cap": 1139446.606657344
+      },
+      "krw-stablecoin": {
+        "name": "KRW Stablecoin",
+        "market_cap": 1097891.2269591293
+      },
+      "market-making-solution": {
+        "name": "Market-Making Solution",
+        "market_cap": 1038813.1995443174
+      },
+      "america-fun-launchpad": {
+        "name": "America.fun Launchpad",
+        "market_cap": 973946.5042655226
+      },
+      "zodiac-themed": {
+        "name": "Zodiac-Themed",
+        "market_cap": 793161.7311735105
+      },
+      "hookr-fun-ecosystem": {
+        "name": "Hookr.fun Ecosystem",
+        "market_cap": 665775.5174830726
+      },
+      "recruitment-solutions": {
+        "name": "Recruitment",
+        "market_cap": 631025.0008116952
+      },
+      "christmas-themed": {
+        "name": "Christmas Themed",
+        "market_cap": 577744.5292881556
+      },
+      "aarna-vault-tokens": {
+        "name": "aarna Vault Tokens",
+        "market_cap": 355140.89998885815
+      },
+      "daos-fun-ecosystem": {
+        "name": "daos.fun Ecosystem",
+        "market_cap": 354755.2856867176
+      },
+      "pump-science-ecosystem": {
+        "name": "Pump Science Ecosystem",
+        "market_cap": 322152.78934973583
+      },
+      "eigenpie-ecosystem": {
+        "name": "Eigenpie Ecosystem",
+        "market_cap": 278265.90113543987
+      },
+      "privacy-focused-browser": {
+        "name": "Privacy Browser",
+        "market_cap": 251774.2540089564
+      },
+      "tokenized-non-us-government-securities": {
+        "name": "Tokenized Non-US Government Securities",
+        "market_cap": 205950.21171824087
+      },
+      "etherfuse-ecosystem": {
+        "name": "Etherfuse Ecosystem",
+        "market_cap": 205950.21171824087
+      },
+      "emoji-themed": {
+        "name": "Emoji-Themed",
+        "market_cap": 161763.62830522627
+      },
+      "st0x-ecosystem": {
+        "name": "ST0x Ecosystem",
+        "market_cap": 158954.43370234472
+      },
+      "stx-city-ecosystem": {
+        "name": "STX.CITY Ecosystem",
+        "market_cap": 145738.85030581112
+      },
+      "duck-themed-coins": {
+        "name": "Duck-Themed",
+        "market_cap": 136256.25320300288
+      },
+      "erc20i": {
+        "name": "ERC20i",
+        "market_cap": 127812.99879594622
+      },
+      "flaunch-ecosystem": {
+        "name": "Flaunch Ecosystem",
+        "market_cap": 124875.19664090138
+      },
+      "openserv-ecosystem": {
+        "name": "OpenServ Ecosystem",
+        "market_cap": 122967.64088938011
+      },
+      "time-fun-ecosystem": {
+        "name": "Time.fun Ecosystem",
+        "market_cap": 118967.93978035798
+      },
+      "spore-fun-ecosystem": {
+        "name": "Spore.fun Ecosystem",
+        "market_cap": 111491.51946845377
+      },
+      "erc-404": {
+        "name": "ERC 404",
+        "market_cap": 105486.51644887844
+      },
+      "charms-ecosystem": {
+        "name": "Charms Ecosystem",
+        "market_cap": 105001.91869154303
+      },
+      "reddit-points": {
+        "name": "Reddit Points",
+        "market_cap": 96447.21611969643
+      },
+      "printr-launchpad": {
+        "name": "Printr Launchpad",
+        "market_cap": 63799.72408523398
+      },
+      "kommunitas": {
+        "name": "Kommunitas Launchpad",
+        "market_cap": 62124.801071754235
+      },
+      "farming-as-a-service-faas": {
+        "name": "Farming-as-a-Service (FaaS)",
+        "market_cap": 43547.29604289872
+      },
+      "kumbaya-launchpad": {
+        "name": "Kumbaya Launchpad",
+        "market_cap": 36414.93747687716
+      },
+      "etf": {
+        "name": "ETF",
+        "market_cap": 13547.460932100628
+      },
+      "hyperxpad-launchpad": {
+        "name": "HyperXpad Launchpad",
+        "market_cap": 5763.334802959025
+      },
+      "surge-launchpad": {
+        "name": "Surge Launchpad",
+        "market_cap": 3380.688703749579
+      },
+      "tokenized-closed-end-funds-cefs": {
+        "name": "Tokenized Closed-End Funds (CEFs)",
+        "market_cap": 354.73286971841037
+      },
+      "remora-markets-tokenized-rstocks": {
+        "name": "Remora Markets Tokenized rStocks",
+        "market_cap": 0.000514359890142009
+      }
+    }
   }
 ]
