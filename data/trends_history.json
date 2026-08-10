@@ -3443,5 +3443,14 @@
       "ethereum": 0.0,
       "eth": 0.0
     }
+  },
+  {
+    "date": "2026-08-10",
+    "values": {
+      "crypto": 9.0,
+      "altcoin": 0.0,
+      "ethereum": 2.0,
+      "eth": 2.0
+    }
   }
 ]

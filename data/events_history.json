@@ -38,5 +38,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-08-10",
+    "events": [
+      {
+        "title": "H100 becomes Europe’s No. 2 Bitcoin treasury after 2,455 BTC deal",
+        "link": "https://cointelegraph.com/news/sweden-h100-bitcoin-treasury-btc-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Bitcoin volatility is in meltdown, but downside protection still commands a premium",
+        "link": "https://www.coindesk.com/markets/2026/08/10/bitcoin-volatility-is-in-meltdown-but-downside-protection-still-commands-a-premium",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "1300% en 30 jours : qu’est-ce que la crypto TUT ?",
+        "link": "https://cryptoast.fr/qu-est-ce-que-crypto-tut/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
