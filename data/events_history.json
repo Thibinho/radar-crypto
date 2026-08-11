@@ -58,5 +58,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-08-11",
+    "events": [
+      {
+        "title": "Une chance sur 5 500 : pourquoi l'IPO d'Unitree affole-t-elle les investisseurs chinois ?",
+        "link": "https://cryptoast.fr/une-chance-sur-5-500-pourquoi-ipo-unitree-affole-investisseurs-chinois/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Keel shuts US Bitcoin mining operations as Q2 revenue falls 50%",
+        "link": "https://cointelegraph.com/news/keel-shuts-bitcoin-mining-ai-pivot-revenue-falls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "NVIDIA lance des plateformes de financement d'IA aux côtés de Goldman Sachs et Blackrock",
+        "link": "https://cryptoast.fr/nvidia-lance-des-plateformes-de-financement-dia-aux-cotes-de-goldman-sachs-et-blackrock/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
