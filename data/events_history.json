@@ -78,5 +78,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-08-12",
+    "events": [
+      {
+        "title": "Fidelity moves to add staking, quarterly payouts to near $900 million ether ETF",
+        "link": "https://www.coindesk.com/business/2026/08/12/fidelity-moves-to-add-staking-quarterly-payouts-to-near-usd900-million-ether-etf",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Crypto companies urge AI firms to give Bitcoin developers early access",
+        "link": "https://cointelegraph.com/news/crypto-companies-ai-firms-bitcoin-developers-access?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Échanger du cash contre des stablecoins avec Solana et MoneyGram",
+        "link": "https://cryptoast.fr/echanger-cash-contre-stablecoins-solana-moneygram/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]

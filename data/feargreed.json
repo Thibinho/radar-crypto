@@ -168,5 +168,10 @@
     "date": "2026-08-11",
     "value": 29,
     "classification": "Fear"
+  },
+  {
+    "date": "2026-08-12",
+    "value": 27,
+    "classification": "Fear"
   }
 ]
