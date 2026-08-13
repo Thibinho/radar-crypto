@@ -98,5 +98,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-08-13",
+    "events": [
+      {
+        "title": "Brazil’s largest bitcoin treasury firm plans ETF with 95% allocation to Strategy's STRC",
+        "link": "https://www.coindesk.com/business/2026/08/13/brazil-s-largest-bitcoin-treasury-firm-plans-etf-with-95-allocation-to-strategy-s-strc",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Bitcoin speculators keep BTC price ‘pinned’ below $68.7K: Glassnode",
+        "link": "https://cointelegraph.com/markets/bitcoin-speculators-in-the-red-keep-price-pinned-below-687k-new-analysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Live Markets: U.S. inflation is stickier than July’s mild CPI reading suggests",
+        "link": "https://www.coindesk.com/tech/2026/08/13/live-markets-u-s-inflation-is-stickier-than-july-s-mild-cpi-suggests",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
