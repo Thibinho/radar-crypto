@@ -118,5 +118,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-08-14",
+    "events": [
+      {
+        "title": "France : 2 millions de propriétaires visés par une nouvelle fuite à la DGFiP",
+        "link": "https://cryptoast.fr/france-2-millions-de-proprietaires-vises-par-une-nouvelle-fuite-a-la-dgfip/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Pourquoi l'explosion de la bulle IA pourrait finalement profiter au Bitcoin ?",
+        "link": "https://cryptoast.fr/pourquoi-explosion-bulle-ia-pourrait-finalement-profiter-bitcoin/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "La Maison-Blanche convoque crypto et marchés prédictifs le 19 août, juste avant la CFTC",
+        "link": "https://journalducoin.com/actualites/maison-blanche-crypto-marches-predictifs-cftc/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]

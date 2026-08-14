@@ -1,96 +1,24 @@
 {
-  "generated_at": "2026-08-13T09:48:03.752100+00:00",
+  "generated_at": "2026-08-14T09:42:25.547696+00:00",
   "movers": [
     {
-      "name": "SocialFi",
-      "change_pct": 106.4,
-      "direction": "up",
-      "market_cap": 2080573206.84
-    },
-    {
-      "name": "Layer 2",
-      "change_pct": 106.2,
-      "direction": "up",
-      "market_cap": 7520998458.68
-    },
-    {
-      "name": "Privacy",
-      "change_pct": 102.6,
-      "direction": "up",
-      "market_cap": 63871750134.61
-    },
-    {
-      "name": "Meme",
-      "change_pct": 101.6,
-      "direction": "up",
-      "market_cap": 31582774782.77
-    },
-    {
-      "name": "Bitcoin",
-      "change_pct": 100.4,
-      "direction": "up",
-      "market_cap": 5331151311.6
-    },
-    {
-      "name": "Stablecoins",
-      "change_pct": 99.9,
-      "direction": "up",
-      "market_cap": 1008651630790.38
-    },
-    {
-      "name": "DeFi",
-      "change_pct": 99.8,
-      "direction": "up",
-      "market_cap": 61230118388.4
-    },
-    {
-      "name": "IA",
-      "change_pct": 99.7,
-      "direction": "up",
-      "market_cap": 23269468105.7
-    },
-    {
-      "name": "Layer 1",
-      "change_pct": 97.4,
-      "direction": "up",
-      "market_cap": 3656385601475.81
-    },
-    {
-      "name": "Liquid Staking",
-      "change_pct": 96.6,
-      "direction": "up",
-      "market_cap": 2089017756.34
-    },
-    {
-      "name": "Restaking",
-      "change_pct": 96.0,
-      "direction": "up",
-      "market_cap": 1506433016.1
-    },
-    {
-      "name": "DePIN",
-      "change_pct": 95.2,
-      "direction": "up",
-      "market_cap": 7111179462.94
-    },
-    {
-      "name": "Metaverse",
-      "change_pct": 93.6,
-      "direction": "up",
-      "market_cap": 1737144981.74
+      "name": "RWA",
+      "change_pct": -30.1,
+      "direction": "down",
+      "market_cap": 50128760433.71
     },
     {
       "name": "GameFi",
-      "change_pct": 64.2,
-      "direction": "up",
-      "market_cap": 5688221925.71
-    },
-    {
-      "name": "RWA",
-      "change_pct": 39.5,
-      "direction": "up",
-      "market_cap": 50231826117.03
+      "change_pct": -20.8,
+      "direction": "down",
+      "market_cap": 5412849506.26
     }
   ],
-  "emerging": []
+  "emerging": [
+    {
+      "name": "Pons Launchpad",
+      "change_pct": 57.0,
+      "market_cap": 52950342.563071184
+    }
+  ]
 }
