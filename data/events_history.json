@@ -138,5 +138,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-08-15",
+    "events": [
+      {
+        "title": "Piratage du site des impôts - Des campagnes massives d'arnaques sont à prévoir",
+        "link": "https://cryptoast.fr/piratage-site-impots-campagnes-massives-arnaques-a-prevoir/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Cryptos : Comment un faux entretien d’embauche sur LinkedIn mène au vol de 11,8 millions de $",
+        "link": "https://journalducoin.com/actualites/cryptos-faux-entretien-embauche-vol/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Trump expected to attend White House meeting with crypto CEOs, sources say",
+        "link": "https://www.coindesk.com/policy/2026/08/14/trump-expected-to-attend-white-house-meeting-with-crypto-ceos-sources-say",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]

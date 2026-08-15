@@ -183,5 +183,10 @@
     "date": "2026-08-14",
     "value": 29,
     "classification": "Fear"
+  },
+  {
+    "date": "2026-08-15",
+    "value": 34,
+    "classification": "Fear"
   }
 ]
