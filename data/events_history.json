@@ -158,5 +158,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-08-16",
+    "events": [
+      {
+        "title": "DGFiP piratée : 678 000 Français exposés, une cible de plus pour les braqueurs de crypto",
+        "link": "https://journalducoin.com/actualites/dgfip-piratee-678-000-francais-cible-les-braqueurs-crypto/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Bybit adds Unitree, Moonshot AI to pre-IPO perpetuals lineup",
+        "link": "https://cointelegraph.com/news/bybit-launches-unitree-pre-ipo-perpetual-as-crypto-platforms-push-into-private-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Tokenized stock holders more than double as monthly volume surges",
+        "link": "https://cointelegraph.com/news/tokenized-stock-holders-double-to-13m-as-activity-grows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
