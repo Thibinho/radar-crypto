@@ -178,5 +178,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-08-17",
+    "events": [
+      {
+        "title": "MiCA : La BCE de Christine Lagarde veut durcir les règles sur les stablecoins",
+        "link": "https://journalducoin.com/actualites/mica-bce-lagarde-regles-stablecoins/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Bitcoin : Les mineurs pivotent vers l’IA, le hashrate décroche",
+        "link": "https://cryptoast.fr/bitcoin-mineurs-pivotent-ia-hashrate-decroche/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "1 Bitcoin sur 6 dort depuis plus de 10 ans : Nouveau record de 3,56 millions de BTC introuvables",
+        "link": "https://journalducoin.com/bitcoin/1-bitcoin-6-dort-10-ans-record-btc-introuvables/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
