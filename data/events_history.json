@@ -198,5 +198,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-08-18",
+    "events": [
+      {
+        "title": "Bitcoin franchit les 64 000 dollars, le pétrole s’embrase avec l’expiration du délai sur Hormuz",
+        "link": "https://journalducoin.com/economie/bitcoin-64-000-dollars-petrole-delai-hormuz/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Strategy vend 334 millions $ de ses actions MSTR, mais n'achète ni ne vend aucun Bitcoin",
+        "link": "https://cryptoast.fr/strategy-vend-334-millions-de-ses-actions-mstr-mais-nachete-ni-ne-vend-aucun-bitcoin/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Ethereum lance Platåberget, le testnet public de la prochaine révolution Glamsterdam",
+        "link": "https://journalducoin.com/ethereum/ethereum-plataberget-testnet-public-glamsterdam/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
