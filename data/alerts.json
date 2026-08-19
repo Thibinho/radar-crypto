@@ -1,23 +1,40 @@
 {
-  "generated_at": "2026-08-18T07:58:43.313123+00:00",
+  "generated_at": "2026-08-19T07:58:14.934911+00:00",
   "movers": [
     {
+      "name": "RWA",
+      "change_pct": 49.8,
+      "direction": "up",
+      "market_cap": 75901850041.36
+    },
+    {
       "name": "GameFi",
-      "change_pct": -19.6,
+      "change_pct": -17.6,
       "direction": "down",
-      "market_cap": 5226610349.22
+      "market_cap": 5187002587.46
+    },
+    {
+      "name": "Restaking",
+      "change_pct": 16.3,
+      "direction": "up",
+      "market_cap": 1754217604.17
     }
   ],
   "emerging": [
     {
+      "name": "Tokenized Assets",
+      "change_pct": 121.7,
+      "market_cap": 44449577015.12072
+    },
+    {
       "name": "Tokenized Treasuries",
-      "change_pct": 35.9,
-      "market_cap": 11426399132.559345
+      "change_pct": 35.5,
+      "market_cap": 11415127121.78342
     },
     {
       "name": "Ether.fi Ecosystem",
-      "change_pct": 29.1,
-      "market_cap": 488234547.1697461
+      "change_pct": 33.3,
+      "market_cap": 490488954.94365925
     }
   ]
 }

@@ -218,5 +218,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-08-19",
+    "events": [
+      {
+        "title": "+629 % pour l'entrée en Bourse d'Unitree, le leader mondial des robots humanoïdes",
+        "link": "https://cryptoast.fr/629-pour-lentree-en-bourse-dunitree-le-leader-mondial-des-robots-humanoides/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Hack de Coldcard : Le pirate de la première vague démasqué ?",
+        "link": "https://cryptoast.fr/hack-coldcard-pirate-premier-vague-demasque/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "50 % remboursés sur vos abonnements ChatGPT, Claude et Netflix : comment en profiter ?",
+        "link": "https://cryptoast.fr/50-rembourses-sur-vos-abonnements-chatgpt-claude-et-netflix-comment-en-profiter/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
