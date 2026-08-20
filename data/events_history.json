@@ -238,5 +238,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-08-20",
+    "events": [
+      {
+        "title": "Plus-values indexées sur l’inflation : le projet fiscal de Trump devrait-il inspirer la France ?",
+        "link": "https://cryptoast.fr/plus-values-indexees-inflation-projet-fiscal-trump-devrait-inspirer-france/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "La dette publique américaine franchit les 40 000 milliards de dollars",
+        "link": "https://journalducoin.com/economie/dette-publique-americaine-40-000-milliards-dollars/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "BitGo Korea secures VASP registration for institutional crypto custody",
+        "link": "https://cointelegraph.com/news/bitgo-korea-vasp-registration-institutional-crypto-custody?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
