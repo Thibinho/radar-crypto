@@ -1,45 +1,92 @@
 {
-  "generated_at": "2026-08-20T08:04:58.661406+00:00",
+  "generated_at": "2026-08-21T08:05:33.745454+00:00",
   "movers": [
     {
       "name": "RWA",
-      "change_pct": 57.8,
+      "change_pct": 63.3,
       "direction": "up",
-      "market_cap": 79270598126.21
+      "market_cap": 81840280183.57
     },
     {
       "name": "Restaking",
-      "change_pct": 32.8,
+      "change_pct": 28.6,
       "direction": "up",
-      "market_cap": 1999851997.26
+      "market_cap": 2083594991.48
+    },
+    {
+      "name": "Bitcoin",
+      "change_pct": 25.9,
+      "direction": "up",
+      "market_cap": 6453662763.37
+    },
+    {
+      "name": "SocialFi",
+      "change_pct": 24.6,
+      "direction": "up",
+      "market_cap": 2316497931.68
+    },
+    {
+      "name": "Meme",
+      "change_pct": 22.2,
+      "direction": "up",
+      "market_cap": 37999633095.11
+    },
+    {
+      "name": "Layer 1",
+      "change_pct": 21.5,
+      "direction": "up",
+      "market_cap": 4389375854827.05
     },
     {
       "name": "IA",
-      "change_pct": -25.5,
+      "change_pct": -19.9,
       "direction": "down",
-      "market_cap": 17346707163.71
+      "market_cap": 18630801245.12
+    },
+    {
+      "name": "DeFi",
+      "change_pct": 19.6,
+      "direction": "up",
+      "market_cap": 73378712743.86
+    },
+    {
+      "name": "Privacy",
+      "change_pct": 19.4,
+      "direction": "up",
+      "market_cap": 75259081970.62
+    },
+    {
+      "name": "Metaverse",
+      "change_pct": 16.3,
+      "direction": "up",
+      "market_cap": 1998007857.55
     }
   ],
   "emerging": [
     {
       "name": "Tokenized Assets",
-      "change_pct": 127.3,
-      "market_cap": 45593014261.198875
-    },
-    {
-      "name": "Ether.fi Ecosystem",
-      "change_pct": 55.6,
-      "market_cap": 577375313.1469684
-    },
-    {
-      "name": "Tokenized Treasuries",
-      "change_pct": 35.1,
-      "market_cap": 11378238386.332375
+      "change_pct": 126.3,
+      "market_cap": 45260085034.49909
     },
     {
       "name": "MMO",
-      "change_pct": 29.7,
-      "market_cap": 54093147.918990485
+      "change_pct": 51.6,
+      "market_cap": 64623165.949650794
+    },
+    {
+      "name": "Hybrid Token Standards",
+      "change_pct": 41.7,
+      "market_cap": 60864175.91445907
+    },
+    {
+      "name": "Bridged-Tokens",
+      "change_pct": 37.7,
+      "market_cap": 402332378.6226839
+    },
+    {
+      "name": "Ether.fi Ecosystem",
+      "change_pct": 37.2,
+      "market_cap": 575846742.7223964
     }
   ]
 }

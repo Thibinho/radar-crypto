@@ -258,5 +258,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-08-21",
+    "events": [
+      {
+        "title": "Dette américaine : pourquoi le Trésor n’arrive pas à faire baisser ses taux",
+        "link": "https://cryptoast.fr/dette-americaine-pourquoi-tresor-faire-baisser-taux/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Bitcoin ETFs draw $608M as Ether ETFs see largest inflow since October",
+        "link": "https://cointelegraph.com/markets/bitcoin-etfs-ether-etfs-largest-inflow-october?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Impôts Crypto : Quel assistant fiscal choisir ? Comparatif 2026",
+        "link": "https://cryptoast.fr/impots-crypto-assistant-fiscal-comparatif/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
