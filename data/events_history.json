@@ -278,5 +278,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-08-22",
+    "events": [
+      {
+        "title": "Le patron de Robinhood voit un « supercycle » qui pourrait transformer la finance",
+        "link": "https://journalducoin.com/defi/patron-robinhood-voit-supercycle-pourrait-transformer/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "XRP signe sa meilleure semaine depuis fin 2024, Solana accélère ses blocs",
+        "link": "https://journalducoin.com/actualites/xrp-signe-sa-meilleure-semaine-depuis-fin-2024-solana-accelere-ses-blocs/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Bitcoin tient près de 80 000 $, Hyperliquid vole encore la vedette au short squeeze",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-tient-pres-de-80-000-hyperliquid-vole-encore-la-vedette-au-short-squeeze/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
