@@ -1,104 +1,92 @@
 {
-  "generated_at": "2026-08-22T07:45:37.504027+00:00",
+  "generated_at": "2026-08-23T07:48:16.377396+00:00",
   "movers": [
     {
       "name": "SocialFi",
-      "change_pct": 50.9,
+      "change_pct": 61.8,
       "direction": "up",
-      "market_cap": 2699486699.32
+      "market_cap": 2900356523.1
     },
     {
       "name": "Bitcoin",
-      "change_pct": 35.2,
+      "change_pct": 30.0,
       "direction": "up",
-      "market_cap": 6958525911.36
+      "market_cap": 6640004549.23
     },
     {
       "name": "Meme",
-      "change_pct": 33.8,
+      "change_pct": 29.1,
       "direction": "up",
-      "market_cap": 41910180704.87
+      "market_cap": 40192382557.11
     },
     {
       "name": "Privacy",
-      "change_pct": 30.2,
+      "change_pct": 26.1,
       "direction": "up",
-      "market_cap": 84039297171.78
+      "market_cap": 81401333982.97
     },
     {
       "name": "Restaking",
-      "change_pct": 29.3,
+      "change_pct": 23.6,
       "direction": "up",
-      "market_cap": 2136068873.18
+      "market_cap": 2105960754.68
     },
     {
       "name": "DeFi",
-      "change_pct": 25.7,
+      "change_pct": 22.7,
       "direction": "up",
-      "market_cap": 77324374650.19
+      "market_cap": 75438987157.48
     },
     {
       "name": "Layer 1",
-      "change_pct": 24.6,
+      "change_pct": 21.9,
       "direction": "up",
-      "market_cap": 4519548930749.56
-    },
-    {
-      "name": "Metaverse",
-      "change_pct": 20.9,
-      "direction": "up",
-      "market_cap": 2110073437.34
-    },
-    {
-      "name": "Layer 2",
-      "change_pct": 19.6,
-      "direction": "up",
-      "market_cap": 9022720938.7
-    },
-    {
-      "name": "Liquid Staking",
-      "change_pct": 19.6,
-      "direction": "up",
-      "market_cap": 2428955537.46
+      "market_cap": 4419402764120.01
     },
     {
       "name": "IA",
-      "change_pct": -19.2,
+      "change_pct": -21.3,
       "direction": "down",
-      "market_cap": 19313966596.46
+      "market_cap": 18572825509.13
     },
     {
-      "name": "DePIN",
+      "name": "Layer 2",
+      "change_pct": 16.9,
+      "direction": "up",
+      "market_cap": 8694730929.65
+    },
+    {
+      "name": "Metaverse",
       "change_pct": 15.6,
       "direction": "up",
-      "market_cap": 7986095986.13
+      "market_cap": 2001006661.93
     }
   ],
   "emerging": [
     {
       "name": "PolitiFi",
-      "change_pct": 87.6,
-      "market_cap": 889885880.9416155
-    },
-    {
-      "name": "Quantum-Resistant",
-      "change_pct": 60.0,
-      "market_cap": 15021774270.956165
+      "change_pct": 71.3,
+      "market_cap": 805135370.0379959
     },
     {
       "name": "Hybrid Token Standards",
-      "change_pct": 56.1,
-      "market_cap": 68020750.44882019
+      "change_pct": 70.1,
+      "market_cap": 72102590.25761366
     },
     {
-      "name": "MMO",
-      "change_pct": 54.5,
-      "market_cap": 67311038.34626488
+      "name": "Quantum-Resistant",
+      "change_pct": 57.8,
+      "market_cap": 14742218746.3226
     },
     {
-      "name": "The Boy’s Club",
-      "change_pct": 54.3,
-      "market_cap": 2177009878.0954275
+      "name": "Zero Knowledge (ZK)",
+      "change_pct": 50.5,
+      "market_cap": 17028511286.363691
+    },
+    {
+      "name": "BONK.fun Ecosystem",
+      "change_pct": 50.4,
+      "market_cap": 88836644.98029828
     }
   ]
 }

@@ -298,5 +298,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-08-23",
+    "events": [
+      {
+        "title": "Bitcoin : Les OG attendaient les 100 000 $ pour vendre… et ils ont vendu",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-og-attendaient-100-000-vendre/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Economie aux USA : La crise de la dette arrivera « dans 3 ans, à 2 ans près » d’après Ray Dalio",
+        "link": "https://journalducoin.com/economie/economie-usa-crise-dette-ray-dalio/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "« Bitcoin, or et terres » : la doctrine anti-crise du patron de Tether",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-or-terres-doctrine-anti-crise-patron-tether/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
