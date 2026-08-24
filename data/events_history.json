@@ -318,5 +318,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-08-24",
+    "events": [
+      {
+        "title": "Jackson  Hole Symposium, U.S. PCE prices, IREN earnings: Crypto Week Ahead",
+        "link": "https://www.coindesk.com/markets/2026/08/24/jackson-hole-symposium-u-s-pce-prices-iren-earnings-crypto-week-ahead",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Est-il possible d'acheter l'action de Perplexity ?",
+        "link": "https://cryptoast.fr/acheter-actions-perplexity/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Live updates: Bitcoin holds $77,000 as XRP, Zcash pull back after a big weekly rally",
+        "link": "https://www.coindesk.com/business/2026/08/24/live-updates-bitcoin-holds-usd77-000-as-xrp-zcash-pull-back-after-a-big-weekly-rally",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
