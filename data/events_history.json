@@ -338,5 +338,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-08-25",
+    "events": [
+      {
+        "title": "Attaque en cours des blockchains Cosmos EVM - Mantra, KiiChain, TAC et Nesa sont concernées",
+        "link": "https://cryptoast.fr/attaque-en-cours-blockchains-cosmos-evm-mantra-kiichain-tac-nesa-concernees/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Bull run de Bitcoin : Arthur Hayes voit le marché crypto encore plus haut",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-arthur-hayes-tresor-us-crypto/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Business owner faces up to 280 years over $24M crypto Ponzi scheme",
+        "link": "https://cointelegraph.com/news/business-owner-280-years-24m-crypto-ponzi-scheme?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]

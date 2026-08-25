@@ -1,110 +1,116 @@
 {
-  "generated_at": "2026-08-24T08:28:07.661952+00:00",
+  "generated_at": "2026-08-25T08:10:31.154391+00:00",
   "movers": [
     {
-      "name": "SocialFi",
-      "change_pct": 42.4,
+      "name": "RWA",
+      "change_pct": 52.6,
       "direction": "up",
-      "market_cap": 2791728999.21
+      "market_cap": 82495895537.28
+    },
+    {
+      "name": "SocialFi",
+      "change_pct": 49.6,
+      "direction": "up",
+      "market_cap": 2791591913.19
     },
     {
       "name": "Meme",
-      "change_pct": 31.3,
+      "change_pct": 35.3,
       "direction": "up",
-      "market_cap": 40853756127.48
+      "market_cap": 41774816877.01
     },
     {
       "name": "Bitcoin",
-      "change_pct": 29.7,
+      "change_pct": 34.5,
       "direction": "up",
-      "market_cap": 6674775583.42
+      "market_cap": 6832664723.02
     },
     {
       "name": "Privacy",
-      "change_pct": 27.4,
+      "change_pct": 30.4,
       "direction": "up",
-      "market_cap": 83487159392.57
-    },
-    {
-      "name": "Restaking",
-      "change_pct": 27.2,
-      "direction": "up",
-      "market_cap": 2294071759.22
-    },
-    {
-      "name": "Layer 1",
-      "change_pct": 22.9,
-      "direction": "up",
-      "market_cap": 4483755290932.87
-    },
-    {
-      "name": "DeFi",
-      "change_pct": 22.8,
-      "direction": "up",
-      "market_cap": 77198371081.28
+      "market_cap": 85007350883.52
     },
     {
       "name": "Layer 2",
-      "change_pct": 21.7,
+      "change_pct": 28.8,
       "direction": "up",
-      "market_cap": 9180913990.22
+      "market_cap": 9486184425.01
     },
     {
-      "name": "IA",
-      "change_pct": -18.5,
-      "direction": "down",
-      "market_cap": 19278920008.64
+      "name": "Restaking",
+      "change_pct": 25.7,
+      "direction": "up",
+      "market_cap": 2214130045.98
+    },
+    {
+      "name": "Layer 1",
+      "change_pct": 25.6,
+      "direction": "up",
+      "market_cap": 4611134724777.78
+    },
+    {
+      "name": "DeFi",
+      "change_pct": 25.1,
+      "direction": "up",
+      "market_cap": 78214511892.87
     },
     {
       "name": "Metaverse",
-      "change_pct": 17.6,
+      "change_pct": 21.1,
       "direction": "up",
-      "market_cap": 2042321341.16
+      "market_cap": 2079879388.06
     },
     {
       "name": "DePIN",
-      "change_pct": 16.1,
+      "change_pct": 19.2,
       "direction": "up",
-      "market_cap": 7919239586.33
+      "market_cap": 8089575642.86
     },
     {
-      "name": "RWA",
-      "change_pct": 15.9,
-      "direction": "up",
-      "market_cap": 59350848343.68
+      "name": "IA",
+      "change_pct": -17.7,
+      "direction": "down",
+      "market_cap": 19349657255.41
     },
     {
       "name": "Liquid Staking",
+      "change_pct": 15.7,
+      "direction": "up",
+      "market_cap": 2376866519.51
+    },
+    {
+      "name": "GameFi",
       "change_pct": 15.0,
       "direction": "up",
-      "market_cap": 2361426420.23
+      "market_cap": 6012368762.71
     }
   ],
   "emerging": [
     {
       "name": "Pons Launchpad",
-      "change_pct": 119.8,
-      "market_cap": 83800427.22522986
+      "change_pct": 195.5,
+      "market_cap": 100762708.17333584
     },
     {
       "name": "Hybrid Token Standards",
-      "change_pct": 115.2,
-      "market_cap": 91296657.23352724
-    },
-    {
-      "name": "Bridged-Tokens",
-      "change_pct": 83.4,
-      "market_cap": 547013262.8298161
-    },
-    {
-      "name": "Wojak-Themed",
-      "change_pct": 78.4,
-      "market_cap": 121156609.99678554
+      "change_pct": 159.9,
+      "market_cap": 109636864.77486314
     },
     {
       "name": "Runes",
-      "change_pct": 67.7,
-      "market_cap": 125678047.75743748
+      "change_pct": 120.4,
+      "market_cap": 165223782.95139143
+    },
+    {
+      "name": "Wojak-Themed",
+      "change_pct": 107.1,
+      "market_cap": 140486878.48926562
+    },
+    {
+      "name": "Bridged-Tokens",
+      "change_pct": 99.5,
+      "market_cap": 584640797.805203
     }
   ]
 }
