@@ -358,5 +358,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-08-26",
+    "events": [
+      {
+        "title": "A massive $6.4 billion bitcoin options expiry on Friday could amplify volatility",
+        "link": "https://www.coindesk.com/markets/2026/08/25/a-massive-usd6-4-billion-bitcoin-options-expiry-on-friday-could-amplify-volatility",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Le Japon veut migrer son système financier sur la blockchain",
+        "link": "https://cryptoast.fr/le-japon-veut-migrer-son-systeme-financier-sur-la-blockchain/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Tornado Cash developer Roman Storm’s retrial delayed to April 2027",
+        "link": "https://cointelegraph.com/news/roman-storm-retrial-delayed-april-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
