@@ -1,98 +1,31 @@
 {
-  "generated_at": "2026-08-26T08:10:32.866677+00:00",
-  "movers": [
-    {
-      "name": "SocialFi",
-      "change_pct": 39.7,
-      "direction": "up",
-      "market_cap": 2665063403.05
-    },
-    {
-      "name": "Bitcoin",
-      "change_pct": 33.9,
-      "direction": "up",
-      "market_cap": 6766271660.36
-    },
-    {
-      "name": "Layer 2",
-      "change_pct": 26.9,
-      "direction": "up",
-      "market_cap": 9400417265.05
-    },
-    {
-      "name": "Meme",
-      "change_pct": 26.5,
-      "direction": "up",
-      "market_cap": 40639107619.49
-    },
-    {
-      "name": "Privacy",
-      "change_pct": 25.4,
-      "direction": "up",
-      "market_cap": 81729206790.73
-    },
-    {
-      "name": "DeFi",
-      "change_pct": 25.1,
-      "direction": "up",
-      "market_cap": 79389912997.35
-    },
-    {
-      "name": "Layer 1",
-      "change_pct": 23.5,
-      "direction": "up",
-      "market_cap": 4555542204471.83
-    },
-    {
-      "name": "Restaking",
-      "change_pct": 22.0,
-      "direction": "up",
-      "market_cap": 2139506332.69
-    },
-    {
-      "name": "IA",
-      "change_pct": -19.7,
-      "direction": "down",
-      "market_cap": 19065982597.32
-    },
-    {
-      "name": "Metaverse",
-      "change_pct": 19.7,
-      "direction": "up",
-      "market_cap": 2051243290.62
-    },
-    {
-      "name": "DePIN",
-      "change_pct": 17.3,
-      "direction": "up",
-      "market_cap": 7938034342.11
-    }
-  ],
+  "generated_at": "2026-08-28T21:28:46.111072+00:00",
+  "movers": [],
   "emerging": [
     {
       "name": "Pons Launchpad",
-      "change_pct": 205.6,
-      "market_cap": 121045270.76734515
+      "change_pct": 157.1,
+      "market_cap": 115719686.33799629
+    },
+    {
+      "name": "Tokenized Credit",
+      "change_pct": 150.1,
+      "market_cap": 2036788333.1035602
     },
     {
       "name": "Hybrid Token Standards",
-      "change_pct": 159.2,
-      "market_cap": 108353962.01390609
-    },
-    {
-      "name": "Bridged-Tokens",
-      "change_pct": 105.6,
-      "market_cap": 615811782.9540045
+      "change_pct": 133.6,
+      "market_cap": 142205096.01543835
     },
     {
       "name": "Wojak-Themed",
-      "change_pct": 104.2,
-      "market_cap": 135216157.67058247
+      "change_pct": 82.1,
+      "market_cap": 168330066.729104
     },
     {
       "name": "Runes",
-      "change_pct": 95.4,
-      "market_cap": 146138057.57534358
+      "change_pct": 65.9,
+      "market_cap": 146429532.23540276
     }
   ]
 }
