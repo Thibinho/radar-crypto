@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-08-28T21:28:46.111072+00:00",
+  "generated_at": "2026-08-29T06:07:10.604206+00:00",
   "movers": [],
   "emerging": [
     {
       "name": "Pons Launchpad",
-      "change_pct": 157.1,
-      "market_cap": 115719686.33799629
+      "change_pct": 208.4,
+      "market_cap": 133634017.65369241
     },
     {
       "name": "Tokenized Credit",
-      "change_pct": 150.1,
-      "market_cap": 2036788333.1035602
+      "change_pct": 150.0,
+      "market_cap": 2036856994.2049282
     },
     {
       "name": "Hybrid Token Standards",
-      "change_pct": 133.6,
-      "market_cap": 142205096.01543835
+      "change_pct": 110.3,
+      "market_cap": 143014719.24861208
     },
     {
       "name": "Wojak-Themed",
-      "change_pct": 82.1,
-      "market_cap": 168330066.729104
+      "change_pct": 67.6,
+      "market_cap": 168560043.48357913
     },
     {
       "name": "Runes",
-      "change_pct": 65.9,
-      "market_cap": 146429532.23540276
+      "change_pct": 48.8,
+      "market_cap": 145399534.15299442
     }
   ]
 }

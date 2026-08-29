@@ -398,5 +398,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-08-29",
+    "events": [
+      {
+        "title": "OPEP : Le Venezuela discute d’une sortie avec les USA, 5 mois après les Émirats",
+        "link": "https://journalducoin.com/economie/opep-venezuela-sortie-washington-5-mois-emirats/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Bitcoin wallets untouched for 10 years moved $40 million. Most avoided exchanges",
+        "link": "https://www.coindesk.com/markets/2026/08/28/bitcoin-wallets-untouched-for-10-years-moved-usd40-million-most-avoided-exchanges",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Bitcoin à 150 000 $ en 2027 : L’optimisme de Bernstein est de retour",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-150-000-2027-optimisme-bernstein/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
