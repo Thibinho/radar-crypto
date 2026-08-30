@@ -418,5 +418,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-08-30",
+    "events": [
+      {
+        "title": "Bitcoin : l’histoire complète de la faille Coldcard, du casse à 38 millions au bilan à 140 millions",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-histoire-complete-faille-coldcard-casse-bilan-140-millions/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Ponzi crypto : Il promettait 30 % de rendement grâce à une IA, 400 investisseurs piégés",
+        "link": "https://journalducoin.com/actualites/ponzi-crypto-rendement-ia-investisseurs-pieges/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "A $1.1 million crypto card hack crashed a neobank's token 49%",
+        "link": "https://www.coindesk.com/web3/2026/08/29/a-usd1-1-million-crypto-card-hack-crashed-a-neobank-s-token-49",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
