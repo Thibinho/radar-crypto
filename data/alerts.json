@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-08-30T06:07:02.463352+00:00",
+  "generated_at": "2026-08-31T06:08:07.315090+00:00",
   "movers": [],
   "emerging": [
     {
       "name": "Pons Launchpad",
-      "change_pct": 399.4,
-      "market_cap": 245545819.1382192
+      "change_pct": 247.3,
+      "market_cap": 291061617.0610788
     },
     {
       "name": "Tokenized Credit",
       "change_pct": 150.0,
-      "market_cap": 2036817746.9852178
-    },
-    {
-      "name": "Hybrid Token Standards",
-      "change_pct": 93.3,
-      "market_cap": 139401960.91322324
+      "market_cap": 2036775944.465264
     },
     {
       "name": "Communication",
-      "change_pct": 80.7,
-      "market_cap": 224325567.64020863
+      "change_pct": 73.9,
+      "market_cap": 223455377.41854995
     },
     {
-      "name": "Wojak-Themed",
-      "change_pct": 62.1,
-      "market_cap": 163774168.7872024
+      "name": "Hybrid Token Standards",
+      "change_pct": 51.3,
+      "market_cap": 138155363.24844486
+    },
+    {
+      "name": "Robinhood Chain Stocks Ecosystem",
+      "change_pct": 37.9,
+      "market_cap": 53563455.56681777
     }
   ]
 }

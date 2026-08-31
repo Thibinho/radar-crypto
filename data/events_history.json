@@ -438,5 +438,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-08-31",
+    "events": [
+      {
+        "title": "Bitcoin : 12 ans après il récupère son portefeuille et devient millionnaire",
+        "link": "https://cryptoast.fr/bitcoin-recupere-portefeuille-devient-millionnaire/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Le 25ᵉ mot : Un coffre-fort secret dans votre signer Ledger",
+        "link": "https://journalducoin.com/technologies/25-mot-signer-ledger/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Here’s what happened in crypto today",
+        "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
