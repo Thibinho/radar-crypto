@@ -458,5 +458,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-09-01",
+    "events": [
+      {
+        "title": "Le téléprompteur qui pariait sur Trump : la CFTC fait payer 172 539 $ à un initié de Kalshi",
+        "link": "https://journalducoin.com/actualites/teleprompteur-trump-cftc-172-539-kalshi/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Here’s what happened in crypto today",
+        "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Bitcoin tient les 78 000 $ malgré les frappes américaines en Iran et l’envolée du pétrole",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-78-000-frappes-americaines-iran-petrole/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
