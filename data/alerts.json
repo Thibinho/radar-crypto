@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-09-01T06:16:00.367926+00:00",
+  "generated_at": "2026-09-02T06:20:49.780800+00:00",
   "movers": [],
   "emerging": [
     {
       "name": "Pons Launchpad",
-      "change_pct": 278.5,
-      "market_cap": 381359734.9936347
+      "change_pct": 188.3,
+      "market_cap": 349015028.7970756
     },
     {
       "name": "Tokenized Credit",
-      "change_pct": 148.8,
-      "market_cap": 2037020555.810349
-    },
-    {
-      "name": "Communication",
-      "change_pct": 70.1,
-      "market_cap": 220767343.758696
+      "change_pct": 149.0,
+      "market_cap": 2039447619.8952734
     },
     {
       "name": "Robinhood Chain Stocks Ecosystem",
-      "change_pct": 66.4,
-      "market_cap": 68582960.52161992
+      "change_pct": 105.3,
+      "market_cap": 83535552.37936243
+    },
+    {
+      "name": "Prediction Market Tools",
+      "change_pct": 70.8,
+      "market_cap": 153381993.2391478
     },
     {
       "name": "BONK.fun Ecosystem",
-      "change_pct": 39.3,
-      "market_cap": 118253894.79829712
+      "change_pct": 58.2,
+      "market_cap": 134331690.41006055
     }
   ]
 }

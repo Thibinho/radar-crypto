@@ -478,5 +478,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-02",
+    "events": [
+      {
+        "title": "Finst lance une offre sur mesure pour les institutionnels en Europe",
+        "link": "https://journalducoin.com/exchanges/finst-offre-institutionnels/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Here’s what happened in crypto today",
+        "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "HYPE treasury firm Hyperliquid Strategies boosts equity facility to $2.5B",
+        "link": "https://cointelegraph.com/news/hyperliquid-strategies-equity-facility-2-5-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
