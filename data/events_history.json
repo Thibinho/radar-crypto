@@ -518,5 +518,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-04",
+    "events": [
+      {
+        "title": "Coinbase laisse des agents IA piloter votre portefeuille crypto",
+        "link": "https://journalducoin.com/exchanges/coinbase-aifi-agents-ia-portefeuille-crypto/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "OpenAI puts $1 billion behind cyber defense after unveiling AI that can find zero-days",
+        "link": "https://www.coindesk.com/tech/2026/09/04/openai-puts-usd1-billion-behind-cyber-defense-after-unveiling-ai-that-can-find-zero-days",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "La rentrée crypto sonne le glas : plus que 48 h pour profiter de l’offre Ledger",
+        "link": "https://journalducoin.com/technologies/rentree-crypto-offre-ledger/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
