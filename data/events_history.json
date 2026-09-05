@@ -538,5 +538,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-05",
+    "events": [
+      {
+        "title": "XRP Ledger has fewer active accounts than last year, but bigger trades and more value",
+        "link": "https://www.coindesk.com/markets/2026/09/05/xrp-ledger-has-fewer-active-accounts-but-bigger-trades-and-more-value",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Southeast Asia’s crypto funding rebounds to $680 million as investors focus on mature firms",
+        "link": "https://www.coindesk.com/business/2026/09/05/southeast-asia-s-crypto-funding-rebounds-to-usd680-million-as-investors-focus-on-mature-firms",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Qu’est-ce que le DCA ? La minute trading",
+        "link": "https://journalducoin.com/trading/dca-minute-trading/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
