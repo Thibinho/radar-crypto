@@ -1,38 +1,38 @@
 {
-  "generated_at": "2026-09-05T06:14:30.836155+00:00",
+  "generated_at": "2026-09-06T06:14:37.730383+00:00",
   "movers": [
     {
       "name": "Privacy",
-      "change_pct": 15.2,
+      "change_pct": 20.7,
       "direction": "up",
-      "market_cap": 94924849652.15
+      "market_cap": 101910526095.0
     }
   ],
   "emerging": [
     {
-      "name": "Pons Launchpad",
-      "change_pct": 303.3,
-      "market_cap": 538971409.3286076
-    },
-    {
       "name": "BONK.fun Ecosystem",
-      "change_pct": 199.3,
-      "market_cap": 246099434.5539734
+      "change_pct": 208.3,
+      "market_cap": 265298301.5460264
     },
     {
       "name": "Robinhood Chain Stocks Ecosystem",
-      "change_pct": 197.4,
-      "market_cap": 145913470.43070614
+      "change_pct": 186.4,
+      "market_cap": 145799590.6400068
+    },
+    {
+      "name": "Pons Launchpad",
+      "change_pct": 169.3,
+      "market_cap": 661345818.1663677
     },
     {
       "name": "Solana Token-2022",
-      "change_pct": 96.3,
-      "market_cap": 54291689.35606988
+      "change_pct": 114.0,
+      "market_cap": 58658378.741178766
     },
     {
-      "name": "Prediction Market Tools",
-      "change_pct": 48.9,
-      "market_cap": 127654169.4683783
+      "name": "Rollup",
+      "change_pct": 57.0,
+      "market_cap": 2157817407.554296
     }
   ]
 }

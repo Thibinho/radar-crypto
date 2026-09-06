@@ -558,5 +558,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-06",
+    "events": [
+      {
+        "title": "Why crypto experts say buying and holding bitcoin easily beats trying to time the market",
+        "link": "https://www.coindesk.com/markets/2026/09/05/why-crypto-experts-say-buying-and-holding-bitcoin-easily-beats-trying-to-time-the-market",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Bitcoin : Comment des économistes morts depuis un siècle sont devenus la bible des bitcoiners ?",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-comment-des-economistes-morts-depuis-un-siecle-sont-devenus-la-bible-des-bitcoiners/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Dollar-backed stablecoins can push local currencies lower, Bank of Korea study finds",
+        "link": "https://www.coindesk.com/business/2026/09/05/dollar-backed-stablecoins-can-push-local-currencies-lower-bank-of-korea-study-finds",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
