@@ -578,5 +578,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-09-07",
+    "events": [
+      {
+        "title": "Bitcoin : Une baleine de l’époque Satoshi Nakamoto réveille 600 BTC",
+        "link": "https://journalducoin.com/bitcoin/600-btc-2010-16-ans-48-millions-dollars/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "This cat memecoin has paid holders $2.8 million in Zcash as ZEC tops $1,200",
+        "link": "https://www.coindesk.com/markets/2026/09/07/this-cat-memecoin-has-paid-holders-usd2-8-million-in-zcash-as-zec-tops-usd1-200",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Bitcoin sidechain Liquid pauses after purported ‘white hats’ withdraw $320M in BTC",
+        "link": "https://cointelegraph.com/news/liquid-network-pauses-320m-bitcoin-withdrawal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
