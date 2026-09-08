@@ -598,5 +598,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-09-08",
+    "events": [
+      {
+        "title": "La BCE devrait relever ses taux ce jeudi, une catastrophe pour la France ?",
+        "link": "https://cryptoast.fr/bce-hausse-taux-septembre-2026-france-dette/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Cronos executes controversial blockchain rollback to recover crypto worth $111 million",
+        "link": "https://www.coindesk.com/business/2026/09/08/cronos-executes-controversial-blockchain-rollback-to-recover-crypto-worth-usd111-million",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Bitcoin slips to $78,800 as BNB and DeFi tokens buck the selloff",
+        "link": "https://www.coindesk.com/markets/2026/09/08/bitcoin-slips-to-usd78-800-as-bnb-and-defi-tokens-buck-the-selloff",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
