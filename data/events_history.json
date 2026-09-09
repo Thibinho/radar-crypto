@@ -618,5 +618,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-09-09",
+    "events": [
+      {
+        "title": "Bitcoin climbs as oil tops $100, equities drop after Iran strikes",
+        "link": "https://www.coindesk.com/markets/2026/09/09/bitcoin-climbs-as-oil-tops-usd100-equities-drop-after-iran-strikes",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Taxation des superprofits pétroliers : l'Allemagne cible TotalEnergies via Bruxelles",
+        "link": "https://cryptoast.fr/taxe-europeenne-superprofits-totalenergies-allemagne-1-milliard/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Pétrole à 100 dollars : Les Houthis rallument la guerre du Golfe, Bitcoin trinque",
+        "link": "https://journalducoin.com/economie/petrole-100-dollars-houthis-bitcoin/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
