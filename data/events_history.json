@@ -638,5 +638,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-10",
+    "events": [
+      {
+        "title": "Anthropic simule l’économie de 2030 : l’IA enrichit le capital au détriment du travail",
+        "link": "https://cryptoast.fr/anthropic-simule-economie-ia-enrichit-capital-travail/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Bitcoin trades near $78,000 as memecoins, small caps lead a broad crypto retreat",
+        "link": "https://www.coindesk.com/markets/2026/09/10/bitcoin-trades-near-usd78-000-as-memecoins-small-caps-lead-a-broad-crypto-retreat",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Treasury Secretary Bessent urges CLARITY Act passage after Senate returns",
+        "link": "https://cointelegraph.com/news/treasury-secretary-bessent-urges-clarity-act-passage-senate-returns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
