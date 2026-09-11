@@ -1,38 +1,31 @@
 {
-  "generated_at": "2026-09-10T10:49:48.991805+00:00",
-  "movers": [
-    {
-      "name": "Privacy",
-      "change_pct": 19.2,
-      "direction": "up",
-      "market_cap": 101692952228.68
-    }
-  ],
+  "generated_at": "2026-09-11T10:45:41.244956+00:00",
+  "movers": [],
   "emerging": [
     {
       "name": "Prediction Market Tools",
-      "change_pct": 73.7,
-      "market_cap": 191261840.03817463
+      "change_pct": 65.3,
+      "market_cap": 178878417.8001543
     },
     {
       "name": "Robinhood Chain Stocks Ecosystem",
-      "change_pct": 66.2,
-      "market_cap": 161314665.46758017
+      "change_pct": 49.4,
+      "market_cap": 165370181.11133027
     },
     {
-      "name": "BONK.fun Ecosystem",
-      "change_pct": 55.0,
-      "market_cap": 256391988.88948205
+      "name": "Buidlpad Launchpad",
+      "change_pct": 47.2,
+      "market_cap": 606877576.419733
+    },
+    {
+      "name": "Venice Ecosystem",
+      "change_pct": 38.6,
+      "market_cap": 1254827187.67454
     },
     {
       "name": "Celebrity-Themed",
-      "change_pct": 48.7,
-      "market_cap": 183344316.18636283
-    },
-    {
-      "name": "Quantum-Resistant",
-      "change_pct": 44.9,
-      "market_cap": 22136114051.488293
+      "change_pct": 31.6,
+      "market_cap": 172186084.9227439
     }
   ]
 }

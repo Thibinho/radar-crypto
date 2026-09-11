@@ -658,5 +658,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-09-11",
+    "events": [
+      {
+        "title": "India launches tokenized bond pilot with $107M issued",
+        "link": "https://cointelegraph.com/news/india-launches-tokenized-bond-pilot-with-107m-issued?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Bybit EU va bientôt proposer des actions et des produits dérivés avec une licence MiFID 2",
+        "link": "https://cryptoast.fr/bybit-eu-bientot-proposer-actions-produits-derives-avec-licence-mifid2/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Il donne 100 dollars à une mouche pour trader Bitcoin : suivez l'expérience en direct",
+        "link": "https://cryptoast.fr/mouche-trade-bitcoin-flybrain-robinhood-chain/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
