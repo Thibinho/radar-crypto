@@ -678,5 +678,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-09-12",
+    "events": [
+      {
+        "title": "Bitcoin activity, passports exposed after Revolut falls for fake government request",
+        "link": "https://www.coindesk.com/tech/2026/09/12/bitcoin-activity-passports-exposed-after-revolut-falls-for-fake-government-request",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Économie : Google mise 13 milliards d’euros sur la Finlande pour alimenter son IA",
+        "link": "https://journalducoin.com/economie/economie-google-mise-13-milliards-deuros-sur-la-finlande-pour-alimenter-son-ia/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "FTX : Sam Bankman-Fried joue son va-tout devant la Cour suprême",
+        "link": "https://journalducoin.com/actualites/ftx-sam-bankman-fried-cour-supreme/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
