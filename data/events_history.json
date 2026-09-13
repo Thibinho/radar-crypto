@@ -698,5 +698,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-13",
+    "events": [
+      {
+        "title": "Data centers, minage de Bitcoin : Accusés de tuer la planète, ils chauffent déjà nos maisons",
+        "link": "https://journalducoin.com/bitcoin/data-centers-minage-bitcoin-accuses-rechauffer-planete-chauffent-maisons/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Revolut says customer data exposed through fake government email",
+        "link": "https://cointelegraph.com/news/revolut-says-customer-data-exposed-through-fake-government-email?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Adresses Bitcoin et identité : Revolut victime d’ingénierie sociale",
+        "link": "https://journalducoin.com/bitcoin/revolut-passeports-historiques-bitcoin-a-un-faux-e-mail-gouvernemental/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]

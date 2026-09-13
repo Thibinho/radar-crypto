@@ -1,38 +1,26 @@
 {
-  "generated_at": "2026-09-12T10:14:44.860729+00:00",
-  "movers": [
-    {
-      "name": "Restaking",
-      "change_pct": 19.4,
-      "direction": "up",
-      "market_cap": 2543390584.74
-    }
-  ],
+  "generated_at": "2026-09-13T11:15:18.077902+00:00",
+  "movers": [],
   "emerging": [
     {
       "name": "TokenFi Launchpad",
-      "change_pct": 888.7,
-      "market_cap": 271165663.1379077
+      "change_pct": 782.4,
+      "market_cap": 266887814.68994328
     },
     {
       "name": "RPG",
       "change_pct": 249.0,
-      "market_cap": 339975121.52413356
+      "market_cap": 337151810.7082354
     },
     {
       "name": "Telegram Apps",
-      "change_pct": 86.6,
-      "market_cap": 490465123.71954703
+      "change_pct": 91.2,
+      "market_cap": 487413480.13220686
     },
     {
-      "name": "Prediction Market Tools",
-      "change_pct": 69.4,
-      "market_cap": 216203491.42318755
-    },
-    {
-      "name": "Ether.fi Ecosystem",
-      "change_pct": 29.8,
-      "market_cap": 698773840.4474299
+      "name": "Venice Ecosystem",
+      "change_pct": 30.8,
+      "market_cap": 1195057746.9218886
     }
   ]
 }
