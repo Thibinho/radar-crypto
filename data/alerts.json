@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-09-13T11:15:18.077902+00:00",
+  "generated_at": "2026-09-14T12:03:43.469255+00:00",
   "movers": [],
   "emerging": [
     {
       "name": "TokenFi Launchpad",
-      "change_pct": 782.4,
-      "market_cap": 266887814.68994328
+      "change_pct": 820.9,
+      "market_cap": 270100419.40079755
     },
     {
       "name": "RPG",
       "change_pct": 249.0,
-      "market_cap": 337151810.7082354
+      "market_cap": 338446604.0943821
     },
     {
       "name": "Telegram Apps",
-      "change_pct": 91.2,
-      "market_cap": 487413480.13220686
+      "change_pct": 81.2,
+      "market_cap": 486518677.2336384
     },
     {
       "name": "Venice Ecosystem",
-      "change_pct": 30.8,
-      "market_cap": 1195057746.9218886
+      "change_pct": 28.9,
+      "market_cap": 1206006640.411171
     }
   ]
 }

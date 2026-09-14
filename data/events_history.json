@@ -718,5 +718,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-14",
+    "events": [
+      {
+        "title": "Donald Trump rejette l'idée d'un ralentissement de l'IA",
+        "link": "https://cryptoast.fr/donald-trump-rejette-idee-ralentissement-ia/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Caroline Ellison retrouve un poste : L’ex-bras droit de FTX rebondit chez la fondation caritative Manifund",
+        "link": "https://journalducoin.com/exchanges/caroline-ellison-manifund-nouveau-poste/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "FCA considers exempting tokenized gold from fund rules to defend London market",
+        "link": "https://www.coindesk.com/business/2026/09/14/fca-considers-exempting-tokenized-gold-from-fund-rules-to-defend-london-market",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
