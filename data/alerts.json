@@ -1,26 +1,38 @@
 {
-  "generated_at": "2026-09-14T12:03:43.469255+00:00",
-  "movers": [],
+  "generated_at": "2026-09-15T11:17:00.878948+00:00",
+  "movers": [
+    {
+      "name": "RWA",
+      "change_pct": 33.9,
+      "direction": "up",
+      "market_cap": 82201788014.34
+    }
+  ],
   "emerging": [
     {
+      "name": "Remora Markets Tokenized rStocks",
+      "change_pct": 188559.8,
+      "market_cap": 140530258.79247013
+    },
+    {
+      "name": "Reality Ecosystem",
+      "change_pct": 1311.8,
+      "market_cap": 150436247.02776015
+    },
+    {
       "name": "TokenFi Launchpad",
-      "change_pct": 820.9,
-      "market_cap": 270100419.40079755
+      "change_pct": 776.2,
+      "market_cap": 263088864.8113037
     },
     {
       "name": "RPG",
-      "change_pct": 249.0,
-      "market_cap": 338446604.0943821
+      "change_pct": 231.1,
+      "market_cap": 333747242.46099466
     },
     {
-      "name": "Telegram Apps",
-      "change_pct": 81.2,
-      "market_cap": 486518677.2336384
-    },
-    {
-      "name": "Venice Ecosystem",
-      "change_pct": 28.9,
-      "market_cap": 1206006640.411171
+      "name": "Tokenized Assets",
+      "change_pct": 96.9,
+      "market_cap": 47226448410.2246
     }
   ]
 }

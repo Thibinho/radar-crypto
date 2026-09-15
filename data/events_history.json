@@ -738,5 +738,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-09-15",
+    "events": [
+      {
+        "title": "Ether, solana, XRP likely to gain if Clarity Act progresses",
+        "link": "https://www.coindesk.com/daybook-us/2026/09/15/ether-solana-xrp-likely-to-gain-if-clarity-act-progresses",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Project Lily : OpenAI paie des humains pour lire vos conversations ChatGPT",
+        "link": "https://cryptoast.fr/openai-project-lily-humains-lisent-conversations-chatgpt/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Why banks should stop worrying and learn to love the Clarity Act",
+        "link": "https://www.coindesk.com/opinion/2026/09/15/why-banks-should-stop-worrying-and-learn-to-love-the-clarity-act",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
