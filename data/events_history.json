@@ -758,5 +758,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-09-16",
+    "events": [
+      {
+        "title": "Bitcoin ETFs shed $450 million as Clarity Act fails",
+        "link": "https://www.coindesk.com/markets/2026/09/16/bitcoin-etfs-shed-usd450-million-as-clarity-act-fails",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Deutsche Bank close to debuting crypto custody for institutions",
+        "link": "https://www.coindesk.com/business/2026/09/16/deutsche-bank-nears-crypto-custody-service-debut-for-institutional-clients",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Live updates: Zcash climbs 6% as majors slide ahead of Fed rate decision",
+        "link": "https://www.coindesk.com/business/2026/09/16/live-updates-zcash-climbs-6-as-majors-slide-ahead-of-fed-rate-decision",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]

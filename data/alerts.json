@@ -1,38 +1,16 @@
 {
-  "generated_at": "2026-09-15T11:17:00.878948+00:00",
-  "movers": [
-    {
-      "name": "RWA",
-      "change_pct": 33.9,
-      "direction": "up",
-      "market_cap": 82201788014.34
-    }
-  ],
+  "generated_at": "2026-09-16T10:59:34.952657+00:00",
+  "movers": [],
   "emerging": [
     {
       "name": "Remora Markets Tokenized rStocks",
-      "change_pct": 188559.8,
-      "market_cap": 140530258.79247013
+      "change_pct": 241923.0,
+      "market_cap": 138663962.41899982
     },
     {
       "name": "Reality Ecosystem",
-      "change_pct": 1311.8,
-      "market_cap": 150436247.02776015
-    },
-    {
-      "name": "TokenFi Launchpad",
-      "change_pct": 776.2,
-      "market_cap": 263088864.8113037
-    },
-    {
-      "name": "RPG",
-      "change_pct": 231.1,
-      "market_cap": 333747242.46099466
-    },
-    {
-      "name": "Tokenized Assets",
-      "change_pct": 96.9,
-      "market_cap": 47226448410.2246
+      "change_pct": 1284.7,
+      "market_cap": 149218303.75718543
     }
   ]
 }
