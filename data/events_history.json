@@ -778,5 +778,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-09-17",
+    "events": [
+      {
+        "title": "Cette banque tech peut-elle changer la donne pour la crypto et les fintechs ?",
+        "link": "https://cryptoast.fr/banque-tech-changer-donne-crypto-fintechs/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Crypto : Pourquoi la branche armée du Hamas déconseillait Binance à ses donateurs",
+        "link": "https://journalducoin.com/actualites/crypto-hamas-deconseillait-binance-donateurs/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Crypto : seulement 290 personnes détiennent plus de 100 millions de $",
+        "link": "https://journalducoin.com/actualites/crypto-290-personnes-100-millions-dollars/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]

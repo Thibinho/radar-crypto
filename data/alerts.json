@@ -1,16 +1,33 @@
 {
-  "generated_at": "2026-09-16T10:59:34.952657+00:00",
-  "movers": [],
+  "generated_at": "2026-09-17T11:09:50.805381+00:00",
+  "movers": [
+    {
+      "name": "RWA",
+      "change_pct": -29.8,
+      "direction": "down",
+      "market_cap": 57712850065.88
+    }
+  ],
   "emerging": [
     {
       "name": "Remora Markets Tokenized rStocks",
-      "change_pct": 241923.0,
-      "market_cap": 138663962.41899982
+      "change_pct": 248075.6,
+      "market_cap": 142171875.683265
     },
     {
       "name": "Reality Ecosystem",
-      "change_pct": 1284.7,
-      "market_cap": 149218303.75718543
+      "change_pct": 1302.9,
+      "market_cap": 152538478.3156304
+    },
+    {
+      "name": "Olympus Pro Ecosystem",
+      "change_pct": 34.1,
+      "market_cap": 99676404.14013661
+    },
+    {
+      "name": "BTCfi Protocol",
+      "change_pct": 27.3,
+      "market_cap": 837807004.8880136
     }
   ]
 }
