@@ -798,5 +798,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-18",
+    "events": [
+      {
+        "title": "Layer-2 and DeFi tokens lead broad crypto advance as post-Fed hike nerves fade",
+        "link": "https://www.coindesk.com/markets/2026/09/18/layer-2-and-defi-tokens-lead-broad-crypto-advance-as-post-fed-hike-nerves-fade",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "La Banque du Japon relève ses taux à 1,25 %, mais son gouverneur rassure et le carry trade tient bon",
+        "link": "https://cryptoast.fr/banque-japon-hausse-taux-125-ueda-yen-carry-trade/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "IA : Comment des hackers ont piraté OpenAI grâce à Claude Opus 5 ?",
+        "link": "https://journalducoin.com/technologies/ia-comment-hackers-openai-claude-opus-5/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]

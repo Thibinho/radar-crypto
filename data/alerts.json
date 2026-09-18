@@ -1,33 +1,56 @@
 {
-  "generated_at": "2026-09-17T11:09:50.805381+00:00",
+  "generated_at": "2026-09-18T10:43:47.129837+00:00",
   "movers": [
     {
       "name": "RWA",
-      "change_pct": -29.8,
+      "change_pct": -26.9,
       "direction": "down",
-      "market_cap": 57712850065.88
+      "market_cap": 59539260348.72
+    },
+    {
+      "name": "Privacy",
+      "change_pct": 20.2,
+      "direction": "up",
+      "market_cap": 115886787755.81
+    },
+    {
+      "name": "IA",
+      "change_pct": 16.3,
+      "direction": "up",
+      "market_cap": 24002323184.62
+    },
+    {
+      "name": "Restaking",
+      "change_pct": 15.1,
+      "direction": "up",
+      "market_cap": 2649294894.42
     }
   ],
   "emerging": [
     {
       "name": "Remora Markets Tokenized rStocks",
-      "change_pct": 248075.6,
-      "market_cap": 142171875.683265
+      "change_pct": 56069.1,
+      "market_cap": 147973530.64495775
     },
     {
       "name": "Reality Ecosystem",
-      "change_pct": 1302.9,
-      "market_cap": 152538478.3156304
+      "change_pct": 1398.6,
+      "market_cap": 158504813.1474194
     },
     {
       "name": "Olympus Pro Ecosystem",
-      "change_pct": 34.1,
-      "market_cap": 99676404.14013661
+      "change_pct": 40.1,
+      "market_cap": 89937171.94427912
     },
     {
       "name": "BTCfi Protocol",
-      "change_pct": 27.3,
-      "market_cap": 837807004.8880136
+      "change_pct": 37.8,
+      "market_cap": 896609320.1304659
+    },
+    {
+      "name": "Data Availability",
+      "change_pct": 36.9,
+      "market_cap": 5629163567.98244
     }
   ]
 }
