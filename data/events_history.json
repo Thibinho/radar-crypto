@@ -818,5 +818,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-19",
+    "events": [
+      {
+        "title": "Crypto : le classement 2026 des 36 pays les plus favorables à l’adoption",
+        "link": "https://journalducoin.com/actualites/crypto-classement-2026-pays-adoption/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Dtcpay welcomes SBI Group as strategic investor extending Series A to $25M",
+        "link": "https://cointelegraph.com/news/dtcpay-welcomes-sbi-group-as-strategic-investor-extending-series-a-to-25m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Après 60 ans, Warren Buffett quitte la présidence de Berkshire Hathaway",
+        "link": "https://journalducoin.com/economie/60-ans-warren-buffett-presidence-berkshire-hathaway/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]

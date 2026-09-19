@@ -1,56 +1,62 @@
 {
-  "generated_at": "2026-09-18T10:43:47.129837+00:00",
+  "generated_at": "2026-09-19T10:27:49.872286+00:00",
   "movers": [
     {
-      "name": "RWA",
-      "change_pct": -26.9,
-      "direction": "down",
-      "market_cap": 59539260348.72
+      "name": "IA",
+      "change_pct": 25.3,
+      "direction": "up",
+      "market_cap": 25987484026.62
     },
     {
       "name": "Privacy",
-      "change_pct": 20.2,
+      "change_pct": 23.2,
       "direction": "up",
-      "market_cap": 115886787755.81
+      "market_cap": 122956300055.19
     },
     {
-      "name": "IA",
-      "change_pct": 16.3,
+      "name": "Liquid Staking",
+      "change_pct": 17.6,
       "direction": "up",
-      "market_cap": 24002323184.62
+      "market_cap": 2813108304.06
     },
     {
-      "name": "Restaking",
-      "change_pct": 15.1,
+      "name": "DePIN",
+      "change_pct": 15.9,
       "direction": "up",
-      "market_cap": 2649294894.42
+      "market_cap": 9440717313.19
+    },
+    {
+      "name": "Layer 2",
+      "change_pct": 15.6,
+      "direction": "up",
+      "market_cap": 11442671261.83
     }
   ],
   "emerging": [
     {
       "name": "Remora Markets Tokenized rStocks",
-      "change_pct": 56069.1,
-      "market_cap": 147973530.64495775
+      "change_pct": 54298.1,
+      "market_cap": 145956219.94493985
     },
     {
       "name": "Reality Ecosystem",
-      "change_pct": 1398.6,
-      "market_cap": 158504813.1474194
+      "change_pct": 1362.7,
+      "market_cap": 154004791.6987261
+    },
+    {
+      "name": "Binance Wallet IDO",
+      "change_pct": 91.0,
+      "market_cap": 3153576468.706796
     },
     {
       "name": "Olympus Pro Ecosystem",
-      "change_pct": 40.1,
-      "market_cap": 89937171.94427912
+      "change_pct": 79.2,
+      "market_cap": 113802072.94734782
     },
     {
-      "name": "BTCfi Protocol",
-      "change_pct": 37.8,
-      "market_cap": 896609320.1304659
-    },
-    {
-      "name": "Data Availability",
-      "change_pct": 36.9,
-      "market_cap": 5629163567.98244
+      "name": "AI Applications",
+      "change_pct": 60.5,
+      "market_cap": 4129208893.7717257
     }
   ]
 }
