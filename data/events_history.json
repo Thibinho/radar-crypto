@@ -838,5 +838,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-20",
+    "events": [
+      {
+        "title": "Chosen Brick : le logiciel espion iranien qui se cache dans une fausse IRM pour piéger des dissidents",
+        "link": "https://journalducoin.com/technologies/chosen-brick-logiciel-espion-iranien-cache-fausse-irm-dissidents/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Grayscale’s Zcash ETF files for 3-for-1 forward share split",
+        "link": "https://cointelegraph.com/news/grayscales-zcash-etf-files-for-3-for-1-forward-share-split?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "500 agents et 500 millions de livres : Londres veut traquer l’argent sale partout",
+        "link": "https://journalducoin.com/actualites/agents-millions-londres-traquer-argent-sale/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
