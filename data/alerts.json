@@ -1,56 +1,80 @@
 {
-  "generated_at": "2026-09-20T10:48:47.959927+00:00",
+  "generated_at": "2026-09-21T12:13:52.964949+00:00",
   "movers": [
     {
       "name": "IA",
-      "change_pct": 29.0,
+      "change_pct": 31.5,
       "direction": "up",
-      "market_cap": 26113279337.77
-    },
-    {
-      "name": "Liquid Staking",
-      "change_pct": 23.0,
-      "direction": "up",
-      "market_cap": 2951566350.53
-    },
-    {
-      "name": "DePIN",
-      "change_pct": 20.4,
-      "direction": "up",
-      "market_cap": 9717748600.1
+      "market_cap": 27726206601.93
     },
     {
       "name": "Privacy",
-      "change_pct": 17.5,
+      "change_pct": 26.7,
       "direction": "up",
-      "market_cap": 114152896834.26
+      "market_cap": 123666174043.03
+    },
+    {
+      "name": "Liquid Staking",
+      "change_pct": 22.2,
+      "direction": "up",
+      "market_cap": 3060821931.81
+    },
+    {
+      "name": "Layer 2",
+      "change_pct": 22.1,
+      "direction": "up",
+      "market_cap": 12085457883.34
+    },
+    {
+      "name": "Bitcoin",
+      "change_pct": 20.4,
+      "direction": "up",
+      "market_cap": 7165707919.11
+    },
+    {
+      "name": "DeFi",
+      "change_pct": 16.7,
+      "direction": "up",
+      "market_cap": 95149954858.53
+    },
+    {
+      "name": "Metaverse",
+      "change_pct": 16.7,
+      "direction": "up",
+      "market_cap": 2264078795.37
+    },
+    {
+      "name": "Restaking",
+      "change_pct": 15.6,
+      "direction": "up",
+      "market_cap": 2856331995.85
     }
   ],
   "emerging": [
     {
       "name": "Remora Markets Tokenized rStocks",
-      "change_pct": 24445.9,
-      "market_cap": 117849730.68109383
+      "change_pct": 31590.4,
+      "market_cap": 152695312.01650932
     },
     {
       "name": "Reality Ecosystem",
-      "change_pct": 1123.1,
-      "market_cap": 128734638.14260691
+      "change_pct": 1477.0,
+      "market_cap": 163284914.34364435
     },
     {
       "name": "Binance Wallet IDO",
-      "change_pct": 146.1,
-      "market_cap": 3999161871.8464427
+      "change_pct": 68.7,
+      "market_cap": 2870481934.5017014
     },
     {
-      "name": "AI Applications",
-      "change_pct": 93.6,
-      "market_cap": 4906506802.277579
+      "name": "TimeFi",
+      "change_pct": 63.2,
+      "market_cap": 521767700.10342014
     },
     {
-      "name": "BTCfi Protocol",
-      "change_pct": 57.9,
-      "market_cap": 1081896648.9198825
+      "name": "Data Availability",
+      "change_pct": 59.7,
+      "market_cap": 6484937856.112057
     }
   ]
 }

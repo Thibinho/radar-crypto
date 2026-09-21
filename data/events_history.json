@@ -858,5 +858,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-21",
+    "events": [
+      {
+        "title": "Strategy returns to bitcoin buys, adding $75 million of BTC last week",
+        "link": "https://www.coindesk.com/markets/2026/09/21/strategy-returns-to-bitcoin-buys-adding-usd75-million-of-btc-last-week",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Bitcoin franchit une résistance importante, les altcoins s’alignent – Steady Lads",
+        "link": "https://journalducoin.com/trading/bitcoin-altcoins-steady-lads-4/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Bitcoin repasse les 85 000 dollars : 648 millions de dollars de shorts liquidés",
+        "link": "https://journalducoin.com/actualites/bitcoin-repasse-85-000-dollars/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
