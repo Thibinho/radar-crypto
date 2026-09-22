@@ -373,5 +373,10 @@
     "date": "2026-09-21",
     "value": 70,
     "classification": "Greed"
+  },
+  {
+    "date": "2026-09-22",
+    "value": 78,
+    "classification": "Extreme Greed"
   }
 ]

@@ -1,80 +1,92 @@
 {
-  "generated_at": "2026-09-21T12:13:52.964949+00:00",
+  "generated_at": "2026-09-22T11:07:09.110272+00:00",
   "movers": [
     {
       "name": "IA",
-      "change_pct": 31.5,
+      "change_pct": 39.3,
       "direction": "up",
-      "market_cap": 27726206601.93
+      "market_cap": 28906668068.59
     },
     {
       "name": "Privacy",
-      "change_pct": 26.7,
+      "change_pct": 25.5,
       "direction": "up",
-      "market_cap": 123666174043.03
+      "market_cap": 123045909417.49
+    },
+    {
+      "name": "DePIN",
+      "change_pct": 25.4,
+      "direction": "up",
+      "market_cap": 10548371388.33
     },
     {
       "name": "Liquid Staking",
-      "change_pct": 22.2,
+      "change_pct": 24.8,
       "direction": "up",
-      "market_cap": 3060821931.81
-    },
-    {
-      "name": "Layer 2",
-      "change_pct": 22.1,
-      "direction": "up",
-      "market_cap": 12085457883.34
+      "market_cap": 2989919829.29
     },
     {
       "name": "Bitcoin",
-      "change_pct": 20.4,
+      "change_pct": 23.1,
       "direction": "up",
-      "market_cap": 7165707919.11
+      "market_cap": 7259597835.17
     },
     {
-      "name": "DeFi",
-      "change_pct": 16.7,
+      "name": "Layer 2",
+      "change_pct": 23.1,
       "direction": "up",
-      "market_cap": 95149954858.53
+      "market_cap": 11955766336.07
     },
     {
       "name": "Metaverse",
-      "change_pct": 16.7,
+      "change_pct": 20.7,
       "direction": "up",
-      "market_cap": 2264078795.37
+      "market_cap": 2305253617.49
     },
     {
-      "name": "Restaking",
-      "change_pct": 15.6,
+      "name": "Meme",
+      "change_pct": 16.7,
       "direction": "up",
-      "market_cap": 2856331995.85
+      "market_cap": 46785377250.34
+    },
+    {
+      "name": "DeFi",
+      "change_pct": 16.0,
+      "direction": "up",
+      "market_cap": 93365596571.31
+    },
+    {
+      "name": "SocialFi",
+      "change_pct": 15.4,
+      "direction": "up",
+      "market_cap": 2754120239.47
     }
   ],
   "emerging": [
     {
-      "name": "Remora Markets Tokenized rStocks",
-      "change_pct": 31590.4,
-      "market_cap": 152695312.01650932
-    },
-    {
-      "name": "Reality Ecosystem",
-      "change_pct": 1477.0,
-      "market_cap": 163284914.34364435
+      "name": "Data Availability",
+      "change_pct": 72.2,
+      "market_cap": 6917999768.677036
     },
     {
       "name": "Binance Wallet IDO",
-      "change_pct": 68.7,
-      "market_cap": 2870481934.5017014
+      "change_pct": 70.2,
+      "market_cap": 3013855248.6126814
+    },
+    {
+      "name": "Olympus Pro Ecosystem",
+      "change_pct": 62.4,
+      "market_cap": 119679378.86930305
+    },
+    {
+      "name": "AI Applications",
+      "change_pct": 57.4,
+      "market_cap": 4197771966.098001
     },
     {
       "name": "TimeFi",
-      "change_pct": 63.2,
-      "market_cap": 521767700.10342014
-    },
-    {
-      "name": "Data Availability",
-      "change_pct": 59.7,
-      "market_cap": 6484937856.112057
+      "change_pct": 54.5,
+      "market_cap": 499823788.8214024
     }
   ]
 }

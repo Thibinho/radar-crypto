@@ -878,5 +878,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-22",
+    "events": [
+      {
+        "title": "Bitcoin : le hashrate repart à la hausse, les mineurs de retour",
+        "link": "https://cryptoast.fr/bitcoin-hashrate-rebond-mineurs-cryptoquant/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Jamie Dimon voit les dépenses IA des hyperscalers grimper à 1 000 milliards de dollars en 2027",
+        "link": "https://journalducoin.com/technologies/jamie-dimon-ia-1-000-milliards-dollars-2027/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Bitcoin recovers from Asian-session lows as falling oil price supports risk appetite",
+        "link": "https://www.coindesk.com/markets/2026/09/22/bitcoin-recovers-from-asian-session-lows-as-falling-oil-price-supports-risk-appetite",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
