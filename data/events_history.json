@@ -918,5 +918,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-09-24",
+    "events": [
+      {
+        "title": "Vers une « tokenisation de masse » : la finance du futur s’échangera 24h/24 et 7j/7",
+        "link": "https://cryptoast.fr/tokenisation-masse-finance-futur-echangera-24h24-7j7/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Bitcoin : Donald Trump a misé jusqu’à 100 000 dollars sur Strategy",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-trump-mise-100-000-strategy/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Bitcoin slides to $83,300 as bond yields hit highest level since 2007",
+        "link": "https://www.coindesk.com/markets/2026/09/24/bitcoin-steadies-near-usd84-000-after-bond-yields-hit-a-2007-high",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
