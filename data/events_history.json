@@ -938,5 +938,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-09-25",
+    "events": [
+      {
+        "title": "IBIT options price trading more calmly after Bitcoin rebound",
+        "link": "https://cointelegraph.com/markets/ibit-options-trading-bitcoins-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Shielded Bitcoin : des transactions confidentielles construites sur le modèle du Zcash",
+        "link": "https://cryptoast.fr/shielded-bitcoin-transactions-confidentielles-construites-modele-zcash/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Polymarket contre New York : La bataille des marchés prédictifs fait rage",
+        "link": "https://journalducoin.com/actualites/polymarket-new-york-bataille-marches-predictifs/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]

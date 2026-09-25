@@ -1,68 +1,62 @@
 {
-  "generated_at": "2026-09-24T11:16:38.649773+00:00",
+  "generated_at": "2026-09-25T11:21:27.823813+00:00",
   "movers": [
     {
       "name": "Bitcoin",
-      "change_pct": 44.2,
+      "change_pct": 32.9,
       "direction": "up",
-      "market_cap": 8491995860.0
+      "market_cap": 8680433066.83
     },
     {
       "name": "IA",
-      "change_pct": 26.5,
+      "change_pct": 23.8,
       "direction": "up",
-      "market_cap": 27151527820.26
+      "market_cap": 29704232133.56
     },
     {
       "name": "DePIN",
-      "change_pct": 22.0,
+      "change_pct": 21.1,
       "direction": "up",
-      "market_cap": 10158973797.43
+      "market_cap": 10883052357.8
     },
     {
       "name": "Metaverse",
-      "change_pct": 18.4,
+      "change_pct": 19.7,
       "direction": "up",
-      "market_cap": 2267417568.87
-    },
-    {
-      "name": "Layer 2",
-      "change_pct": 17.9,
-      "direction": "up",
-      "market_cap": 11694359694.34
+      "market_cap": 2451536043.92
     },
     {
       "name": "Liquid Staking",
-      "change_pct": 15.5,
+      "change_pct": 19.1,
       "direction": "up",
-      "market_cap": 2845270906.06
+      "market_cap": 3153730691.96
     }
   ],
   "emerging": [
     {
-      "name": "Data Availability",
-      "change_pct": 45.5,
-      "market_cap": 6631305772.240018
+      "name": "Echo Launchpad",
+      "change_pct": 100.7,
+      "market_cap": 577108451.1106007
     },
     {
-      "name": "Binance Wallet IDO",
-      "change_pct": 43.0,
-      "market_cap": 2718689485.5591083
+      "name": "Arcade Games",
+      "change_pct": 49.6,
+      "market_cap": 130535456.71206802
+    },
+    {
+      "name": "DeFAI",
+      "change_pct": 39.3,
+      "market_cap": 1186324356.9805071
+    },
+    {
+      "name": "Data Availability",
+      "change_pct": 36.8,
+      "market_cap": 7699620451.161617
     },
     {
       "name": "Augmented Reality",
-      "change_pct": 41.2,
-      "market_cap": 62629351.27087696
-    },
-    {
-      "name": "TimeFi",
-      "change_pct": 40.9,
-      "market_cap": 449768689.9853144
-    },
-    {
-      "name": "MMO",
-      "change_pct": 40.8,
-      "market_cap": 65456813.1000042
+      "change_pct": 35.5,
+      "market_cap": 64021764.64945574
     }
   ]
 }
