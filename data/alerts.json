@@ -1,62 +1,56 @@
 {
-  "generated_at": "2026-09-25T11:21:27.823813+00:00",
+  "generated_at": "2026-09-26T10:57:58.765775+00:00",
   "movers": [
     {
       "name": "Bitcoin",
-      "change_pct": 32.9,
+      "change_pct": 29.7,
       "direction": "up",
-      "market_cap": 8680433066.83
-    },
-    {
-      "name": "IA",
-      "change_pct": 23.8,
-      "direction": "up",
-      "market_cap": 29704232133.56
-    },
-    {
-      "name": "DePIN",
-      "change_pct": 21.1,
-      "direction": "up",
-      "market_cap": 10883052357.8
+      "market_cap": 8678634803.94
     },
     {
       "name": "Metaverse",
-      "change_pct": 19.7,
+      "change_pct": 18.8,
       "direction": "up",
-      "market_cap": 2451536043.92
+      "market_cap": 2492748821.0
+    },
+    {
+      "name": "DePIN",
+      "change_pct": 17.9,
+      "direction": "up",
+      "market_cap": 11133899092.48
     },
     {
       "name": "Liquid Staking",
-      "change_pct": 19.1,
+      "change_pct": 16.3,
       "direction": "up",
-      "market_cap": 3153730691.96
+      "market_cap": 3272530203.25
     }
   ],
   "emerging": [
     {
       "name": "Echo Launchpad",
-      "change_pct": 100.7,
-      "market_cap": 577108451.1106007
-    },
-    {
-      "name": "Arcade Games",
-      "change_pct": 49.6,
-      "market_cap": 130535456.71206802
-    },
-    {
-      "name": "DeFAI",
-      "change_pct": 39.3,
-      "market_cap": 1186324356.9805071
-    },
-    {
-      "name": "Data Availability",
-      "change_pct": 36.8,
-      "market_cap": 7699620451.161617
+      "change_pct": 102.5,
+      "market_cap": 594396376.1505508
     },
     {
       "name": "Augmented Reality",
-      "change_pct": 35.5,
-      "market_cap": 64021764.64945574
+      "change_pct": 35.9,
+      "market_cap": 70163329.51137733
+    },
+    {
+      "name": "Binance Launchpool",
+      "change_pct": 35.3,
+      "market_cap": 9556671356.818726
+    },
+    {
+      "name": "Arcade Games",
+      "change_pct": 34.6,
+      "market_cap": 125842408.79556765
+    },
+    {
+      "name": "Parallelized EVM",
+      "change_pct": 31.8,
+      "market_cap": 920528409.0365877
     }
   ]
 }
