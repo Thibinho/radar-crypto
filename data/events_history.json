@@ -978,5 +978,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-09-27",
+    "events": [
+      {
+        "title": "IA : GPT-6 d’OpenAI casse un code allemand de 1918 que personne n’avait déchiffré",
+        "link": "https://journalducoin.com/analyses/gpt-6-openai-code-allemand-1918-dechiffre/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Riot Platforms repays $200M credit facility, releases collateral",
+        "link": "https://cointelegraph.com/news/riot-platforms-repays-200m-credit-facility-releases-collateral?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Tether : Les États-Unis saisissent 84 millions de dollars chez un intermédiaire bancaire",
+        "link": "https://journalducoin.com/actualites/tether-etats-unis-saisissent-millions-intermediaire/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
