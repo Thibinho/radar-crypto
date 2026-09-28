@@ -1,68 +1,44 @@
 {
-  "generated_at": "2026-09-27T11:35:00.152367+00:00",
+  "generated_at": "2026-09-28T13:09:18.127317+00:00",
   "movers": [
     {
-      "name": "Bitcoin",
-      "change_pct": 30.9,
+      "name": "RWA",
+      "change_pct": 45.7,
       "direction": "up",
-      "market_cap": 8678266175.33
+      "market_cap": 92447199105.06
     },
     {
-      "name": "Metaverse",
-      "change_pct": 22.5,
+      "name": "SocialFi",
+      "change_pct": 16.6,
       "direction": "up",
-      "market_cap": 2503217830.42
-    },
-    {
-      "name": "IA",
-      "change_pct": 17.5,
-      "direction": "up",
-      "market_cap": 30693432921.43
-    },
-    {
-      "name": "DePIN",
-      "change_pct": 17.5,
-      "direction": "up",
-      "market_cap": 11415490608.95
-    },
-    {
-      "name": "Privacy",
-      "change_pct": 17.4,
-      "direction": "up",
-      "market_cap": 133978953837.02
-    },
-    {
-      "name": "GameFi",
-      "change_pct": 16.4,
-      "direction": "up",
-      "market_cap": 7198273416.9
+      "market_cap": 3106206142.13
     }
   ],
   "emerging": [
     {
-      "name": "Echo Launchpad",
-      "change_pct": 88.4,
-      "market_cap": 545746658.1799234
+      "name": "Tokenized Assets",
+      "change_pct": 97.0,
+      "market_cap": 46358877018.696495
     },
     {
-      "name": "MMO",
-      "change_pct": 53.8,
-      "market_cap": 79237785.30269685
+      "name": "Echo Launchpad",
+      "change_pct": 54.2,
+      "market_cap": 501537841.3533994
+    },
+    {
+      "name": "VPN",
+      "change_pct": 34.6,
+      "market_cap": 632221797.8003494
     },
     {
       "name": "Augmented Reality",
-      "change_pct": 45.6,
-      "market_cap": 69643449.60469627
+      "change_pct": 31.8,
+      "market_cap": 67239541.93286243
     },
     {
-      "name": "Data Availability",
-      "change_pct": 40.0,
-      "market_cap": 7940070244.714109
-    },
-    {
-      "name": "Parallelized EVM",
-      "change_pct": 39.8,
-      "market_cap": 941409099.7096605
+      "name": "Directed Acyclic Graph (DAG)",
+      "change_pct": 27.2,
+      "market_cap": 6858919680.754245
     }
   ]
 }

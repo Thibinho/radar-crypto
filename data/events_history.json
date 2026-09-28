@@ -998,5 +998,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-28",
+    "events": [
+      {
+        "title": "AI agents could drain cheap bank deposits, Apollo's Torsten Slok warns",
+        "link": "https://www.coindesk.com/markets/2026/09/28/ai-agents-could-drain-cheap-bank-deposits-apollo-s-torsten-slok-warns",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "OpenSea mise sur les cartes Pokémon tokenisées pour relancer les NFT",
+        "link": "https://cryptoast.fr/opensea-cartes-tokenisees-pokemon-one-piece/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Des agents IA attribués à OpenAI ont saturé un site public de l’ONU : plus de 16 000 requêtes",
+        "link": "https://journalducoin.com/technologies/agents-ia-openai-onu/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
