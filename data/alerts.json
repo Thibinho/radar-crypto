@@ -1,44 +1,23 @@
 {
-  "generated_at": "2026-09-28T13:09:18.127317+00:00",
+  "generated_at": "2026-09-29T12:18:46.385182+00:00",
   "movers": [
     {
-      "name": "RWA",
-      "change_pct": 45.7,
-      "direction": "up",
-      "market_cap": 92447199105.06
-    },
-    {
       "name": "SocialFi",
-      "change_pct": 16.6,
+      "change_pct": 18.0,
       "direction": "up",
-      "market_cap": 3106206142.13
+      "market_cap": 3249015303.17
     }
   ],
   "emerging": [
     {
-      "name": "Tokenized Assets",
-      "change_pct": 97.0,
-      "market_cap": 46358877018.696495
-    },
-    {
       "name": "Echo Launchpad",
-      "change_pct": 54.2,
-      "market_cap": 501537841.3533994
+      "change_pct": 62.7,
+      "market_cap": 497622366.52023286
     },
     {
-      "name": "VPN",
-      "change_pct": 34.6,
-      "market_cap": 632221797.8003494
-    },
-    {
-      "name": "Augmented Reality",
-      "change_pct": 31.8,
-      "market_cap": 67239541.93286243
-    },
-    {
-      "name": "Directed Acyclic Graph (DAG)",
-      "change_pct": 27.2,
-      "market_cap": 6858919680.754245
+      "name": "Arcade Games",
+      "change_pct": 26.4,
+      "market_cap": 122513118.03924517
     }
   ]
 }

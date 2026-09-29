@@ -1018,5 +1018,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-29",
+    "events": [
+      {
+        "title": "Découvrez ces 2 outils qui permettent de retrouver vos cryptos oubliées",
+        "link": "https://cryptoast.fr/decouvrez-2-outils-permettent-retrouver-cryptos-oubliees/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "ECB puts AI agent payments on the digital euro drawing board",
+        "link": "https://cointelegraph.com/news/ecb-private-firms-ai-agents-digital-euro?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Du milliard à zéro : il oublie ses actions Nvidia pendant plus de 30 ans",
+        "link": "https://journalducoin.com/actualites/nvidia-oubli-milliard-dollars-fond-tiroir/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
