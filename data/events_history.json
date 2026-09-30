@@ -1038,5 +1038,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-09-30",
+    "events": [
+      {
+        "title": "Le Kazakhstan veut faire tourner ses mineurs de Bitcoin au gaz torché de ses champs pétroliers",
+        "link": "https://journalducoin.com/bitcoin/kazakhstan-mineurs-bitcoin-gaz/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Altcoin exchange deposit count jumps 160% in 2 weeks",
+        "link": "https://cointelegraph.com/markets/altcoin-exchange-deposits-spike-160-in-two-weeks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "A stronger dollar is a weaker threat to bitcoin than traders think",
+        "link": "https://www.coindesk.com/daybook-us/2026/09/30/a-stronger-dollar-is-a-weaker-threat-to-bitcoin-than-traders-think",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]

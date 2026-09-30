@@ -1,23 +1,18 @@
 {
-  "generated_at": "2026-09-29T12:18:46.385182+00:00",
+  "generated_at": "2026-09-30T12:04:01.391483+00:00",
   "movers": [
     {
       "name": "SocialFi",
-      "change_pct": 18.0,
+      "change_pct": 26.6,
       "direction": "up",
-      "market_cap": 3249015303.17
+      "market_cap": 3347644429.61
     }
   ],
   "emerging": [
     {
       "name": "Echo Launchpad",
-      "change_pct": 62.7,
-      "market_cap": 497622366.52023286
-    },
-    {
-      "name": "Arcade Games",
-      "change_pct": 26.4,
-      "market_cap": 122513118.03924517
+      "change_pct": 54.2,
+      "market_cap": 486374531.04516345
     }
   ]
 }
