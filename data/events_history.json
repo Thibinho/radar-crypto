@@ -1058,5 +1058,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-10-01",
+    "events": [
+      {
+        "title": "Crypto : Fundsz et son algorithme fantôme condamnés à payer 31 millions de dollars",
+        "link": "https://journalducoin.com/actualites/crypto-fundsz-condamnes-payer-millions/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Live Updates: Bitcoin flat near $84,000 after closing out best quarter since 2024",
+        "link": "https://www.coindesk.com/tech/2026/10/01/live-updates-bitcoin-flat-near-usd84-000-after-best-quarter-since-2024",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Illinois agrees to six-month delay of crypto tax as industry continues court battle",
+        "link": "https://www.coindesk.com/policy/2026/09/30/illinois-agrees-to-six-month-delay-of-crypto-tax-as-industry-continues-court-battle",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
