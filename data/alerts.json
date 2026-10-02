@@ -1,39 +1,34 @@
 {
-  "generated_at": "2026-10-01T12:37:29.133118+00:00",
+  "generated_at": "2026-10-02T12:01:30.804022+00:00",
   "movers": [
     {
       "name": "RWA",
-      "change_pct": 54.6,
+      "change_pct": 40.9,
       "direction": "up",
-      "market_cap": 94158400175.59
+      "market_cap": 93935818141.6
     },
     {
       "name": "SocialFi",
-      "change_pct": 41.6,
+      "change_pct": 32.3,
       "direction": "up",
-      "market_cap": 3367831219.05
+      "market_cap": 3412139419.65
     }
   ],
   "emerging": [
     {
       "name": "Bridged DAI",
-      "change_pct": 490.8,
-      "market_cap": 83373944.18615873
+      "change_pct": 470.4,
+      "market_cap": 80489023.2195983
     },
     {
       "name": "Tokenized Assets",
-      "change_pct": 107.2,
-      "market_cap": 47752601785.002335
+      "change_pct": 106.1,
+      "market_cap": 47748950466.738846
     },
     {
-      "name": "Echo Launchpad",
-      "change_pct": 65.0,
-      "market_cap": 474483778.6707308
-    },
-    {
-      "name": "Tourism",
-      "change_pct": 30.7,
-      "market_cap": 64009827.06487663
+      "name": "Simulation Games",
+      "change_pct": 34.4,
+      "market_cap": 448881606.3277155
     }
   ]
 }

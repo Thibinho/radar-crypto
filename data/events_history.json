@@ -1078,5 +1078,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-10-02",
+    "events": [
+      {
+        "title": "MiCA : « La réglementation est le ticket d’entrée sur un marché »",
+        "link": "https://cryptoast.fr/mica-rachats-societes-crypto-julie-bader-de-gaulle-fleurance/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Crypto : les USA sanctionnent A7 Network, le réseau bancaire clandestin russe à 17 milliards de dollars",
+        "link": "https://journalducoin.com/actualites/crypto-washington-sanctionne-a7-network/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "BNB Chain crosses $1B in tokenized stocks, ETFs as market hits $3.7B",
+        "link": "https://cointelegraph.com/markets/bnb-chain-1-billion-tokenized-assets-market-3-7-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
