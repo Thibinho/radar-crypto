@@ -1,34 +1,33 @@
 {
-  "generated_at": "2026-10-03T11:14:29.655620+00:00",
+  "generated_at": "2026-10-04T11:54:18.562180+00:00",
   "movers": [
     {
-      "name": "RWA",
-      "change_pct": -23.8,
-      "direction": "down",
-      "market_cap": 68733900697.64
-    },
-    {
       "name": "SocialFi",
-      "change_pct": 23.2,
+      "change_pct": 33.7,
       "direction": "up",
-      "market_cap": 3304764430.25
+      "market_cap": 3597010818.63
     }
   ],
   "emerging": [
     {
       "name": "Bridged DAI",
-      "change_pct": 427.9,
-      "market_cap": 74493019.99028255
-    },
-    {
-      "name": "Tourism",
-      "change_pct": 51.7,
-      "market_cap": 73545595.28140813
+      "change_pct": 431.4,
+      "market_cap": 74986063.32526302
     },
     {
       "name": "Simulation Games",
-      "change_pct": 30.9,
-      "market_cap": 442466479.50983125
+      "change_pct": 36.2,
+      "market_cap": 458168724.7836233
+    },
+    {
+      "name": "Tourism",
+      "change_pct": 34.3,
+      "market_cap": 66013970.59365025
+    },
+    {
+      "name": "Synthetic Dollar",
+      "change_pct": 30.4,
+      "market_cap": 1938131800.3788846
     }
   ]
 }

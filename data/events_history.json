@@ -1118,5 +1118,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-10-04",
+    "events": [
+      {
+        "title": "La banque centrale européenne veut se mettre « onchain »",
+        "link": "https://cryptoast.fr/bce-trois-scenarios-monnaie-banque-centrale-blockchain/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Les actualités Bitcoin et cryptomonnaies de la semaine – L’Hebdo Crypto #349",
+        "link": "https://journalducoin.com/actualites/actualites-bitcoin-cryptomonnaies-semaine-hebdo-crypto-349/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Crypto : les banques américaines contre-attaquent",
+        "link": "https://cryptoast.fr/banques-americaines-attaquent-occ-licences-crypto/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
