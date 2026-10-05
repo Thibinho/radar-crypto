@@ -1138,5 +1138,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-10-05",
+    "events": [
+      {
+        "title": "Analyse du Bitcoin (BTC) – le seuil qui ouvrirait la voie vers 92 000 $",
+        "link": "https://cryptoast.fr/analyse-du-bitcoin-btc-le-seuil-qui-ouvrirait-la-voie-vers-92-000/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Stripe to expand stablecoin cards to over 100 countries by the end of the year",
+        "link": "https://www.coindesk.com/business/2026/10/01/stripe-to-expand-stablecoin-cards-to-over-100-countries-by-the-end-of-the-year",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Aleph Alpha : un concurrent européen au fleuron français Mistral AI ?",
+        "link": "https://cryptoast.fr/aleph-alpha-concurrent-europeen-fleuron-francais-mistral-ai/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
