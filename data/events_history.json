@@ -1158,5 +1158,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-10-06",
+    "events": [
+      {
+        "title": "Self-styled 'Godfather' gets 6 years in prison for $37 million Meta fraud scheme",
+        "link": "https://www.coindesk.com/policy/2026/10/06/self-styled-crypto-godfather-gets-more-than-6-years-in-usd37-million-meta-fraud-case",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "La start-up française Spiko lève 90 millions de dollars en série B",
+        "link": "https://cryptoast.fr/spiko-leve-90-millions-dollars-serie-b-nea/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Épargne, cashback et paiements : OKX dévoile son application Money",
+        "link": "https://journalducoin.com/actualites/epargne-cashback-paiements-okx-application-money/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]

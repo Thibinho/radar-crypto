@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-10-05T13:51:49.280845+00:00",
+  "generated_at": "2026-10-06T12:55:08.927150+00:00",
   "movers": [
     {
-      "name": "SocialFi",
-      "change_pct": 19.8,
-      "direction": "up",
-      "market_cap": 3720298402.11
+      "name": "RWA",
+      "change_pct": -27.1,
+      "direction": "down",
+      "market_cap": 69329982408.43
     }
   ],
   "emerging": [
     {
       "name": "Bridged DAI",
-      "change_pct": 417.0,
-      "market_cap": 72952952.55987637
+      "change_pct": 406.2,
+      "market_cap": 71439013.71057875
     },
     {
-      "name": "Simulation Games",
-      "change_pct": 34.0,
-      "market_cap": 436493251.6814424
+      "name": "Legal",
+      "change_pct": 120.9,
+      "market_cap": 66161425.11256846
     },
     {
       "name": "Synthetic Dollar",
       "change_pct": 30.0,
-      "market_cap": 1937911902.545991
+      "market_cap": 1937773877.9869454
     },
     {
-      "name": "Arcade Games",
-      "change_pct": 25.4,
-      "market_cap": 144651635.44381446
+      "name": "Simulation Games",
+      "change_pct": 26.6,
+      "market_cap": 420549231.04745495
     }
   ]
 }
