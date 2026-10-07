@@ -1178,5 +1178,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-10-07",
+    "events": [
+      {
+        "title": "Ether is about to lose a steady buyer as Tom Lee says Bitmine will stop token purchases",
+        "link": "https://www.coindesk.com/markets/2026/10/07/ether-is-about-to-lose-a-steady-buyer-as-tom-lee-says-bitmine-will-stop-token-purchases",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Crypto trading giant GSR's new vault business is a $100M bet on onchain credit",
+        "link": "https://www.coindesk.com/business/2026/10/07/crypto-trading-giant-gsr-s-new-vault-business-is-a-usd100m-bet-on-onchain-credit",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "CIA : 298 lingots d’or saisis chez un ex-cadre, 194 M$ détournés",
+        "link": "https://journalducoin.com/economie/cia-ex-cadre-plaide-coupable-fraude-194-millions-lingots-or/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
