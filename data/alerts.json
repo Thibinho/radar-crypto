@@ -1,31 +1,26 @@
 {
-  "generated_at": "2026-10-07T12:49:20.150607+00:00",
+  "generated_at": "2026-10-08T12:57:57.437127+00:00",
   "movers": [],
   "emerging": [
     {
-      "name": "Bridged DAI",
-      "change_pct": 406.3,
-      "market_cap": 71446499.41538307
-    },
-    {
-      "name": "Legal",
-      "change_pct": 133.3,
-      "market_cap": 66121331.29473214
-    },
-    {
       "name": "TokenFi Launchpad",
-      "change_pct": 52.5,
-      "market_cap": 287780602.7703007
+      "change_pct": 56.5,
+      "market_cap": 288436296.6957839
     },
     {
       "name": "RPG",
-      "change_pct": 36.5,
-      "market_cap": 369611860.762609
+      "change_pct": 39.5,
+      "market_cap": 373211813.5344623
+    },
+    {
+      "name": "Simulation Games",
+      "change_pct": 33.1,
+      "market_cap": 430083018.8690604
     },
     {
       "name": "Synthetic Dollar",
-      "change_pct": 30.0,
-      "market_cap": 1931602906.3803952
+      "change_pct": 30.9,
+      "market_cap": 1944904579.7834926
     }
   ]
 }

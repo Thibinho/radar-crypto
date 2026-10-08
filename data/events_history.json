@@ -1198,5 +1198,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-10-08",
+    "events": [
+      {
+        "title": "Sui’s Hashi to launch with $500M in Bitcoin finance commitments",
+        "link": "https://cointelegraph.com/news/sui-hashi-bitcoin-finance-commitments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Exit tax : LFI et les Écologistes veulent durcir les règles contre l'exil fiscal",
+        "link": "https://cryptoast.fr/exit-tax-15-ans-budget-2027-amendements-lfi/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Crypto : Sui et Alibaba Cloud préparent les paiements des agents IA en stablecoins",
+        "link": "https://journalducoin.com/actualites/sui-alibaba-cloud-paiements-agents-ia-stablecoins/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
