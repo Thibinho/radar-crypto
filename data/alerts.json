@@ -1,26 +1,18 @@
 {
-  "generated_at": "2026-10-08T12:57:57.437127+00:00",
-  "movers": [],
+  "generated_at": "2026-10-09T12:44:16.707679+00:00",
+  "movers": [
+    {
+      "name": "RWA",
+      "change_pct": -29.3,
+      "direction": "down",
+      "market_cap": 66449538564.53
+    }
+  ],
   "emerging": [
     {
-      "name": "TokenFi Launchpad",
-      "change_pct": 56.5,
-      "market_cap": 288436296.6957839
-    },
-    {
-      "name": "RPG",
-      "change_pct": 39.5,
-      "market_cap": 373211813.5344623
-    },
-    {
-      "name": "Simulation Games",
-      "change_pct": 33.1,
-      "market_cap": 430083018.8690604
-    },
-    {
-      "name": "Synthetic Dollar",
-      "change_pct": 30.9,
-      "market_cap": 1944904579.7834926
+      "name": "Tokenized Pre-IPO Stocks",
+      "change_pct": 32.2,
+      "market_cap": 83534437.87203883
     }
   ]
 }

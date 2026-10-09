@@ -1218,5 +1218,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-10-09",
+    "events": [
+      {
+        "title": "DWF Labs subsidiaries sue BitGo for $141 million over alleged token lock-up breach",
+        "link": "https://www.coindesk.com/policy/2026/10/09/dwf-labs-subsidiaries-sue-bitgo-for-usd141-million-over-alleged-token-lock-up-breach",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Bitcoin : pourquoi les taux obligataires pourraient compter plus que la Fed ?",
+        "link": "https://cryptoast.fr/bitcoin-taux-obligations-americaines-fed-coinshares/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Tether : un sénateur démocrate enquête sur les liens avec Cantor Fitzgerald",
+        "link": "https://journalducoin.com/actualites/tether-senateur-blumenthal-cantor-fitzgerald/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
