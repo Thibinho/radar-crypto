@@ -1,18 +1,11 @@
 {
-  "generated_at": "2026-10-09T12:44:16.707679+00:00",
-  "movers": [
-    {
-      "name": "RWA",
-      "change_pct": -29.3,
-      "direction": "down",
-      "market_cap": 66449538564.53
-    }
-  ],
+  "generated_at": "2026-10-10T12:02:53.422572+00:00",
+  "movers": [],
   "emerging": [
     {
       "name": "Tokenized Pre-IPO Stocks",
-      "change_pct": 32.2,
-      "market_cap": 83534437.87203883
+      "change_pct": 30.0,
+      "market_cap": 82874529.78055221
     }
   ]
 }
