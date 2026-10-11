@@ -1,8 +1,86 @@
 {
-  "generated_at": "2026-10-10T12:02:56.436967+00:00",
+  "generated_at": "2026-10-11T12:16:07.215825+00:00",
   "items": [
     {
-      "title": "One year after 10/10, bitcoin and ether liquidity have rebuilt, but other altcoins still face risks",
+      "title": "S&P 500 : 10 entreprises pèsent 41 % de l’indice",
+      "link": "https://journalducoin.com/economie/sp-500-concentration-41-cents-dix-actions-etf/",
+      "source": "Journal du Coin",
+      "published": "2026-10-11T12:00:00+00:00"
+    },
+    {
+      "title": "Ledger, Coldcard… Les hardware wallets sont-ils encore sûrs en 2026 ?",
+      "link": "https://cryptoast.fr/hardware-wallets-vague-attaques-2026/",
+      "source": "Cryptoast",
+      "published": "2026-10-11T11:09:29+00:00"
+    },
+    {
+      "title": "Coldcard says it’s investigating how phishing link appeared on its X account",
+      "link": "https://cointelegraph.com/news/coldcard-says-its-investigating-how-phishing-link-appeared-on-its-x-account?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-10-11T10:22:44+00:00"
+    },
+    {
+      "title": "Nasdaq : la tokenisation pourrait libérer des dizaines de milliards de dollars de collatéral",
+      "link": "https://journalducoin.com/economie/nasdaq-tokenisation-milliards-dollars-collateral/",
+      "source": "Journal du Coin",
+      "published": "2026-10-11T10:00:00+00:00"
+    },
+    {
+      "title": "Ledger confirms unauthorized hardware implant; losses may exceed $86M",
+      "link": "https://cointelegraph.com/news/ledger-confirms-unauthorized-hardware-implant-losses-may-exceed-86m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-10-11T09:01:51+00:00"
+    },
+    {
+      "title": "Or : les banques centrales achètent 39 tonnes en août, la Chine en tête",
+      "link": "https://journalducoin.com/economie/or-les-banques-centrales-achetent-39-tonnes-en-aout-la-chine-en-tete/",
+      "source": "Journal du Coin",
+      "published": "2026-10-11T08:00:00+00:00"
+    },
+    {
+      "title": "CFTC proposals aimed at separating prediction markets from casino gambling",
+      "link": "https://cointelegraph.com/news/cftc-proposals-aimed-at-separating-prediction-markets-from-casino-gambling?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-10-11T07:44:51+00:00"
+    },
+    {
+      "title": "Quand le XRP battra-t-il son record ? ChatGPT et 5 autres IA donnent une date",
+      "link": "https://cryptoast.fr/xrp-record-prediction-ia-chatgpt/",
+      "source": "Cryptoast",
+      "published": "2026-10-11T07:00:56+00:00"
+    },
+    {
+      "title": "Chine : Pékin veut un réseau blockchain national, toujours sans Bitcoin",
+      "link": "https://journalducoin.com/economie/chine-pekin-reseau-blockchain-national/",
+      "source": "Journal du Coin",
+      "published": "2026-10-11T07:00:00+00:00"
+    },
+    {
+      "title": "Bitcoin à 83 000 $ : les ETF perdent 681 M$ un an après le krach",
+      "link": "https://journalducoin.com/bitcoin/bitcoin-83-000-dollars-etf-681-millions-krach-10-octobre/",
+      "source": "Journal du Coin",
+      "published": "2026-10-11T06:00:00+00:00"
+    },
+    {
+      "title": "Budget 2027 : cinq amendements crypto adoptés, puis le texte rejeté",
+      "link": "https://journalducoin.com/actualites/fiscalite-crypto-budget-2027-bilan-commission-finances/",
+      "source": "Journal du Coin",
+      "published": "2026-10-10T16:00:00+00:00"
+    },
+    {
+      "title": "Ethereum : Vitalik Buterin confie son ENS à un agent IA et fixe un cap à deux ans",
+      "link": "https://journalducoin.com/ethereum/ethereum-vitalik-buterin-agent-ia-ens-deux-ans/",
+      "source": "Journal du Coin",
+      "published": "2026-10-10T14:00:00+00:00"
+    },
+    {
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-10-10T12:30:00+00:00"
+    },
+    {
+      "title": "One year after 10/10 flash crash, bitcoin and ether liquidity have rebuilt, but altcoins still face risks",
       "link": "https://www.coindesk.com/markets/2026/10/10/one-year-after-10-10-bitcoin-and-ether-liquidity-have-rebuilt-but-other-altcoins-still-face-risks",
       "source": "CoinDesk",
       "published": "2026-10-10T12:00:00+00:00"
@@ -18,84 +96,6 @@
       "link": "https://journalducoin.com/defi/chainlink-ccip-vault-adapters-aave-lombard-maple-adoptent-depot-cross-chain/",
       "source": "Journal du Coin",
       "published": "2026-10-10T12:00:00+00:00"
-    },
-    {
-      "title": "Agressions et enlèvements crypto : comment se protéger ?",
-      "link": "https://cryptoast.fr/agressions-enlevements-crypto-comment-proteger-conseils/",
-      "source": "Cryptoast",
-      "published": "2026-10-10T11:55:31+00:00"
-    },
-    {
-      "title": "Justin Sun says Tron’s post-quantum cryptography has gone live on testnet",
-      "link": "https://cointelegraph.com/news/justin-sun-says-trons-post-quantum-cryptography-has-gone-live-on-testnet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-10-10T11:52:14+00:00"
-    },
-    {
-      "title": "Cardano (ADA) : quel est le prochain objectif de prix ? Analyse technique",
-      "link": "https://cryptoast.fr/cardano-ada-quel-est-le-prochain-objectif-de-prix-analyse-technique/",
-      "source": "Cryptoast",
-      "published": "2026-10-10T11:30:16+00:00"
-    },
-    {
-      "title": "Bitcoin's $19 billion wake-up call: One-year later, has crypto learned anything?",
-      "link": "https://www.coindesk.com/markets/2026/10/10/bitcoin-s-usd19-billion-wake-up-call-one-year-later-has-crypto-learned-anything",
-      "source": "CoinDesk",
-      "published": "2026-10-10T11:00:00+00:00"
-    },
-    {
-      "title": "Ledger : Mark Karpelès dit avoir trouvé une carte SIM espionne dans un Nano X",
-      "link": "https://cryptoast.fr/ledger-implant-carte-sim-mark-karpeles-cryptobilis/",
-      "source": "Cryptoast",
-      "published": "2026-10-10T10:00:56+00:00"
-    },
-    {
-      "title": "Web3 : 5 ans après l’euphorie, qu’est-ce qui reste vraiment ?",
-      "link": "https://journalducoin.com/actualites/web3-5-ans-apres-leuphorie/",
-      "source": "Journal du Coin",
-      "published": "2026-10-10T10:00:00+00:00"
-    },
-    {
-      "title": "Telegram : une faille permettait de voler vos bitcoins et cryptos",
-      "link": "https://cryptoast.fr/faille-telegram-desktop-piratage-compte-vol-fichiers/",
-      "source": "Cryptoast",
-      "published": "2026-10-10T09:30:29+00:00"
-    },
-    {
-      "title": "Tech chief says EU can fend off rogue AI risk: Report",
-      "link": "https://cointelegraph.com/news/tech-chief-says-eu-can-fend-off-rogue-ai-risk-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-10-10T08:41:06+00:00"
-    },
-    {
-      "title": "XRP Ledger : une faille vieille de 10 ans pouvait créer des XRP à l'infini",
-      "link": "https://cryptoast.fr/xrp-ledger-bug-creer-xrp-infini-corrige-ripple/",
-      "source": "Cryptoast",
-      "published": "2026-10-10T08:24:17+00:00"
-    },
-    {
-      "title": "Sam Altman-backed Bitcoin life insurer, Meanwhile, raises more funds",
-      "link": "https://cointelegraph.com/news/sam-altman-backed-bitcoin-life-insurer-meanwhile-raises-more-funds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-10-10T07:10:43+00:00"
-    },
-    {
-      "title": "Ledger : le revendeur CryptoBilis avait changé de propriétaire avant les vols",
-      "link": "https://journalducoin.com/bitcoin/ledger-cryptobilis-revendeur-rachete-avant-vols/",
-      "source": "Journal du Coin",
-      "published": "2026-10-10T07:00:00+00:00"
-    },
-    {
-      "title": "Que faire si je suis victime d'une agression liée à la crypto ?",
-      "link": "https://cryptoast.fr/que-faire-victime-agression-enlevement-crypto/",
-      "source": "Cryptoast",
-      "published": "2026-10-10T06:48:21+00:00"
-    },
-    {
-      "title": "IA contre Bitcoin : Google s’offre 890 MW de nucléaire",
-      "link": "https://journalducoin.com/bitcoin/google-constellation-nucleaire-ia-mineurs-bitcoin/",
-      "source": "Journal du Coin",
-      "published": "2026-10-10T06:00:00+00:00"
     }
   ]
 }

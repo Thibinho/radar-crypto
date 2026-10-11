@@ -1258,5 +1258,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-10-11",
+    "events": [
+      {
+        "title": "S&P 500 : 10 entreprises pèsent 41 % de l’indice",
+        "link": "https://journalducoin.com/economie/sp-500-concentration-41-cents-dix-actions-etf/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Ledger, Coldcard… Les hardware wallets sont-ils encore sûrs en 2026 ?",
+        "link": "https://cryptoast.fr/hardware-wallets-vague-attaques-2026/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Coldcard says it’s investigating how phishing link appeared on its X account",
+        "link": "https://cointelegraph.com/news/coldcard-says-its-investigating-how-phishing-link-appeared-on-its-x-account?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
