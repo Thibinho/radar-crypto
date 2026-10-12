@@ -1,21 +1,11 @@
 {
-  "generated_at": "2026-10-11T12:16:04.168623+00:00",
+  "generated_at": "2026-10-12T14:40:14.090731+00:00",
   "movers": [],
   "emerging": [
     {
       "name": "Trading Bots",
-      "change_pct": 37.5,
-      "market_cap": 70539202.57697067
-    },
-    {
-      "name": "SideChain",
-      "change_pct": 27.0,
-      "market_cap": 2120931636.172954
-    },
-    {
-      "name": "Education",
-      "change_pct": 26.2,
-      "market_cap": 71431986.76408656
+      "change_pct": 36.9,
+      "market_cap": 69882564.24746564
     }
   ]
 }

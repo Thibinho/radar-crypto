@@ -1278,5 +1278,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-10-12",
+    "events": [
+      {
+        "title": "XRP treasury Evernorth’s shares rise 5% at Nasdaq opening print",
+        "link": "https://cointelegraph.com/news/xrp-treasury-evernorth-rise-nasdaq-opening?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Ledger implant tests Bitcoin ETFs as safer custodial solutions than hardware wallets",
+        "link": "https://cointelegraph.com/news/ledger-implant-bitcoin-etfs-hardware-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Fuites de données et sécurité des détenteurs de crypto : L’Adan alerte la CNIL",
+        "link": "https://journalducoin.com/actualites/fuites-donnees-crypto-adan-alerte-cnil/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
