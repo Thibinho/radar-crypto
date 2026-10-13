@@ -1298,5 +1298,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-10-13",
+    "events": [
+      {
+        "title": "Is Bitcoin kidding itself about the Lightning Network?",
+        "link": "https://cointelegraph.com/magazine/is-bitcoin-kidding-itself-about-the-lightning-network?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Here’s what happened in crypto today",
+        "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Digital cash offers ‘cash-like privacy,’ but bank data breaches threaten users: BIS",
+        "link": "https://cointelegraph.com/news/bis-digital-cash-privacy-bank-data-breaches?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
