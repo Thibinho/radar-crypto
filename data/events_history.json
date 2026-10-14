@@ -1318,5 +1318,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-10-14",
+    "events": [
+      {
+        "title": "Here's how analysts see U.S. inflation influencing bitcoin",
+        "link": "https://www.coindesk.com/daybook-us/2026/10/14/here-s-how-analysts-see-u-s-inflation-influencing-bitcoin",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Dutch central bank grants Qivalis e-money license for MiCA-compliant euro token",
+        "link": "https://www.coindesk.com/policy/2026/10/14/dutch-regulator-approves-qivalis-as-electronic-money-institution-under-mica-rules",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Kraken annonce le rachat d'une banque européenne",
+        "link": "https://cryptoast.fr/kraken-annonce-rachat-banque-europeenne/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
