@@ -1338,5 +1338,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-10-15",
+    "events": [
+      {
+        "title": "Bitcoin holds above $80,000 as Asian stock rout drags altcoins lower",
+        "link": "https://www.coindesk.com/markets/2026/10/15/bitcoin-holds-above-usd80-000-as-an-asian-stock-rout-drags-altcoins-lower",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "White House crypto council chief Patrick Witt steps down",
+        "link": "https://cointelegraph.com/news/white-house-crypto-council-director-steps-down?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Ethereum, Solana et BNB Chain : Les 3 blockchains favorites pour la tokenisation d’après Grayscale",
+        "link": "https://journalducoin.com/ethereum/ethereum-solana-grayscale-infrastructures-tokenisation/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]

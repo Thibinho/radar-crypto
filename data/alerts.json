@@ -1,34 +1,29 @@
 {
-  "generated_at": "2026-10-14T11:22:21.251915+00:00",
+  "generated_at": "2026-10-15T10:59:24.201847+00:00",
   "movers": [
     {
       "name": "RWA",
-      "change_pct": -27.8,
+      "change_pct": -29.9,
       "direction": "down",
-      "market_cap": 65981253002.47
+      "market_cap": 63398786598.83
     },
     {
       "name": "SocialFi",
-      "change_pct": -18.3,
+      "change_pct": -22.6,
       "direction": "down",
-      "market_cap": 2943164303.96
+      "market_cap": 2558968126.39
     }
   ],
   "emerging": [
     {
       "name": "Synthetic Dollar",
-      "change_pct": 253.2,
-      "market_cap": 6823091299.258402
+      "change_pct": 253.4,
+      "market_cap": 6873217851.840638
     },
     {
       "name": "Trading Bots",
-      "change_pct": 42.7,
-      "market_cap": 66061283.11365991
-    },
-    {
-      "name": "Tokenized Pre-IPO Stocks",
-      "change_pct": 26.5,
-      "market_cap": 83708531.24864677
+      "change_pct": 41.1,
+      "market_cap": 67031875.62330049
     }
   ]
 }
