@@ -1,44 +1,39 @@
 {
-  "generated_at": "2026-10-16T10:54:04.915298+00:00",
+  "generated_at": "2026-10-17T10:16:52.012805+00:00",
   "movers": [
     {
       "name": "RWA",
-      "change_pct": 36.2,
+      "change_pct": 32.7,
       "direction": "up",
-      "market_cap": 90526147158.25
+      "market_cap": 89120764836.61
     },
     {
       "name": "SocialFi",
-      "change_pct": -17.0,
+      "change_pct": -15.8,
       "direction": "down",
-      "market_cap": 2670672607.55
+      "market_cap": 2738025813.65
     }
   ],
   "emerging": [
     {
       "name": "Synthetic Dollar",
-      "change_pct": 252.8,
-      "market_cap": 6830095329.508944
+      "change_pct": 251.9,
+      "market_cap": 6815809802.8061905
     },
     {
       "name": "Tokenized Assets",
-      "change_pct": 101.7,
-      "market_cap": 48475644720.38757
+      "change_pct": 102.5,
+      "market_cap": 48464012473.758316
     },
     {
-      "name": "Trading Bots",
-      "change_pct": 52.8,
-      "market_cap": 69874260.89036001
+      "name": "bStocks Ecosystem",
+      "change_pct": 27.4,
+      "market_cap": 1025391246.7304581
     },
     {
-      "name": "Charity",
-      "change_pct": 41.4,
-      "market_cap": 59639616.51066353
-    },
-    {
-      "name": "Farcaster Ecosystem",
-      "change_pct": 33.7,
-      "market_cap": 65583177.14629721
+      "name": "Modular Blockchain",
+      "change_pct": 25.8,
+      "market_cap": 881544357.6805996
     }
   ]
 }

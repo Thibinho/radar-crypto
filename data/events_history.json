@@ -1378,5 +1378,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-10-17",
+    "events": [
+      {
+        "title": "Circle’s Allaire says stablecoin issuer looking to enter 40 developing markets: Report",
+        "link": "https://cointelegraph.com/news/circles-allaire-says-stablecoin-issuer-looking-to-enter-40-developing-markets-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Tokenisation sur Solana : Les RWA passent de 700 millions à 4,3 milliards de dollars en un an",
+        "link": "https://journalducoin.com/actualites/tokenisation-solana-rwa-millions-a-milliards/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Lagarde says euro-area economy is resilient, digital euro imminent",
+        "link": "https://cointelegraph.com/news/lagarde-says-euro-area-economy-is-resilient-digital-euro-imminent?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
