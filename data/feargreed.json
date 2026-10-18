@@ -503,5 +503,10 @@
     "date": "2026-10-17",
     "value": 55,
     "classification": "Greed"
+  },
+  {
+    "date": "2026-10-18",
+    "value": 53,
+    "classification": "Neutral"
   }
 ]
