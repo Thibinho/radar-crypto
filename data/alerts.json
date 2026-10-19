@@ -1,23 +1,34 @@
 {
-  "generated_at": "2026-10-18T10:32:22.362353+00:00",
+  "generated_at": "2026-10-19T12:24:55.041017+00:00",
   "movers": [
     {
-      "name": "SocialFi",
-      "change_pct": -19.9,
+      "name": "RWA",
+      "change_pct": -30.1,
       "direction": "down",
-      "market_cap": 2604586145.25
+      "market_cap": 63658234805.64
+    },
+    {
+      "name": "SocialFi",
+      "change_pct": -16.4,
+      "direction": "down",
+      "market_cap": 2683166266.59
     }
   ],
   "emerging": [
     {
       "name": "Synthetic Dollar",
-      "change_pct": 251.1,
-      "market_cap": 6799559344.667483
+      "change_pct": 251.3,
+      "market_cap": 6800730396.363434
+    },
+    {
+      "name": "Stonk Ecosystem",
+      "change_pct": 44.9,
+      "market_cap": 55088764.507127695
     },
     {
       "name": "bStocks Ecosystem",
-      "change_pct": 26.4,
-      "market_cap": 1018631972.4776907
+      "change_pct": 32.1,
+      "market_cap": 1067924595.3841124
     }
   ]
 }

@@ -1418,5 +1418,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "events": [
+      {
+        "title": "Cardano founder Charles Hoskinson is building a new programming language for the network",
+        "link": "https://www.coindesk.com/tech/2026/10/19/cardano-founder-charles-hoskinson-is-building-a-new-programming-language-for-the-network",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "727 000 dollars envolés vers Ethereum : Le bridge de Cysic piraté",
+        "link": "https://journalducoin.com/defi/crypto-bridge-cysic-pirate-ethereum/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "World Liberty’s USD1 stablecoin sheds $400M in market cap in two weeks",
+        "link": "https://cointelegraph.com/news/world-liberty-usd1-stablecoin-market-cap-drops-400-million?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
