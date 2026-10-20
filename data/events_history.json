@@ -1438,5 +1438,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-10-20",
+    "events": [
+      {
+        "title": "Livret B : le plan de LFI pour réduire le coût de la dette française",
+        "link": "https://cryptoast.fr/livret-b-lfi-plan-dette-epargne-assurance-vie/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Polymarket, Kalshi : Les Américains disent non aux paris sur les élections",
+        "link": "https://journalducoin.com/actualites/polymarket-kalshi-americains-disent-non/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Manifestations en France : pourquoi l'État ne peut plus apporter de réponses ?",
+        "link": "https://cryptoast.fr/manifestations-france-etat-ne-peut-plus-repondre-dette-epargne/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]

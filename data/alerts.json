@@ -1,34 +1,21 @@
 {
-  "generated_at": "2026-10-19T12:24:55.041017+00:00",
-  "movers": [
-    {
-      "name": "RWA",
-      "change_pct": -30.1,
-      "direction": "down",
-      "market_cap": 63658234805.64
-    },
-    {
-      "name": "SocialFi",
-      "change_pct": -16.4,
-      "direction": "down",
-      "market_cap": 2683166266.59
-    }
-  ],
+  "generated_at": "2026-10-20T11:02:55.942008+00:00",
+  "movers": [],
   "emerging": [
     {
-      "name": "Synthetic Dollar",
-      "change_pct": 251.3,
-      "market_cap": 6800730396.363434
-    },
-    {
       "name": "Stonk Ecosystem",
-      "change_pct": 44.9,
-      "market_cap": 55088764.507127695
+      "change_pct": 67.1,
+      "market_cap": 50310053.280626185
     },
     {
-      "name": "bStocks Ecosystem",
-      "change_pct": 32.1,
-      "market_cap": 1067924595.3841124
+      "name": "Charity",
+      "change_pct": 35.3,
+      "market_cap": 58769680.721889116
+    },
+    {
+      "name": "Farcaster Ecosystem",
+      "change_pct": 33.0,
+      "market_cap": 63836247.25608066
     }
   ]
 }
