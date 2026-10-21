@@ -1,21 +1,38 @@
 {
-  "generated_at": "2026-10-20T11:02:55.942008+00:00",
-  "movers": [],
+  "generated_at": "2026-10-21T11:19:55.515514+00:00",
+  "movers": [
+    {
+      "name": "RWA",
+      "change_pct": 34.8,
+      "direction": "up",
+      "market_cap": 88923783861.41
+    }
+  ],
   "emerging": [
     {
-      "name": "Stonk Ecosystem",
-      "change_pct": 67.1,
-      "market_cap": 50310053.280626185
+      "name": "Tokenized Assets",
+      "change_pct": 102.2,
+      "market_cap": 47656857068.74795
     },
     {
-      "name": "Charity",
-      "change_pct": 35.3,
-      "market_cap": 58769680.721889116
+      "name": "Stonk Ecosystem",
+      "change_pct": 84.0,
+      "market_cap": 53746911.98899497
     },
     {
       "name": "Farcaster Ecosystem",
-      "change_pct": 33.0,
-      "market_cap": 63836247.25608066
+      "change_pct": 38.0,
+      "market_cap": 66607379.73915371
+    },
+    {
+      "name": "Charity",
+      "change_pct": 34.0,
+      "market_cap": 59633201.27360538
+    },
+    {
+      "name": "Clanker Ecosystem",
+      "change_pct": 28.5,
+      "market_cap": 83494375.44481571
     }
   ]
 }

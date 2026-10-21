@@ -1458,5 +1458,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-10-21",
+    "events": [
+      {
+        "title": "Bitcoin risk management grows more popular as the 'just bet on price' era fades",
+        "link": "https://www.coindesk.com/daybook-us/2026/10/21/bitcoin-risk-management-grows-more-popular-as-the-just-bet-on-price-era-fades",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "OCC's final rule to start fresh in weighing stablecoin rewards against GENIUS Act ban",
+        "link": "https://www.coindesk.com/policy/2026/10/21/occ-s-final-rule-to-start-fresh-in-weighing-stablecoin-rewards-against-genius-act-ban",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Pologne : 337 millions de zlotys d’arnaques crypto blanchis en faux lingots, neuf arrestations",
+        "link": "https://journalducoin.com/actualites/pologne-blanchiment-crypto-or-337-millions-zlotys-neuf-arrestations/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
