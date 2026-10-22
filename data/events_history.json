@@ -1478,5 +1478,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "events": [
+      {
+        "title": "Crypto-rapts : un couple ligoté à Mont-de-Marsan, trois hommes en fuite avec un ordinateur portable",
+        "link": "https://journalducoin.com/actualites/crypto-rapts-couple-ligote-mont-marsan-trois/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Grayscale : vos cryptos acceptées contre des parts d’ETF, ticket d’entrée à 80 300 dollars",
+        "link": "https://journalducoin.com/actualites/grayscale-souscriptions-in-kind-etf-crypto/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "CoinDCX pledges no user losses after $16M transfers draw scrutiny",
+        "link": "https://cointelegraph.com/news/coindcx-suspicious-outflows-wallet-compromised-2025-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
