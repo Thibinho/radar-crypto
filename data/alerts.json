@@ -1,16 +1,23 @@
 {
-  "generated_at": "2026-10-22T11:18:59.457747+00:00",
-  "movers": [],
+  "generated_at": "2026-10-23T11:09:33.581229+00:00",
+  "movers": [
+    {
+      "name": "RWA",
+      "change_pct": -31.2,
+      "direction": "down",
+      "market_cap": 62250249585.9
+    }
+  ],
   "emerging": [
     {
-      "name": "Yield Optimizer",
-      "change_pct": 25.7,
-      "market_cap": 265668238.81350887
+      "name": "Metagovernance",
+      "change_pct": 31.1,
+      "market_cap": 249892751.3028982
     },
     {
       "name": "Layer 3 (L3)",
-      "change_pct": 25.4,
-      "market_cap": 125714388.45530368
+      "change_pct": 27.3,
+      "market_cap": 131947566.3427866
     }
   ]
 }

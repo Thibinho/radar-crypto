@@ -1498,5 +1498,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "events": [
+      {
+        "title": "Ethereum reporte la mise à niveau Glamsterdam - Pour quelle raison ?",
+        "link": "https://cryptoast.fr/ethereum-reporte-mise-niveau-glamsterdam-quelle-raison/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Coinbase : 3,25 millions d’euros d’amende en Irlande pour des fonds clients mal protégés",
+        "link": "https://journalducoin.com/actualites/coinbase-amende-irlande-fonds-clients/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Bitcoin steadies near $81,700 as altcoins rebound, pepe climbs 13%",
+        "link": "https://www.coindesk.com/markets/2026/10/23/bitcoin-steadies-near-usd81-700-as-altcoins-rebound-pepe-climbs-13",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
