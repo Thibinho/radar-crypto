@@ -1518,5 +1518,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-10-24",
+    "events": [
+      {
+        "title": "Bitcoin Core modifie sa politique de sécurité pour les failles détectées par l'IA",
+        "link": "https://cryptoast.fr/bitcoin-core-modifie-politique-securite-pour-failles-detectees-ia/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Cryptomonnaies : ce géant du capital-risque raye le mot de son nom et se tourne vers l’IA",
+        "link": "https://journalducoin.com/actualites/a16z-retire-crypto-nom-ia/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Cyberattaques : le Royaume-Uni demande de stocker 3 jours de vivres",
+        "link": "https://cryptoast.fr/royaume-uni-3-jours-vivres-cash-cyberattaques-coupure-internet/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]

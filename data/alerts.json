@@ -1,23 +1,18 @@
 {
-  "generated_at": "2026-10-23T11:09:33.581229+00:00",
+  "generated_at": "2026-10-24T10:27:10.961246+00:00",
   "movers": [
     {
       "name": "RWA",
-      "change_pct": -31.2,
+      "change_pct": -32.0,
       "direction": "down",
-      "market_cap": 62250249585.9
+      "market_cap": 60591453050.67
     }
   ],
   "emerging": [
     {
-      "name": "Metagovernance",
-      "change_pct": 31.1,
-      "market_cap": 249892751.3028982
-    },
-    {
       "name": "Layer 3 (L3)",
-      "change_pct": 27.3,
-      "market_cap": 131947566.3427866
+      "change_pct": 29.6,
+      "market_cap": 133703033.97432032
     }
   ]
 }
