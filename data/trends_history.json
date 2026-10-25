@@ -4368,5 +4368,18 @@
       "ethereum": 4.9,
       "eth": 0.0
     }
+  },
+  {
+    "date": "2026-10-25",
+    "values": {
+      "crypto": 14.0,
+      "cryptomonnaie": 0.0,
+      "bitcoin": 30.0,
+      "btc": 14.0,
+      "alt": 16.0,
+      "altcoin": 0.0,
+      "ethereum": 2.3,
+      "eth": 3.5
+    }
   }
 ]

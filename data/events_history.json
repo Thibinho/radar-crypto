@@ -1538,5 +1538,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-10-25",
+    "events": [
+      {
+        "title": "Les actualités Bitcoin et cryptomonnaies de la semaine – L’Hebdo Crypto #351",
+        "link": "https://journalducoin.com/actualites/bitcoin-cryptomonnaies-semaine-hebdo-crypto-351/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Un data center IA à 10 minutes de Lascaux : la Dordogne découvre la France des « usines à calcul »",
+        "link": "https://journalducoin.com/technologies/data-center-lascaux-condat-ia-factory-petition-dordogne/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Bitcoin 0.1 reconstruit octet par octet : la machine de Satoshi Nakamoto trahie par son exécutable",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-0-1-reconstruit-octet-machine-satoshi/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
