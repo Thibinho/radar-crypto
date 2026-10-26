@@ -1558,5 +1558,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "events": [
+      {
+        "title": "BNB : la BNB Chain dévoile une nouvelle blockchain taillée pour le trading",
+        "link": "https://cryptoast.fr/bnb-chain-nouveau-layer-1-nouveau-token/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Le marché crypto perd de l’altitude, la patience devient une habitude – Steady Lads",
+        "link": "https://journalducoin.com/trading/marche-crypto-perd-altitude-steady-lads/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "A $68 million bitcoin bet is targeting a post-midterm election breakout to $90,000",
+        "link": "https://www.coindesk.com/daybook-us/2026/10/26/a-usd68-million-bitcoin-bet-is-targeting-a-post-midterm-election-breakout-to-usd90-000",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]

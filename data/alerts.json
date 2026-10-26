@@ -1,26 +1,38 @@
 {
-  "generated_at": "2026-10-25T10:54:40.206516+00:00",
-  "movers": [],
+  "generated_at": "2026-10-26T12:25:19.072871+00:00",
+  "movers": [
+    {
+      "name": "RWA",
+      "change_pct": 36.2,
+      "direction": "up",
+      "market_cap": 86709699675.93
+    }
+  ],
   "emerging": [
     {
-      "name": "Remora Markets Tokenized rStocks",
-      "change_pct": 605.5,
-      "market_cap": 102995118.18434545
+      "name": "Legal",
+      "change_pct": 106.5,
+      "market_cap": 65871338.947549306
     },
     {
-      "name": "Reality Ecosystem",
-      "change_pct": 316.0,
-      "market_cap": 118888062.9474062
-    },
-    {
-      "name": "Runes",
-      "change_pct": 45.0,
-      "market_cap": 162513306.1392597
+      "name": "Tokenized Assets",
+      "change_pct": 103.5,
+      "market_cap": 48300234500.95532
     },
     {
       "name": "Layer 3 (L3)",
-      "change_pct": 44.9,
-      "market_cap": 145976989.19834405
+      "change_pct": 32.3,
+      "market_cap": 130532039.94707592
+    },
+    {
+      "name": "Metagovernance",
+      "change_pct": 28.4,
+      "market_cap": 249268878.8054888
+    },
+    {
+      "name": "Runes",
+      "change_pct": 27.4,
+      "market_cap": 142257018.7469
     }
   ]
 }
