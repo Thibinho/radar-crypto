@@ -1,38 +1,23 @@
 {
-  "generated_at": "2026-10-26T12:25:19.072871+00:00",
+  "generated_at": "2026-10-27T11:44:08.382900+00:00",
   "movers": [
     {
       "name": "RWA",
-      "change_pct": 36.2,
-      "direction": "up",
-      "market_cap": 86709699675.93
+      "change_pct": -30.7,
+      "direction": "down",
+      "market_cap": 60758194568.45
     }
   ],
   "emerging": [
     {
-      "name": "Legal",
-      "change_pct": 106.5,
-      "market_cap": 65871338.947549306
-    },
-    {
-      "name": "Tokenized Assets",
-      "change_pct": 103.5,
-      "market_cap": 48300234500.95532
-    },
-    {
       "name": "Layer 3 (L3)",
-      "change_pct": 32.3,
-      "market_cap": 130532039.94707592
-    },
-    {
-      "name": "Metagovernance",
-      "change_pct": 28.4,
-      "market_cap": 249268878.8054888
+      "change_pct": 35.1,
+      "market_cap": 134218177.23903936
     },
     {
       "name": "Runes",
-      "change_pct": 27.4,
-      "market_cap": 142257018.7469
+      "change_pct": 30.7,
+      "market_cap": 143066786.71706235
     }
   ]
 }
