@@ -1,23 +1,16 @@
 {
-  "generated_at": "2026-10-27T11:44:08.382900+00:00",
-  "movers": [
-    {
-      "name": "RWA",
-      "change_pct": -30.7,
-      "direction": "down",
-      "market_cap": 60758194568.45
-    }
-  ],
+  "generated_at": "2026-10-28T12:16:52.561270+00:00",
+  "movers": [],
   "emerging": [
     {
       "name": "Layer 3 (L3)",
-      "change_pct": 35.1,
-      "market_cap": 134218177.23903936
+      "change_pct": 32.4,
+      "market_cap": 135252067.703664
     },
     {
-      "name": "Runes",
-      "change_pct": 30.7,
-      "market_cap": 143066786.71706235
+      "name": "Payment Solutions",
+      "change_pct": 28.2,
+      "market_cap": 2099267174.416633
     }
   ]
 }

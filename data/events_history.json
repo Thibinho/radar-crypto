@@ -1598,5 +1598,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "events": [
+      {
+        "title": "Censure des réseaux sociaux : face aux critiques sur son aspect liberticide, le gouvernement adoucit son texte",
+        "link": "https://cryptoast.fr/censure-reseaux-sociaux-gouvernement-assouplit-amendement-pharos/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Krach IA en Chine : 2 400 milliards de dollars évaporés depuis mai, Bitcoin tient ses 80 000 $",
+        "link": "https://journalducoin.com/bitcoin/chine-bourse-2400-milliards-bulle-ia-bitcoin/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Dissent and more: 3 things to watch for at the Fed meeting",
+        "link": "https://www.coindesk.com/daybook-us/2026/10/28/dissent-and-more-3-things-to-watch-for-at-the-fed-meeting",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
