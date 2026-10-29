@@ -1,16 +1,18 @@
 {
-  "generated_at": "2026-10-28T12:16:52.561270+00:00",
-  "movers": [],
+  "generated_at": "2026-10-29T12:26:36.690853+00:00",
+  "movers": [
+    {
+      "name": "RWA",
+      "change_pct": 39.2,
+      "direction": "up",
+      "market_cap": 87376951654.27
+    }
+  ],
   "emerging": [
     {
-      "name": "Layer 3 (L3)",
-      "change_pct": 32.4,
-      "market_cap": 135252067.703664
-    },
-    {
-      "name": "Payment Solutions",
-      "change_pct": 28.2,
-      "market_cap": 2099267174.416633
+      "name": "Tokenized Assets",
+      "change_pct": 116.3,
+      "market_cap": 49265569905.26724
     }
   ]
 }

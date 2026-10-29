@@ -1618,5 +1618,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "events": [
+      {
+        "title": "U.S. sanctions Russian nationals for laundering millions in crypto for North Korean IT workers",
+        "link": "https://www.coindesk.com/business/2026/10/29/u-s-sanctions-russian-crypto-middlemen-tied-to-north-korean-it-worker-fraud",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "100 € de Bitcoin par mois depuis janvier : quelle plateforme a coûté le moins cher ?",
+        "link": "https://cryptoast.fr/100-e-de-bitcoin-par-mois-depuis-janvier-quelle-plateforme-a-coute-le-moins-cher/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "As $10 billion in bitcoin options near expiry, the tell is in the pricing",
+        "link": "https://www.coindesk.com/daybook-us/2026/10/29/as-usd10-billion-in-bitcoin-options-near-expiry-the-tell-is-in-the-pricing",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
