@@ -1,101 +1,101 @@
 {
-  "generated_at": "2026-10-29T12:26:39.336651+00:00",
+  "generated_at": "2026-10-30T12:18:20.393367+00:00",
   "items": [
     {
-      "title": "U.S. sanctions Russian nationals for laundering millions in crypto for North Korean IT workers",
-      "link": "https://www.coindesk.com/business/2026/10/29/u-s-sanctions-russian-crypto-middlemen-tied-to-north-korean-it-worker-fraud",
+      "title": "Binance arranges $6.34 billion to cover losses from record crypto hack",
+      "link": "https://www.coindesk.com/business/2026/10/30/binance-arranges-usd6-34-billion-to-cover-losses-from-record-crypto-hack",
       "source": "CoinDesk",
-      "published": "2026-10-29T12:18:20+00:00"
+      "published": "2026-10-30T12:13:02+00:00"
     },
     {
-      "title": "100 € de Bitcoin par mois depuis janvier : quelle plateforme a coûté le moins cher ?",
-      "link": "https://cryptoast.fr/100-e-de-bitcoin-par-mois-depuis-janvier-quelle-plateforme-a-coute-le-moins-cher/",
+      "title": "Fed, BCE, BoJ : Les banques centrales imposent 3 statu quo cette semaine",
+      "link": "https://journalducoin.com/bitcoin/fed-bce-boj-statu-quo-hausse-decembre-bitcoin/",
+      "source": "Journal du Coin",
+      "published": "2026-10-30T12:00:00+00:00"
+    },
+    {
+      "title": "Here's how big bitcoin traders responded after the Binance hack hit",
+      "link": "https://www.coindesk.com/daybook-us/2026/10/30/here-s-how-big-bitcoin-traders-responded-after-the-binance-hack-hit",
+      "source": "CoinDesk",
+      "published": "2026-10-30T11:51:26+00:00"
+    },
+    {
+      "title": "Live updates: Binance says $6.34B set aside to cover hack losses",
+      "link": "https://cointelegraph.com/news/live-updates-binance-63b-hack-linked-to-north-koreas-tradertraitor?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-10-30T11:44:20+00:00"
+    },
+    {
+      "title": "Zcash grants group offers $124M compromise as governance backlash grows",
+      "link": "https://cointelegraph.com/news/zcash-grants-46m-proposal-governance-backlash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-10-30T11:36:23+00:00"
+    },
+    {
+      "title": "Here’s how an Ethereum upgrade helped drain part of Binance’s $6 billion loss",
+      "link": "https://www.coindesk.com/tech/2026/10/30/here-s-how-one-ethereum-permission-let-an-attacker-drain-usd2-5-billion-from-binance",
+      "source": "CoinDesk",
+      "published": "2026-10-30T11:35:16+00:00"
+    },
+    {
+      "title": "Après le piratage de Binance, les institutionnels vident les exchanges : Standard Chartered voit le grand basculement vers les DEX",
+      "link": "https://journalducoin.com/defi/piratage-binance-institutionnels-exchanges-dex-standard-chartered/",
+      "source": "Journal du Coin",
+      "published": "2026-10-30T11:30:00+00:00"
+    },
+    {
+      "title": "Bitcoin price metrics hint at rebound as $1.6B liquidations follow Binance hack",
+      "link": "https://cointelegraph.com/markets/bitcoin-price-metrics-hint-at-rebound-as-16b-liquidations-follow-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-10-30T11:29:23+00:00"
+    },
+    {
+      "title": "Piratage de Binance : CZ demande à Elon Musk d’arrêter de troller et réclame son soutien",
+      "link": "https://journalducoin.com/exchanges/piratage-binance-cz-elon-musk-troller/",
+      "source": "Journal du Coin",
+      "published": "2026-10-30T11:21:47+00:00"
+    },
+    {
+      "title": "Risque quantique : il faudrait beaucoup moins de matériel que prévu pour casser les clés cryptographiques de Bitcoin",
+      "link": "https://cryptoast.fr/risque-quantique-faudrait-beaucoup-moins-materiel-prevu-casser-cles-cryptographiques-bitcoin/",
       "source": "Cryptoast",
-      "published": "2026-10-29T12:15:19+00:00"
+      "published": "2026-10-30T11:15:04+00:00"
     },
     {
-      "title": "As $10 billion in bitcoin options near expiry, the tell is in the pricing",
-      "link": "https://www.coindesk.com/daybook-us/2026/10/29/as-usd10-billion-in-bitcoin-options-near-expiry-the-tell-is-in-the-pricing",
+      "title": "Crypto liquidations jump to $1.57 billion as Binance hack sends bitcoin, ether lower",
+      "link": "https://www.coindesk.com/markets/2026/10/30/crypto-liquidations-jump-to-usd1-57-billion-as-binance-hack-sends-bitcoin-ether-lower",
       "source": "CoinDesk",
-      "published": "2026-10-29T12:04:50+00:00"
+      "published": "2026-10-30T11:09:24+00:00"
     },
     {
-      "title": "EU investors rank crypto above retirement plans for lasting wealth creation: OKX survey",
-      "link": "https://cointelegraph.com/news/eu-investors-crypto-above-retirement-lasting-wealth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "title": "EIP-7702 didn’t cause Binance hack, but may have amplified losses",
+      "link": "https://cointelegraph.com/news/binance-hack-security-ethereum-eip-7702-role?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "source": "Cointelegraph",
-      "published": "2026-10-29T12:00:00+00:00"
+      "published": "2026-10-30T11:00:10+00:00"
     },
     {
-      "title": "Coinbase seeks Brazil crypto license, expects no service disruption",
-      "link": "https://cointelegraph.com/news/coinbase-brazil-license-no-service-disruption-expected?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-10-29T12:00:00+00:00"
-    },
-    {
-      "title": "Bitcoin lending and yield could drive next wave of institutional demand, Rootstock says",
-      "link": "https://cointelegraph.com/news/bitcoin-lending-and-yield-could-drive-next-wave-of-institutional-demand-rootstock-says?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-10-29T12:00:00+00:00"
-    },
-    {
-      "title": "ETF Bitcoin : les hedge funds ont vendu 68 000 BTC, les fonds souverains ont pris leur place",
-      "link": "https://journalducoin.com/bitcoin/etf-bitcoin-hedge-funds-vendu-68000-btc-fonds-souverains-galaxy/",
+      "title": "Crypto : Itaú Unibanco, première banque du Brésil à se déclarer au régulateur",
+      "link": "https://journalducoin.com/actualites/crypto-itau-unibanco-banque-bresil-regulateur/",
       "source": "Journal du Coin",
-      "published": "2026-10-29T12:00:00+00:00"
+      "published": "2026-10-30T11:00:00+00:00"
     },
     {
-      "title": "Bitcoin sous les 80 000 $ après la Fed : les 79 500 $ vont-ils céder ?",
-      "link": "https://cryptoast.fr/bitcoin-sous-les-80-000-apres-la-fed-les-79-500-vont-ils-ceder/",
+      "title": "Binance hacker’s Bitcoin haul tops Coinbase’s corporate treasury",
+      "link": "https://cointelegraph.com/news/binance-hacker-bitcoin-holdings-exceed-coinbase-btc-treasury?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-10-30T10:54:30+00:00"
+    },
+    {
+      "title": "Byzantine Finance et Keyrock veulent offrir les rendements des crédits onchain aux entreprises et family offices",
+      "link": "https://cryptoast.fr/byzantine-finance-keyrock-credit-onchain-entreprises-family-offices/",
       "source": "Cryptoast",
-      "published": "2026-10-29T11:50:22+00:00"
+      "published": "2026-10-30T10:25:23+00:00"
     },
     {
-      "title": "Piratage du fisc : un hackeur de 16 ans mis en examen, ses outils menacent aussi les détenteurs de crypto",
-      "link": "https://journalducoin.com/actualites/piratage-fisc-casquette-16-ans-mis-en-examen-infostealer-crypto/",
+      "title": "HYPE, Tron, Zcash et Monero dans le vert : les gagnants inattendus du hack Binance – Le point altcoins",
+      "link": "https://journalducoin.com/actualites/hype-monero-tron-zcash-gagnants-hack-binance-point-altcoins/",
       "source": "Journal du Coin",
-      "published": "2026-10-29T11:50:03+00:00"
-    },
-    {
-      "title": "Alphabet chute de 10 % : Google Cloud double, le bénéfice fond et OpenAI s’offre ses puces",
-      "link": "https://journalducoin.com/technologies/alphabet-chute-10-pourcent-cloud-double-benefice-fond-openai-tpu/",
-      "source": "Journal du Coin",
-      "published": "2026-10-29T11:30:00+00:00"
-    },
-    {
-      "title": "Bitcoin drops to $80,000 on Fed dissent, Samsung, Alphabet earnings; AI tokens slump",
-      "link": "https://www.coindesk.com/markets/2026/10/29/bitcoin-drops-to-usd80-000-on-fed-dissent-samsung-alphabet-earnings-ai-tokens-slump",
-      "source": "CoinDesk",
-      "published": "2026-10-29T11:11:48+00:00"
-    },
-    {
-      "title": "NYSE owner takes steps to bring Hyperliquid perpetual futures to U.S.",
-      "link": "https://www.coindesk.com/markets/2026/10/29/nyse-owner-takes-steps-to-bring-hyperliquid-perpetual-futures-to-u-s",
-      "source": "CoinDesk",
-      "published": "2026-10-29T11:11:25+00:00"
-    },
-    {
-      "title": "Départ anticipé de Christine Lagarde : La BCE change de tête, l’euro numérique reste en chantier",
-      "link": "https://journalducoin.com/actualites/depart-christine-lagarde-bce-euro-numerique/",
-      "source": "Journal du Coin",
-      "published": "2026-10-29T10:52:32+00:00"
-    },
-    {
-      "title": "Cathie Wood’s ARK buys the dip on Robinhood in its largest purchase in 6 months after 23% slump",
-      "link": "https://www.coindesk.com/markets/2026/10/29/cathie-wood-s-ark-buys-the-dip-on-robinhood-in-its-largest-purchase-in-6-months-after-23-slump",
-      "source": "CoinDesk",
-      "published": "2026-10-29T10:51:10+00:00"
-    },
-    {
-      "title": "Bitcoin long-term resistance in focus as analysis sees selling risk above $85K",
-      "link": "https://cointelegraph.com/markets/bitcoin-long-term-resistance-in-focus-as-analysis-sees-selling-risk-above-85k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-10-29T10:46:43+00:00"
-    },
-    {
-      "title": "Solana wallet Solflare pledges to pay missed rewards on staked $160 million after validator goes offline",
-      "link": "https://www.coindesk.com/markets/2026/10/29/solana-wallet-solflare-pledges-to-pay-missed-rewards-on-staked-usd160-million-after-validator-goes-offline",
-      "source": "CoinDesk",
-      "published": "2026-10-29T10:44:48+00:00"
+      "published": "2026-10-30T10:00:00+00:00"
     }
   ]
 }

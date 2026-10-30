@@ -1638,5 +1638,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "events": [
+      {
+        "title": "Binance arranges $6.34 billion to cover losses from record crypto hack",
+        "link": "https://www.coindesk.com/business/2026/10/30/binance-arranges-usd6-34-billion-to-cover-losses-from-record-crypto-hack",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Fed, BCE, BoJ : Les banques centrales imposent 3 statu quo cette semaine",
+        "link": "https://journalducoin.com/bitcoin/fed-bce-boj-statu-quo-hausse-decembre-bitcoin/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Here's how big bitcoin traders responded after the Binance hack hit",
+        "link": "https://www.coindesk.com/daybook-us/2026/10/30/here-s-how-big-bitcoin-traders-responded-after-the-binance-hack-hit",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]

@@ -1,18 +1,11 @@
 {
-  "generated_at": "2026-10-29T12:26:36.690853+00:00",
-  "movers": [
-    {
-      "name": "RWA",
-      "change_pct": 39.2,
-      "direction": "up",
-      "market_cap": 87376951654.27
-    }
-  ],
+  "generated_at": "2026-10-30T12:18:17.413221+00:00",
+  "movers": [],
   "emerging": [
     {
-      "name": "Tokenized Assets",
-      "change_pct": 116.3,
-      "market_cap": 49265569905.26724
+      "name": "Avalanche L1",
+      "change_pct": 29.2,
+      "market_cap": 329186248.60252863
     }
   ]
 }
