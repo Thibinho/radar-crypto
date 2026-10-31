@@ -1658,5 +1658,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-10-31",
+    "events": [
+      {
+        "title": "Blockchain investigator Chainalysis hit by cybersecurity incident",
+        "link": "https://cointelegraph.com/news/blockchain-investigator-chainalysis-hit-by-cybersecurity-incident?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Intel -29 %, Reddit -29 % : la séance noire qui a fait trembler Wall Street",
+        "link": "https://journalducoin.com/economie/intel-reddit-29-pourcent-seance-noire-wall-street-ia/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Piratage de Binance : le patron de la CFTC plaide pour l’enregistrement des plateformes offshore",
+        "link": "https://cryptoast.fr/piratage-binance-patron-cftc-plaide-pour-enregistrement-plateformes-offshore/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
