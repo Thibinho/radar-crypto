@@ -1678,5 +1678,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-11-01",
+    "events": [
+      {
+        "title": "Bitcoin : Dubaï mise 1,5 milliard de dollars sur BTC et l’immobilier",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-dubai-mise-1-5-milliard-dollars/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Binance opens crypto withdrawals in phases starting with bitcoin following $6.3 billion hack",
+        "link": "https://www.coindesk.com/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Binance says phase one of withdrawals opens after $6.3B hack",
+        "link": "https://cointelegraph.com/news/binance-says-phase-one-of-withdrawals-opens-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
