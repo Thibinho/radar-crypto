@@ -1698,5 +1698,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-11-02",
+    "events": [
+      {
+        "title": "Coinbase downgraded at Morgan Stanely; price target slashed 53% on weak earnings outlook",
+        "link": "https://www.coindesk.com/markets/2026/11/02/morgan-stanley-downgrades-coinbase-slashes-price-target-53-on-weak-earnings-outlook",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Euro numérique : la BCE choisit Nexi et Deutsche Telekom pour brancher les banques",
+        "link": "https://journalducoin.com/actualites/euro-numerique-bce-choisit-nexi-deutsche-telekom/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Uber utilise une blockchain publique pour faire fructifier sa trésorerie le week-end",
+        "link": "https://cryptoast.fr/uber-tresorerie-fonds-tokenise-franklin-templeton-week-end/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
