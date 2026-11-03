@@ -1718,5 +1718,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-11-03",
+    "events": [
+      {
+        "title": "DAC8 : la contestation gagne les autres pays européens",
+        "link": "https://cryptoast.fr/dac8-contestation-gagne-autres-pays-europeens/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Moscow Exchange to launch Bitcoin, Ether and USDT trading in December",
+        "link": "https://cointelegraph.com/news/moscow-exchange-bitcoin-ether-usdt-trading-december?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Crypto : Ark Invest achète la baisse sur Coinbase et Circle, et solde Bullish",
+        "link": "https://journalducoin.com/actualites/crypto-ark-invest-achete-coinbase-circle/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]

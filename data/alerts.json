@@ -1,26 +1,23 @@
 {
-  "generated_at": "2026-11-02T14:57:59.950458+00:00",
-  "movers": [],
+  "generated_at": "2026-11-03T13:46:09.580238+00:00",
+  "movers": [
+    {
+      "name": "RWA",
+      "change_pct": 42.0,
+      "direction": "up",
+      "market_cap": 86270754273.61
+    }
+  ],
   "emerging": [
     {
+      "name": "Tokenized Assets",
+      "change_pct": 116.7,
+      "market_cap": 49293267195.45495
+    },
+    {
       "name": "Ondo Intelligent Portfolios",
-      "change_pct": 47.2,
-      "market_cap": 50012598.94926401
-    },
-    {
-      "name": "Charity",
-      "change_pct": 38.0,
-      "market_cap": 51746242.0013137
-    },
-    {
-      "name": "Farcaster Ecosystem",
-      "change_pct": 28.0,
-      "market_cap": 56893428.086210296
-    },
-    {
-      "name": "Avalanche L1",
-      "change_pct": 26.2,
-      "market_cap": 335577679.59869075
+      "change_pct": 35.6,
+      "market_cap": 53956871.53631146
     }
   ]
 }
