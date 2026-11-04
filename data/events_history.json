@@ -1738,5 +1738,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-11-04",
+    "events": [
+      {
+        "title": "Global asset manager Schroders brings emerging market bond fund to Solana",
+        "link": "https://www.coindesk.com/business/2026/11/04/global-asset-manager-schroders-brings-emerging-market-bond-fund-to-solana",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Tentative d'enlèvement en Vendée : il tire sur ses assaillants et finit en détention provisoire",
+        "link": "https://cryptoast.fr/tentative-enlevement-vendee-il-tire-sur-assaillants-finit-detention-provisoire/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "THORChain's RUNE jumps 10% as North Korean hackers resume laundering Binance loot",
+        "link": "https://www.coindesk.com/markets/2026/11/04/thorchain-s-rune-jumps-10-as-north-korean-hackers-resume-laundering-binance-loot",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]

@@ -1,23 +1,16 @@
 {
-  "generated_at": "2026-11-03T13:46:09.580238+00:00",
-  "movers": [
-    {
-      "name": "RWA",
-      "change_pct": 42.0,
-      "direction": "up",
-      "market_cap": 86270754273.61
-    }
-  ],
+  "generated_at": "2026-11-04T13:54:18.152572+00:00",
+  "movers": [],
   "emerging": [
     {
-      "name": "Tokenized Assets",
-      "change_pct": 116.7,
-      "market_cap": 49293267195.45495
+      "name": "Layer 3 (L3)",
+      "change_pct": 46.4,
+      "market_cap": 198012389.48003453
     },
     {
-      "name": "Ondo Intelligent Portfolios",
-      "change_pct": 35.6,
-      "market_cap": 53956871.53631146
+      "name": "Binance Buildkey TGE",
+      "change_pct": 38.2,
+      "market_cap": 51222765.04510236
     }
   ]
 }
