@@ -1758,5 +1758,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-11-05",
+    "events": [
+      {
+        "title": "Kraken parent Payward and its clients buy AAVE tokens in DeFi investment push",
+        "link": "https://www.coindesk.com/business/2026/11/05/kraken-parent-payward-and-its-clients-buy-aave-tokens-in-defi-investment-push",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Binance : CZ dénonce une « autre attaque », cette fois sur les réseaux sociaux",
+        "link": "https://journalducoin.com/exchanges/binance-cz-denonce-attaque-reseaux-sociaux/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "XRP : voici ce que change la revente de plus de 73 millions d'actions par Evernorth",
+        "link": "https://cryptoast.fr/evernorth-xrp-revente-73-millions-actions/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
