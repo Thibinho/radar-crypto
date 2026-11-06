@@ -1,26 +1,28 @@
 {
-  "generated_at": "2026-11-05T14:10:16.726221+00:00",
-  "movers": [],
+  "generated_at": "2026-11-06T13:51:41.398795+00:00",
+  "movers": [
+    {
+      "name": "RWA",
+      "change_pct": 43.8,
+      "direction": "up",
+      "market_cap": 85078983464.56
+    }
+  ],
   "emerging": [
     {
-      "name": "Binance Buildkey TGE",
-      "change_pct": 42.4,
-      "market_cap": 51814801.94263717
+      "name": "Tokenized Assets",
+      "change_pct": 121.2,
+      "market_cap": 49380048124.02829
     },
     {
       "name": "Layer 3 (L3)",
-      "change_pct": 42.1,
-      "market_cap": 200664121.10236844
-    },
-    {
-      "name": "Bridged DAI",
-      "change_pct": 30.6,
-      "market_cap": 51941951.19288213
+      "change_pct": 56.2,
+      "market_cap": 201603969.4746908
     },
     {
       "name": "TimeFi",
-      "change_pct": 30.2,
-      "market_cap": 359445181.93523765
+      "change_pct": 43.1,
+      "market_cap": 389164494.34851044
     }
   ]
 }

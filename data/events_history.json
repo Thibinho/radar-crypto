@@ -1778,5 +1778,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-11-06",
+    "events": [
+      {
+        "title": "Here’s what happened in crypto today",
+        "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "U.S. added 165,000 jobs in October, blowing past 65,000 estimate",
+        "link": "https://www.coindesk.com/markets/2026/11/06/u-s-added-165-000-jobs-in-october-blowing-past-65-000-estimate",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "98 % de réussite pour les marchés prédictifs lors des élections américaines - Qu'en sera-t-il pour les élections présidentielles en France ?",
+        "link": "https://cryptoast.fr/reussite-pour-marches-predictifs-elections-americaines-pour-elections-presidentielles-france/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
