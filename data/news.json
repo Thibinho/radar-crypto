@@ -1,101 +1,101 @@
 {
-  "generated_at": "2026-11-06T13:51:44.288326+00:00",
+  "generated_at": "2026-11-07T12:36:35.587099+00:00",
   "items": [
+    {
+      "title": "Bitcoin et S&P 500 : une corrélation record depuis 2020 qui inquiète les investisseurs",
+      "link": "https://cryptoast.fr/bitcoin-sp-500-correlation-record-glassnode/",
+      "source": "Cryptoast",
+      "published": "2026-11-07T12:16:14+00:00"
+    },
+    {
+      "title": "Solana : Une campagne publicitaire à Shanghai déclenche une enquête en Chine",
+      "link": "https://journalducoin.com/actualites/solana-campagne-publicitaire-enquete-chine/",
+      "source": "Journal du Coin",
+      "published": "2026-11-07T12:00:00+00:00"
+    },
+    {
+      "title": "Corée du Nord : comment le régime recrute ses futurs hackers dès 11 ans",
+      "link": "https://cryptoast.fr/coree-du-nord-formation-hackers-colleges/",
+      "source": "Cryptoast",
+      "published": "2026-11-07T11:40:00+00:00"
+    },
+    {
+      "title": "US sanctions Canadian money-exchange firms over Iran ties",
+      "link": "https://cointelegraph.com/news/us-sanctions-canadian-money-exchange-firms-over-iran-ties?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-11-07T11:10:47+00:00"
+    },
+    {
+      "title": "Nigeria : Licence obligatoire pour les stablecoins, les modèles algorithmiques interdits",
+      "link": "https://journalducoin.com/actualites/nigeria-licence-obligatoire-stablecoins/",
+      "source": "Journal du Coin",
+      "published": "2026-11-07T11:00:00+00:00"
+    },
+    {
+      "title": "MEXC exclu du système financier américain après 16 milliards de dollars de transactions illicites",
+      "link": "https://cryptoast.fr/mexc-tresor-americain-fincen-16-milliards-iran-russie-coree-du-nord/",
+      "source": "Cryptoast",
+      "published": "2026-11-07T10:40:54+00:00"
+    },
+    {
+      "title": "MEXC coupé du système financier américain : 16 milliards de dollars de flux illicites",
+      "link": "https://journalducoin.com/exchanges/mexc-coupe-systeme-financier-americain-fincen/",
+      "source": "Journal du Coin",
+      "published": "2026-11-07T10:00:00+00:00"
+    },
+    {
+      "title": "Suspicious prediction market activity seen before election poll release: NYT",
+      "link": "https://cointelegraph.com/news/suspicious-prediction-market-activity-seen-before-election-poll-release-nyt?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-11-07T09:10:35+00:00"
+    },
+    {
+      "title": "OKX : dernière semaine pour le bonus de 8 % et les X-Drops continuent de pleuvoir",
+      "link": "https://journalducoin.com/exchanges/okx-derniere-semaine-bonus-x-drops/",
+      "source": "Journal du Coin",
+      "published": "2026-11-07T09:00:00+00:00"
+    },
+    {
+      "title": "Comment retirer son argent et ses cryptomonnaies de Binance ?",
+      "link": "https://cryptoast.fr/comment-retirer-argent-binance/",
+      "source": "Cryptoast",
+      "published": "2026-11-07T08:00:38+00:00"
+    },
+    {
+      "title": "Bitcoin Cash au plus bas depuis septembre, Zcash digère NU7 : le point altcoins",
+      "link": "https://journalducoin.com/actualites/bitcoin-cash-plus-bas-zcash-nu7-point-altcoins/",
+      "source": "Journal du Coin",
+      "published": "2026-11-07T08:00:00+00:00"
+    },
+    {
+      "title": "Nvidia may face a more hostile post-election Washington: Report",
+      "link": "https://cointelegraph.com/news/nvidia-may-be-facing-a-more-hostile-post-election-washington-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "Cointelegraph",
+      "published": "2026-11-07T07:45:24+00:00"
+    },
+    {
+      "title": "Bitcoin à 75 000 $ : le week-end démarre sur un plus bas de 11 semaines",
+      "link": "https://journalducoin.com/bitcoin/bitcoin-75000-dollars-plus-bas-11-semaines/",
+      "source": "Journal du Coin",
+      "published": "2026-11-07T07:19:53+00:00"
+    },
+    {
+      "title": "Binance fermera votre compte le 31 décembre : vers quelle plateforme migrer ?",
+      "link": "https://cryptoast.fr/arret-binance-france-voici-meilleures-alternatives-pour-vos-cryptomonnaies/",
+      "source": "Cryptoast",
+      "published": "2026-11-07T07:10:25+00:00"
+    },
+    {
+      "title": "Crypto : un ex-agent du FBI plaide coupable du vol de 2,47 millions de dollars",
+      "link": "https://journalducoin.com/actualites/crypto-agent-fbi-plaide-coupable/",
+      "source": "Journal du Coin",
+      "published": "2026-11-07T07:00:00+00:00"
+    },
     {
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "source": "Cointelegraph",
-      "published": "2026-11-06T13:33:00+00:00"
-    },
-    {
-      "title": "U.S. added 165,000 jobs in October, blowing past 65,000 estimate",
-      "link": "https://www.coindesk.com/markets/2026/11/06/u-s-added-165-000-jobs-in-october-blowing-past-65-000-estimate",
-      "source": "CoinDesk",
-      "published": "2026-11-06T13:31:54+00:00"
-    },
-    {
-      "title": "98 % de réussite pour les marchés prédictifs lors des élections américaines - Qu'en sera-t-il pour les élections présidentielles en France ?",
-      "link": "https://cryptoast.fr/reussite-pour-marches-predictifs-elections-americaines-pour-elections-presidentielles-france/",
-      "source": "Cryptoast",
-      "published": "2026-11-06T13:30:59+00:00"
-    },
-    {
-      "title": "Ethereum devs won’t fork Glamsterdam on Hoodi until smart contract risks resolved",
-      "link": "https://cointelegraph.com/news/ethereum-devs-fork-glamsterdam-hoodi-smart-contract-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-11-06T13:23:08+00:00"
-    },
-    {
-      "title": "Après les fonds monétaires, Amundi tokenise une part de fonds indiciel sur Ethereum",
-      "link": "https://journalducoin.com/ethereum/amundi-tokenise-fonds-indiciel-ethereum/",
-      "source": "Journal du Coin",
-      "published": "2026-11-06T13:00:00+00:00"
-    },
-    {
-      "title": "Piratage du Crédit Mutuel Arkéa : « Les attaquants ont du temps et des moyens »",
-      "link": "https://cryptoast.fr/credit-mutuel-arkea-piratage-analyse-expert-cybersecurite/",
-      "source": "Cryptoast",
-      "published": "2026-11-06T12:30:07+00:00"
-    },
-    {
-      "title": "Over $1 billion in bullish bets liquidated while ETF flows suggest no help in spot market",
-      "link": "https://www.coindesk.com/daybook-us/2026/11/06/over-usd1-billion-in-bullish-bets-liquidated-while-etf-flows-suggest-no-help-in-spot-market",
-      "source": "CoinDesk",
-      "published": "2026-11-06T12:30:00+00:00"
-    },
-    {
-      "title": "Solana’s Shanghai event halted over unauthorized promotion: Report",
-      "link": "https://cointelegraph.com/news/solana-shanghai-event-halted-unauthorized-promotion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-11-06T12:15:28+00:00"
-    },
-    {
-      "title": "Bhoutan : Un décret royal ouvre les réserves de la future banque centrale de Gelephu aux cryptos",
-      "link": "https://journalducoin.com/bitcoin/bhoutan-decret-reserves-banque-centrale-cryptos/",
-      "source": "Journal du Coin",
-      "published": "2026-11-06T12:00:00+00:00"
-    },
-    {
-      "title": "Live updates: Bitcoin slips further after blowout October jobs numbers",
-      "link": "https://www.coindesk.com/tech/2026/11/06/live-updates-nasdaq-100-futures-rally-points-to-stock-market-respite",
-      "source": "CoinDesk",
-      "published": "2026-11-06T11:58:40+00:00"
-    },
-    {
-      "title": "Bitcoin steadies after AI-led selloff as eyes turn to latest U.S. jobs figures",
-      "link": "https://www.coindesk.com/markets/2026/11/06/bitcoin-steadies-near-usd76-000-after-ai-led-selloff",
-      "source": "CoinDesk",
-      "published": "2026-11-06T11:49:35+00:00"
-    },
-    {
-      "title": "Acheter et vendre du Bitcoin en laissant moins de traces, la nouvelle fonctionnalité de Bull Bitcoin",
-      "link": "https://cryptoast.fr/acheter-vendre-bitcoin-laissant-moins-traces-nouvelle-fonctionnalite-bull-bitcoin/",
-      "source": "Cryptoast",
-      "published": "2026-11-06T11:30:00+00:00"
-    },
-    {
-      "title": "Binance hackers had 8 weeks of access before $6.3B exploit, Security Alliance estimates",
-      "link": "https://cointelegraph.com/news/binance-hackers-8-weeks-access-63b-exploit-security-alliance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-11-06T11:26:30+00:00"
-    },
-    {
-      "title": "Bitcoin holds $75K as AI regulation fears see KOSPI halted after 8% crash",
-      "link": "https://cointelegraph.com/markets/bitcoin-holds-ai-regulation-fears-kospi-halted?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-11-06T11:16:53+00:00"
-    },
-    {
-      "title": "Greece approves 10% tax on crypto gains starting in 2027",
-      "link": "https://cointelegraph.com/news/greece-approves-10-tax-crypto-gains-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "source": "Cointelegraph",
-      "published": "2026-11-06T11:05:36+00:00"
-    },
-    {
-      "title": "IPO d’Anthropic : Des ambitions revues à la baisse après la chute des valeurs IA ?",
-      "link": "https://journalducoin.com/economie/ipo-anthropic-ambitions-baisse-chute-ia/",
-      "source": "Journal du Coin",
-      "published": "2026-11-06T11:00:00+00:00"
+      "published": "2026-11-06T22:00:15+00:00"
     }
   ]
 }

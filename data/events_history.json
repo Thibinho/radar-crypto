@@ -1798,5 +1798,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-11-07",
+    "events": [
+      {
+        "title": "Bitcoin et S&P 500 : une corrélation record depuis 2020 qui inquiète les investisseurs",
+        "link": "https://cryptoast.fr/bitcoin-sp-500-correlation-record-glassnode/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Solana : Une campagne publicitaire à Shanghai déclenche une enquête en Chine",
+        "link": "https://journalducoin.com/actualites/solana-campagne-publicitaire-enquete-chine/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Corée du Nord : comment le régime recrute ses futurs hackers dès 11 ans",
+        "link": "https://cryptoast.fr/coree-du-nord-formation-hackers-colleges/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
