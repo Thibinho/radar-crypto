@@ -1818,5 +1818,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-11-08",
+    "events": [
+      {
+        "title": "Binance : son directeur financier s’en va neuf jours après le hack à 6,3 milliards de dollars",
+        "link": "https://journalducoin.com/exchanges/binance-directeur-financier-depart-hack/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Bitcoin : le minage traverse une crise historique, l’IA en cause ?",
+        "link": "https://cryptoast.fr/bitcoin-difficulte-minage-record-crise-mineurs-ia/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Amsterdam protesters break into Microsoft data center construction site: Report",
+        "link": "https://cointelegraph.com/news/amsterdam-data-center-protesters-break-into-construction-site-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
