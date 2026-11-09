@@ -1,33 +1,16 @@
 {
-  "generated_at": "2026-11-08T12:53:39.953796+00:00",
-  "movers": [
-    {
-      "name": "RWA",
-      "change_pct": 42.2,
-      "direction": "up",
-      "market_cap": 85120231162.08
-    }
-  ],
+  "generated_at": "2026-11-09T15:27:40.214053+00:00",
+  "movers": [],
   "emerging": [
     {
-      "name": "Tokenized Assets",
-      "change_pct": 127.3,
-      "market_cap": 49912919979.255936
+      "name": "TimeFi",
+      "change_pct": 84.3,
+      "market_cap": 530873975.6377874
     },
     {
       "name": "Layer 3 (L3)",
-      "change_pct": 49.5,
-      "market_cap": 188165597.42369017
-    },
-    {
-      "name": "TimeFi",
-      "change_pct": 41.5,
-      "market_cap": 413009928.514534
-    },
-    {
-      "name": "Trading Bots",
-      "change_pct": 38.4,
-      "market_cap": 75242045.38309884
+      "change_pct": 47.6,
+      "market_cap": 172138580.5134813
     }
   ]
 }
