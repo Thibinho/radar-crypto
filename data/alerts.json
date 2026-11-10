@@ -1,16 +1,21 @@
 {
-  "generated_at": "2026-11-09T15:27:40.214053+00:00",
+  "generated_at": "2026-11-10T14:28:32.076881+00:00",
   "movers": [],
   "emerging": [
     {
       "name": "TimeFi",
-      "change_pct": 84.3,
-      "market_cap": 530873975.6377874
+      "change_pct": 75.2,
+      "market_cap": 567354283.7141774
     },
     {
-      "name": "Layer 3 (L3)",
-      "change_pct": 47.6,
-      "market_cap": 172138580.5134813
+      "name": "Quest-to-Earn",
+      "change_pct": 55.5,
+      "market_cap": 133808274.02706562
+    },
+    {
+      "name": "Crypto-Backed Tokens",
+      "change_pct": 25.1,
+      "market_cap": 377258138.98865175
     }
   ]
 }

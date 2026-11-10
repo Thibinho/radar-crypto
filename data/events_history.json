@@ -1858,5 +1858,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-11-10",
+    "events": [
+      {
+        "title": "Vous détenez de la crypto et un iPhone ? Mettez-le absolument à jour",
+        "link": "https://cryptoast.fr/faille-ios-worse-query-iphone-crypto-phrases-recuperation/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "XRP Ledger : comment le réseau se prépare à la menace quantique",
+        "link": "https://cryptoast.fr/xrp-ledger-plan-quantique-cles-2028/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Mistral AI appelle les députés à enterrer la loi Darcos sur l’IA et le droit d’auteur",
+        "link": "https://journalducoin.com/technologies/mistral-ai-loi-darcos-droit-auteur-ia/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
