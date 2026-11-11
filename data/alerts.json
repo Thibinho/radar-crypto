@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-11-10T14:28:32.076881+00:00",
+  "generated_at": "2026-11-11T13:43:02.407291+00:00",
   "movers": [],
   "emerging": [
     {
       "name": "TimeFi",
-      "change_pct": 75.2,
-      "market_cap": 567354283.7141774
+      "change_pct": 43.8,
+      "market_cap": 462857535.289108
     },
     {
-      "name": "Quest-to-Earn",
-      "change_pct": 55.5,
-      "market_cap": 133808274.02706562
+      "name": "Ondo Intelligent Portfolios",
+      "change_pct": 33.2,
+      "market_cap": 72392692.5829353
     },
     {
-      "name": "Crypto-Backed Tokens",
-      "change_pct": 25.1,
-      "market_cap": 377258138.98865175
+      "name": "Adventure Games",
+      "change_pct": 29.1,
+      "market_cap": 87942891.9522717
     }
   ]
 }
