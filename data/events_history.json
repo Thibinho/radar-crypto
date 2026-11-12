@@ -1898,5 +1898,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-11-12",
+    "events": [
+      {
+        "title": "Jupiter adds Anchorage-backed USDGO to its $1 billion Solana lending platform",
+        "link": "https://www.coindesk.com/business/2026/11/12/jupiter-adds-anchorage-backed-usdgo-to-its-usd1-billion-solana-lending-platform",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "The next Congress will write rules for AI and emerging tech. They should use the stuff first.",
+        "link": "https://www.coindesk.com/opinion/2026/11/12/the-next-congress-will-write-rules-for-ai-and-emerging-tech-they-should-use-the-stuff-first",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Chiffrement : les députés suppriment l'article qui interdisait les portes dérobées",
+        "link": "https://cryptoast.fr/chiffrement-deputes-suppriment-article-portes-derobees/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
