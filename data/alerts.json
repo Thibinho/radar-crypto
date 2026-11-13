@@ -1,35 +1,18 @@
 {
-  "generated_at": "2026-11-12T14:46:15.686686+00:00",
+  "generated_at": "2026-11-13T14:04:09.251061+00:00",
   "movers": [
     {
-      "name": "Bitcoin",
-      "change_pct": -19.9,
-      "direction": "down",
-      "market_cap": 6052169160.13
-    },
-    {
       "name": "Privacy",
-      "change_pct": -17.3,
+      "change_pct": -15.1,
       "direction": "down",
-      "market_cap": 95226276560.8
-    },
-    {
-      "name": "SocialFi",
-      "change_pct": -15.6,
-      "direction": "down",
-      "market_cap": 2104458945.69
+      "market_cap": 95509026704.21
     }
   ],
   "emerging": [
     {
-      "name": "Legal",
-      "change_pct": 106.9,
-      "market_cap": 65513360.82334409
-    },
-    {
       "name": "Ondo Intelligent Portfolios",
-      "change_pct": 33.4,
-      "market_cap": 73240291.22103162
+      "change_pct": 38.9,
+      "market_cap": 73166353.28171134
     }
   ]
 }
