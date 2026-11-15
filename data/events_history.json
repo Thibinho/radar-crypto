@@ -1958,5 +1958,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-11-15",
+    "events": [
+      {
+        "title": "Here’s what happened in crypto today",
+        "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Marchés prédictifs : la Louisiane coupe Kalshi et Polymarket, la CFTC riposte",
+        "link": "https://journalducoin.com/actualites/louisiane-cftc-marches-predictifs-kalshi-polymarket-coupes/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "OKX vous offre 50 € pour vous exposer à Anthropic avant l'IPO – Voici comment en profiter",
+        "link": "https://cryptoast.fr/okx-vous-offre-50-e-pour-vous-exposer-a-anthropic-avant-lipo-voici-comment-en-profiter/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
