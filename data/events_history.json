@@ -1978,5 +1978,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-11-16",
+    "events": [
+      {
+        "title": "Bitcoin : Strategy achète 485 BTC de plus et porte sa réserve à 850 849",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-strategy-achete-reserve-850-849/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Zelle taps Solana for stablecoin-based international expansion",
+        "link": "https://cointelegraph.com/news/zelle-solana-zelleusd-stablecoin-international-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Solana 1.0 : le réseau sort officiellement de sa version beta",
+        "link": "https://cryptoast.fr/solana-1-0-mainnet-fin-version-beta-sol/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
