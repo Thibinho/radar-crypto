@@ -1998,5 +1998,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-11-17",
+    "events": [
+      {
+        "title": "Hong Kong, Swift test tokenized deposits as banks chase stablecoin-style speed",
+        "link": "https://www.coindesk.com/business/2026/11/17/hong-kong-swift-test-tokenized-deposits-as-banks-chase-stablecoin-style-speed",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Nvidia : le fonds du milliardaire Jim Simons a vendu 99,7 % de ses actions",
+        "link": "https://cryptoast.fr/nvidia-renaissance-technologies-jim-simons-vend-99-7-actions/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Dons à l’Ukraine, sanctions contre la Russie : La guerre se joue aussi sur la blockchain",
+        "link": "https://journalducoin.com/actualites/dons-ukraine-sanctions-russie-guerre-blockchain/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
