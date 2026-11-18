@@ -2018,5 +2018,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-11-18",
+    "events": [
+      {
+        "title": "Deepfake d’Elon Musk devant 500 000 personnes : l’agent IA de Coinbase bloque l’arnaque à 99 %",
+        "link": "https://journalducoin.com/exchanges/deepfake-elon-musk-live-tesla-coinbase-agent-ia-arnaque/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Bitcoin prêt à rebondir ? Glassnode repère des signes de capitulation",
+        "link": "https://cryptoast.fr/bitcoin-capitulation-pertes-realisees-glassnode/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Bitcoin Covenants Part 6: FE Covenants — Enforcing covenants through cryptographically restricted signing keys",
+        "link": "https://cointelegraph.com/research/bitcoin-covenants-part-6-fe-covenants-enforcing-covenants-through-cryptographically-restricted-signing-keys?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
