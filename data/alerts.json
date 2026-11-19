@@ -1,34 +1,33 @@
 {
-  "generated_at": "2026-11-18T15:15:51.593693+00:00",
+  "generated_at": "2026-11-19T15:22:34.145931+00:00",
   "movers": [
     {
       "name": "SocialFi",
-      "change_pct": -25.3,
+      "change_pct": -21.5,
       "direction": "down",
-      "market_cap": 1657639629.39
-    },
-    {
-      "name": "Restaking",
-      "change_pct": -20.8,
-      "direction": "down",
-      "market_cap": 1729528470.34
+      "market_cap": 1652524540.39
     }
   ],
   "emerging": [
     {
       "name": "TimeFi",
-      "change_pct": 92.1,
-      "market_cap": 889154475.2905852
+      "change_pct": 77.8,
+      "market_cap": 797218564.2160963
     },
     {
       "name": "Trading Bots",
-      "change_pct": 42.6,
-      "market_cap": 66259101.45247832
+      "change_pct": 48.8,
+      "market_cap": 66095088.14099464
+    },
+    {
+      "name": "Adventure Games",
+      "change_pct": 31.8,
+      "market_cap": 80108572.77356854
     },
     {
       "name": "AI Applications",
-      "change_pct": 25.7,
-      "market_cap": 2910539771.0315657
+      "change_pct": 29.6,
+      "market_cap": 2926425842.608194
     }
   ]
 }

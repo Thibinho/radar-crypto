@@ -2038,5 +2038,25 @@
         "source": "Cointelegraph"
       }
     ]
+  },
+  {
+    "date": "2026-11-19",
+    "events": [
+      {
+        "title": "Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft",
+        "link": "https://www.coindesk.com/business/2026/11/19/binance-wins-usd6-5-billion-feezing-order-against-hackers-behind-crypto-s-largest-theft",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Crypto : Brian Armstrong (Coinbase) donne 99,999 % des paiements aux agents IA",
+        "link": "https://journalducoin.com/technologies/crypto-armstrong-coinbase-paiements-agents-ia/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Trump Media veut couvrir 884 millions de dollars de dette, mais sans vendre son Bitcoin",
+        "link": "https://cryptoast.fr/trump-media-rachat-dette-884-millions-sans-vendre-bitcoin/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
