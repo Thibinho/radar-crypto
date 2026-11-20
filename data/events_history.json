@@ -2058,5 +2058,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-11-20",
+    "events": [
+      {
+        "title": "Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians",
+        "link": "https://www.coindesk.com/policy/2026/11/20/hong-kong-moves-to-extend-crypto-licensing-rules-to-brokers-advisers-and-custodians",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "U.S. Senate passes bill to ban prediction market bets on war and death",
+        "link": "https://www.coindesk.com/policy/2026/11/20/u-s-senated-passes-bill-to-ban-prediction-market-best-on-war-and-death",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "ETF Bitcoin : le IBIT de BlackRock enregistre un record historique de sorties nettes",
+        "link": "https://cryptoast.fr/etf-bitcoin-ibit-blackrock-enregistre-record-historique-sorties-nettes/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]

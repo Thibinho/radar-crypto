@@ -1,33 +1,68 @@
 {
-  "generated_at": "2026-11-19T15:22:34.145931+00:00",
+  "generated_at": "2026-11-20T14:59:47.869450+00:00",
   "movers": [
     {
       "name": "SocialFi",
-      "change_pct": -21.5,
+      "change_pct": -37.9,
       "direction": "down",
-      "market_cap": 1652524540.39
+      "market_cap": 1346172871.9
+    },
+    {
+      "name": "Meme",
+      "change_pct": -19.3,
+      "direction": "down",
+      "market_cap": 24579752235.01
+    },
+    {
+      "name": "Restaking",
+      "change_pct": -18.8,
+      "direction": "down",
+      "market_cap": 1691035252.96
+    },
+    {
+      "name": "Liquid Staking",
+      "change_pct": -17.1,
+      "direction": "down",
+      "market_cap": 1854379233.55
+    },
+    {
+      "name": "DeFi",
+      "change_pct": -15.5,
+      "direction": "down",
+      "market_cap": 59563496232.12
+    },
+    {
+      "name": "Privacy",
+      "change_pct": -15.1,
+      "direction": "down",
+      "market_cap": 81051258009.32
     }
   ],
   "emerging": [
     {
+      "name": "Legal",
+      "change_pct": 129.5,
+      "market_cap": 65181833.95608364
+    },
+    {
+      "name": "Solana Token-2022",
+      "change_pct": 94.2,
+      "market_cap": 71547606.40217099
+    },
+    {
       "name": "TimeFi",
-      "change_pct": 77.8,
-      "market_cap": 797218564.2160963
+      "change_pct": 53.1,
+      "market_cap": 711026285.5161568
     },
     {
       "name": "Trading Bots",
-      "change_pct": 48.8,
-      "market_cap": 66095088.14099464
+      "change_pct": 45.8,
+      "market_cap": 65486268.75117506
     },
     {
-      "name": "Adventure Games",
-      "change_pct": 31.8,
-      "market_cap": 80108572.77356854
-    },
-    {
-      "name": "AI Applications",
-      "change_pct": 29.6,
-      "market_cap": 2926425842.608194
+      "name": "Tokenized Pre-IPO Stocks",
+      "change_pct": 32.9,
+      "market_cap": 95860196.73510666
     }
   ]
 }
