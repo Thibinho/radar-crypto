@@ -2078,5 +2078,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-11-21",
+    "events": [
+      {
+        "title": "Blockchain et IA : Alyra vous ouvre ses portes en ligne le 16 décembre",
+        "link": "https://cryptoast.fr/blockchain-et-ia-alyra-vous-ouvre-ses-portes-en-ligne-le-16-decembre/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "1inch intègre les perpétuels Hyperliquid dans sa dApp et son wallet Android",
+        "link": "https://journalducoin.com/defi/perpetuels-hyperliquid-1inch-integre-dapp-wallet-android/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated",
+        "link": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
