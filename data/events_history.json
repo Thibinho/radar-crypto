@@ -2098,5 +2098,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "events": [
+      {
+        "title": "Bitcoin's quantum security challenge extends to bridges, custodians and millions of coins",
+        "link": "https://www.coindesk.com/tech/2026/11/22/bitcoin-s-quantum-security-challenge-extends-to-bridges-custodians-and-millions-of-coins",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Bitcoin : le hashprice tombe à 26 dollars, les mineurs travaillent à perte",
+        "link": "https://journalducoin.com/bitcoin/bitcoin-hashprice-26-dollars-mineurs-perte/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "Binance : plus que 7 jours pour éviter les frais sur votre compte",
+        "link": "https://cryptoast.fr/binance-plus-que-7-jours-pour-eviter-les-frais-sur-votre-compte/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]

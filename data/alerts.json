@@ -1,45 +1,28 @@
 {
-  "generated_at": "2026-11-21T14:21:16.876275+00:00",
+  "generated_at": "2026-11-22T14:12:48.175285+00:00",
   "movers": [
     {
       "name": "SocialFi",
-      "change_pct": -31.5,
+      "change_pct": -29.5,
       "direction": "down",
-      "market_cap": 1354738577.52
-    },
-    {
-      "name": "Meme",
-      "change_pct": -17.2,
-      "direction": "down",
-      "market_cap": 23986021092.14
-    },
-    {
-      "name": "Liquid Staking",
-      "change_pct": -15.8,
-      "direction": "down",
-      "market_cap": 1748458730.86
+      "market_cap": 1335157273.84
     }
   ],
   "emerging": [
     {
       "name": "Solana Token-2022",
-      "change_pct": 97.4,
-      "market_cap": 69250313.78197359
+      "change_pct": 119.0,
+      "market_cap": 69845481.12050909
     },
     {
       "name": "TimeFi",
-      "change_pct": 66.8,
-      "market_cap": 828032244.1216047
+      "change_pct": 49.6,
+      "market_cap": 770112762.4306743
     },
     {
-      "name": "Trading Bots",
-      "change_pct": 52.6,
-      "market_cap": 66082368.002816334
-    },
-    {
-      "name": "Tokenized Pre-IPO Stocks",
-      "change_pct": 30.8,
-      "market_cap": 92765763.94160958
+      "name": "Venice Ecosystem",
+      "change_pct": 27.9,
+      "market_cap": 1357110111.4249437
     }
   ]
 }
