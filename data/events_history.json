@@ -2118,5 +2118,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-11-23",
+    "events": [
+      {
+        "title": "Bitcoin rebound already losing steam as AI trade returns with a bang",
+        "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-rebound-already-losing-steam-as-ai-trade-returns-with-a-bank",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Ethereum et Stellar désormais reliés par le fonds tokenisé USDY de 2,3 milliards de $ d’Ondo",
+        "link": "https://cryptoast.fr/ondo-usdy-stellar-ethereum-layerzero-oft-bons-tresor-us/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Binance : l’ultimatum se resserre pour les clients français",
+        "link": "https://journalducoin.com/exchanges/binance-ultimatum-francais/",
+        "source": "Journal du Coin"
+      }
+    ]
   }
 ]
