@@ -2138,5 +2138,25 @@
         "source": "Journal du Coin"
       }
     ]
+  },
+  {
+    "date": "2026-11-24",
+    "events": [
+      {
+        "title": "Ethereum : l’IA devient une menace plus urgente que le quantique",
+        "link": "https://journalducoin.com/ethereum/ethereum-ia-menace-urgente-quantique/",
+        "source": "Journal du Coin"
+      },
+      {
+        "title": "How South Korea’s proposed 20% cap could change who runs Upbit",
+        "link": "https://cointelegraph.com/news/how-south-koreas-proposed-20-cap-could-change-who-runs-upbit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "'AI trade never died': Traders see room for market recovery, but bitcoin's participation is another story",
+        "link": "https://www.coindesk.com/markets/2026/11/24/ai-trade-never-died-traders-see-room-for-market-recovery-despite-bitcoin-s-weakness",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
