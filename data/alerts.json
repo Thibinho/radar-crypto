@@ -1,28 +1,23 @@
 {
-  "generated_at": "2026-11-24T17:05:35.781931+00:00",
+  "generated_at": "2026-11-25T16:54:22.094977+00:00",
   "movers": [
     {
       "name": "SocialFi",
-      "change_pct": -26.5,
+      "change_pct": -25.3,
       "direction": "down",
-      "market_cap": 1281749559.65
+      "market_cap": 1238349349.26
     }
   ],
   "emerging": [
     {
-      "name": "Legal",
-      "change_pct": 107.7,
-      "market_cap": 65093195.66136016
-    },
-    {
-      "name": "TimeFi",
-      "change_pct": 49.3,
-      "market_cap": 819976125.3327643
-    },
-    {
       "name": "Binance Megadrop",
-      "change_pct": 28.4,
-      "market_cap": 71573490.08601713
+      "change_pct": 36.0,
+      "market_cap": 74464034.9146993
+    },
+    {
+      "name": "Crypto-Backed Tokens",
+      "change_pct": 33.3,
+      "market_cap": 338410062.76998603
     }
   ]
 }

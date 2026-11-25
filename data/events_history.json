@@ -2158,5 +2158,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-11-25",
+    "events": [
+      {
+        "title": "EU bank watchdog seeks European Commission rules for crypto firms offering DeFi lending",
+        "link": "https://www.coindesk.com/policy/2026/11/25/eu-bank-watchdog-seeks-european-commission-rules-for-crypto-firms-offering-defi-lending",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Ukrainian lawmakers pass crypto tax and regulation bill expected to bring in $330 million",
+        "link": "https://www.coindesk.com/business/2026/11/25/ukrainian-lawmakers-pass-crypto-tax-and-regulation-bill-expected-to-bring-in-usd330-million",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "Crypto Long & Short: Bitcoin investors can’t keep ignoring Japan",
+        "link": "https://www.coindesk.com/coindesk-indices/2026/11/25/crypto-long-and-short-bitcoin-investors-can-t-keep-ignoring-japan",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
