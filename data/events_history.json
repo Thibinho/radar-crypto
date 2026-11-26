@@ -2178,5 +2178,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-11-26",
+    "events": [
+      {
+        "title": "Nvidia suspend les expéditions de serveurs vers quatre pays d'Asie du Sud-Est",
+        "link": "https://cryptoast.fr/nvidia-suspend-expeditions-serveurs-vers-quatre-pays-asie-sud-est/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "How EU brokers could lose access to Kyrgyz crypto exchanges",
+        "link": "https://cointelegraph.com/news/how-eu-brokers-could-lose-access-to-kyrgyz-crypto-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      },
+      {
+        "title": "Crypto for Advisors: Four questions to ask before trusting a crypto exchange",
+        "link": "https://www.coindesk.com/coindesk-indices/2026/11/26/crypto-for-advisors-four-questions-to-ask-before-trusting-a-crypto-exchange",
+        "source": "CoinDesk"
+      }
+    ]
   }
 ]
