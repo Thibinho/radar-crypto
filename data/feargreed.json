@@ -703,5 +703,10 @@
     "date": "2026-11-26",
     "value": 11,
     "classification": "Extreme Fear"
+  },
+  {
+    "date": "2026-11-27",
+    "value": 12,
+    "classification": "Extreme Fear"
   }
 ]

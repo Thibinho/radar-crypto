@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-11-26T16:31:19.681627+00:00",
+  "generated_at": "2026-11-27T16:17:13.237646+00:00",
   "movers": [],
   "emerging": [
     {
-      "name": "Quest-to-Earn",
-      "change_pct": 58.2,
-      "market_cap": 110378676.47425985
-    },
-    {
       "name": "TimeFi",
-      "change_pct": 39.6,
-      "market_cap": 1113103354.9774797
+      "change_pct": 46.2,
+      "market_cap": 1039663916.4954981
     },
     {
-      "name": "Crypto-Backed Tokens",
-      "change_pct": 33.3,
-      "market_cap": 338029922.79197323
+      "name": "DeFAI",
+      "change_pct": 30.2,
+      "market_cap": 642663232.6161152
+    },
+    {
+      "name": "Venice Ecosystem",
+      "change_pct": 29.2,
+      "market_cap": 1443788145.3004391
     }
   ]
 }

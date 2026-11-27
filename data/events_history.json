@@ -2198,5 +2198,25 @@
         "source": "CoinDesk"
       }
     ]
+  },
+  {
+    "date": "2026-11-27",
+    "events": [
+      {
+        "title": "L'or et le Bitcoin n'ont jamais été autant corrélés qu'aujourd'hui",
+        "link": "https://cryptoast.fr/bitcoin-or-correlation-record-historique-digital-gold/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Bitcoin : ces 3 signaux qui pourraient annoncer un rebond",
+        "link": "https://cryptoast.fr/bitcoin-3-signaux-annoncer-rebond-prix/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "50 000 € en Bitcoin à gagner : le calendrier de l'Avent de Bitpanda est de retour",
+        "link": "https://cryptoast.fr/50-000-e-en-bitcoin-a-gagner-le-calendrier-de-lavent-de-bitpanda-est-de-retour/",
+        "source": "Cryptoast"
+      }
+    ]
   }
 ]
