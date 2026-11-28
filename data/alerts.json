@@ -1,21 +1,16 @@
 {
-  "generated_at": "2026-11-27T16:17:13.237646+00:00",
+  "generated_at": "2026-11-28T15:11:06.203514+00:00",
   "movers": [],
   "emerging": [
     {
-      "name": "TimeFi",
-      "change_pct": 46.2,
-      "market_cap": 1039663916.4954981
+      "name": "Adventure Games",
+      "change_pct": 30.5,
+      "market_cap": 89753002.08821897
     },
     {
-      "name": "DeFAI",
-      "change_pct": 30.2,
-      "market_cap": 642663232.6161152
-    },
-    {
-      "name": "Venice Ecosystem",
-      "change_pct": 29.2,
-      "market_cap": 1443788145.3004391
+      "name": "Parallelized EVM",
+      "change_pct": 25.9,
+      "market_cap": 590468690.987747
     }
   ]
 }

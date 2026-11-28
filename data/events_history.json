@@ -2218,5 +2218,25 @@
         "source": "Cryptoast"
       }
     ]
+  },
+  {
+    "date": "2026-11-28",
+    "events": [
+      {
+        "title": "Bybit’s $1.4 billion hack postmortem is ready. You won’t get to see it.",
+        "link": "https://www.coindesk.com/business/2026/11/28/bybit-s-usd1-4-billion-hack-postmortem-is-ready-you-won-t-get-to-see-it",
+        "source": "CoinDesk"
+      },
+      {
+        "title": "« Bitcoin ira inévitablement à 0 », Michael Saylor répond",
+        "link": "https://cryptoast.fr/bitcoin-zero-ia-michael-saylor-repond/",
+        "source": "Cryptoast"
+      },
+      {
+        "title": "Here’s what happened in crypto today",
+        "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph"
+      }
+    ]
   }
 ]
